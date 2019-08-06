@@ -1,0 +1,7 @@
+v12aml
+
+true gemini
+
+## Контакты
+
+XMPP/Jabber/Gtalk: мойник@gmail.com

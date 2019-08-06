@@ -1,0 +1,1 @@
+![Image:Example.jpg](Example.jpg "Image:Example.jpg")

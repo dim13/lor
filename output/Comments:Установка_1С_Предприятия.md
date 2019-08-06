@@ -1,0 +1,3 @@
+Вместо создания симлинков на локаль, можно добавить строчку в файл
+locale.alias (/etc/locale.alias в ubuntu, /usr/share/locale/locale.alias
+в fedora, ...).

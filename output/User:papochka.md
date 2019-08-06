@@ -1,0 +1,1 @@
+[я](http://www.linux.org.ru/people/papochka/profile)
