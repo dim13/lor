@@ -1,1 +1,0 @@
-Что такое ./application.ini?

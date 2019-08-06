@@ -1,3 +1,0 @@
-<http://www.debian.org/doc/manuals/maint-guide/dreq.en.html>
-
-<http://www.debian.org/devel/>
