@@ -111,7 +111,6 @@ hcid.conf строчку "pin_helper /usr/bin/bluepin" на "pin_helper
   - Устанавливаем пакет rp-pppoe
   - Запускаем adsl-setup.
 
-<!-- end list -->
 
 ```
       USER NAME: имя для инета
@@ -139,7 +138,6 @@ hcid.conf строчку "pin_helper /usr/bin/bluepin" на "pin_helper
 
   - Попробуйте выполнить в консоли
 
-<!-- end list -->
 
 ```
       root@linux~:# route add default ppp0
@@ -157,7 +155,6 @@ hcid.conf строчку "pin_helper /usr/bin/bluepin" на "pin_helper
 
   - Попробуйте выполнить в консоли
 
-<!-- end list -->
 
 ```
       echo "1" > /proc/sys/net/ipv4/ip_dynaddr
@@ -175,7 +172,6 @@ hcid.conf строчку "pin_helper /usr/bin/bluepin" на "pin_helper
     **/etc/resolv.conf** и прописать их туда примерно в такой форме
     (пример для МТУ-Интел):
 
-<!-- end list -->
 
 ```
       nameserver      195.34.32.11
@@ -506,16 +502,13 @@ iptables.
 
   - отключить слежение iptables за мостом:
 
-<!-- end list -->
 
   -
     echo "0" \> /proc/sys/net/bridge/bridge-nf-call-iptables
 
-<!-- end list -->
 
   - разрешить FORWARD'инг трафика через мост следующим правилом:
 
-<!-- end list -->
 
   -
     iptables -I FORWARD -m physdev --physdev-is-bridged -j ACCEPT
@@ -827,7 +820,6 @@ xxxxx- порт arts сервера.
     симкой, которая была куплена мною, **APN с сайта Билайна
     internet.beeline.ru не работает**. Рабочая строка:
 
-<!-- end list -->
 
 ```
      OK 'AT+CGDCONT=1,"IP","home.beeline.ru"' \
@@ -835,14 +827,12 @@ xxxxx- порт arts сервера.
 
   - В файл **/etc/ppp/peers/beeline-gprs** добавлена строка:
 
-<!-- end list -->
 
     user beeline
 
   - В файл **/etc/ppp/pap-secrets** (на меге не нужна аутентификация)
     добавлена строка:
 
-<!-- end list -->
 
     beeline *       beeline
 

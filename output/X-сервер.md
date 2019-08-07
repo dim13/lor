@@ -418,11 +418,9 @@ grp:ctrl_shift_toggle`. Сохраняем настройки кнопкой "Sa
 
   - [1](http://www.opennet.ru/base/X/xdmcp_windows.txt.html)
 
-<!-- end list -->
 
   - [2](http://wiki.linuxformat.ru/index.php/LXF83:XDMCP)
 
-<!-- end list -->
 
   - [3](http://linux.mkrovlya.ru/book/xdmcp-клиенты)
 

@@ -104,7 +104,6 @@ Swap раздел не создавал за ненадобностью (в но
 
     Выставить в опциях загрузки ядра `elevator=noop`:
 
-<!-- end list -->
 
   - Первый вариант - в конфигурационном файле `/boot/grub/grub.cfg`
     добавить к опциям загрузки ядра.
@@ -241,7 +240,6 @@ Ubuntu 12\*, Mint 13, Fedora 17 - эти клавиши работают. Раз
 3.  В этом каталоге создать файл `Makefile` (регистр\!) следующего
     содержания:
 
-<!-- end list -->
 
     obj-m += thinkpad_acpi.o
 
@@ -257,7 +255,6 @@ Ubuntu 12\*, Mint 13, Fedora 17 - эти клавиши работают. Раз
 1.  Пропатчить `thinkpad_acpi.c` для корректной работы уведомлений о
     событиях:
 
-<!-- end list -->
 
     static void hotkey_notify(struct ibm_struct *ibm, u32 event)
     {
@@ -283,7 +280,6 @@ Ubuntu 12\*, Mint 13, Fedora 17 - эти клавиши работают. Раз
     <b>MicMute</b>. Этот патч и инструкцию нашёл
     [здесь](http://askubuntu.com/questions/125367/enabling-mic-mute-button-and-light-on-lenovo-thinkpads).
 
-<!-- end list -->
 
     static const char * const tpacpi_led_names[TPACPI_LED_NUMLEDS] = {
         /* there's a limit of 19 chars + NULL before 2.6.26 */
@@ -355,7 +351,6 @@ Ubuntu 12\*, Mint 13, Fedora 17 - эти клавиши работают. Раз
 2.  Я для этих целей, когда экспериментировал, набросал шелл-скрипт
     запускаемый в рабочем каталоге (под root разумеется):
 
-<!-- end list -->
 
     #!/bin/sh
 

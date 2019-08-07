@@ -211,7 +211,6 @@ D-Bus предусмотрен интерфейс *org.freedesktop.Hal.Device*, 
     получим список всех устройств);
   - деинициализировать HAL клиента;
 
-<!-- end list -->
 
     <nowiki>
     #include <stdio.h>

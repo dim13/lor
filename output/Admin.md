@@ -247,7 +247,6 @@ i686.rpm и т.п.).
 
   - С помощью mkfs:
 
-<!-- end list -->
 
 ```
       root@localhost# mkfs -t msdos /dev/fd0
@@ -261,7 +260,6 @@ i686.rpm и т.п.).
 
   - Если установлен mtools, то:
 
-<!-- end list -->
 
 ```
       user@localhost$ mformat a:
@@ -547,7 +545,6 @@ pdf. Описание сделано для Mandrake и потому поряд�
   - Бэкапим весь корень (/) за исключением некоторых папок **/proc**,
     **/sys** и **/tmp**, например:
 
-<!-- end list -->
 
 ```
       root@localhost# tar cvpjf /mnt/backup/all.tar.bz2 / --exclude /proc --exclude /sys --exclude /tmp --exclude /var/tmp --exclude /usr/tmp --exclude /mnt
@@ -563,7 +560,6 @@ pdf. Описание сделано для Mandrake и потому поряд�
   - Далее создаем образ винта (если надо) или каждого раздела в
     отдельности.
 
-<!-- end list -->
 
 ```
       root@localhost# dd if=/dev/hda of=/dev/hdb bs=10M

@@ -8,7 +8,6 @@
     $(fuseinst)/lib/libfuse.a -lpthread -lrt -ldl**.
   - Монтируем:
 
-<!-- end list -->
 
     mount -t siefs [-o options] /dev/ttyS0 /mnt/mobile
 

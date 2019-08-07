@@ -62,12 +62,10 @@
     [dim13.org](http://www.dim13.org/1978/11/Who-am-I), есть место
     переночевать, пивоустойчив
 
-<!-- end list -->
 
   - [dikiy](http://www.linux.org.ru/people/dikiy/profile), есть место
     переночевать, водкоустойчив.
 
-<!-- end list -->
 
   - [Lennart :-)](https://www.linux.org.ru/people/Lennart/profile)
 
@@ -85,7 +83,6 @@
     Warsteiner/Jagermeiter. Есть возможность захостить отряд до 1.5
     человек.
 
-<!-- end list -->
 
   - [maxylopes](http://www.linux.org.ru/people/maxylopes/profile), Тип
     топлива Paulaner Weiss. Есть возможность захостить отряд до 1.5
@@ -186,7 +183,6 @@
     против чая и пива (но не вместе), нуб во всём, могу не выйти на
     связь или вообще оказаться в Серове.
 
-<!-- end list -->
 
   - [newpunkies](https://www.linux.org.ru/people/newpunkies/profile), не
     против.
@@ -337,120 +333,97 @@
     СПбГУ. На охране сказать "иду в Феникс". Вход на первом этаже в
     белую железную дверь, звонок справа от двери.
 
-<!-- end list -->
 
   - [Jaga](http://www.linux.org.ru/people/Jaga/profile). Контакты — в
     профиле. Употребляю. Мало времени, намного проще меня встретить
     на каком-нибудь концерте в клубе.
 
-<!-- end list -->
 
   - [panter_dsd](http://www.linux.org.ru/people/panter_dsd/profile)
     Употребляю. Семейный, поэтому намного реже, чем раньше, но по
     пинте доброго эля опрокинуть можно.
 
-<!-- end list -->
 
   - [realloc](http://www.linux.org.ru/people/realloc/profile)
     Употребляю. Употребляю. Употребляю.
 
-<!-- end list -->
 
   - [catap](http://www.linux.org.ru/people/catap/profile). Контакты в
     профиле, встретить можно вечерами по будням в pub \#1 что на
     чкаловской :) либо в Дикенсе, либо в Дугласе, либо в Крике что
     на петроградке, но чаще в офисе на пуфиках — Большой 58 же\!
 
-<!-- end list -->
 
   - [cvs-255](http://www.linux.org.ru/people/cvs-255/profile) В меру.
 
-<!-- end list -->
 
   - [manntes-live](http://www.linux.org.ru/people/manntes-live/profile)
     Чай, кофе, Убунту. Основным контактом служит почта (в профиле).
 
-<!-- end list -->
 
   - [veneperkele](http://www.linux.org.ru/people/veneperkele/profile)
     OpenBSD, Ubuntu. На попойки не иду.
 
-<!-- end list -->
 
   - [vspider](http://www.linux.org.ru/people/vspider/profile) Чай, кофе,
     Linux Mint. Контакты в профиле.
 
-<!-- end list -->
 
   - [Stage1](http://www.linux.org.ru/people/Stage1/profile) Чай, мята,
     жаровый самовар, Gentoo. Контакт в профиле.
 
-<!-- end list -->
 
   - [ollowtf](http://www.linux.org.ru/people/ollowtf/profile) По
     настроению.
 
-<!-- end list -->
 
   - [kdask](http://www.linux.org.ru/people/kdask/profile) Да\!
 
-<!-- end list -->
 
   - [x4DA](http://www.linux.org.ru/people/x4DA/profile) Сижу дома,
     никуда не выхожу. Можно не звать. // Но попробовать можно.
 
-<!-- end list -->
 
   - [torvn77](https://www.linux.org.ru/people/torvn77/profile) Люблю
     ликёры,грязный и не мытый.Дом для встреч не пригоден,если нет
     работы или какого ни будь дела то разговор замирает не начавщесь.
 
-<!-- end list -->
 
   - [BlackHawk](https://www.linux.org.ru/people/BlackHawk/profile)
     Употребляю. Контакт в профиле.
 
-<!-- end list -->
 
   - [Ford_Focus](https://www.linux.org.ru/people/Ford_Focus/profile)
     всеядный, мыло/жаба в профиле
 
-<!-- end list -->
 
   - [jcd](https://www.linux.org.ru/people/jcd/profile) слабоконтактен,
     генту, алкоголь
 
-<!-- end list -->
 
   - [HerrWeigel](https://www.linux.org.ru/people/HerrWeigel/profile)
     употребляю почти все (из алкоголя), посиделки с чаем и кофе тоже
     люблю, могу иногда выйти на коньках покататься; джаббер в профиле,
     захожу каждый день, когда дома.
 
-<!-- end list -->
 
   - [yacuken](https://www.linux.org.ru/people/yacuken/profile) алкоголь
     одобряю, мыло в профиле. Arch.
 
-<!-- end list -->
 
   - [v9lij](https://www.linux.org.ru/people/v9lij/profile) Употребить
     всегда рад. Контакты в профиле.
 
-<!-- end list -->
 
   - [vostrik](https://www.linux.org.ru/people/vostrik/profile),
     употребляю.
 
-<!-- end list -->
 
   - [quest](http://www.linux.org.ru/people/quest/profile) По настроению.
 
-<!-- end list -->
 
   - [Towelie](http://www.linux.org.ru/people/Towelie/profile) Бывает
 
-<!-- end list -->
 
   - [Valkeru](http://www.linux.org.ru/people/Valkeru/profile) По
     настроению в умеренных количествах. Контактная инфа в
@@ -467,7 +440,6 @@
     заранее, примерный ориентир — музыкальное училище или
     энергоинститут.
 
-<!-- end list -->
 
   - [SeHELLioN](http://www.linux.org.ru/people/sehellion/profile)
     Употребляю. Бывает, холиварю. Дебианщик.
@@ -503,13 +475,11 @@
     времени провожу на работе. Не против выпить по пиву вместо того
     чтобы играть в Dota 2.
 
-<!-- end list -->
 
   - [gr_buza](http://www.linux.org.ru/people/gr_buza/profile).
     Юниксоид-сетевик. Живу то в Сургуте, то в Тюмени. Можно
     писать в джаббер eill@j.r или в почту на тот-же-ник@яндекс :)
 
-<!-- end list -->
 
   - [Demacr](http://www.linux.org.ru/people/Demacr/profile).
     Полугентушник-полуцискошатальщик. Страйкбол и сноуборд
@@ -596,7 +566,6 @@
     Гентушник. Употребляю. Много. В разнообразных компаниях. Контакты
     в профиле.
 
-<!-- end list -->
 
   - [moon](http://www.linux.org.ru/people/moon/profile) сферический
     убунтист, питонист и бассист в вакууме.
@@ -616,22 +585,18 @@
   - [vurdalak](http://www.linux.org.ru/people/vurdalak/profile).
     Употреляю под настроение, джаббер в профиле.
 
-<!-- end list -->
 
   - [vinnni](http://www.linux.org.ru/people/vinnni/profile). Употребляю.
     Пишите в skype vinni_ua
 
-<!-- end list -->
 
   - [joy4eg](http://www.linux.org.ru/people/joy4eg/profile). Skype:
     joy4egg
 
-<!-- end list -->
 
   - [MaGIc2laNTern](https://www.linux.org.ru/people/MaGIc2laNTern/profile).
     Email/Jabber: aruseni.magiku@gmail.com
 
-<!-- end list -->
 
   - [leg0las](https://www.linux.org.ru/people/leg0las/profile). Jabber:
     leg0las@jabber.com.ua, leg0las88@jabber.ru

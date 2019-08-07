@@ -53,12 +53,10 @@
 
   - [SuperTux](http://itunes.apple.com/us/app/supertux/id454857377?mt=8)
 
-<!-- end list -->
 
   - [Extreme Tux
     Racer](http://itunes.apple.com/us/app/tux-racer/id455459371?mt=8)
 
-<!-- end list -->
 
   - [Extreme Tux
     Racer](http://itunes.apple.com/us/app/tux-skiing-3d/id539456392?mt=8)

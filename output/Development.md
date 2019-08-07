@@ -108,7 +108,6 @@ Manual](http://developer.gnome.org/gdk/stable/gdk-General.html)
 
   - [lisp-lor-faq](lisp-lor-faq)
 
-<!-- end list -->
 
   - [Викиучебник](https://ru.wikibooks.org/wiki/%D0%9B%D0%B8%D1%81%D0%BF)
 

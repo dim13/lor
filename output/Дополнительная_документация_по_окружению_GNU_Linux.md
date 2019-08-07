@@ -62,7 +62,6 @@
   - [Материалы по многострадальному /usr и Леннарту
     Поттерингу](Материалы_по_многострадальному_usr_и_Леннарту_Поттерингу)
 
-<!-- end list -->
 
   - Manpages
       - [Linux manpages](http://www.linuxmanpages.com/)
@@ -71,7 +70,6 @@
         Linux](http://ss64.com/bash/)
       - [Маны на русском языке](http://www.opennet.ru/man.shtml)
 
-<!-- end list -->
 
   - GNU Manuals
       - [GNU manuals online](http://www.gnu.org/manual/)
@@ -92,7 +90,6 @@
       - [Recutils](http://www.gnu.org/software/recutils/manual/recutils.html)
       - [Sharutils](http://www.gnu.org/software/sharutils/manual/html_mono/sharutils.html)
 
-<!-- end list -->
 
   - GNU GCC and GDB
       - [GCC online documentation](http://gcc.gnu.org/onlinedocs/)
@@ -106,7 +103,6 @@
         Examples](http://www.cprogramming.com/gdb.html)
       - [GDB Tutorial](http://www.cprogramming.com/gdbtutorial.html)
 
-<!-- end list -->
 
   - Various
       - [Как Gnome 3 превратить в Gnome 2 за 5
@@ -128,7 +124,6 @@
       - [Изумительный способ чтения fb2 под
         Linux](https://www.linux.org.ru/forum/talks/3599767)
 
-<!-- end list -->
 
   - USB drive
       - [Universal USB Installer – Easy
@@ -138,7 +133,6 @@
       - [Загрузочная флешка (Live
         USB)](http://kastaneda.kiev.ua/desktop/live_usb.html)
 
-<!-- end list -->
 
   - Hardware
       - [Linux on laptops](http://www.linlap.com)
@@ -154,7 +148,6 @@
       - [Полезная статья про особенности
         SSD](http://emulek.blogspot.ru/2013/04/ssd.html)
 
-<!-- end list -->
 
   - UNIX
       - [Books on cat-v](http://books.cat-v.org/)

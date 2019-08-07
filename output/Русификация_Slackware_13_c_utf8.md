@@ -72,7 +72,6 @@ rc.keymap, lang.sh) установлен атрибут выполнения.
 
   - Раскладка через HAL (Slackware 13.0, 13.1)
 
-<!-- end list -->
 
     cp /usr/share/hal/fdi/policy/10osvendor/10-keymap.fdi /etc/hal/fdi/policy/10-keymap.fdi
 

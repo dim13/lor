@@ -136,7 +136,6 @@ Quake 3 Arena и её не слишком удачное дополнение Te
     Распаковываете архивы в папку с Quake3 и создаете
     исполняемый файл cpma вида:
 
-<!-- end list -->
 
     #!/bin/sh
     cd /usr/local/games/ioquake3

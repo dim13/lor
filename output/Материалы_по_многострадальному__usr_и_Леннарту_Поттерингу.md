@@ -232,7 +232,6 @@ which` `situations it doesn't work.`
     as a daemon and typically has PID 1. The boot loader starts the
     kernel and the kernel starts init.
 
-<!-- end list -->
 
   -   - **systemd** is a system and service manager for Linux,
         compatible with SysV and LSB init scripts. systemd provides
@@ -244,7 +243,6 @@ which` `situations it doesn't work.`
         dependency-based service control logic. It can work as a drop-in
         replacement for sysvinit.
 
-<!-- end list -->
 
   -   - **upstart** is an event-based replacement for the /sbin/init
         daemon which handles starting of tasks and services during boot,
@@ -254,7 +252,6 @@ which` `situations it doesn't work.`
         all Linux distributions as a replacement for the venerable
         System-V init.
 
-<!-- end list -->
 
   - **initramfs-tools** - This package contains tools to create and boot
     an initramfs for prepackaged 2.6 Linux kernel. The initramfs is an
@@ -266,7 +263,6 @@ which` `situations it doesn't work.`
     initramfs archive. Having the root on MD, LVM2, LUKS or NFS is also
     supported.
 
-<!-- end list -->
 
   -   - **dracut** - unlike existing initramfs's, this is an attempt at
         having as little as possible hard-coded into the initramfs as
@@ -279,14 +275,12 @@ which` `situations it doesn't work.`
         root on MD, LVM2, LUKS is supported as well as NFS, iSCSI, NBD
         and FCOE with dracut-network.
 
-<!-- end list -->
 
   - **udev** is the device manager for the Linux kernel. Primarily, it
     manages device nodes in /dev. It is the successor of devfs and
     hotplug, which means that it handles the /dev directory and all user
     space actions when adding/removing devices, including firmware load.
 
-<!-- end list -->
 
   -   - ***hotplug** is a system for managing devices that can be
         dynamically attached to and removed from the system while it's
@@ -296,7 +290,6 @@ which` `situations it doesn't work.`
         SCSI devices, devices requiring firmware to be loaded into them,
         input devices, and more. Obsolete.*
 
-<!-- end list -->
 
   -   - ***HAL** was a software project providing a hardware abstraction
         layer for Unix-like computer systems. It aimed to allow desktop
@@ -308,7 +301,6 @@ which` `situations it doesn't work.`
         added. All future development focuses on udisks, upower and
         other parts of the stack. HAL -\> udev/udisks/other*
 
-<!-- end list -->
 
   - **Rsyslog** is an enhanced multi-threaded syslogd with a focus on
     security and reliability. Among others, it offers support for
@@ -316,7 +308,6 @@ which` `situations it doesn't work.`
     RELP, writing to databases, email alerting. It is a drop-in
     replacement for syslogd.
 
-<!-- end list -->
 
   - **D-Bus** is a message bus system, a simple way for applications to
     talk to one another. In addition to interprocess communication,
@@ -325,7 +316,6 @@ which` `situations it doesn't work.`
     launch applications and daemons on demand when their services are
     needed.
 
-<!-- end list -->
 
   - **PolicyKit** is an application-level toolkit for defining and
     handling the policy that allows unprivileged processes to speak to
@@ -336,21 +326,18 @@ which` `situations it doesn't work.`
     multi-user UNIX-like operating systems. It does not imply or rely on
     any exotic kernel features.
 
-<!-- end list -->
 
   - **ConsoleKit** is a framework for defining and tracking users, login
     sessions, and seats. ConsoleKit is currently not actively
     maintained. The focus has shifted to the built-in seat/user/session
     management of Software/systemd called systemd-loginctl
 
-<!-- end list -->
 
   - **udisks** project provides: a daemon, udisksd, that implements
     well-defined D-Bus interfaces that can be used to query and
     manipulate storage devices; a command-line tool, **udisksctl
     (udisks2)**, that can be used to query and use the daemon.
 
-<!-- end list -->
 
   - **upower** is an abstraction for enumerating power devices,
     listening to device events and querying history and statistics.
@@ -359,7 +346,6 @@ which` `situations it doesn't work.`
     of different operations on your computer, which enables you to save
     significant amounts of power.
 
-<!-- end list -->
 
   - **Avahi** is a system which facilitates service discovery on a local
     network via the mDNS/DNS-SD protocol suite. This enables you to plug
@@ -368,7 +354,6 @@ which` `situations it doesn't work.`
     find files being shared. Compatible technology is found in Apple
     MacOS X (branded Bonjour and sometimes Zeroconf).
 
-<!-- end list -->
 
   - **PulseAudio** is a sound system for POSIX OSes, meaning that it is
     a proxy for your sound applications. It allows you to do advanced

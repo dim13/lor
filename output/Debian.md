@@ -140,7 +140,6 @@ security.debian.org нужно отключить, так как для unstable
     обеспечения; **non-free** - лицензии пакетов в этой части содержат
     условия, ограничивающие использование или распространение ПО.
 
-<!-- end list -->
 
     # Debian repository
     deb http://ftp.ru.debian.org/debian/ squeeze main non-free contrib

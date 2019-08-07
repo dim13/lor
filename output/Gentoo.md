@@ -271,7 +271,6 @@ emerge -S word_for_search \# по описанию
   - distcc — распределенная между машинами сборка пакетов
     [12](http://www.gentoo.org/doc/en/distcc.xml)
 
-<!-- end list -->
 
   - ccache — [13](http://en.gentoo-wiki.com/wiki/Ccache)
 

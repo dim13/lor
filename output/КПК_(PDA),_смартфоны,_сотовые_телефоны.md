@@ -83,7 +83,6 @@ Linux](http://familiar.handhelds.org).
     ограниченного набора устройств, и использующая библиотеку Qt. Для
     PDA hx4700 ее стоимость составляет $50.
 
-<!-- end list -->
 
   - [OPIE](http://opie.handhelds.org/cgi-bin/moin.cgi/) - очень красивая
     и быстрая рабочая среда, написанная на Qt. Является форком закрытой
@@ -94,7 +93,6 @@ Linux](http://familiar.handhelds.org).
     графические приложения сложнее, чем для GPE. Имеет приличную
     поддержку PIM и мультимедии.
 
-<!-- end list -->
 
   - [GPE](http://gpe.handhelds.org/) - наиболее популярная среда,
     использующая для вывода графики [X Window
@@ -107,7 +105,6 @@ Linux](http://familiar.handhelds.org).
     (например, abiword и gnumeric) - это наиболее подходящая для вас
     среда.
 
-<!-- end list -->
 
   - [Maemo](http://maemo.org/) — базирующаяся на Debian Linux платформа
     для портативных устройств. Используется в интернет-планшетах Nokia

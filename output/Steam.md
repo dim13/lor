@@ -378,7 +378,6 @@ Beta", без скобок запускаются нормально):
     "cfg";
   - открыть файл "video.txt";
 
-<!-- end list -->
 
   - найти параметр "setting.mat_antialias" и заменить значение "2" на
     "1";
@@ -690,7 +689,6 @@ libSDL-1.2.so.0, libSDL_image-1.2.so.0, libSDL_mixer-1.2.so.0. После
     error 44**
       - Решение:
 
-<!-- end list -->
 
   - Установить libmpg123-0:i386
 

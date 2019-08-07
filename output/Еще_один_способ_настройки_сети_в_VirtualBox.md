@@ -17,7 +17,6 @@ vboxnet0 получил адрес 192.168.56.1, сетевое устройст
 
   - 2\. У гостя добавил маршрут
 
-<!-- end list -->
 
     #route add default gw 192.168.56.1 eth0
 
@@ -26,7 +25,6 @@ vboxnet0 получил адрес 192.168.56.1, сетевое устройст
 
   - 3\. У хоста в файле /etc/sysctl.conf изменил
 
-<!-- end list -->
 
     net.ipv4.ip_forward = 0
 
@@ -45,7 +43,6 @@ vboxnet0 получил адрес 192.168.56.1, сетевое устройст
   - 4\. На хосте добавил в файл */etc/sysconfig/iptables* добавил два
     правила (перед REJECT'ом FORWARD'а)
 
-<!-- end list -->
 
     -A FORWARD -s 192.168.56.1/24 -j ACCEPT
     -A FORWARD -d 192.168.56.1/24 -j ACCEPT
@@ -56,7 +53,6 @@ vboxnet0 получил адрес 192.168.56.1, сетевое устройст
 
   - 5\. На хосте в */etc/rc.d/rc.local* добавил
 
-<!-- end list -->
 
     iptables -A POSTROUTING -t nat -s 192.168.56.1/24 -j SNAT --to-source 10.10.11.222
 

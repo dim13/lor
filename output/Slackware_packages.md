@@ -180,7 +180,6 @@ WINE:
     достаточно лишь положить в ту же директорию архив с
     исходниками и запустить скрипт.
 
-<!-- end list -->
 
   - В большинстве случаев в самих собранных пакетах сборщики кладут
     SlackBuild'ы в пакет, открыв его в своем любимом архиваторе, найти
@@ -189,7 +188,6 @@ WINE:
     [Current](http://www.slackware.com/changelog/current.php?cpu=i386) -
     текущее состояние разработки дистрибутива.
 
-<!-- end list -->
 
   - Так же, в практически во всех репозиториях (которые были приведены
     выше) можно найти эти билды. Лежать они могут в том месте, где и
@@ -197,7 +195,6 @@ WINE:
     реализовано у самого дистрибутива slackware в качестве примера
     [MPlayer](http://mirrors.slackware.com/slackware/slackware-current/source/xap/MPlayer/)
 
-<!-- end list -->
 
   -
     Стоит отметить, если Вы будете искать SlackBuild'ы у Salix , то
@@ -255,20 +252,17 @@ WINE:
     - [SBo в бинарном
     варианте](http://slackware.su/forum/index.php?topic=1705.0)
 
-<!-- end list -->
 
   - <http://slakfinder.org/>
   - <http://pkgs.org/>
   - <http://people.salixos.org/>
 
-<!-- end list -->
 
   - <http://slack.isper.sk/pub/>
   - <http://www.droplinegnome.org/#download>
   - <http://sourceforge.net/projects/portable/files/>
   - <http://www.nielshorn.net/slackware/slack_pkg.php>
 
-<!-- end list -->
 
   - <http://www.andreasliebe.de/pkgs/>
   - <http://slackware.sukkology.net/>

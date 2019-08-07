@@ -467,7 +467,6 @@ hotplugd:
   - xsetbg почему-то не дружит с композитингом - при запуске xcompmgr
     теряется wallpaper. С feh же все нормально
 
-<!-- end list -->
 
   - В наличии [имеется](http://www.linux.org.ru/news/bsd/9023141) сайт
     быстрого поиска по свежим исходникам kernel + non-gnu userland —
@@ -477,7 +476,6 @@ hotplugd:
     сайт коротких адресов системных руководств
     [„mdoc.su“](http://mdoc.su/)
 
-<!-- end list -->
 
   - [Новости с пометкой „openbsd“ на
     ЛОРе](http://www.linux.org.ru/tag/openbsd?section=1)

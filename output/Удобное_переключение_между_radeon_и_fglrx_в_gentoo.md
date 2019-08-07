@@ -31,13 +31,11 @@
     [KMS](https://wiki.archlinux.org/index.php/Kernel_Mode_Setting)) в
     cmdline необходимо добавить
 
-<!-- end list -->
 
     radeon.modeset=1 modprobe.blacklist=fglrx
 
   - Для закрытого драйвера нужно добавить
 
-<!-- end list -->
 
     modprobe.blacklist=drm,drm_kms_helper,radeon,uvcvideo,ttm,videodev,videobuf2_core,videobuf2_memops,videobuf2_vmalloc
 

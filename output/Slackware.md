@@ -56,7 +56,6 @@ Slackware, на университетский ftp-сервер.
     среда — Xfce. Также есть редакции дистрибутива с графическими
     средами KDE, Fluxbox, MATE, Ratpoison и LXDE.
 
-<!-- end list -->
 
   - [Slax](http://slax.org) или его форк [Porteus](http://porteus.org/)
     - Один из лучших LiveCD/USB и имеет возможность установки на жесткий
@@ -67,21 +66,18 @@ Slackware, на университетский ftp-сервер.
     (wine, dosbox, qemu), Server и PopCorn (помещается на 128
     мегабайтовую флешку).
 
-<!-- end list -->
 
   - [Slackel](http://www.slackel.gr/) - Греческий дистрибутив,
     базирующийся на current-ветке и репозиториях salix.
     Варианты: KDE и Openbox. Доступен так же в LiveCD/DVD.
     Присутствует выбор русского языка.
 
-<!-- end list -->
 
   - [DeepStyle](http://deepstyle.org.ua) - Украинский форк Slackware,
     отличается поддержкой русского и украинского языка "из коробки".
     Так же содержит множество пакетов, отсутствующих в оригинальной
     дистрибутиве.
 
-<!-- end list -->
 
   - [MOPSLinux](http://www.mopslinux.org/) - Российский дистрибутив. В
     плюсы проекта можно записать полностью русифицированный интерфейс
@@ -89,7 +85,6 @@ Slackware, на университетский ftp-сервер.
     развивается](https://www.linux.org.ru/news/linux-general/4763032),
     последняя версия 7.0 и выходила она в 2010 году.
 
-<!-- end list -->
 
   - [SlaXBMC](http://slaxbmc.blogspot.ru/) - Дистрибутив базирующийся на
     slackware и включающий в себя медиа-станцию xbmc, так же в
@@ -97,12 +92,10 @@ Slackware, на университетский ftp-сервер.
     имеются ссылки для загрузки образов, исходников и самих
     пакетов для установки xbmc на slackware.
 
-<!-- end list -->
 
   - [Vector Linux](http://vectorlinux.com) - Нацелен прежде всего на
     офисные рабочие станции.
 
-<!-- end list -->
 
   - [Zenwalk](http://zenwalk.org) - Бывший MiniSlack, десктопный
     дистрибутив, ориентированный на маломощные ПК. В качестве
@@ -130,12 +123,10 @@ Linux, в том числе поможет в установке системы 
     оригинал, книга доступна в различных форматах: HTML, Post
     script, PDF
 
-<!-- end list -->
 
 1.  [jack.kiev.ua](http://jack.kiev.ua/docs/slackbook/index.html) -
     русский перевод SlackBook версии 2
 
-<!-- end list -->
 
 1.  [OpenNET](http://www.opennet.ru/docs/RUS/slackware) - та же версия,
     материал опубликованный на OpenNET
@@ -144,13 +135,11 @@ Linux, в том числе поможет в установке системы 
 
 1.  Читайте SlackBook\!
 
-<!-- end list -->
 
 1.  [Установка
     Slackware](http://www.slackware.ru/wiki/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_Slackware)
     статья на slackware.ru/wiki
 
-<!-- end list -->
 
 1.  Скорей всего, следующая статья: [Установка
     Slackware](http://www.slackguide.com/content/view/20/11/) на ресурсе
@@ -194,18 +183,15 @@ Language](http://docs.slackware.com/slackware:localization)
 1.  [Инструкция по русификации
     Firefox](https://mozilla-russia.org/products/firefox/l10n.html)
 
-<!-- end list -->
 
 1.  Slackware SlackBuild script:
     [1](http://slackware.su/forum/index.php/topic,106.0.html),
     [2](http://taper.alienbase.nl/mirrors/people/alien/slackbuilds/mozilla-firefox-l10n/)
 
-<!-- end list -->
 
 1.  И последний пункт, воспользоваться версией от дистрибутива в котором
     предусмотрена локализация
 
-<!-- end list -->
 
   -
     \* Salix, только учтите, они собирают esr-версию, которую
@@ -215,7 +201,6 @@ Language](http://docs.slackware.com/slackware:localization)
     Open
     Office](http://docs.salixos.org/wiki/Get_localized_Firefox_and_Open_Office)).
 
-<!-- end list -->
 
   -
     \* В репозитории
@@ -239,34 +224,28 @@ infozip, а через p7zip, н-р: архивы можно просматри�
 
   - infozip , способы:
 
-<!-- end list -->
 
 1.  [пересборка infozip](http://slackware.su/forum/index.php?topic=33.0)
     с патчами (libnatspec) для zip-архивов;
 
-<!-- end list -->
 
 1.  подключаем репозиторий
     [deepstyle](http://slackboost.blogspot.ru/2014/10/slackware.html) ,
     как это выглядит для slackpkg+:
 
-<!-- end list -->
 
   -
     MIRRORPLUS\['deepstyle'\]=<ftp://download.deepstyle.org.ua/pub/slackware/slackboost-14.1/slackboost/>
 
-<!-- end list -->
 
   -
     устанавливаем приоритет: PKGS_PRIORITY=( deepstyle:infozip
     deepstyle:libnatspec )
 
-<!-- end list -->
 
   -
     и устанавливаем: infozip и libnatspec оттуда
 
-<!-- end list -->
 
   - [p7zip](https://www.linux.org.ru/forum/desktop/11489814?lastmod=1428716743137#comment-11493559)
     - И в случае необходимости здесь бы я Вам посоветовал бы собрать
@@ -291,7 +270,6 @@ infozip, а через p7zip, н-р: архивы можно просматри�
     - уже готовый пропатченый пакет man с поддержкой utf8 может быть
     найден у них в репозитории
 
-<!-- end list -->
 
   - Еще шпаргалка, если вас угораздило использовать man-pages-ru на
     koi8r от ALT или те которые собраны были в пакет во времена
@@ -303,7 +281,6 @@ infozip, а через p7zip, н-р: архивы можно просматри�
     (порядок и действия для сборки man-pages-ru-alt подсмотреть можно в
     [Arch/AUR](https://aur.archlinux.org/packages/man-pages-ru-alt/))
 
-<!-- end list -->
 
   - И если все так на каких-то руководствах (man xfce4-terminal)
     встречается непростая кодировка и не хочется заморачиваться
@@ -459,11 +436,9 @@ mirror](http://docs.salixos.org/wiki/How_to_create_a_public_Salix_mirror)
 
   - **alsamixer** - настройка уровня громкости и прочее
 
-<!-- end list -->
 
   - **alsactl init** - автоопрделение карточки
 
-<!-- end list -->
 
   - **alsactl store** - cохранение настроек, что бы они после
     перезагрузки системы были сохранены
@@ -567,7 +542,6 @@ applied](https://www.virtualbox.org/ticket/6830), да и в обще как-т�
     hosts](https://www.virtualbox.org/wiki/Downloads) - All
     distributions i386 | AMD64
 
-<!-- end list -->
 
 1.  Устанавливаем:
 
@@ -656,7 +630,6 @@ Infinality:
     вверху в поиске вбиваем необходимое нам название искомой игры,
     библиотеки, эмулятора и т.д.
 
-<!-- end list -->
 
   - [Gens/GS](http://segaretro.org/Gens/GS), эмулятор SEGA/Genesis,
     доступен собранный пакет Gens/GS Release 7 (Slackware 13.0,
@@ -877,70 +850,57 @@ MySQL. Для этого нужно сделать исполняемым фай
 
 1.  [slackware.com](http://slackware.com) - основной ресурс
 
-<!-- end list -->
 
 1.  [docs.slackware.com](http://docs.slackware.com) - мультиязычный
     проект документации Slackware
 
-<!-- end list -->
 
 1.  [alien.slackbook.org](http://alien.slackbook.org/dokuwiki/doku.php)
     - Alien BOB's Wiki
 
-<!-- end list -->
 
 1.  [slackwiki.org](http://slackwiki.org) - SlackWiki
 
-<!-- end list -->
 
 1.  [собрание различных ссылок](http://www.slackwiki.com/Links) от
     SlackWiki
 
-<!-- end list -->
 
 1.  [linuxquestions.org/questions/slackware-14](http://www.linuxquestions.org/questions/slackware-14/)
     - LQ-Slackware - официальный форум (en) на Linux Questions
 
-<!-- end list -->
 
 1.  [slackware.ru](http://slackware.ru) - информационный ресурс,
     посвящённый дистрибутиву Slackware Linux и информационным
     технологиям в целом.
 
-<!-- end list -->
 
 1.  [slackware.su](http://slackware.su) - статьи и форум, посвящённые
     Slackware Linux.
 
-<!-- end list -->
 
 1.  [slackware.pp.ru](http://slackware.pp.ru) - xороший сайт с подробным
     описанием установки, русификации и настройки. Может быть временно в
     дауне.
 
-<!-- end list -->
 
 1.  [slackworld.berlios.de/links](http://slackworld.berlios.de/links.html)
     - ссылки на дополнительные материалы по Slackware.
 
-<!-- end list -->
 
 1.  [slackblogs.blogspot.com](http://slackblogs.blogspot.com/) -
     комментарии про последние обновления в -current и
     дополнительных репозиториях.
 
-<!-- end list -->
 
 1.  [MLED](http://www.microlinux.fr/mled.php) - Microlinux Enterprise
     Desktop и описание на русском про проект MLED на
     [zenway.ru](http://zenway.ru/page/meld).
 
-<!-- end list -->
 
 1.  [переводы README](http://wiki.slackware.su/wiki:od) различных файлов
     из дерева дстрибутива на wiki.slackware.su
 
-<!-- end list -->
 
 1.  [alv.me](http://alv.me/?p=5911) или [IBM
     dW](http://www.ibm.com/search/csass/search/?q=%D0%9F%D0%BE%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B2+Salix&dws=rudw&ibm-search.x=0&ibm-search.y=0&sn=dw&lang=ru&cc=RU&ddr=&en=utf&lo=ru&hpp=20)
@@ -949,32 +909,26 @@ MySQL. Для этого нужно сделать исполняемым фай
     (управление пакетами, утилиты конфигурирования), а также его
     назначению и месту в общей картине мира Linux.
 
-<!-- end list -->
 
 1.  [koptev.ru](http://koptev.ru/docs/oracle10) - установка Oracle на
     Slackware
 
-<!-- end list -->
 
 1.  [Slint](http://slint.fr/ru/slint.html) - Проект интернационализации
     Slackware
 
-<!-- end list -->
 
 1.  [Recommended UID/GIDs](http://slackbuilds.org/uid_gid.txt) for use
     with SlackBuilds.org scripts
 
-<!-- end list -->
 
 1.  Slackware [Banners, Logos,
     Propaganda](http://www.slackware.com/~msimons/slackware/grfx/)
 
-<!-- end list -->
 
 1.  [Slackware Linux
     Graphics](http://slackware-linux-graphics.blogspot.ru/)
 
-<!-- end list -->
 
 1.  [Создание минимального CD
     Slackware](http://unixforum.org/index.php?s=c6fb2114f3593e7d88dc23ebe3c38730&showtopic=135998&view=findpost&p=1252280)

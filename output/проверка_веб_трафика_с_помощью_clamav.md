@@ -53,11 +53,9 @@
 
   - [1](http://ylsoftware.com/?action=news&na=viewfull&news=390)
 
-<!-- end list -->
 
   - [2](http://www.lissyara.su/?id=1662)
 
-<!-- end list -->
 
   - [3](http://www.linux16.net/node/390)
 

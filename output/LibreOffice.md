@@ -5,24 +5,19 @@ GNU/Linux, Mac OS и Windows, форк OpenOffice.org.
 
   - Writer - мощный и удобный текстовый процессор;
 
-<!-- end list -->
 
   - Calc - редактор электронных таблиц (а не калькулятор, как может
     показаться по названию);
 
-<!-- end list -->
 
   - Draw - простой редактор векторной графики;
 
-<!-- end list -->
 
   - Math - редактор математических формул;
 
-<!-- end list -->
 
   - Impress - программа для создания и показа презентаций;
 
-<!-- end list -->
 
   - Base - СУБД;
 
@@ -70,16 +65,13 @@ Bugzilla](https://bugs.freedesktop.org/show_bug.cgi?id=32581)
 
   - [Официальный сайт проекта](http://www.libreoffice.org/)
 
-<!-- end list -->
 
   - [Загрузить](http://www.libreoffice.org/download/)
 
-<!-- end list -->
 
   - [Часто задаваемые вопросы по LibreOffice и
     OpenOffice](http://wiki.forumooo.ru)
 
-<!-- end list -->
 
   - [LibreOffice PPA для
     Ubuntu](https://launchpad.net/~libreoffice/+archive/ppa)

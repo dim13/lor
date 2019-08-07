@@ -67,7 +67,6 @@
   - *checkbox* - кнопка ведёт себя как элемент *checkbox*, она может
     быть в двух состояниях - нажата и отжата:
 
-<!-- end list -->
 
     <nowiki>
     <button label="Press Me" type="checkbox" oncommand="alert('Clicked');"/>
@@ -76,7 +75,6 @@
   - *menu* - кнопка с выпадающим меню, когда на неё кликают. Само меню
     задаётся как элемент *menupopup* внутри кнопки:
 
-<!-- end list -->
 
     <nowiki>
     <button label="Press Me" type="menu">

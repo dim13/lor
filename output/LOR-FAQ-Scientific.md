@@ -352,14 +352,12 @@ Python.
     Масквелла (Maxwell) на C++ с биндингами на Python. Основное
     назначение - область нанофотоники.
 
-<!-- end list -->
 
   - [Meep](http://ab-initio.mit.edu/wiki/index.php/Meep) Meep (or MEEP)
     is a free finite-difference time-domain (FDTD) simulation software
     package developed at MIT to model electromagnetic systems, along
     with our MPB eigenmode package.
 
-<!-- end list -->
 
   - [openEMS](http://openems.de/start/index.php) -- пакет для решения
     уравнений Максвелла методом конечных разностей во временной
@@ -425,7 +423,6 @@ Python.
     технические науки, впрочем, качество там довольно
     сомнительное.
 
-<!-- end list -->
 
   - [Green Tea Press](http://www.greenteapress.com/) издательство
     объединяет различные книги в сериях Think X, и How to Think
@@ -433,7 +430,6 @@ Python.
     начального уровня, но написаны специалистами в своей
     области. Доступны их исходные тексты в TeX.
 
-<!-- end list -->
 
   - [МЦНМО](http://www.mccme.ru/free-books/)Часть книг в области
     математики распостраняется под свободными лицензиями

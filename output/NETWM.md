@@ -406,7 +406,6 @@ NETWM. Содержит идентификатор Window окна-ребёнк�
   - **_NET_VIRTUAL_ROOTS**
   - **_NET_DESKTOP_LAYOUT**
 
-<!-- end list -->
 
   - **_NET_SHOWING_DESKTOP**
 
@@ -658,7 +657,6 @@ NETWM. Содержит идентификатор Window окна-ребёнк�
 
   - **_NET_WM_HANDLED_ICONS**
 
-<!-- end list -->
 
   - **_NET_WM_USER_TIME**
 
@@ -689,7 +687,6 @@ NETWM. Содержит идентификатор Window окна-ребёнк�
   - **_NET_WM_FULL_PLACEMENT**
   - **_NET_WM_SUPPORTED_LIST**
 
-<!-- end list -->
 
   - **_NET_WM_WINDOW_OPACITY**
 
