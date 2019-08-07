@@ -145,4 +145,4 @@ cd "/home/<user>/UT2004/System"
   - [Русский Planet Unreal](http://www.planetunreal.ru/) — Русское
     сообщество анрилеров.
 
-[category:Игры](category:Игры "wikilink")
+[category:Игры](category:Игры)

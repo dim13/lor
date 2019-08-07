@@ -197,4 +197,4 @@ Weather](http://weather.yahoo.com/). Далее полученный XML пре�
   - [(Де)сериализатор
     XML](http://www.kawa.net/works/js/xml/objtree-e.html)
 
-[Category:XUL](Category:XUL "wikilink")
+[Category:XUL](Category:XUL)

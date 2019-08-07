@@ -125,6 +125,6 @@ driver, и модуль ядра
 
 И наслаждаться optimus на linux. :)
 
-[Category: Hardware](Category:_Hardware "wikilink") [Category:
-nVidia](Category:_nVidia "wikilink") [Category:
-Bumblebee](Category:_Bumblebee "wikilink")
+[Category: Hardware](Category:_Hardware) [Category:
+nVidia](Category:_nVidia) [Category:
+Bumblebee](Category:_Bumblebee)

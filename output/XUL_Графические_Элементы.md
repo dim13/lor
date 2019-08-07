@@ -94,4 +94,4 @@
     только одна кнопка типа *radio* может быть нажата в группе.
   - *repeat* - кнопка с автоповтором, пока мышь держится нажатой на ней.
 
-[Category:XUL](Category:XUL "wikilink")
+[Category:XUL](Category:XUL)

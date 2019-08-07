@@ -69,4 +69,4 @@ Amarok. Установить их можно из дополнительного
 [2](http://software.opensuse.org/search) или
 [3](http://packages.opensuse-community.org/)
 
-[Category:Дистрибутивы](Category:Дистрибутивы "wikilink")
+[Category:Дистрибутивы](Category:Дистрибутивы)

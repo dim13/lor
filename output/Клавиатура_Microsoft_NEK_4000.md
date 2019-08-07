@@ -33,5 +33,5 @@
 После всех вышеперечисленных телодвижений "zoom" начинает работать как
 прокрутка колесом мыши.
 
-[Category:Hardware](Category:Hardware "wikilink") [Category:Полезные
-советы](Category:Полезные_советы "wikilink")
+[Category:Hardware](Category:Hardware) [Category:Полезные
+советы](Category:Полезные_советы)

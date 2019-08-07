@@ -66,7 +66,7 @@ Sibbald
 
 # Установка
 
-Основная статья: [Bacula/Быстрый старт](Bacula_Быстрый_старт "wikilink")
+Основная статья: [Bacula/Быстрый старт](Bacula_Быстрый_старт)
 
 Установка по умолчанию, только до состояния "работает".
 
@@ -75,7 +75,7 @@ Sibbald
 # Pools, Volumes and Labels
 
 Основная статья: [Bacula/Pools, Volumes and
-Labels](Bacula_Pools,_Volumes_and_Labels "wikilink")
+Labels](Bacula_Pools,_Volumes_and_Labels)
 
 Понимание использования пулов, томов и меток.
 
@@ -93,7 +93,7 @@ Labels](Bacula_Pools,_Volumes_and_Labels "wikilink")
     файлам.
 
 [Bacula/Использование
-накопителей](Bacula_Использование_накопителей "wikilink")
+накопителей](Bacula_Использование_накопителей)
 
 ## Вынос части конфигурации в отдельные файлы
 
@@ -183,4 +183,4 @@ file.
     /usr/share/doc/bacula-common-\[version\]/examples/database/ для
     этого есть примеры.
 
-[Category:Bacula](Category:Bacula "wikilink")
+[Category:Bacula](Category:Bacula)

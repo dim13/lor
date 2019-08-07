@@ -981,4 +981,4 @@ MySQL. Для этого нужно сделать исполняемым фай
     и сами образы на основе релизов от AlienBOB:
     [slackware-mini-install.iso](http://www.slackware.com/~alien/slackboot/mini/)
 
-[Category:Дистрибутивы](Category:Дистрибутивы "wikilink")
+[Category:Дистрибутивы](Category:Дистрибутивы)

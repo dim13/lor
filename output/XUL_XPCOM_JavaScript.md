@@ -13,7 +13,7 @@
 
 Подготовка включает в себя все разделы вплоть до **Генерация заголовка и
 xpt библиотеки** включительно в статье
-[XUL_XPCOM](XUL_XPCOM "wikilink"). Тут ничего не поменялось, кроме
+[XUL_XPCOM](XUL_XPCOM). Тут ничего не поменялось, кроме
 разве что GUID.
 
 ## Пишем JavaScript XPCOM
@@ -118,9 +118,9 @@ xpt библиотеки** включительно в статье
 
 Копируем .xpt библиотеку и .js файл в каталог *components* нашего XUL
 проекта, и создаём .xul файл абсолютно идентичный таковому из статьи
-[Пишем XPCOM компонент на C++](XUL_XPCOM "wikilink"). Запуск и результат
+[Пишем XPCOM компонент на C++](XUL_XPCOM). Запуск и результат
 также должны совпадать с результатами из статьи [Пишем XPCOM компонент
-на C++](XUL_XPCOM "wikilink") - Вы должны увидеть окно с текстом **3 +
+на C++](XUL_XPCOM) - Вы должны увидеть окно с текстом **3 +
 4 = 7** внутри.
 
 ## Анализ
@@ -139,4 +139,4 @@ XPCOM компонент реализован не на C++, а на JavaScript.
   - [Создание XPCOM компонента на
     JavaScript-2](http://www.builderau.com.au/program/soa/Creating_XPCOM_components_with_JavaScript/0,339024614,339206503,00.htm)
 
-[Category:XUL](Category:XUL "wikilink")
+[Category:XUL](Category:XUL)

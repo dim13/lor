@@ -1,5 +1,5 @@
 **Arch Linux** — простой, легкий, оптимизированный под i686 и x86_64
-дистрибутив операционной системы [Linux](Linux "wikilink"),
+дистрибутив операционной системы [Linux](Linux),
 основанный на идеях дистрибутива CRUX. Рассчитан на опытных
 пользователей и использует собственный менеджер пакетов pacman и
 похожую на порты систему сборки пакетов ABS (Arch Build System).
@@ -42,7 +42,7 @@
   - [Официальная русскоязычная
     Вики](http://wiki.archlinux.org/index.php/Main_Page_\(Русский\))
 
-[Category:Дистрибутивы](Category:Дистрибутивы "wikilink")
+[Category:Дистрибутивы](Category:Дистрибутивы)
 
 1.  Judd Vinet (2003-07-21) [Arch Linux 0.5
     Released](http://www.archlinux.org/news/25/).

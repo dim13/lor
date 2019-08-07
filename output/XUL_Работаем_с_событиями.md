@@ -539,4 +539,4 @@ DOM предоставляет пользователю несколько ти�
   - [3](http://developer.mozilla.org/en/DOM/)
   - [4](http://developer.mozilla.org/en/Gecko_DOM_Reference/Examples#Example_5:_Event_Propagation)
 
-[Category:XUL](Category:XUL "wikilink")
+[Category:XUL](Category:XUL)

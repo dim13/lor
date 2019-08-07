@@ -277,4 +277,4 @@ Guide, а также прогнать пробное задание, если и
 По материалам
 [ru-bacula](https://groups.google.com/forum/#!forum/ru-bacula).
 
-[Category:Bacula](Category:Bacula "wikilink")
+[Category:Bacula](Category:Bacula)

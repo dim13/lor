@@ -177,5 +177,5 @@
         (princ "> ") (force-output)
         (eval (eval (read)))))
 
-[Category:LOR-contest](Category:LOR-contest "wikilink")
-[Category:Lisp](Category:Lisp "wikilink")
+[Category:LOR-contest](Category:LOR-contest)
+[Category:Lisp](Category:Lisp)

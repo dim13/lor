@@ -61,6 +61,6 @@
 
   - [3](http://www.linux16.net/node/390)
 
-[Category:Администрирование](Category:Администрирование "wikilink")
-[Category:Сети и интернет](Category:Сети_и_интернет "wikilink")
-[Category:Безопасность](Category:Безопасность "wikilink")
+[Category:Администрирование](Category:Администрирование)
+[Category:Сети и интернет](Category:Сети_и_интернет)
+[Category:Безопасность](Category:Безопасность)

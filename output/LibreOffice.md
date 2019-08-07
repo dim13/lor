@@ -62,7 +62,7 @@ opensuse-bugs](http://lists.suse.com/opensuse-bugs/2011-04/msg02677.html)
 Bugzilla](https://bugs.freedesktop.org/show_bug.cgi?id=32581)
 
 **FIXME**: надо показать как красиво, быстро и аккуратно транслитировать
-строки. [Андрей](User:adriano32 "wikilink") 07-Jun-2011 17:35 MSD
+строки. [Андрей](User:adriano32) 07-Jun-2011 17:35 MSD
 
 ## Полезные советы по работе с LibreOffice
 
@@ -84,5 +84,5 @@ Bugzilla](https://bugs.freedesktop.org/show_bug.cgi?id=32581)
   - [LibreOffice PPA для
     Ubuntu](https://launchpad.net/~libreoffice/+archive/ppa)
 
-[Category:Коллекция ПО](Category:Коллекция_ПО "wikilink")
-[Category:Офисные пакеты](Category:Офисные_пакеты "wikilink")
+[Category:Коллекция ПО](Category:Коллекция_ПО)
+[Category:Офисные пакеты](Category:Офисные_пакеты)

@@ -167,7 +167,7 @@ maxcom-а](http://www.linux.org.ru/people/maxcom)).
 
 <references/>
 
-[Category:Linux.org.ru](Category:Linux.org.ru "wikilink")
+[Category:Linux.org.ru](Category:Linux.org.ru)
 
 1.  Мы написали об этом потому, что [не все
     пользователи](http://www.linux.org.ru/forum/lor-source/7635068)

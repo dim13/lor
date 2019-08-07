@@ -137,4 +137,4 @@ IBM](http://www14.software.ibm.com/webapp/set2/sas/f/gpfs/home.html).
     - короткая и понятная статья содержит минимум, необходимый для
     запуска кластера.
 
-[Category:Файловые системы](Category:Файловые_системы "wikilink")
+[Category:Файловые системы](Category:Файловые_системы)

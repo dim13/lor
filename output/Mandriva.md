@@ -92,4 +92,4 @@ hostname, то есть по минимуму в файле /etc/hostname:
 
 [Mandriva Russia](http://mandriva.ru)
 
-[Category:Дистрибутивы](Category:Дистрибутивы "wikilink")
+[Category:Дистрибутивы](Category:Дистрибутивы)

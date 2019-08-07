@@ -46,4 +46,4 @@ score стал меньше, чем текущее значение нижнег
 срока ожидания, не подтвержденная публикация перестает отображаться,
 но доступна через статистику пользователя.
 
-[Category:Linux.org.ru](Category:Linux.org.ru "wikilink")
+[Category:Linux.org.ru](Category:Linux.org.ru)

@@ -158,7 +158,7 @@ Kubuntu 13.04. Решение — в настройках используемо
 ## Статьи в этой wiki
 
   - [Установка Ubuntu через другой GNU/Linux
-    (debootstrap)](Установка_Ubuntu_через_другой_GNU_Linux_\(debootstrap\) "wikilink")
+    (debootstrap)](Установка_Ubuntu_через_другой_GNU_Linux_\(debootstrap\))
 
 ## Ссылки
 
@@ -169,4 +169,4 @@ Kubuntu 13.04. Решение — в настройках используемо
 [3](http://ubuntuguide.org) — подробный FAQ, в том числе и на русском
 языке
 
-[Category:Дистрибутивы](Category:Дистрибутивы "wikilink")
+[Category:Дистрибутивы](Category:Дистрибутивы)

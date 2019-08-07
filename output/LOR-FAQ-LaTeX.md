@@ -158,4 +158,4 @@ fontenc и inputenc, и компиляция документа pdflatex. При
 
 [Источник](http://www.linux.org.ru/forum/general/9128352?cid=9134170)
 
-[Category:Полезные советы](Category:Полезные_советы "wikilink")
+[Category:Полезные советы](Category:Полезные_советы)

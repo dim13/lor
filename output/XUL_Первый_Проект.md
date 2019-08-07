@@ -236,4 +236,4 @@ prefs.js, в котором описываются настройки для д�
   - ![Исходники example1 (переименуйте в .tar.bz2)](example1.tar.bz2
     "Исходники example1 (переименуйте в .tar.bz2)")
 
-[Category:XUL](Category:XUL "wikilink")
+[Category:XUL](Category:XUL)

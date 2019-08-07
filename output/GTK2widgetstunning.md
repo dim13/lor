@@ -157,7 +157,7 @@
 
 -----
 
-\--[Alexander Butenko](User:mrdeath "wikilink") 09-Sep-2008 08:50 MSD
+\--[Alexander Butenko](User:mrdeath) 09-Sep-2008 08:50 MSD
 
 ''' Настройка диалога выбора файлов '''
 
@@ -166,4 +166,4 @@
 $XDG_CONFIG_HOME/gtk-2.0/gtkfilechooser.ini поменять значение
 параметра StartupMode с recent на cwd.
 
-[Category:Программирование](Category:Программирование "wikilink")
+[Category:Программирование](Category:Программирование)

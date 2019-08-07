@@ -57,14 +57,14 @@ FIDO](http://groups.google.ru/group/fido7.ru.linux/msg/6ec25f8a0acba63e)
     нужно было вводить при каждом постинге сообщения (ник
     запоминался в cookie)\[12\].
     [fagot](http://www.linux.org.ru/people/fagot/profile) добавил [LOR
-    FAQ](Lor-faq "wikilink") v1.0\[13\]
+    FAQ](Lor-faq) v1.0\[13\]
 
 ### 2005 год
 
   - 18 июля: количество сообщений достигло 1 млн\[14\].
   - июль: замена Red Hat Linux 9 на Fedora Core 4. Сайт недоступен
     несколько дней из-за рассыпавшегося жёсткого диска.
-  - сентябрь: новая версия [LOR FAQ](Lor-faq "wikilink")\[15\]
+  - сентябрь: новая версия [LOR FAQ](Lor-faq)\[15\]
 
 ### 2006 год
 
@@ -91,7 +91,7 @@ FIDO](http://groups.google.ru/group/fido7.ru.linux/msg/6ec25f8a0acba63e)
   - февраль: wiki\[18\]. Замена веб-сервера на
     [Tomcat](http://tomcat.apache.org/).
   - 6 августа: количество сообщений достигло 3 млн.
-  - октябрь: разметка сообщений [LORCODE](Lorcode "wikilink")\[19\].
+  - октябрь: разметка сообщений [LORCODE](Lorcode)\[19\].
     Замена веб-сервера Resin на [Tomcat](http://tomcat.apache.org/)
   - декабрь: сайт впал в кому на несколько дней из-за непонятного сбоя
     железа, случившегося после проблем с электропитанием в
@@ -193,7 +193,7 @@ FIDO](http://groups.google.ru/group/fido7.ru.linux/msg/6ec25f8a0acba63e)
 
 </div>
 
-[Category:Linux.org.ru](Category:Linux.org.ru "wikilink")
+[Category:Linux.org.ru](Category:Linux.org.ru)
 
 1.  [Новости — Linux.org.ru :: Зарегистрирован домен
     linux.org.ru](http://www.linux.org.ru/news/linux-org-ru/7)

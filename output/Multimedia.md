@@ -1120,5 +1120,5 @@ tcpmp (преемник betaplayer).
 А такие плееры, как deadbeef, qmmp и xmms2(рассматривает cue как
 плейлист) умеют играть cue нативно.
 
-[Category:Мультимедиа](Category:Мультимедиа "wikilink") [Category:L.O.R.
-FAQ](Category:L.O.R._FAQ "wikilink")
+[Category:Мультимедиа](Category:Мультимедиа) [Category:L.O.R.
+FAQ](Category:L.O.R._FAQ)

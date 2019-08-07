@@ -936,4 +936,4 @@ reparent для целей композитинга. Таким образом, 
   - [Qt проект с namespace netwm](http://rusfolder.com/34174585)
   - [Qt проект, пример панели](http://rusfolder.com/34174587)
 
-[Category:Net WM](Category:Net_WM "wikilink")
+[Category:Net WM](Category:Net_WM)

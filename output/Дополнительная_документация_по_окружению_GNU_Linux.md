@@ -60,7 +60,7 @@
   - [Introduction to text manipulation on UNIX-based
     systems](http://www.ibm.com/developerworks/aix/library/au-unixtext/index.html)
   - [Материалы по многострадальному /usr и Леннарту
-    Поттерингу](Материалы_по_многострадальному_usr_и_Леннарту_Поттерингу "wikilink")
+    Поттерингу](Материалы_по_многострадальному_usr_и_Леннарту_Поттерингу)
 
 <!-- end list -->
 
@@ -172,5 +172,5 @@
       - [Setting up UNIX Sixth
         Edition](http://gunkies.org/wiki/Setting_up_UNIX_Sixth_Edition)
 
-[Category:Полезные советы](Category:Полезные_советы "wikilink")
-[Category:L.O.R. FAQ](Category:L.O.R._FAQ "wikilink")
+[Category:Полезные советы](Category:Полезные_советы)
+[Category:L.O.R. FAQ](Category:L.O.R._FAQ)

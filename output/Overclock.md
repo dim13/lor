@@ -184,4 +184,4 @@ C помощью aticonfig также можно изменить и измер�
 
 60 - это скорость вращения в процентах, максимум 100.
 
-[Category:Hardware](Category:Hardware "wikilink")
+[Category:Hardware](Category:Hardware)

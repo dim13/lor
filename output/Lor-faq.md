@@ -2,7 +2,7 @@
 
 **Составители - Метляев Евгений AKA jackill, Сергей Сикорский AKA fagot,
 Тимур Тучковенко AKA gr_buza, Тучинский Артем AKA JB и многие другие
-(см. раздел [Благодарности](Благодарности "wikilink"))**
+(см. раздел [Благодарности](Благодарности))**
 
 Мы не будем писать тут о том, что такое Linux, зачем оно надо и т.д. Об
 этом уже много написано, в том числе и в других похожих документах.
@@ -15,71 +15,71 @@
 
 ## Вступление
 
-1.  [Правовая часть](Правовая_часть "wikilink")
-2.  [Об этом FAQ](Об_этом_FAQ "wikilink")
-3.  [Вопросы по сайту](Linux-org-ru "wikilink") и [история его
-    возникновения](LOR_History "wikilink")
+1.  [Правовая часть](Правовая_часть)
+2.  [Об этом FAQ](Об_этом_FAQ)
+3.  [Вопросы по сайту](Linux-org-ru) и [история его
+    возникновения](LOR_History)
 4.  [LORcode - код для визуального оформления сообщений на
-    LOR](Lorcode "wikilink")
+    LOR](Lorcode)
 5.  [Глоссарий (ну совсем неформальный
-    :)](Глоссарий_\(ну_совсем_неформальный_:\) "wikilink")
-6.  [Благодарности](Благодарности "wikilink")
+    :)](Глоссарий_\(ну_совсем_неформальный_:\))
+6.  [Благодарности](Благодарности)
 7.  [GNU Free Documentation
-    License](GNU_Free_Documentation_License "wikilink")
+    License](GNU_Free_Documentation_License)
 
 ## Дистрибутивы
 
-1.  [ALT Linux](ALT_Linux "wikilink")
-2.  [Arch Linux](Arch_Linux "wikilink")
-3.  [ASP Linux](ASP_Linux "wikilink")
-4.  [Debian](Debian "wikilink")
-5.  [Gentoo](Gentoo "wikilink")
-6.  [Mandriva](Mandriva "wikilink")
-7.  [openSUSE](openSUSE "wikilink")
-8.  [RedHat/Fedora](RedHat_Fedora "wikilink")
-9.  [Slackware](Slackware "wikilink")
-10. [Ubuntu](Ubuntu "wikilink")
-11. [OpenBSD](OpenBSD "wikilink")
+1.  [ALT Linux](ALT_Linux)
+2.  [Arch Linux](Arch_Linux)
+3.  [ASP Linux](ASP_Linux)
+4.  [Debian](Debian)
+5.  [Gentoo](Gentoo)
+6.  [Mandriva](Mandriva)
+7.  [openSUSE](openSUSE)
+8.  [RedHat/Fedora](RedHat_Fedora)
+9.  [Slackware](Slackware)
+10. [Ubuntu](Ubuntu)
+11. [OpenBSD](OpenBSD)
 
 ## Программное обеспечение
 
-1.  [Поиск ПО](Поиск_ПО "wikilink")
+1.  [Поиск ПО](Поиск_ПО)
 2.  [Программы для дома и
-    работы](Программы_для_дома_и_работы "wikilink")
-3.  [Сборка программ](Сборка_программ "wikilink")
+    работы](Программы_для_дома_и_работы)
+3.  [Сборка программ](Сборка_программ)
 
 ## Вопросы по системе
 
-1.  [Общее](General "wikilink")
-2.  [Основные команды](Основные_команды "wikilink")
+1.  [Общее](General)
+2.  [Основные команды](Основные_команды)
 3.  [Диски, приводы CD/DVD-RW и файловые
-    системы](Диски,_приводы_CD_DVD-RW_и_файловые_системы "wikilink")
-4.  [X-сервер](X-сервер "wikilink")
-5.  [Сеть](Network "wikilink")
-6.  [Железо](Hardware "wikilink")
+    системы](Диски,_приводы_CD_DVD-RW_и_файловые_системы)
+4.  [X-сервер](X-сервер)
+5.  [Сеть](Network)
+6.  [Железо](Hardware)
 7.  [КПК (PDA), смартфоны, сотовые
-    телефоны](КПК_\(PDA\),_смартфоны,_сотовые_телефоны "wikilink")
-8.  [Администрирование](Admin "wikilink")
-9.  [Безопасность](Linux_Security_FAQ "wikilink")
+    телефоны](КПК_\(PDA\),_смартфоны,_сотовые_телефоны)
+8.  [Администрирование](Admin)
+9.  [Безопасность](Linux_Security_FAQ)
 
 ## Работа с ПО
 
-1.  [Десктопные приложения](Desktop "wikilink")
-2.  [Мультимедиа](Multimedia "wikilink")
+1.  [Десктопные приложения](Desktop)
+2.  [Мультимедиа](Multimedia)
 3.  [Редактирование и преобразование аудио и видео
-    файлов](Редактирование_и_преобразование_аудио_и_видео_файлов "wikilink")
-4.  [Разработка](Development "wikilink")
-5.  [Наука](LOR-FAQ-Scientific "wikilink")
-6.  [Вопросы по LaTeX](LOR-FAQ-LaTeX "wikilink")
-7.  [Инженерное ПО](Инженерное_ПО "wikilink")
-8.  [Wine (свободная реализация Windows API)](Wine "wikilink")
-9.  [ПО виртуализации](Virtualization "wikilink")
+    файлов](Редактирование_и_преобразование_аудио_и_видео_файлов)
+4.  [Разработка](Development)
+5.  [Наука](LOR-FAQ-Scientific)
+6.  [Вопросы по LaTeX](LOR-FAQ-LaTeX)
+7.  [Инженерное ПО](Инженерное_ПО)
+8.  [Wine (свободная реализация Windows API)](Wine)
+9.  [ПО виртуализации](Virtualization)
 
 ## Программирование
 
 1.  [Lisp LINUX.ORG.RU Frequently Asked
-    Questions](lisp-lor-faq "wikilink")
+    Questions](lisp-lor-faq)
 2.  [Tcl/Tk LINUX.ORG.RU Frequently Asked
-    Questions](tcl_tk-lor-faq "wikilink")
+    Questions](tcl_tk-lor-faq)
 3.  [Ruby LINUX.ORG.RU Frequently Asked
-    Questions](lor-faq-ruby "wikilink")
+    Questions](lor-faq-ruby)

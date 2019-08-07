@@ -156,4 +156,4 @@
   - может входить в сборку бакулы
   - может потребоваться установить некоторые модули perl, как perl-GD
 
-[Category:Bacula](Category:Bacula "wikilink")
+[Category:Bacula](Category:Bacula)

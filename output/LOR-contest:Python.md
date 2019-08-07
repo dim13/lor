@@ -1,4 +1,4 @@
-Так же, как и для [Ocaml](LOR-contest:Ocaml "wikilink"), программа
+Так же, как и для [Ocaml](LOR-contest:Ocaml), программа
 состоит из четырех файлов -- advworld.py, advserver.py,
 hclient.py, roboclient.py.
 
@@ -273,4 +273,4 @@ hclient.py, roboclient.py.
             'PYROLOC://%s:%s/adventure_server' % (argv[1], argv[2]))
         Robot(server).play()
 
-[Category:LOR-contest](Category:LOR-contest "wikilink")
+[Category:LOR-contest](Category:LOR-contest)

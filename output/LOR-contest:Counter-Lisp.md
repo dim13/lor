@@ -9,7 +9,7 @@ make-lisp-classifier, использование конкретного макр
 Примечание: текст слегка не влез по ширине, поэтому советую скопипастить
 его для изучения и/или использования. Если кто-нибудь отформатирует,
 буду очень благодарен --[Евгений
-Косенко](User:eugine_kosenko "wikilink") 05-Jul-2008 17:25 MSD
+Косенко](User:eugine_kosenko) 05-Jul-2008 17:25 MSD
 
     (require 'lexer)
     (in-package lexer)
@@ -179,4 +179,4 @@ make-lisp-classifier, использование конкретного макр
 
     (print-result (hi-stats (make-haskell-classifier (read-content "advworld.lisp"))))
 
-[Category:LOR-contest](Category:LOR-contest "wikilink")
+[Category:LOR-contest](Category:LOR-contest)

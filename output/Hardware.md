@@ -1705,5 +1705,5 @@ discovery. У китайцев эти макетки стоят от 10 до 100
 зависимости от модели. После отладки кода и разводки схемы в
 kicad можно приступать к изготовлению своего изделия.
 
-[Category:Hardware](Category:Hardware "wikilink") [Category:L.O.R.
-FAQ](Category:L.O.R._FAQ "wikilink")
+[Category:Hardware](Category:Hardware) [Category:L.O.R.
+FAQ](Category:L.O.R._FAQ)

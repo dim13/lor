@@ -28,4 +28,4 @@
 Учите английский - сэкономите себе кучу времени и будете всегда в курсе
 последних событий.
 
-[Category:L.O.R. FAQ](Category:L.O.R._FAQ "wikilink")
+[Category:L.O.R. FAQ](Category:L.O.R._FAQ)

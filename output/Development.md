@@ -1,18 +1,18 @@
 ## Программирование на XUL
 
-  - [XUL](XUL "wikilink")
+  - [XUL](XUL)
 
 ## Использование NETWM
 
-  - [NETWM](NETWM "wikilink")
+  - [NETWM](NETWM)
 
 ## Использование HAL
 
-  - [HAL](HAL "wikilink")
+  - [HAL](HAL)
 
 ## Введение в D-Bus
 
-  - [D-Bus](D-Bus "wikilink")
+  - [D-Bus](D-Bus)
 
 ## Ресурсы по Qt
 
@@ -106,7 +106,7 @@ Manual](http://developer.gnome.org/gdk/stable/gdk-General.html)
 
 ## F.A.Q. по языку Lisp
 
-  - [lisp-lor-faq](lisp-lor-faq "wikilink")
+  - [lisp-lor-faq](lisp-lor-faq)
 
 <!-- end list -->
 
@@ -249,4 +249,4 @@ Edition](http://www.amazon.com/exec/obidos/tg/detail/-/0130385603/qid=1046168352
 
 **Требуется доброволец для наполнения раздела\!**
 
-[Category:Программирование](Category:Программирование "wikilink")
+[Category:Программирование](Category:Программирование)

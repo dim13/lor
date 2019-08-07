@@ -377,4 +377,4 @@ which` `situations it doesn't work.`
     machine, changing the sample format or channel count and mixing
     several sounds into one are easily achieved using a sound server.
 
-[category:Системное ПО](category:Системное_ПО "wikilink")
+[category:Системное ПО](category:Системное_ПО)

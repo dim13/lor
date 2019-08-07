@@ -215,4 +215,4 @@
 storage, после чего направлять произвольный пул на произвольное
 устройство.
 
-[Category:Bacula](Category:Bacula "wikilink")
+[Category:Bacula](Category:Bacula)

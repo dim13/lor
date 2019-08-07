@@ -755,4 +755,4 @@ patches, infinality, etc) взамен этой \*/
 системы. Решение - добавить строчку "ntfs-3g"(без кавычек) перед
 звездочкой в файл /etc/filesystems
 
-[Category:L.O.R. FAQ](Category:L.O.R._FAQ "wikilink")
+[Category:L.O.R. FAQ](Category:L.O.R._FAQ)

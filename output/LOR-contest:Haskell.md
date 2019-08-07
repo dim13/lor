@@ -145,4 +145,4 @@
       world <- getWorld
       doRepl world world
 
-[Category:LOR-contest](Category:LOR-contest "wikilink")
+[Category:LOR-contest](Category:LOR-contest)

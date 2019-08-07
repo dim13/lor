@@ -255,4 +255,4 @@ Tcl/Tk](http://www.bin-co.com/tcl/tutorial/) - неплохой туториал
 небольшая заметка о том, как компилировать файлы .tcl для
 Windows
 
-[Category:Tcl](Category:Tcl "wikilink")
+[Category:Tcl](Category:Tcl)

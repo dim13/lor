@@ -73,4 +73,4 @@
 положения
 устарели)](http://www.altlinux.ru/media/otchet_dlia_publikacii/part4.html)
 
-[Category:Лицензии](Category:Лицензии "wikilink")
+[Category:Лицензии](Category:Лицензии)

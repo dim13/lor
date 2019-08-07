@@ -280,4 +280,4 @@ Quake III, Quake 4 и QuakeLive
 [Promode.ru](http://promode.ru/) — Russian Quake III Challenge Promode
 Arena Community
 
-[Category:Игры](Category:Игры "wikilink")
+[Category:Игры](Category:Игры)

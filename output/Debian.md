@@ -323,7 +323,7 @@ Forums](http://forums.debian.net/), [Debian Q/A](http://ask.debian.net/)
 ## Статьи в этой wiki
 
   - [Установка Debian через другой GNU/Linux
-    (debootstrap)](Установка_Debian_через_другой_GNU_Linux_\(debootstrap\) "wikilink")
+    (debootstrap)](Установка_Debian_через_другой_GNU_Linux_\(debootstrap\))
 
 ## Ссылки
 
@@ -359,6 +359,6 @@ Forums](http://forums.debian.net/), [Debian Q/A](http://ask.debian.net/)
 
 </div>
 
-[Category:Дистрибутивы](Category:Дистрибутивы "wikilink")
+[Category:Дистрибутивы](Category:Дистрибутивы)
 
 1.  <http://www.debian.org/doc/manuals/project-history/ch-intro.en.html#s1.2>
