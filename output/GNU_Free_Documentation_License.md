@@ -400,4 +400,3 @@ their use in free software.
 Неофициальный перевод данной лицензии можно получить здесь -
 [2](http://www.infolex.narod.ru/gpl_gnu/gfdlrus.html)
 
-[Category:Лицензии](Category:Лицензии)

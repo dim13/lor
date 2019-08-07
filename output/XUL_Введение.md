@@ -57,4 +57,3 @@ xulrunner-1.9.
   - [Gecko в
     Wikipedia](http://en.wikipedia.org/wiki/Gecko_\(layout_engine\))
 
-[Category:XUL](Category:XUL)

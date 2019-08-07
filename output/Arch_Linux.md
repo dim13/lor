@@ -42,7 +42,6 @@
   - [Официальная русскоязычная
     Вики](http://wiki.archlinux.org/index.php/Main_Page_\(Русский\))
 
-[Category:Дистрибутивы](Category:Дистрибутивы)
 
 1.  Judd Vinet (2003-07-21) [Arch Linux 0.5
     Released](http://www.archlinux.org/news/25/).

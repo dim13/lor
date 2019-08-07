@@ -178,4 +178,3 @@ Debian lenny.
 [1](http://www.postfix.org/documentation.html)
 [2](http://www.books.ru/shop/books/561452)
 
-[Category:Администрирование](Category:Администрирование)

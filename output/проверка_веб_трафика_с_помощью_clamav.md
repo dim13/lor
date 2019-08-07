@@ -61,6 +61,3 @@
 
   - [3](http://www.linux16.net/node/390)
 
-[Category:Администрирование](Category:Администрирование)
-[Category:Сети и интернет](Category:Сети_и_интернет)
-[Category:Безопасность](Category:Безопасность)

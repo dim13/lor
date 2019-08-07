@@ -166,4 +166,3 @@
 $XDG_CONFIG_HOME/gtk-2.0/gtkfilechooser.ini поменять значение
 параметра StartupMode с recent на cwd.
 
-[Category:Программирование](Category:Программирование)

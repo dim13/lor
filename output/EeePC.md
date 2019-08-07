@@ -177,7 +177,6 @@ GRUB_CMDLINE_LINUX_DEFAULT в файле /etc/default/grub и update-grub2)
   - <http://ru.wikipedia.org/wiki/ASUS_Eee_PC> - статья на Википедии.
   - <http://www.eeeuser.com/> - портал пользователей Eeepc
 
-[Category:Hardware](Category:Hardware)
 
 1.  Сделать таблицу в текстовом виде
 2.  <http://eee-pc.ru/wiki/лимит_записи_ssd>

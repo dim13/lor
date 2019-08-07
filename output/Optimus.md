@@ -125,6 +125,4 @@ driver, и модуль ядра
 
 И наслаждаться optimus на linux. :)
 
-[Category: Hardware](Category:_Hardware) [Category:
-nVidia](Category:_nVidia) [Category:
 Bumblebee](Category:_Bumblebee)

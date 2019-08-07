@@ -890,6 +890,3 @@ Network namespace это изолированный сетевой стек бе
 [Маршрутизация multicast в
 Linux](http://net-labs.in/2014/04/19/%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-multicast-%D0%B2-linux/)
 
-[Category:Сети и интернет](Category:Сети_и_интернет)
-[Category:Администрирование](Category:Администрирование)
-[Category:L.O.R. FAQ](Category:L.O.R._FAQ)

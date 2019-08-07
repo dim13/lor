@@ -492,5 +492,3 @@ product (Мой диск), size (4644896768)"*:
   - \[<http://ru.wikipedia.org/wiki/HAL_(freedesktop.org>) Статья на
     Wikipedia\]
 
-[Category:Системное ПО](Category:Системное_ПО)
-[Category:Программирование](Category:Программирование)

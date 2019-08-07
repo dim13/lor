@@ -11,4 +11,3 @@
 [Страница на
 Distrowatch](http://distrowatch.com/table.php?distribution=pardus)
 
-[Category:Дистрибутивы](Category:Дистрибутивы)

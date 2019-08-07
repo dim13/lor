@@ -145,4 +145,3 @@
       world <- getWorld
       doRepl world world
 
-[Category:LOR-contest](Category:LOR-contest)

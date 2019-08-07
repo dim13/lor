@@ -225,4 +225,3 @@ Q4Wine [2](http://q4wine.brezblock.org.ua)
 Теперь собираем пакет как в ссылке выше, устанавливаем в 64битную
 систему и играемся.
 
-[Category:Wine](Category:Wine)

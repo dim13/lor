@@ -191,7 +191,6 @@ FIDO](http://groups.google.ru/group/fido7.ru.linux/msg/6ec25f8a0acba63e)
 <references />
 
 
-[Category:Linux.org.ru](Category:Linux.org.ru)
 
 1.  [Новости — Linux.org.ru :: Зарегистрирован домен
     linux.org.ru](http://www.linux.org.ru/news/linux-org-ru/7)

@@ -249,4 +249,3 @@ Edition](http://www.amazon.com/exec/obidos/tg/detail/-/0130385603/qid=1046168352
 
 **Требуется доброволец для наполнения раздела\!**
 
-[Category:Программирование](Category:Программирование)

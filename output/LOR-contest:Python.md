@@ -273,4 +273,3 @@ hclient.py, roboclient.py.
             'PYROLOC://%s:%s/adventure_server' % (argv[1], argv[2]))
         Robot(server).play()
 
-[Category:LOR-contest](Category:LOR-contest)

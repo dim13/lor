@@ -84,5 +84,3 @@ Bugzilla](https://bugs.freedesktop.org/show_bug.cgi?id=32581)
   - [LibreOffice PPA для
     Ubuntu](https://launchpad.net/~libreoffice/+archive/ppa)
 
-[Category:Коллекция ПО](Category:Коллекция_ПО)
-[Category:Офисные пакеты](Category:Офисные_пакеты)

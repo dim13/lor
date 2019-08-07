@@ -1689,4 +1689,3 @@ JavaScript код из внешнего файла:
   - [3](http://www.getfirebug.com)
   - [4](http://xml.com/axml/target.html#sec-cdata-sect)
 
-[Category:XUL](Category:XUL)

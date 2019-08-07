@@ -9,4 +9,3 @@
     JavaScript](XUL_XPCOM_JavaScript)
 9.  [FAQ](XUL_FAQ)
 
-[Category:XUL](Category:XUL)

@@ -51,4 +51,3 @@ System. Для его настройки нужно знать язык прог
 [Руководство для
 новичков](http://awesome.naquadah.org/wiki/My_first_awesome)
 
-[Category:X Window System](Category:X_Window_System)

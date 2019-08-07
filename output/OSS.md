@@ -104,4 +104,3 @@ Site](http://developer.opensound.com/) — Сайт разработчиков O
 языке о том, что такое OSS и как его установить в Ubuntu Linux (подойдет
 и для Debian)
 
-[Category:Мультимедиа](Category:Мультимедиа)

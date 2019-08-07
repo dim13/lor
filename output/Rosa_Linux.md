@@ -37,4 +37,3 @@ Linux](http://wiki.rosalab.ru/ru/index.php/Заглавная_страница)
 
 [Форум сообщеста дистрибутива Rosa Linux](http://forum.rosalab.ru/)
 
-[Category:Дистрибутивы](Category:Дистрибутивы)

@@ -405,4 +405,3 @@ Reiser4. Тем не менее, с этим приходится считать
   - [Namesys things - Утилиты и патчи для
     Reiser4](http://chichkin_i.zelnet.ru/namesys/)
 
-[Category:Файловые системы](Category:Файловые_системы)

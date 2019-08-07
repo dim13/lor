@@ -31,4 +31,3 @@ Devices).
 
     # mount /dev/nbd0p1 /mnt
 
-[Category:Виртуализация](Category:Виртуализация)

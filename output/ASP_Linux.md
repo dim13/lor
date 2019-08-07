@@ -14,4 +14,3 @@ Fedora, но отличающийся иной программой устано
 
 [Полезная документация](http://community.asplinux.ru/documents/)
 
-[Category:Дистрибутивы](Category:Дистрибутивы)

@@ -482,4 +482,3 @@ Python.
 Прочее ПО для этой задачи можно найти на сайтах
 [SBML](http://www.sbml.org) и [SBGN](http://www.sbgn.org).
 
-[Category:Полезные советы](Category:Полезные_советы)

@@ -90,4 +90,3 @@
 Unix/Linux/BSD систем, интересно почитать всем, в т.ч. и опытым
 пользователям.
 
-[Category:L.O.R. FAQ](Category:L.O.R._FAQ)

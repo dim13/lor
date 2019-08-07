@@ -16,5 +16,4 @@ GNU/Linux.
 3.  [Часть 3. Практическое применение
     Lisp](Часть_3._Практическое_применение_Lisp)
 
-[Category:Lisp](Category:Lisp) [Category:L.O.R.
 FAQ](Category:L.O.R._FAQ)

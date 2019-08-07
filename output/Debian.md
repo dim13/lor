@@ -357,6 +357,5 @@ Forums](http://forums.debian.net/), [Debian Q/A](http://ask.debian.net/)
 <references />
 
 
-[Category:Дистрибутивы](Category:Дистрибутивы)
 
 1.  <http://www.debian.org/doc/manuals/project-history/ch-intro.en.html#s1.2>

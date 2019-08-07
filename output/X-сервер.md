@@ -1019,4 +1019,3 @@ gallium неработоспособен, сплошные сегфолты, а�
 
 ''
 
-[Category:X Window System](Category:X_Window_System)

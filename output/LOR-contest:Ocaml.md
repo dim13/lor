@@ -150,4 +150,3 @@ hclient.ml, roboclient.ml. Кроме этого, еще два файла, ко
     clean:
         rm -Rf *~ *.cm[io] advserver hclient roboclient
 
-[Category:LOR-contest](Category:LOR-contest)

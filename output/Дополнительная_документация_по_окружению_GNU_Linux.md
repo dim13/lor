@@ -172,5 +172,3 @@
       - [Setting up UNIX Sixth
         Edition](http://gunkies.org/wiki/Setting_up_UNIX_Sixth_Edition)
 
-[Category:Полезные советы](Category:Полезные_советы)
-[Category:L.O.R. FAQ](Category:L.O.R._FAQ)

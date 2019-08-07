@@ -183,4 +183,3 @@ file.
     /usr/share/doc/bacula-common-\[version\]/examples/database/ для
     этого есть примеры.
 
-[Category:Bacula](Category:Bacula)

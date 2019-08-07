@@ -18,4 +18,3 @@
   - [Emacs Starter
     Kit](https://github.com/technomancy/emacs-starter-kit)
 
-[Category:Lisp](Category:Lisp)

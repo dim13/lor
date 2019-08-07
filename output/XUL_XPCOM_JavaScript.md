@@ -139,4 +139,3 @@ XPCOM компонент реализован не на C++, а на JavaScript.
   - [Создание XPCOM компонента на
     JavaScript-2](http://www.builderau.com.au/program/soa/Creating_XPCOM_components_with_JavaScript/0,339024614,339206503,00.htm)
 
-[Category:XUL](Category:XUL)

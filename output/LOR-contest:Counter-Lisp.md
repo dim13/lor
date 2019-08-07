@@ -179,4 +179,3 @@ make-lisp-classifier, использование конкретного макр
 
     (print-result (hi-stats (make-haskell-classifier (read-content "advworld.lisp"))))
 
-[Category:LOR-contest](Category:LOR-contest)

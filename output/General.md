@@ -321,5 +321,3 @@ colors=14)
 
 Где X,Y заменить соответствующим значением для Вашей машины
 
-[Category:L.O.R. FAQ](Category:L.O.R._FAQ)
-[Category:Дистрибутивы](Category:Дистрибутивы)

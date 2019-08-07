@@ -97,7 +97,6 @@
 
 <references/>
 
-[Category:Файловые системы](Category:Файловые_системы)
 
 1.  CTDB+OCFS2: Иногда помогает
     [это](http://wiki.samba.org/index.php/CTDB_Setup#Other_cluster_filesystems),

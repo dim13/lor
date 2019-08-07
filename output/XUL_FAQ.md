@@ -333,4 +333,3 @@ Firefox - это расширяемый плагинами браузер, на�
 
 [Есть](http://xpoint.ru/forums/programming/XUL/forum.xhtml).
 
-[Category:XUL](Category:XUL)
