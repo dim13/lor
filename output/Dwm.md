@@ -1,6 +1,4 @@
-<div style="background-image:url(http://dwm.suckless.org/dwm.svg); width:95px; height:40px;">
 
-</div>
 
 -----
 

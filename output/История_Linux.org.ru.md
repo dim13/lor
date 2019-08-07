@@ -187,11 +187,9 @@ FIDO](http://groups.google.ru/group/fido7.ru.linux/msg/6ec25f8a0acba63e)
 
 ## Ссылки
 
-<div class="references-small">
 
 <references />
 
-</div>
 
 [Category:Linux.org.ru](Category:Linux.org.ru)
 

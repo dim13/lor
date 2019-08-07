@@ -353,11 +353,9 @@ Forums](http://forums.debian.net/), [Debian Q/A](http://ask.debian.net/)
 
 ## Сноски
 
-<div class="references-small">
 
 <references />
 
-</div>
 
 [Category:Дистрибутивы](Category:Дистрибутивы)
 

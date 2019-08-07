@@ -1,6 +1,4 @@
-<div style="background-image:url(http://awesome.naquadah.org/images/icons/aw_64_shadow.png); width:95px; height:90px;">
 
-</div>
 
 **awesome** — динамический тайловый оконный менеджер для X Window
 System. Для его настройки нужно знать язык программирования
