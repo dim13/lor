@@ -1,0 +1,45 @@
+<div style="background-image:url(http://dwm.suckless.org/dwm.svg); width:95px; height:40px;"></div>
+----
+'''dwm'''-  динамический фреймовый( мозаичный, тайловый ) оконный менеджер для  X Window System.<br>
+
+===Особенности===
+
+----
+
+===Установка===
+
+----
+
+===Основы===
+
+----
+
+===Настройка===
+
+----
+
+
+
+
+
+----
+
+=== Ссылки ===
+:[https://ru.wikipedia.org/wiki/Dwm Описание в wikipedia ]<br>
+:[http://dwm.suckless.org/ Cайт проекта suckless]<br>
+
+----
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+

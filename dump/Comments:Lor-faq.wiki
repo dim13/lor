@@ -1,0 +1,10 @@
+[[ДизайнФутболок]]: битые ссылки; раньше работали; проверить внутривиковские ссылки
+----
+с wiki/en хорошая шутка ;) --[[User:eugrus|Фишгалов Евгений Игоревич]] 25-Apr-2008 19:20 MSD
+----
+чё-то косяк со ссылкой на openSUSE, гляньте (там какие-то шахматы с openSUSE и OpenSUSE, возможно проще будет создать страницу OpenSUSE с редиректом) [[User:overmind88|Артём]] 19-Sep-2008 23:16 MSD
+* fixed.--[[User:JB|Тёма]] 20-Sep-2008 16:14 MSD
+----
+Arc<u>hL</u>inux, <u>O</u>penSUSE, Re<u>dH</u>at - Это позорно, я считаю, что на ресурсе с информацией об ОС GNU/Linux не знают, как правильно пишутся названия дистрибутивов (Кто не знает, [http://www.archlinux.org/ Arch Linux], [http://www.opensuse.org/en/ openSUSE], [http://www.redhat.com/ Red Hat]). --[[User:adriano32|adriano32]] 06.06.2011 Злой, поздно ночью.
+----
+DONE: [[User:JB|JB]], добавь, пожалуйста в конец этой статьи <pre>[[Category:L.O.R. FAQ]]</pre> --[[User:adriano32|Андрей]] 20-Jul-2011 21:34 MSD

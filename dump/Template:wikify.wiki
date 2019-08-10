@@ -1,0 +1,7 @@
+{|style="background:none; border: 1px dotted white; padding: 5px;" width="80%"
+|style="vertical-align:middle;"|
+[[Image:Wikitext.svg|30px]]
+|style="vertical-align:middle;"|
+''Эту статью необходимо привести в божеский вид - подправить ссылки,
+причесать форматирование, вообщем викифицировать.''
+|}

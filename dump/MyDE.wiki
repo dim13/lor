@@ -1,0 +1,338 @@
+По сути DE - набор из панели (или средства для её предоставления), WM и стандартных программ.<br>
+Перед сборкой DE из разных кусков попробуйте существующие решения. 
+= DE =
+== Enlightenment ==
+
+Сайт проекта: http://www.enlightenment.org/<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/ru/thumb/b/ba/Eshot-1680x1050.png/800px-Eshot-1680x1050.png].<br />
+Библиотека: EFL (Enlightenment Foundation Libraries)<br />
+Менеджер входа: elsa<br />
+Менеджер окон: Enlightenment, [возможен другой?]<br />
+Менеджер сессий: [???]<br />
+Разработчики: [http://www.enlightenment.org/p.php?p=contact&l=en список разработчиков]<br />
+Позиционирует как оболочка для слабых компьютеров, мобильных телефонов, и других систем с малой производительностью (известно, что на базе библиотеки EFL компания Samsung сделала интерфейс для контрольной панели серии холодильников).
+
+== GNOME ==
+
+Сайт проекта: http://www.gnome.org/<br />
+Библиотека: GTK+ 3<br />
+Менеджер входа: GNOME Display Manager, возможен другой<br />
+Менеджер сессий: GNOME 3 Session manager<br />
+Разработчики: [http://foundation.gnome.org/ The GNOME Foundation]
+
+Ныне самое распространенное окружение рабочего стола для Линуксов, включенная по-умолчанию во многие дистрибутивы.
+
+В состав GNOME кроме оболочки входит также и набор всех необходимых большинству людей приложений.
+
+Стандартные средства настройки очень скудные (можно настроить только обоину, заставку и ещё несколько мелочей). Настройка таких вещей, как: тема GTK+, тема иконок, тема курсора, шрифты, поведение менеджера окон и ещё несколько мелочей доступно через GNOME Tweak Tool (пакет gnome-tweak-tool).
+
+В состав GNOME входит две разных оболочки: GNOME Fallback и GNOME Shell.
+
+=== Gnome Fallback ===
+Скриншот: [http://www.linux.org.ru/gallery/6690197.png].<br />
+Менеджер окон: по умолчанию Metacity, но могут использоваться и другие.<br />
+
+Позиционирует как оболочка для слабых и среднестатистических компьютеров, а также для тех, кому более приятен интерфейс Gnome 2 нежели Gnome Shell.
+
+=== Gnome Shell ===
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/GNOME_Shell.png/800px-GNOME_Shell.png].<br />
+Менеджер окон: Mutter (по сути оболочка GNOME Shell это плагин к Mutter).<br />
+Позиционирует как оболочка для среднестатистических компьютеров и планшетов.<br />
+
+Возможна кастомизация оболочки через GNOME Tweak Tool посредством расширений (так званные GNOME Shell Extionsions) и тем. Для установки тем Шелла необходимо установить расширение User-Theme Extension (пакет gnome-shell-extension-user-theme).
+
+== KDE ==
+
+=== KDE 4 ===
+Сайт проекта: http://kde.org/<br />
+Скриншот:[http://upload.wikimedia.org/wikipedia/commons/5/54/KDE_4.png].<br />
+Библиотеки: Qt 4, KDELibs<br />
+Менеджер входа: KDE Display Manager, возможен другой<br />
+Менеджер окон: K Window manager, возможен другой<br />
+Разработчики: разрабатывается сообществом<br />
+Позиционирует как оболочка для среднестатистических компьютеров.
+
+В состав окружения также, как и в GNOME входят все необходимые обычному пользователю приложения.
+
+==== Plasma Desktop ====
+Plasma Desktop — это фреймворк для виджетов для рабочего стола, написанный в рамках KDE 4.
+
+=== Trinity ===
+Сайт проекта: http://www.trinitydesktop.org/<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Screenshot_of_Trinity_3.5.12.png/800px-Screenshot_of_Trinity_3.5.12.png].<br />
+Библиотеки: Qt 3, TDELibs<br />
+Менеджер входа: TDE Display Manager, возможен другой<br />
+Менеджер окон: T Window manager, возможен другой<br />
+Разработчики: разрабатывается сообществом<br />
+Позиционирует как оболочка для слабых и среднестатистических компьютеров.<br />
+
+Форк KDE 3. 
+
+== LXDE ==
+Сайт проекта: http://lxde.org/<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/4/4c/LXDE_desktop_full.png].<br />
+Библиотека: GTK+ 2<br />
+Менеджер входа: произвольный<br />
+Менеджер окон: по умолчанию Openbox, возможна установка других WM <br />
+Разработчики: Команда разработчиков LXDE<br />
+Позиционирует как оболочка для слабых компьютеров.
+
+Название расшифровывается как '''L'''ightweight '''X'''11 '''D'''esktop '''E'''nvironment. Примечательно то, что создатели не стремились тесно интегрировать различные компоненты, наоборот, каждый из них может использоваться отдельно с несколькими зависимостями.
+
+== MATE ==
+
+Сайт проекта: https://github.com/Perberos/Mate-Desktop-Environment<br />
+Скриншот: [http://www.linux.org.ru/gallery/6667506.jpg].<br />
+Библиотека: GTK+ 2 (планируют переходить на GTK+ 3)<br />
+Менеджер входа: произвольный.<br />
+Менеджер окон: Mate window manager, возможен другой<br />
+Менеджер сессий: Mate session manager<br />
+Разработчики: разрабатывается сообществом<br />
+Позиционирует как оболочка для среднестатистических компьютеров.<br />
+
+Форк 2-ой версии GNOME.
+== Razor-Qt ==
+Сайт проекта: http://razor-qt.org/<br />
+Скриншот: http://razor-qt.org/screenshots/images/01.Desktop.png.<br />
+Библиотека: Qt 4<br />
+Менеджер входа: произвольный<br />
+Менеджер сессий: Razot-Qt Session Maneger<br />
+Менеджер окон: произвольный (разработчики рекомендуют использовать Openbox)<br />
+Разработчики: команда из нескольких разработчиков (в т.ч. и русские)<br />
+Позиционирует как оболочка для слабых компьютеров. В плане производительности может сравниться с LXDE.
+
+Форк ныне не развивающегося Antico. В состав оболочки входят только панель, переключалка окон (по нажатию комбинации клавиш Альт+Таб), запускалка приложений, рабочий стол, менеджер сессий и библиотека обеспечивающая функционал всего этого. Зависимостей мало. KDELibs не тянет.
+
+Небольшой список рекомендованных легковесных приложений на Qt, которые могут пригодиться, можно найти [https://github.com/Razor-qt/razor-qt/wiki/3rd-party-applications тут].
+== Unity ==
+
+Сайт проекта: http://unity.ubuntu.com/<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/4/4f/Ubuntu_11.04_ru.png].<br />
+Библиотека: GTK+ 3<br />
+Менеджер входа: LightDM, возможен другой<br />
+Менеджер окон: Compiz (Unity — это по сути плагин к Compiz)<br />
+Менеджер сессий: gnome-session<br />
+Разработчики: [http://www.canonical.com/ Canonical]<br />
+Позиционирует как оболочка для среднестатистических компьютеров и планшетов. Планируется в далеком будущем перенос на мобильные телефоны.
+
+Оболочка рабочего стола по умолчанию в дистрибутиве Ubuntu. Основан на GNOME. 
+
+== Xfce ==
+
+Сайт проекта: http://www.xfce.org/<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/7/71/Xfce-4.4.png]<br />
+Библиотека: GTK+ 2<br />
+Менеджер входа: произвольный<br />
+Менеджер окон: Xfwm, возможен другой<br />
+Менеджер сессий: Xfce4 Session Manager<br />
+Разработчики: Проект Xfce<br />
+Позиционирует как оболочка для слабых и среднестатистических компьютеров. Многие ошибочно полагают, что это оболочка заточенная для работы на слабых машинах. Да, это правда, но по потреблению ресурсов она находится между такими, как MATE и LXDE, Razor-Qt.
+
+= WM =
+Менеджеры окон делятся на стековые, композитные и тайловые, они же фреймовые. Некоторые тайловые могут работать в режиме стековых (awesome). Стековые управляют окнами в привычном нам режиме, композитные ещё и придают им разных эффектов и декораций (например прозрачность и куб рабочего стола), тайловые же разбивают рабочее пространство экрана на взаимно не пересекающиеся прямоугольные области — фреймы. Есть ещё динамические оконные менеджеры — они работают как тайловые, только там размещение фреймов предварительно настраивается (пример — Awesome). Также есть приложения, позволяющие добавить стековым менеджерам некоторый функции характерные для композитных (Xcompmgr).
+==Композитные==
+
+=== Compiz ===
+
+Размер: ~25 кб. (много зависимостей)<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Fedora-Core-6-AIGLX.png/800px-Fedora-Core-6-AIGLX.png]<br />
+Настройка: графический конфигуратор.<br />
+Статус: актуальный.
+
+=== KWin ===
+
+Размер: ~3 мб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Kwin-coverswitch4.1_beta_1.png/800px-Kwin-coverswitch4.1_beta_1.png]<br />
+Настройка: графические средства.<br />
+Тайловый: опционально.<br />
+Статус: актуальный.<br />
+Разрабатывается в рамках проекта KDE.
+
+
+=== Xfwm ===
+
+Размер: ~9347 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/7/71/Xfce-4.4.png]<br />
+Настройка: графическая утилита.<br />
+Статус: актуальный.
+Разрабатывается в рамках проекта Xfce.
+
+=== Mutter ===
+
+Размер: ~6.5 мб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/GNOME_Shell.png/800px-GNOME_Shell.png]<br />
+Настройка: графические средства (очень ограниченная настройка).<br />
+Статус: актуальный.
+Является продолжением Metacity. Название — это сокращение от „Metacity Clutter“ (Clutter - это новая библиотека-тулкит для отрисовки интерфейса приложений средствами OpenGL). Служит основой для GNOME Shell (по сути GNOME Shell это плагин для Mutter). [http://en.wikipedia.org/wiki/Mutter_(window_manager) Может] функционировать, как отдельный оконный менеджер отдельно без GNOME Shell. Наличие GPU не обязательно.
+
+== Стековые ==
+
+=== Openbox ===
+
+Размер: ~300 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Openbox-elementary3.png/800px-Openbox-elementary3.png]<br />
+Настройка: правка текстовых конфигурационных файлов, возможно использование графического средства настройки.<br />
+Статус: актуальный.
+
+=== Enlightenment ===
+
+Размер: ~3 мб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/ru/thumb/b/ba/Eshot-1680x1050.png/800px-Eshot-1680x1050.png]<br />
+Настройка: GUI<br />
+Тайловый: плагином.<br />
+Статус: актуальный
+
+=== Fluxbox ===
+
+Размер: ~1.5 мб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flux.jpg/800px-Flux.jpg]<br />
+Настройка: редактирования текстовых файлов конфигурации, или [http://devaux.fabien.free.fr/flux/ fluxconf].<br />
+Статус: актуальный.
+
+=== FVWM ===
+
+Размер: ~4 мб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Fvwm1-wikipedia-20050312.png/800px-Fvwm1-wikipedia-20050312.png]<br />
+Настройка: редактирования текстовых файлов конфигурации.<br />
+Статус: актуальный.<br />
+Примечание: прабатюшка большинства современных wm.
+
+=== Metacity ===
+
+Размер: ~500 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/e/ec/Metacity-screenshot.png]<br />
+Настройка: графические средства (ограниченная настройка), gconf (там настроек побольше).<br />
+Статус: устарел.
+Разрабатывался в рамках GNOME 2.
+
+=== Sawfish ===
+
+Размер: ???<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Sawfish.png/750px-Sawfish.png]<br />
+Настройка: ???<br />
+Статус: актуальный.
+
+=== IceWM ===
+
+Размер: ~750 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/IceWM.png/750px-IceWM.png]<br />
+Настройка: как прямое редактирование текстовых файлов так и графические средства.<br />
+Статус: разработка прекращена (fixme, если что). 
+
+=== AfterStep ===
+
+Размер: ~400 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/AfterStep.png/750px-AfterStep.png]<br />
+Настройка: редактирования текстовых файлов конфигурации.<br />
+Статус: в разработке, но очень медленной. [fixme]
+
+=== JWM ===
+
+Размер: ~100 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Openbsd37withjwm.png/800px-Openbsd37withjwm.png]<br />
+Настройка: ???<br />
+Статус: актуальный.<br />
+Примечание: Используется на очень слабых системах и "легких" дистрибутивах.
+
+=== Blackbox ===
+
+Размер: ~250 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Blackbox_on_Debian.png/750px-Blackbox_on_Debian.png]<br />
+Настройка: редактирования текстовых файлов конфигурации.<br />
+Статус: актуальный.
+== Тайловые ==
+
+=== Awesome ===
+
+Размер: ~850 кб.<br />
+Пакет: awesome<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Awesome_screenshot.png/750px-Awesome_screenshot.png]<br />
+Настройка: один конфигурационный файл (на Lua).<br />
+Тайловый: возможность переключения.<br />
+Статус: актуальный.
+
+=== DWM ===
+
+Размер: ~40 кб<br />
+Пакет: dwm<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dwm-shot.png/800px-Dwm-shot.png]<br />
+Настройка: правка исходных кодов и перекомпиляция.<br />
+Статус: актуальный.
+
+=== Ion ===
+
+Размер: ???<br />
+Пакет: ???<br />
+Скриншот: [http://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Screenshot-1.png]<br />
+Настройка: ???<br />
+Статус: актуальный.
+
+=== Stumpwm ===
+
+Размер: ~300 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/e/eb/Stumpwm_12-2-2006.png] <br />
+Настройка: ???<br />
+Статус: актуальный.
+
+=== Window Manager Improved 2 ===
+
+Размер: ~400 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Wmii-20070228.png/750px-Wmii-20070228.png]<br />
+Настройка: консольная утилита<br />
+Статус: актуальный.
+
+=== Xmonad ===
+
+Размер: ~600 кб.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Xmonad-tall-status-dons.png/800px-Xmonad-tall-status-dons.png]<br />
+Настройка: путем написания исходного кода на Haskell.<br />
+Статус: актуальный.
+= Панель/Окружение =
+== Окружения ==
+=== Plasma ===
+
+Настройка: Графические утилиты.<br />
+Тулкит: Qt (QML)<br />
+Часть проекта KDE4, которая предоставляет API для написания виджетов (плазмоидов) рабочего стола, в том числе панель. <br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/5/54/KDE_4.png]<br />
+=== GNOME Shell ===
+
+Cреда рабочего стола, созданная для GNOME3. Очень тесно интегрирована с Mutter.<br />
+Настройка: Графические утилиты.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/9/97/GNOME_Shell.png]<br /> 
+
+
+== Панели ==
+
+=== Xfce4 panel ===
+
+Панель, написанная разработчиками xfce.<br />
+Настройка: Графические утилиты.<br />
+Тулкит: GTK+ 2.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/en/b/bc/XFCE-4.8-Desktop.png]<br />
+
+=== tint2 ===
+Панель, созданная для openbox. <br />
+Настройка: Правка конфигурационного файла/GUI. <br /> 
+Скриншот: [http://img252.imageshack.us/img252/1433/wallpaper2td.jpg]<br />
+
+=== lxpanelx ===
+
+Улучшенный форк lxpanel.<br />
+Настройка: Графические утилиты.<br />
+Тулкит: GTK+ 2.<br />
+Скриншот: [http://i015.radikal.ru/1201/52/bf358d3416ca.png]<br />
+
+=== AWN ===
+
+Док, наподобие Dock из Mac OS X.<br />
+Настройка: Графические утилиты.<br />
+Скриншот: [http://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Awn_screenshot.png/250px-Awn_screenshot.png]<br />
+
+== WM, содержащие панель/окружение ==
+*BlackBox
+*WindowMaker
+*FluxBox
+*IceWM
+*JWM
+*Windowlab

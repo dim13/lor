@@ -1,0 +1,405 @@
+Для начала - список нативно работающих под Linux игр можно найти на [http://www.icculus.org/lgfaq/gamelist.php www.icculus.org], там же лежит [http://icculus.org/lgfaq/ Linux Gamers FAQ]. 
+
+Для некоего числа старых игр (в том числе DOS'овых) существует многоплатформенный эмулятор [http://www.scummvm.org ScummVM]. 
+
+==Во что можно поиграть?==
+
+Описание и большой список игр можно найти на сайте [http://pingvinus.ru/games/ Пингвинус].
+
+===Классика на свободных движках===
+
+*[https://sourceforge.net/projects/openkb/ openKB] - движок для King's Bounty - идейного прародителя Heroes Of Might & Magic, Warlords, Disciples, Age Of Wonders.
+*[http://sourceforge.net/projects/fheroes2/ FHeroes2] - Heroes of Might & Magic 2 - прошёл 2 больших карты против AI, всё вполне работоспособно, быстро, красиво, поддерживается вся серия HOMM2, смена разрешений, в настройках можно добавлять плюшки из HOMM3.
+*[http://forum.vcmi.eu/portal.php VCMI] - Heroes of Might & Magic 3 - играл против AI, тестировал новые версии движка, испавлял баги, добавлял города. Поддерживаются WOG и ERA, но можно играть и на чистых HOMM3 (поддерживается вся серия). Также много плюшек, новых артефактов, городов, юнитов, героев, смена разрешений и другие вкусности.
+*[http://dunelegacy.sourceforge.net/website/ Dune Legacy] - Dune 2 - прошёл несколько миссий за разные дома, играл скирмиши, всё прекрасно работает. Движок вполне современный, взято много идей из последующих игр серии, например выделение множества объектов, очереди строительства, векторы движения, естественно, есть смена разрешений и куча приятных настроек. Также поддерживаются моды.
+*[https://launchpad.net/war1gus/ War1gus] - движок для Warcraft I, основан на [https://launchpad.net/stratagus/ Stratagus].
+*[https://launchpad.net/wargus Wargus]+[https://launchpad.net/tales/ Aleona's Tales] - свободный движок для Warcraft II + свободные ресурсы (можно играть и с оригинальными) - тоже вполне играбельно и удобно, основа движка - [https://launchpad.net/stratagus/ Stratagus], возможность выделять множество объектов, векторы движения, разные разрешения...
+*[https://launchpad.net/stargus/ Stargus] - движок для Starcraft I, основан на [https://launchpad.net/stratagus/ Stratagus].
+*[http://7kfans.com/ 7KAA] - движок для своеобразной стратегии Seven Kingdoms.
+*[https://code.google.com/p/openredalert/ OpenRedAlert] - движок для Red Alert 1, написанный на C++, в отличие OpenRA (Mono).
+*[http://www.openra.net/ OpenRA] - модифицированный движок для Red Alert, Command & Conquer и Dune 2000 (Achtung! Mono!).
+*[http://openxcom.org/ OpenXcom] - SDL-движок для UFO: Enemy Unknown - всё работает, с каждой новой версией всё лучше. Также с версии 1.0 заявляется полная поддержка первой части и фокус разработки сместился в сторону поддержки продолжения — X-COM: Terror From The Deep.
+*[http://freesynd.sourceforge.net/ FreeSynd] - Syndicate - тоже вполне играбельно, наконец-то починили радар.
+*[http://swars.vexillium.org/ Syndicate Wars Port] - движок для Syndicate Wars, продолжения Syndicate.
+*[http://www.gemrb.org/wiki/doku.php?id=start GemRB] - движок для Baldur's Gate, Icewind Dale и Planescape: Torment. Вполне рабочий, протестирован почи весь Baldur's Gate.
+*[https://code.google.com/p/micropolis/ Micropolis] - Свободный движок для SimCity.
+*[http://maniacsvault.net/ecwolf/ ECWolf] - модернизированный движок для Wolfenstein 3D, Spear of Destiny и Super 3D Noah's Ark, основанный на кодах Wolf4SDL и ZDoom.
+*[https://github.com/bibendovsky/bstone bstone] - движок для стрелялки от первого лица Blake Stone: Planet Strike.
+*[http://cytadela.sourceforge.net/ Cytadela] - движок для Cytadela, стрелялки от первого лица для Amiga.
+*[http://icculus.org/rott/ Rise of the Triad] - движок для уникальной для своего времени игры Rise of the Triad, основанной на сильно модифицированном движке для Wolfenstein 3D.
+*[http://www.zdoom.org/News ZDoom]+[https://freedoom.github.io/ FreeDoom] - Модифицированный и современный движок для Doom, Doom 2, Heretic, HeXen, Strife + свободные ресурсы. Множество улучшений: свободный обзор, прицел, приседания и прыжки, объекты больше не имеют бесконечную высоту, высокое разрешение. Также есть замечательный мод [http://www.moddb.com/mods/brutal-doom BrutalDoom], привносящий моря кровищщи, горы кишок и ультранасилие.
+*[http://www.osnanet.de/c.oelckers/gzdoom/ GZDoom] - OpenGL-форк [http://www.zdoom.org/News]ZDoom.
+*[http://dengine.net/ Doomsday] - модифицированный OpenGL-движок для Doom I&2, Heretic, Hexen, HacX, Chex с поддержкой трёхмерных моделей вместо спрайтов.
+*[http://sc2.sourceforge.net/ uHexen2] - SDL/OpenGL движок для Hexen II: Hammer of Thyrion.
+*[http://icculus.org/twilight/darkplaces/ DarkPlaces] + [http://qrp.quakeone.com/ Quake Revitalization Project] - модифицированный OpenGL-движок для Quake I + обновлённые текстуры.
+*[http://www.yamagi.org/quake2/ Yamagi Quake II] - модифицированный движок для Quake II, также поддерживает дополнения  Mission Pack 1 'The Reckoning' и  Mission Pack 2 'Ground Zero'.
+*[http://ioquake3.org/ ioquake3] - модифицированный движок для Quake III.
+*[http://www.eduke32.com/ Eduke32]+[http://hrp.duke4.net/ HRP] - Модифицированный SDL/OpenGL движок для Duke Nukem 3D (свободный обзор, прицел, прыжки, приседания, высокое разрешение) + набор свободных трёхмерных текстур. Протестирован весь Дюк с трёхмерными текстурами и продвинутой отрисовкой Polymer.
+*[https://code.google.com/p/erampage/wiki/MainPage eRampage] - движок для стрелялок Redneck Rampage, Suckin' Grits on Route 66, Redneck Rampage Rides Again и Redneck Deer Huntin'. Основан на [http://eduke32.com/ EDuke32].
+*[http://m210.duke4.net/ BloodCM] + [http://sta.sh/017tdnr0iuad HRP for BloodCM] - Blood на движке [http://eduke32.com/ EDuke32] + текстуры в высоком разрешении. Готовы 2 эпизода игры, третий в разработке.
+*[http://source.bungie.org/ Aleph One] - модифицированный движок для Marathon, Marathon 2: Durandal и Marathon Infinity. Также сообществом разработаны новые игры Marathon: EVIL, Tempus Irae, Marathon RED, Marathon: Eternal, Marathon: Rubicon X, Marathon: Phoenix. Ещё есть отдельная игра [http://www.excaliburworld.com/emr/emr3/ Excalibur: Morgana's Revenge]. Эти игры особенно придутся по душе латентным, активным и пассивным любителям Macintosh, ибо изначально Marathon разрабатывался исключительно под эту платформу.
+*[http://xash3d.ru/doku.php Xash3D] - свободный движок для Half-Life (аналог GoldSource).
+*[http://www.descent2.de/ D2X-XL] - OpenGL движок для трёхмерной леталки-стрелялки Descent. Также разработан редактор уровней DLE.
+*[http://www.dxx-rebirth.com/ DXX-Rebirth] - SDL/OpenGL движок для трёхмерных леталок-стрелялок Descent 1&2.
+*[http://forsakenx.github.io/ ForsakenX] - движок для трёхмерной леталки-стрелялки Forsaken, клона Descent.
+*[http://www.openttd.org/en/ OpenTTD] - свободный движок для Transport Tycoon Deluxe + свободная графика и звуки.
+*[https://bitbucket.org/gennady/ja2-stracciatella JA2-Stracciatella] - Jagged Alliance 2. Несмотря на периодические приостановки, проект до сих пор жив и недавно снова вошёл в активную фазу.
+*[http://scummvm.org/ ScummVM] - набор свободных движков в основном для игр в жанре quest (приключение), например от Lucas Arts, Sierra, Westwood, Coktel Vision, The Neverhood Inc., The Dreamers Guild, Revolution Software, Psygnosis, Infocom, Delphine Software International, Adventure Soft,  также и для некоторых ролевых игр: Eye of the Beholder I&II, Lands of Lore: The Throne of Chaos. На данном этапе ведутся работы по поддержке таких замечательных игр, как Myst, Riven: The Sequel to Myst, Gabriel Knight, Gabriel Knight 2: The Beast Within, King's Quest VII, Phantasmagoria I&II, Police Quest IV, Police Quest: SWAT, Quest for Glory IV, Space Quest 6: The Spinal Frontier, Leisure Suit Larry 7, Broken Sword 2.5...
+*[http://www.residualvm.org/ ResidualVM] - движки для трёхмерных игр Grim Fandango и Escape from Monkey Island от Lucas Arts, также добавлена поддержка для Myst 3 Exile. Для Grim Fandango разработан [http://forums.residualvm.org/viewtopic.php?f=1&t=623 'point & click интерфейс'].
+*[http://pentagram.sourceforge.net/ Pentagram] - движок для Ultima VIII с поддержкой разных разрешений, разных звуковых систем, миникарты, TrueType.
+*[http://exult.sourceforge.net/ Exult] - движок для Ultima VII с поддержкой разных разрешений, разных звуковых систем, статусбаров, Exult Studio для разработки своих игр.
+*[http://nuvie.sourceforge.net/ Nuvie] - движок для Ultima VI.
+*[http://xu4.sourceforge.net/ XU4] - движок для Ultima IV с поддержкой VGA и 16-bit графики, смешивание заклинаний как в Ultima V.
+*[https://openmw.org/en/ OpenMW] - The Elder Scrolls III: Morrowind. Проект активно развивается, добавляется новый функционал, поддержка модификаций, но на данном этапе поиграть пока не удастся.
+*[http://www.karlin.mff.cuni.cz/~benes/lotr/ Lord of the Rings game engine] - движок для ролевой игры Lord of the Rings.
+*[http://arx-libertatis.org/ Arx Libertatis] - движок для трёхмерной ролевой игры Arx Fatalis.
+*[http://scp.indiegames.us/ FS2Open] - движок для космического симулятора FreeSpace 2. Также есть [http://fsport.hard-light.net/website/]fsport - адаптация кампаний FreeSpace 1 для FS2Open.
+*[https://github.com/CorsixTH/CorsixTH CorsixTH] + [https://github.com/CorsixTH/CorsixTH-Graphics CorsixTH-Graphics] - движок для симулятора больницы Theme Hospital и набор новой свободной графики.
+*[https://sourceforge.net/projects/abysmal/ Abysmal Engine] - движок для System Shock 1 и Ultima Underworld. Проект жив, потихоньку развивается.
+*[http://openage.sft.mx/ OpenAge] - движок для Age of Empires II. Проект на начальной стадии, ещё сырой. Разработчики пока толком не определились с технологиями, хотят для спрайтовой двухмерной графики задействовать OpenGl и шейдеры.
+*[http://arescentral.org/antares/ Antares] - движок для космической стратегии Ares. Трепещите, латентные, активные и пассивные любители Macintosh, игра изначально разрабатывалась исключительно под эту платформу.
+*[https://bitbucket.org/dalerank/caesaria/wiki/Home CaesarIA] - симулятор Римской Империи и Цезаря в частности Caesar III.
+*[https://falltergeist.org/ Falltergeist] - свободный движок для Fallout 1&2, разрабатываемый на C++ с использованием SDL2. Проект на начальной стадии, но активно развивается.
+*[http://freeablo.org/ freeablo] - свободный движок для Diablo 1 с использованием SDL2. Проект на начальной стадии, готов начальный посёлок с нейтральными персонажами и пара случайно генерируемых подземных уровней.
+*[http://abuse.zoy.org/ Abuse] - аркадная стрелялка-латформер, сюжет вдохновлён вариациями на тему "Хищник против Чужих". Движок использует отрисовку через SDL или OpenGL (на выбор), работает на 32-bit и 64-bit платформах. К игре прилагаются освобождённые ресурсы.
+*[https://sourceforge.net/projects/newraw/ New RAW] - интерпретатор для аркадной игры Another World.
+*[http://cyxdown.free.fr/bs/ Bermuda Syndrome] - SDL-движок для аркадного приключения Bermuda Syndrome.
+*[http://cyxdown.free.fr/reminiscence/ REminiscence] - SDL-движок для аркадного приключения Flashback.
+*[http://cyxdown.free.fr/f2b/ f2bgl] - SDL/OpenGL-движок для трёхмерного приключения Fade To Black.
+*[http://cyxdown.free.fr/igor/ Igor] - SDL-движок для испанского квеста Igor: Objetivo Uikokahonia.
+*[http://cyxdown.free.fr/carlos/ Carlos] - SDL-движок для платформера Carlos.
+*[http://xbak.sourceforge.net/ xBaK] - движок для уникальной для своего времени ролевой игры Betrayal at Krondor. Относительно играбельно, но некоторых важных функций может не оказаться. Проект, к сожалению, заброшен. Форкайте, господа, пилите для [http://scummvm.org/ ScummVM].
+*[https://github.com/Blzut3/CatacombSDL CatacombSDL] - SDL2-движок для фентези-стрелялки Catacomb II.
+*[http://nxengine.sourceforge.net/ NXEngine] - SDL-движок для платформера Doukutsu Monogatari (также известного как Cave Story).
+*[http://clonekeenplus.sourceforge.net/ Commander Genius]  - движок для серии платформеров Commander Keen.
+*[http://sc2.sourceforge.net/ The Ur-Quan Masters] + [https://sourceforge.net/projects/urquanmastershd/ Ur-Quan Masters HD] - движок для космического аркадного ролевого стратегического квеста Star Control II + текстуры в высоком разрешении.
+*[https://github.com/JACoders/OpenJK OpenJK] - движок для Jedi Knight II: Jedi Outcast и Jedi Knight III: Jedi Academy с минимальными измененями, максимально близкий к оригинальному.
+*[https://github.com/xLAva/JediOutcastLinux JediOutcastLinux] - ещё один движок для Jedi Knight II: Jedi Outcast.
+*[https://github.com/xLAva/JediAcademyLinux JediAcademyLinux] - ещё один движок для Jedi Knight III: Jedi Academy.
+*[http://sdl-sopwith.sourceforge.net/index.shtml SDL Sopwith] - SDL/GTK+ движок для классического аркадного авиасимулятора Sopwith.
+*[http://www.ultimatestunts.nl/index.php?page=0&lang=en Ultimate Stunts] - OpenGL движок для классического гоночного симулятора Stunts.
+*[http://jonls.dk/freeserf/ Freeserf] - SDL-движок для классического симулятора поселенцев The Settlers 1 "Serf City".
+*[http://www.siedler25.org/ Return to the Roots] - OpenGL-движок для для классического симулятора поселенцев The Settlers II Gold Edition.
+*[https://github.com/xythobuz/OpenRaider OpenRaider] - OpenGL-движок для серии приключенческих игр Tomb Raider (1-5). 5-я игра серии пока не полностью работоспособна.
+*[https://sourceforge.net/projects/opentomb/ OpenTomb] - ещё один OpenGL-движок для серии приключенческих игр Tomb Raider (1-5).
+*[http://privateer.sourceforge.net/ Privateer - Gemini Gold] - OpenGL-движок для Wing Commander, основан на кодовой базе [http://vegastrike.sourceforge.net/ Vega Strike].
+*[http://etlegacy.com/ ET: Legacy] - модифицированный движок для многопользовательской игры Wolfenstein: Enemy Territory.
+*[http://zod.sourceforge.net/ Zod Engine] - движок для уникальной стратегии Z.
+*[http://zandronum.com Zandronum] - движок для старых игр на базе id Tech 1 (HeXen, Heretic, Doom, Strife). Упор на многопользовательскую игру.
+===MOBA===
+* [http://www.heroesofnewerth.com/ Heroes of Newerth] — Игра основана на популярной карте DotA для Warcraft III. Основная карта в HoN представляет собой большую локацию с лесами, горами (или подобием их), рекой пересекающей карту с северо-запада на юго-восток и с основными дорогами по которым передвигаются войска управляемые компьютером. В левом нижнем углу карты (юго-запад) находится лагерь «света» («Легион», англ. «The Legion»), в правом верхнем (северо-восток) — лагерь «тьмы» («Преисподняя», англ. «The Hellbourne»). Обе базы защищены башнями, которые стоят на каждой из трёх основных дорог к базе по которым, как и указанно выше передвигаются войска управляемые компьютером. В центре каждой базы располагается главное здание — «World Tree» у Legion и «Sacrificial Shrine» у Hellbourne. Проигрывает та команда, которая потеряла главное здание или сдалась.
+===Indie===
+* [http://minetest.net Minetest] —  компьютерная игра с видом от первого лица, в которой всё построено из кубов, которые используют текстуры с низким разрешением (16×16 текселей) с которыми и взаимодействует игрок. Суть игры состоит в том, чтобы строить всё, что душа пожелает. Minetest это, по сути, открытый клон игры [http://www.minecraft.net/ Minecraft].
+* [http://freeminer.org/ FreeMiner] — форк Minetest с серьёзными улучшениями в плане производительности.
+* [http://voxelands.com/ Voxelands] — форк Minetest ветки 0.3, в отличие от Minetest и FreeMiner ориентирован на геймплей, а не на создание платформы для моддинга, благодаря чему готова для игры "из коробки". В игре присутствуют несколько сотен блоков, животные, фарминг и различные механизмы.
+===RPG & Hack and slash===
+* [http://www.clintbellanger.net/rpg/ Flare] — игра жанров RPG и Hack and slash, схожа с Diablo.
+* [http://www.freedroid.org/ FreedroidRPG] — постапокалиптическая RPG, где идёт война между людьми и машинами с киберпингвином Тux'ом в главной роли.   
+* [http://stabyourself.net/mari0/ Mari0] — копия игры «Супербратья Марио» с порталами позаимствованными из игры Portal. Есть многопользовательский режим и редактор уровней. Игра создана на 2D-движке [https://love2d.org/ LÖVE].
+Кроме того, команда [http://stabyourself.net/ Stabyourself.net] разработала рад других свободных игр на движке LÖVE, среди которых: [http://stabyourself.net/orthorobot/ Ortho Robot], [http://stabyourself.net/nottetris2/ Not Tetris 2], [http://stabyourself.net/rimshot/ Rimshot], [http://stabyourself.net/notpacman/ Not Pacman] (в разработке) и [http://stabyourself.net/other/ другие].
+* [http://supertux.lethargik.org/ Super Tux] — своеобразная интерпретация Super Mario Brothers, где заместо Марио — маскот Linux — пингвин Tux.
+* [http://naev.org/ Naev] — игра про торговлю и бои на кораблях в двухмерном космосе.
+===Платформеры===
+* [http://www.hedgewars.org/ Hedgewars] — клон Worms.
+* [http://www.teeworlds.com/ Teeworlds] — свободная компьютерная игра в жанре многопользовательского 2D шутера. В связи с особенностями физики имеет свой уникальный геймплей. Игра похожа на игры Worms, Counter-Strike 2D.
+* [http://www.warmux.org/ WarMUX] — ещё один клон Worms.
+* [http://supertux.lethargik.org/ Super Tux] — своеобразная интерпретация Super Mario Brothers, где заместо Марио — маскот Linux — пингвин Tux.
+===Симуляторы и гонки===
+* [http://www.flightgear.org/ FlightGear] — открытый проект по созданию свободного авиасимулятора.
+* [http://www.heptargon.de/gl-117/gl-117.html GL-117] — симулятор управления боевым самолётом.
+* [http://supertuxkart.sourceforge.net/ SuperTuxKart] — аркадная гонка с участием Tux'а.
+* [http://torcs.sourceforge.net/ The Open Racing Car Simulator] — свободная гоночная видеоигра с трёхмерной графикой.
+* [http://tuxracer.sourceforge.net/ Tux Racer] — игра, смысл которой пройти трассу, управляя скользящим пингвином.
+* [http://dustrac.sourceforge.net/ Dust Racing 2D] — двухмерная гоночная игра с видом сверху и редактором трасс.
+===Стратегии===
+* [http://play0ad.com/ 0 A.D.] — стратегия в реальном времени, освещающая период от 500 лет до н. э. и 500 лет н. э. Игра до сих пор имеет статус альфа-версии, хотя за 2010-2013 годы было выпущено более дюжины промежуточных релизов.
+* [http://freeciv.org FreeCiv] — пошаговая стратегия, свободный аналог Civilization. Вашей империи предстоит пройти через всю историю человеческой цивилизации: от каменного века до космической эры.
+* [http://openra.res0l.net OpenRA] — стратегия в реальном времени, открытый аналог Red Alert и Command & Conquer.
+* [http://glest.org Glest] — стратегия в реальном времени с хорошей графикой, аналог игр типа Stronghold.
+* [https://megaglest.org/ MegaGlest] — форк Glest с новыми фракциями и юнитами.
+* [http://ufoai.ninex.info UFO:AI] — стратегия в духе X-COM. Имеет два основных режима. В пошаговом тактическом режиме отряд ваших десантников истребляет экипажи приземлившихся НЛО. В стратегическом режиме вы развиваете базы, закупаете вооружения, проводите научные исследования и сбиваете корабли инопланетян.
+* [http://www.openttd.org OpenTTD] — симулятор транспортной компании, по мотивам игры Transport Tycoon Deluxe. Вы строите сеть автомобильных и железных дорог, аэропортов и причалов чтобы обеспечить эффективные коммуникации между десятками расположенных на карте городов и промышленных предприятий. Доступен мультиплеер и компьютерные соперники.
+* [http://triplea.sourceforge.net TripleA] — пошаговая стратегия, свободная компьютерная версия настольной игры Axis & Allies or Risk.
+* [https://www.kde.org/applications/games/ksirk KsirK] — ещё один клон Risk, значительно упрощённый в сравнении с TripleA.
+* [http://www.unknown-horizons.org/ Unknown Horizons] — экономическая стратегия в реальном мире, в чём-то похожая на игры серий ''The Settlers'' или ''Caesar'', с достаточно хорошей графикой. Вы управляете группой переселенцев, решивших обосноваться на острове, и ваша задача — превратить небольшое поселение в большой город или даже создать небольшое государство.
+* [http://zero-k.info/ Zero-K] — стратегия в реальном времени на движке [http://springrts.com/ Spring].
+* [http://wesnoth.org/ Battle for Wesnoth (Битва за Веснот)] — Пошаговая РПГ/Стратегия с большим количеством сценариев и кампаний. Имеет двухмерную графику с качественной прорисовкой. Является одной из наиболее доработанных и известных свободных игр - во многом благодаря большому количеству возможностей для создания своих карт, что привлекает дизайнеров уровней. В результате игра имеет большое количество длинных и законченных кампаний по умолчанию, а также большое количество аддонов. По Весноту даже проводятся чемпионаты. Основной сеттинг - фэнтези-мир собственной разработки.
+* [https://wl.widelands.org/ Widelands] — стратегия в реальном времени по созданию инфраструктуры и устойчивой экономики. Игровым процессом и некоторыми идеями похожа на The Settlers и The Settlers II. Игрушка достаточно стабильная. Проект живой.
+* [https://github.com/lincity-ng/lincity-ng/ Lincity-ng] — стратегия-симулятор города по построению стабильной экономики.
+* [https://wz2100.net/ Warzone 2100] — пост-апокалиптическая стратегия реального времени с возможностью проектировать юниты.
+* [http://globulation2.org/wiki/Main_Page Globulation 2] — RTS в фантастическом сеттинге с непрямым управлением.
+===Шутеры===
+* [http://red.planetarena.org/ Alien Arena] — созданная на движке от Id Software игра, объединяющая в себе элементы Unreal Tournament, Quake и Doom.
+* [http://cubeengine.com/cube.php4 Cube] — альтернатива Quake I/II.
+* <span id="openarena">[http://openarena.ws/ Open Arena]</span> — шутер от первого лица, созданный на базе движка Quake III Arena.
+* [http://www.redeclipse.net/ Red Eclipse ] — сетевой шутер основанный на движке Cube Engine 2. Имеет некоторый намек на паркур.
+* [http://sauerbraten.org/ Sauerbraten] — Quake-style шутер на Cube 2.
+* [http://tremulous.net/ Tremulous] — многопользовательская компьютерная игра, смесь жанров 3D-action (FPS) и стратегии реального времени (RTS). Игра работает на базе игрового движка Quake III.
+* Unreal Tournament 99, 2003, 2004 — Культовые игры. Все имеют нативные клиенты под Linux
+* [http://www.urbanterror.info/ Urban Terror] — компьютерная игра в жанре шутер от первого лица, созданная на базе движка Quake III Arena. Особенностью игры является ориентированность на командную игру и паркур.
+* [http://www.warsow.net/ Warsow] — сетевой шутер от первого лица, геймплей которого представляет собой смесь Unreal Tournament и Quake.
+* [http://www.xonotic.org/ Xonotic] — шутер от первого лица работающий на игровом движке DarkPlaces — переработанной версии движка Quake. Форк ныне не развивающегося [http://www.nexuiz.com/classic.php Nexuiz]'a.
+* [http://www.truecombatelite.com/index.php?page=news TrueCombat:Elite ] — сетевой шутер аля Counter-Strike.
+* [http://assault.cubers.net/ AssaultCube] — 3D-шутер в реальном (не фантастическом) сеттинге, имеется режим игры по сети.
+* [http://www.asahi-net.or.jp/~cs8k-cyu/windows/tt_e.html Torus Trooper] — 3D-скроллшутер с очень скоростным геймплеем. Игрок перемещается по треку спиралевидной формы и уничтожает врагов на своём пути (уворачиваясь от их снарядов, конечно); время на прохождение каждого уровня ограничено.
+===MMORPG===
+* [https://www.themanaworld.org/ The Mana World] — свободная 2D-MMORPG (с видом сверху), разворачивающяся в вымышленном фэнтезийном мире. Помимо официального, имеет улучшенный клиент [http://manaplus.org/ ManaPlus].
+===Визуальные новеллы===
+* [http://www.katawa-shoujo.com/ Katawa Shoujo] — главный герой переносит сердечный приступ, после чего попадает в школу-интернат для инвалидов, в которой и разворачивается действие этой новеллы. На её протяжении главный герой должен будет (при удачном раскладе) завязать отношения с одной из девушек школы; игра содержит эротику (отключаемую).
+===Другое===
+* [http://instead.syscall.ru/ Instead] — движок текстовых квестов. Со списком игр можно ознакомиться [http://instead-games.ru/ здесь] и [http://instead.syscall.ru/games/ здесь].
+* [http://www.ufoot.org/liquidwar/ Liquid War] — очень необычная аркадная игра с элементами стратегии. Вам необходимо, управляя небольшим количеством неизвестной субстанции, поглотить всю субстанцию своих соперников.
+==Какие Linux-установщики есть под Windows-игры (т.е. бинарники игр, которые работают с виндовыми ресурсами)?== 
+
+[http://icculus.org/~ravage тыц 1] 
+
+[http://liflg.org/?catid=6&ameid=65 тыц 2]
+
+==Как запустить виндовую игру в Linux?==
+
+С помощью [http://www.winehq.org/ Wine]. Несмотря на популярное заблуждение, что Wine — это эмулятор, это не так. Название Wine является рекурсивным акронимом и расшифровывается «Wine Is Not an Emulator» (Wine не эмулятор). Имеется в виду, что Wine не является эмулятором компьютера, как, например, qemu или VirtualBox, Wine — это альтернативная реализация Windows API.
+
+Для упрощения установки можно воспользоваться программой [http://www.playonlinux.com/ru/ PlayOnLinux] — надстройкой для Wine с готовыми профилями для запуска большого количества Windows-игр.
+
+Также есть коммерческие варианты Wine — [http://www.cedega.com/ Cedega] и [http://www.codeweavers.com/ Crossover]. Основное их преимущество в том, что если в них заявлена поддержка какой-либо игры, то в 90% случаев она будет работать. 
+==Как временно выйти из игры, запущенной в Wine?== 
+
+Так же, как и в Windows - комбинацией Alt+Tab, работает если игра запущена как в оконном режиме, так и в полноэкранном. Проверено.
+==А есть ли Counter Strike под Linux? Где взять сервер под CS?== 
+
+Под Linux выпущены нативные версии Counter Strike 1.6, Counter Strike: Condition Zero, Counter Strike: Source и Counter Strike: Global Offensive. Все они доступны через Steam.
+
+Также под Linux доступны dedicated servers для Counter Strike (в том числе и для Counter Strike: Global Offensive). Взять можно здесь https://developer.valvesoftware.com/wiki/SteamCMD
+==В Counter Strike не работает микрофон. Что делать?== 
+
+Попробовать включить поддержку full duplex. 
+
+==Что делать, если не запускается ни одна Steam-игра?==
+С большой вероятностью игры не запускаются из-за внутриигрового оверлея (включен по умолчанию). Отключить можно через меню «Просмотр → Настройки → В игре → Включить сообщество Steam в игре»
+
+[http://bugs.winehq.org/show_bug.cgi?id=22053 Ссылка на обсуждение бага]. В wine, собранном с gcc из ветки 4.5 и без omit-frame-pointer, оверлей работать должен.
+==Как поиграть под Linux в ...?== 
+===Как поиграть под Linux в %mygamename%?===
+Не знаю. Для начала стоит поискать игру в списке портированных на Linux. Если игры там не окажется, воспользуйтесь Wine или Cedega. Перед этим, загляните на сайт [http://appdb.winehq.org/] и узнайте, насколько хорошо Wine поддерживает вашу игру. Обратите внимание, постоянно ведётся работа по улучшению поддержки множества приложений, поэтому ваша игра может не запуститься на одних версиях Wine (даже более новых) и прекрасно работать на других. Попробуйте воспользоваться поиском по форуму — наверняка кто-то уже сталкивался с подобной проблемой и, возможно, давно существует  решение. 
+
+Очень старые игры (для ОС MSDOS) можно успешно запустить в DOSBOX. А совместимость можно проверить на сайте [http://www.dosbox.com/comp_list.php?letter=a].
+
+===Как поиграть под Linux в Doom (1, 2, Final Doom, Doom3/RoE)?===
+
+Прочитать [http://www.linux.org.ru/wiki/en/Doom эту] статью.
+
+===Как поиграть под Linux в Postal 1/2?===
+
+В нативный Postal Plus можно поиграть только раздобыв установочный диск или его образ.
+
+На русском языке Linux-версия Postal 2 не издавалась. На западе же самая полная антология Postal называется Postal Fudge Pack и содержит обе части игры, а также дополнительные пользовательские модификации и установщик для Windows, MacOS и Linux. Можно заказать [http://www.gopostal.com/store/fudgepack.php здесь] или поискать где-нибудь ещё.
+
+Нативные версии доступны через [http://store.steampowered.com Steam] и [http://www.desura.com Desura]. Steam-версия Postal 2 содержит ''только'' Postal 2, Share the Pain и Apocalypse Weekend и не поддерживает модификации из Fudge Pack. Однако их можно установить вручную.
+
+[http://unixforum.org/index.php?showtopic=86943 Инструкция] по установке локализованного Postal2 от Акеллы.
+===Как поиграть под Linux в Prey?=== 
+
+Инсталлятор можно взять [http://icculus.org/prey/ здесь].
+
+===Как поиграть в Quake под Linux? Где взять Quake (1,2,3,4,ETQW) под Linux?=== 
+
+[http://www.linux.org.ru/wiki/en/Quake Здесь] все подробно расписано
+
+А для настоящих линуксоидов :) имеется особый Quake - [http://webpages.mr.net/bobz/ttyquake/ TEXTMODE QUAKE].
+
+===Как поиграть под Linux в Return to Castle Wolfenstein?===
+
+Процесс установки идентичен для всех игр от IDSoftware последних лет. Установщик можно взять отсюда [ftp://www.idsoftware.com/idstuff/wolf/linux/wolf-linux-1.41b.x86.run].
+
+А вот в Wolfenstein: Enemy Territory - чисто сетевую версию игры, созданную специально для командных сражений, можно поиграть совершенно бесплатно, скачав ее [http://www.planetwolfenstein.com/files/files.shtml отсюда]
+
+===Как поиграть под Linux в Soldier of Fortune (Double Helix, Payback)?===
+
+В первую часть SOF поиграть очень просто — надо раздобыть диск с [http://www.lokigames.com/products/sof/ нативной Linux-версией]. Отдельно бинарники не распространяются.
+
+Вторая часть — Double Helix [http://appdb.winehq.org/objectManager.php?sClass=application&iId=751 неплохо работает в wine].
+
+Третья часть — Payback не работает в Linux никак и, скорее всего, не заработает.
+
+===Как поиграть под Linux в Unreal (1, 2, UT99, UT2k3/4, UT3)?===
+
+Прочитать [http://www.linux.org.ru/wiki/en/Unreal эту] статью.
+
+==Где поиграть под Linux в ...?== 
+
+Если есть желание поиграть в компании, то на форуме есть [http://www.linux.org.ru/forum/games/7782832 ветка] для этого. 
+
+==Тормозит/виснет WarCraft3 под Wine, как запустить?==
+
+Начнем с того, что видеокарта должна аппаратно поддерживать OpenGL. Смотрите соответствующие вопросы по установке драйверов к картам ATI и Nvidia. 
+
+А запустить его можно так: 
+<pre>user@linux$ war3.exe -opengl </pre> 
+
+==Где взять PvP сервер под Warcraft 3? Diablo 2? Сервер Battle.net? Они вообще есть?== 
+
+Проект называется [http://pvpgn.berlios.de/ pvpgn]. Обязательно прочитайте FAQ, размещенный на сайте. Там все подробно описано. 
+
+==Многие игры выводят изображение с частотой 60Гц. Как это исправить?== 
+
+Существует две проблемы: 
+
+* Игры показывают изображение с частотой 60Гц. 
+* При прописывании разрешения в конфигурационном файле X-сервера все равно остается частота в 60Гц. 
+
+Есть очень простой, хотя и неочевидный метод, который поможет нам решить данную проблему. Нужно прописать modline под каждое разрешение. Как рассчитывать modeline - [[X-сервер#Как_настроить_нормальную_частоту_и_разрешение_в_X-сервере%3F_Как_рассчитать_modeline%3F|смотрите соответствующий вопрос]]. 
+
+Метод поможет, например, любителям HoMM-III. 
+
+Разделы, ответственные за развертку, выглядят у меня так: 
+<pre> 
+Section "Monitor" 
+        Identifier   "Monitor0" 
+        VendorName   "Monitor Vendor" 
+        ModelName    "CTX5378" 
+        DisplaySize  330        250 
+        HorizSync    30.0 - 72.0 
+        VertRefresh  50.0 - 130.0 
+        ModeLine     "1152x864" 108.0 1152 1200 1328 1528 864 865 868 904 +hsync +vsync 
+        ModeLine     "1024x768" 94.5 1024 1076 1172 1372 768 769 772 812 +hsync +vsync 
+        ModeLine     "800x600" 56.3 800 832 896 1032 600 601 604 619 +hsync +vsync 
+        ModeLine     "640x480" 36.0 640 712 768 808 480 485 488 525 -hsync -vsync 
+        ModeLine     "400x300" 28.1 400 412 444 508 300 304 306 327 +hsync +vsync doublescan 
+        ModeLine     "320x200" 15.8 320 360 392 396 200 204 206 222 -hsync +vsync doublescan 
+        Option      "dpms" 
+EndSection 
+
+Section "Screen" 
+        Identifier "Screen0" 
+        Device     "Videocard0" 
+        Monitor    "Monitor0" 
+        DefaultDepth     24 
+
+        SubSection "Display" 
+                Depth   8 
+                Modes   "1152x864" "1024x768" "800x600" "640x480" "400x300" "320x200" 
+        EndSubSection 
+
+        SubSection "Display" 
+                Depth   16 
+                Modes   "1152x864" "1024x768" "800x600" "640x480" "400x300" "360x200" 
+        EndSubSection 
+
+        SubSection "Display" 
+                Depth   24 
+                Modes   "1152x864" "1024x768" "800x600" "640x480" "400x300" "360x200" 
+        EndSubSection 
+EndSection 
+</pre> 
+
+==Некоторые игры после завершения не восстанавливают разрешение экрана. Как мне восстановить разрешение не перезапуская X-сервер?== 
+
+Прочитать [http://www.linux.org.ru/wiki/en/Desktop#a_.D0.9A.D0.B0.D0.BA_.D0.BF.D0.BE.D0.BC.D0.B5.D0.BD.D1.8F.D1.82.D1.8C_.D1.80.D0.B0.D0.B7.D1.80.D0.B5.D1.88.D0.B5.D0.BD.D0.B8.D0.B5.2C_.D0.BD.D0.B5_.D0.BF.D0.B5.D1.80.D0.B5.D0.B7.D0.B0.D0.BF.D1.83.D1.81.D0.BA.D0.B0.D1.8F_X-.D1.81.D0.B5.D1.80.D0.B2.D0.B5.D1.80.3F ответ на этот вопрос]
+
+==Скачал патч/установщик под игру (в основном выпущенное loki games), но не ставится. Можно оттуда как-нибудь файлы достать?== 
+
+Можно. Всё можно. 
+
+Любой патч или программа установки от loki games представляет собой некое подобие самораспаковывающегося архива - в начале идет скрипт, который проверяет наличие диска/правильной md5sum и т.п. Конечно, все это можно обойти. 
+
+Алгоритм простой: 
+
+* Делаем бэкап на случай, если ничего не выйдет. 
+* Отрезаем скрипт по строчку, с которой начинается архив (такая смесь символов) и сохраняем файл. 
+* Переименовываем получившийся файл в tar.gz (один раз попался tar.bz2, но это редкость). 
+* Распаковываем его как нам нравится. 
+
+Итак, файлы мы достали. Что делать дальше? Если у нас обновление к игре, значит там содержатся новые файлы вперемешку с файлами изменений бинарников. Последние всегда идут в формате xdelta. Если до этого уже выходили обновления к игре, то там будут содержаться файлы изменений для обновления любой версии игры - придется методом научного тыка поискать какой подойдет (это не страшно, потому что xdelta проверяет, можно ли обновлять файл или нет). 
+
+Значит проапдейтили бинарники, переписали библиотеки и можем пробовать запускать игру. 
+
+Не всегда удаётся проделать все с первого раза, но главное не отступать. 
+
+Если у нас сама игра - файлы, нужные для превращения windows-версии игры в linux-версии, то тут еще проще. Распаковали всё, взглянули как лежит, переписали куда-нибудь в '''/usr/local/games/mygame''' и потом копируете файлы с виндовой версии - скажем, паки графические. То же обычно решается методом научного тыка. Или анализом скрипта. 
+
+==Как исправить задержку перемещения курсора в Neverwinter Nights?== 
+
+Поставить [http://icculus.org/~ravage/nwn/ родные бинарники, если это возможно]. 
+
+==Как избавиться от черного экрана в Worms: Armageddon и увидеть меню в Diablo II на последних версиях Wine?== 
+
+Данный патч накладывается на файл dlls/ddraw/surface_user.c: 
+<pre> 
+--- surface_user.c.old 2006-04-08 19:04:24.000000000 +0600 
++++ surface_user.c 2006-04-08 19:04:03.000000000 +0600 
+@@ -385,6 +385,7 @@ 
+
+if (This->ddraw_owner->cooperative_level & DDSCL_FULLSCREEN) 
+{ 
++ return GetDesktopWindow(); 
+#ifdef OWN_WINDOW 
+USER_PRIV_VAR(priv, This); 
+#if 1 
+</pre>
+
+На Wine 1.3.3 игра Diablo 2 Patch 1.13c идёт нормально и без вышеописанного патча.
+==Как бы поиграть в игры со старых игровых приставок?==
+
+Для начала — прочитать ответ на [http://www.linux.org.ru/wiki/en/Поиск_ПО#a_.D0.9A.D0.B0.D0.BA.D0.B8.D0.B5_.D0.B5.D1.81.D1.82.D1.8C_.D1.8D.D0.BC.D1.83.D0.BB.D1.8F.D1.82.D0.BE.D1.80.D1.8B_.D0.B8.D0.B3.D1.80.D0.BE.D0.B2.D1.8B.D1.85_.D0.BA.D0.BE.D0.BD.D1.81.D0.BE.D0.BB.D0.B5.D0.B9.3F_.28Game_Boy/PSX/NES/MasterGear/SNES/Nintendo/Sega/PlayStation.29 этот вопрос].
+==Запуск 32-битных игр на 64-битной системе==
+
+На самом деле, в этом нет ничего сложного. Если ваше оборудование поддерживается открытыми драйверами, все должно работать сразу и без проблем. Если же у вас используются проприетарные драйверы nVidia или ATI, то нужно установить соответствующие 32-битные библиотеки. К примеру в Debian они находятся в пакетах nvidia-glx-ia32 и fglrx-glx-ia32 для nVidia и ATI соответственно, а в Ubuntu они ставятся по умолчанию. Если предпочитаете ставить драйвера вручную, то соглашайтесь на предложение инсталлятора поставить 32битные библиотеки.
+==Как записать игру на видео? Есть ли аналог FRAPS?== 
+
+Да - аналог FRAPS есть. Он называется GLC. Проект доступен по адресу: http://nullkey.ath.cx/projects/glc/
+
+Если не хочется читать много документации, имеется хорошая обзорная статья: http://zenux.ru/articles/12/
+
+Доступна программа для записи и потокового вещания [https://github.com/jp9000/obs-studio OBS-Studio], имеющая возможности композитинга и переключения сцен, хромакея, захвата отдельных окон и других возможностей, полезных для летсплеера.
+==Как переключиться на рабочий стол из полноэкранных игр?== 
+Некоторые полноэкранные игры блокируют работу хоткеи Window Manager и утилит горячих клавиш (например xbindkeys) и невозможно временно переключиться на рабочий стол по Win+D (или Alt+Tab).
+
+Есть программа [http://users.softlab.ntua.gr/~thkala/projects/actkbd/ actkbd]. Эта программа работает независимо от иксовых программ и узнаёт о нажатии клавиш из /dev/input.
+
+Создать группу devinput. Назначить группу devinput всем файлам в папке "/dev/input/*" . Это надо делать каждый раз при загрузке ОС. Надо добавить в стартовые скрипты в /etc/.
+
+Своего юзера добавить в эту группу.
+
+Для actkbd нужный клавиатурный /dev/input/event? который можно узнать по /dev/input/by-id, /dev/input/by-path или в /proc/bus/input/devices. Нужно найти слова kbd или keyboard.
+
+В конфигурационный файл actkbd добавить команду (эти коды хоткея "Win + D" для клавиш для моей простой 105 кнопочной клавиатуры) :
+
+<pre>
+32+125:rel:all:wnckprop --show-desktop
+</pre>
+
+Коды для вашей клавиатуры можете узнать по команде 
+
+<pre>
+actkbd -s -c actkbd.conf -d /dev/input/тут_ваш_event
+</pre>
+
+Для тестирования запускайте так
+
+<pre>
+actkbd -s -x -c actkbd.conf -d /dev/input/тут_ваш_event
+</pre>
+
+==Изображение в Heroes Of Newerth замирает, на короткое время высвечивается иконка разрыва соединения== 
+
+При потере связи игра записывает данные об этом событии в файл на жестком диске, если это происходит часто (микролаги), отрисовка графики тормозится вводом-выводом. Чтобы этого избежать, просто выносим файл, в который идет запись, в оперативную память:
+<pre>
+rm ~/.Heroes\ of\ Newerth/game/reconnect.cfg; ln -s /dev/shm/reconnect.cfg ~/.Heroes\ of\ Newerth/game/reconnect.cfg 
+</pre>
+
+Также, хорошее влияние на латентность интерфейса оказывает использование ядра с BFS
+
+==Heroes Of Newerth падает после старта лобби==
+
+Если игра пишет в stdout следующее:
+<pre>
+Assertion 'b' failed at pulsecore/memblock.c:454, function pa_memblock_acquire(). Aborting.
+</pre>
+То шлем авторам pulseaudio лучи чего-нибудь нехорошего. После чего просто выпиливаем (в очередной раз!) бяку из системы. Для Убунты:
+<pre>
+sudo aptitude purge pulseaudio
+</pre>
+И наслаждаемся игрой.
+
+[[Category:L.O.R. FAQ]]
+[[Category:Игры]]

@@ -1,0 +1,56 @@
+= vi-like =
+
+== Текстовые редакторы ==
+* vi
+* vim
+* gvim - интерфейс на основе тулкита GTK для vim
+* [https://bitbucket.org/equalsraf/vim-qt/wiki/Home vim-qt] - интерфейс на основе тулкита Qt для vim
+
+Следующие редакторы частично поддерживают vi-like управление:
+* kate
+* qtcreator
+* [http://vrapper.sourceforge.net/home/ eclipse-vrapper] - плагин для eclipse IDE
+
+== Файловые менеджеры ==
+* [http://vifm.sourceforge.net/ vifm] - консольный файловый менеджер, написанный на ncurses
+* [http://ranger.nongnu.org/ ranger] - консольный файловый менеджер, написанный на Python и curses.
+
+== Браузеры ==
+=== Webkit ===
+* [http://uzbl.org/ uzbl] - браузер на WebKitGTK+
+* [http://portix.bitbucket.org/dwb/ dwb] - браузер на WebKitGTK+
+* [http://mason-larobina.github.com/luakit/ luakit] - браузер на WebKitGTK+, расширяемый с помощью lua
+* [https://opensource.conformal.com/wiki/xombrero xombrero] - браузер на WebKitGTK+
+* [http://cream-browser.net/ cream-browser] - браузер на GTK3 с поддержкой вкладок и тайлов
+* [https://github.com/The-Compiler/qutebrowser qutebrowser] - браузер на QtWebkit
+=== XUL ===
+Следующие расширения Firefox реализуют vi-like интерфейс:
+* vimperator
+* pentadactyl
+* VimFx
+* vimium
+* keysnail
+=== Chromium ===
+Следующие расширения Chromium реализуют vi-like интерфейс:
+* Vimium
+* cVim
+* Vichrome
+== Просмотрщики ==
+* [http://pwmt.org/projects/zathura/ zathura] - просмотрщик PDF, Djvu, PS на GTK
+* apvlv - просмотрщик PDF, Djvu на GTK
+* pim - просмотрщик изображений, написанный на Python.
+
+== Мультимедиа ==
+* [http://cmus.sourceforge.net/ cmus] - консольный аудиоплеер
+* [http://sourceforge.net/projects/vimpc/ vimpc] - консольный клиент MPD на ncurses
+* [http://vitunes.org/ vitunes] - консольный аудиоплеер на curses.
+= emacs-like =
+== Текстовые редакторы ==
+* emacs
+* [http://bellard.org/qemacs/ qemacs] - подобный emacs текстовый редактор, написан на C
+* [https://github.com/nsf/godit godit] - "православный" текстовый редактор написанный на Go.
+
+== Браузеры ==
+=== XUL ===
+* [http://conkeror.org/ conkeror] - браузер на XULrunner
+* firemacs - плагин для Firefox.

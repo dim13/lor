@@ -1,0 +1,1 @@
+<font size="-3">All contents copyright of the author. &copy;2007-{{CURRENTYEAR}}.</font>

@@ -1,0 +1,13 @@
+А здесь предлагаю писать ответы на вопросы типа: "Что почитать, чтобы научиться работать с..."
+
+== Blender ==
+[http://b3d.mezon.ru/index.php/Blender_Basics_4-rd_edition Blender Basics 4-rd edition (русский перевод)]
+
+== Darktable ==
+[http://www.darktable.org/resources/ Digital photo development with darktable]
+
+== Inkscape ==
+[http://screencasters.heathenx.org/ Скринкаст отличный есть]
+
+== GIMP ==
+[http://meetthegimp.org/ Meet The GIMP! (видеоуроки)]

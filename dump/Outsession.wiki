@@ -1,0 +1,369 @@
+= Общие заметки =
+
+Эта страничка предназначена для тех, кто любит путешествовать и/или не против встретиться/найти единомышленников в родном городе или просто встретиться с хорошими людьми, а также для тех, кто не страдает паранойей или решил от неё избавиться. Данный список представляет собой места проживания участников ЛОР, которые не против за кружкой пива завести новые знакомства. Так что будете проездом — заходите в гости! Для координации можно использовать Jabber-конференцию '''lor-outsession@conference.jabber.ru'''.
+
+* Добавляйте города/страны своего проживания в алфавитном порядке!
+
+= Теги для подписки =
+
+* Рекомендуемый для использования: [http://www.linux.org.ru/tag/outsession outsession]
+* Название города, например: [http://www.linux.org.ru/tag/киев киев], [http://www.linux.org.ru/tag/спб спб], [http://www.linux.org.ru/tag/berlin berlin]
+* Анонсы встреч публиковать с вышеуказанными тегами в [http://www.linux.org.ru/forum/talks/ Talks]
+
+= Азербайджан =
+
+== Баку ==
+
+* [http://www.linux.org.ru/people/dada/profile dada], употребляю много и регулярно. Я есть в [http://www.facebook.com/alikhan.damirov facebook]. Просьба, при отправке запроса на дружбу, указывать свой лоропрофиль.
+
+= Беларусь =
+
+== [http://www.linux.org.ru/tag/минск Минск] ==
+
+* Каждую последнюю субботу месяца проходят встречи MLUG в здании Sam Solutions на Филимонова, анонсы [http://mlug.linux.by/ здесь].
+* [http://www.linux.org.ru/people/MyNameIsWinner/profile MyNameIsWinner], Люблю линукс, музыку и ламповые посиделки. Не употребляю.
+* [http://www.linux.org.ru/people/leave/profile leave], могу употребить, свободного времени мало.
+* [https://www.linux.org.ru/people/Fist/profile Fist], умеренно. Обычно могу вписать 1-2 иногородних/иностранцев после конференции/линуксовки/посиделок в баре. Почта kulak-l@tut.by, skype kulakkulak25.
+* [https://www.linux.org.ru/people/int13h/profile int13h], могу много употребить. Люблю поговорить о Linux, железе, технике, олдскуле. mailto: int13h[at]tut.by
+* [https://www.linux.org.ru/people/soko1/profile soko1], не употребляю, купаюсь зимой и летом, люблю велоспорт, торчу на турниках, профес. увлечения: linux/bsd и компьютерная безопасность (готов разговаривать вечно), пишу сайты (к великому сожалению), фрилансер. Буду рад новым знакомствам. Jabber: soko1 at overlogic dot org
+= Германия =
+
+== [http://www.linux.org.ru/tag/berlin Berlin] ==
+
+* [http://www.linux.org.ru/people/beastie/profile beastie], контакты: [http://www.dim13.org/1978/11/Who-am-I dim13.org], есть место переночевать, пивоустойчив
+
+* [http://www.linux.org.ru/people/dikiy/profile dikiy], есть место переночевать, водкоустойчив.
+
+* [https://www.linux.org.ru/people/Lennart/profile Lennart :-)]
+== Dortmund ==
+
+* [http://www.linux.org.ru/people/hzk/profile hzk]
+
+== Düsseldorf ==
+
+* [http://www.linux.org.ru/people/UVV/profile UVV]
+
+== Hamburg ==
+
+* [http://www.linux.org.ru/people/shuck/profile Shuck], Тип топлива Warsteiner/Jagermeiter. Есть возможность захостить отряд до 1.5 человек.
+
+* [http://www.linux.org.ru/people/maxylopes/profile maxylopes], Тип топлива Paulaner Weiss. Есть возможность захостить отряд до 1.5 человек.  
+
+== München ==
+
+* [http://www.linux.org.ru/people/xawe/profile xawe]
+
+== Kassel ==
+
+* [http://www.linux.org.ru/people/Rubbiroid/profile Rubbiroid]
+
+
+= Ирландия =
+
+== Dublin ==
+* [http://www.linux.org.ru/people/vertexua/profile vertexua]
+
+== Tralee ==
+
+* [http://www.linux.org.ru/people/svu/profile svu]
+= Казахстан =
+
+== Алматы ==
+
+[http://www.linux.org.ru/people/Ginki/profile Ginki] Не употребляю, но всегда буду рад веселой компании линуксойдов, [http://arynov.ru/contact контакты].
+== Астана ==
+
+[http://www.linux.org.ru/people/undertaker/profile undertaker] Употребляю (правда, весьма редко). Желательно договариваться сильно заранее.
+
+== Шымкент ==
+
+[https://www.linux.org.ru/people/RedEyedMan4/profile RedEyedMan4] Не употребляю. К сожалению только в конфе.
+
+== Караганда ==
+
+[https://www.linux.org.ru/people/a1batross/profile a1batross] Не употребляю. 
+= Латвия =
+
+== Рига ==
+
+[http://www.linux.org.ru/people/Irben/profile Irben] 
+Не употребляю, всегда рад посидеть с гостями Риги в кафешке / барчухе
+= Польша =
+
+== Варшава ==
+
+* [https://www.linux.org.ru/people/Licwin/profile Licwin].
+* [https://www.linux.org.ru/people/fenris/profile fenris] Трезвенник и язвенник. Прихожу и ухожу когда считаю нужным.
+* [http://www.linux.org.ru/people/cycl0ne/profile cycl0ne]
+= Россия =
+
+== Абакан ==
+* [http://www.linux.org.ru/people/kukuruku/profile kukuruku]
+
+== Выборг ==
+* [http://www.linux.org.ru/people/Policeman/profile Policeman]
+* [http://www.linux.org.ru/people/hizel/profile hizel]
+* [http://www.linux.org.ru/people/Guest007/profile Guest007]
+== Владимир ==
+
+* [https://www.linux.org.ru/people/derlafff/profile derlafff], полуживой, непьющий, контакты в профиле, пытался найти согородчан [http://www.linux.org.ru/forum/talks/8667045 тут]
+
+== Воронеж ==
+
+* [https://www.linux.org.ru/people/alozovskoy/profile alozovskoy], контакты в профиле.
+* [https://www.linux.org.ru/people/BattleCoder/profile BattleCoder]
+
+== Грозный ==
+
+* [http://www.linux.org.ru/people/r0ck3r/profile r0ck3r]. E-Mail'ы в профиле. Люблю все откладывать на завтра, но не всегда получается, так как работаю. Буду рад гостям, благодаря которым, займусь любимым делом :)
+
+==[https://www.linux.org.ru/tag/%D0%B5%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3 Екатеринбург] ==
+
+* [https://www.linux.org.ru/people/olibjerd/profile olibjerd], не против чая и пива (но не вместе), нуб во всём, могу не выйти на связь или вообще оказаться в Серове.
+
+* [https://www.linux.org.ru/people/newpunkies/profile newpunkies], не против.
+
+== Ижевск ==
+*[http://www.linux.org.ru/people/darkenshvein/profile darkshvein], безалкогольный. Летом можно на велике. Зимой на лыжах/коньках.
+*[http://www.linux.org.ru/people/belkabelka/profile belkabelka]
+*[http://www.linux.org.ru/people/Insomnium/profile Insomnium] Явер, оффтопер, употребляю пиво. (: Ins137 at gmail dot com
+== Краснодар ==
+
+* [https://www.linux.org.ru/people/Akamanah/profile Akamanah]. Спиртное не переношу, но всегда буду рад встретиться и задушевно потрещать на онтопиковские темы.
+* [https://www.linux.org.ru/people/Y/profile Y]. Контакты: https://39.yt/. Можно на велике.
+* [https://www.linux.org.ru/people/Bizun/profile Bizun].
+== Красноярск ==
+* [http://www.linux.org.ru/people/Spoofing/profile Spoofing] (Красноярский край, Сосновоборск в ~30км) Не пью, не курю, хикки. Ламповые беседы и задротские холивары про айти. Контакты в профиле.
+
+== [http://www.linux.org.ru/tag/москва Москва ] ==
+
+* Встречи [http://www.linux.org.ru/tag/mlug МЛУГа] проходят каждую вторую пятницу и последнюю субботу месяца в ресторанном дворике ТЦ Аркадия. Конкретно можно обращаться к [http://www.linux.org.ru/people/XMs/profile XMs] и [http://www.linux.org.ru/people/devl547/profile devl547]. Подробности на сайте [http://www.mlug.ru/ mlug.ru]
+* [http://www.linux.org.ru/people/lazyklimm/profile lazyklimm], джаббер там же. Могу побыть (полу)проводником по закоулкам и питейным заведениям города. Недолюбливаю разговоры о компьютерах вообще и линуксе в частности. Иногда хожу на [http://www.lastfm.ru/user/lazyklimm/events митол- и не совсем концерты]. 
+* [http://www.linux.org.ru/people/tazhate/profile tazhate] жаббер там же.  Могу побыть (полу)проводником по закоулкам и питейным заведениям города. Долюбливаю разговоры о компьютерах вообще и линуксе в частности.
+* [http://www.linux.org.ru/people/alexnorton/profile alexnorton] контакты в профиле. Знаю где покушать-пожрать-выпить-набухаться-девочки-гостинницы-ночлежки-потанцевать в Дефолт-Сити. Собеседник никакой, но вожу англоязычные экскурсии по ДС для желающих в выходные.
+* [http://www.linux.org.ru/people/riki/profile riki], жаббер в профиле. Гуляю по Москве и области, катаюсь по лесам и болотам, стреляю по тарелочкам. Питейные заведения выбирать обучен.
+* [http://www.linux.org.ru/people/log4tmp/profile log4tmp] Употребляю темное пиво и крепкие настойки, любитель задушевных бесед.
+* [http://www.linux.org.ru/people/Anoxemian/profile anoxemian] Употребляю по настроению от доброго эля до чего угодно. Частенько зависаю в дорогих и пафосных местах города, куда могу стать проводником, ну и потрепаться на любую тему.
+* [http://www.linux.org.ru/people/lexxus-lex/profile lexxus-lex] без надобности не пью, любитель походить на выставки, и поиграть на гитаре. Занимаюсь натуральным бодибилдингом, кроссфитом и т.д.
+* [http://www.linux.org.ru/people/l0stparadise/profile l0stparadise], джаббер в профиле. Пью что покрепче, слушаю что потяжелее, посещаю заведения данных направлений.
+* [http://www.linux.org.ru/people/overmind88/profile overmind88], джаббер и почта в профиле, могу пить, могу не пить. Довольно лёгок на подъём.
+* [http://www.linux.org.ru/people/sehellion/profile SeHELLioN] Понаехал учиться. Поддержу любую тему для разговора.
+* [http://www.linux.org.ru/people/trofk/profile trofk] Понаехал работать. 
+* [http://www.linux.org.ru/people/intelfx/profile intelfx], джаббер там же. Поуехал учиться (физтех). Не употребляю, катаюсь на велосипеде, слушаю митол, разговариваю исключительно на темы, связанные с радиотехникой, кодингом и внутренним устройством этого нашего линукса.
+* [https://www.linux.org.ru/people/d/profile d] РБ -> СПб -> М. Буду рад встрече как с адекватами, так и с неадекватами всея ЛОРа. Употребляю.
+* [https://www.linux.org.ru/people/djambeyshik/profile djambeyshik], употребляю (а когда употребляю - пою песни), но нищеброд; обитаю на ВДНХ/Алексеевской, по утрам и вечерам на Тушинской, сплю в Зеленограде; контакты в профиле.
+== Нижний Архыз (КЧР) == 
+
+* [http://www.linux.org.ru/people/Eddy_Em/profile Eddy_Em]. Контакты — в профиле. Летом могу сводить в горы в поход.
+
+А еще у нас в поселке можно просто смотаться на экскурсию на БТА, съездить зимой покататься на лыжах/сноубордах (к нам, либо за Архыз), сгонять на экскурсию в Маас (останки аланского города) и просто хорошо провести время.
+
+== Новосибирск, Бердск (Новосибирская область) ==
+
+* [http://www.linux.org.ru/people/Hertz/profile Hertz]. Всегда рад попить пивка с лоровцами (по обстоятельствам). Контакты в профиле.
+
+== Переславль-Залесский (Ярославская область) ==
+
+* [http://www.linux.org.ru/people/buddhist/profile buddhist]. Употребление сильно не поощряю, но против не буду.
+
+== Омск ==
+
+* [https://www.linux.org.ru/people/linuxmaster/profile linuxmaster]. Не пью спиртное, ем здоровую пищу. Страдаю Linux-прозелитизмом. Люблю средства виртуализации (kvm, qemu, virtualbox), оптимизировать PostgreSQL, шифрование (OpenSSL, GNU OpenGPG), компилировать кастомные ядра Linux, рассматривать внешние половые признаки и внутренности свободных дистрибутивов ОС, собирать и разбирать старые компьютерные железки. Если вам это нравится, то вам понравится в сообществе Омских линукоидов [http://www.omsklug.com OmskLUG.com]. Для согласования каких-либо акций, флешмобов или просто встреч линуксоидов забегайте к нам на omsklug@confrence.jabber.ru 
+
+== Псков ==
+
+* [http://www.linux.org.ru/people/madcore/profile madcore]. Употребление по настроению и обстоятельствам. 
+* [http://www.linux.org.ru/people/kilolife/profile kilolife]. Употребляю. Уважаю лес.
+== Ростов-на-Дону ==
+
+* [http://www.linux.org.ru/people/AlexCones/profile AlexCones]. Жаббер - жмайловский никнейм. Можно туда же на почту стукнуть, если долго не отвечаю. Трезвенник, но за компанию посижу и попью минералки.
+* [http://www.linux.org.ru/people/Pinkbyte/profile Pinkbyte]. Контакты в профиле. Жуткий домосед, но иногда могу по настроению куда-нибудь выбраться. Пиво - люблю ;-)
+
+== [http://www.linux.org.ru/tag/самара Самара] ==
+
+* [http://linux.org.ru/people/JB/profile JB]. Контакты есть в профиле. Не пью, но употребляю в компании и за компанию
+
+== [http://www.linux.org.ru/tag/спб Санкт-Петербург] ==
+
+* Встречи [http://spblug.org SPbLUG] проходят каждую последнюю среду месяца в ЦДО "Феникс", В.О., 10я линия, 35. Факультет Географии СПбГУ. На охране сказать "иду в Феникс". Вход на первом этаже в белую железную дверь, звонок справа от двери.
+
+* [http://www.linux.org.ru/people/Jaga/profile Jaga]. Контакты — в профиле. Употребляю. Мало времени, намного проще меня встретить на каком-нибудь концерте в клубе.
+
+* [http://www.linux.org.ru/people/panter_dsd/profile panter_dsd] Употребляю. Семейный, поэтому намного реже, чем раньше, но по пинте доброго эля опрокинуть можно.
+
+* [http://www.linux.org.ru/people/realloc/profile realloc] Употребляю. Употребляю. Употребляю.
+
+* [http://www.linux.org.ru/people/catap/profile catap]. Контакты в профиле, встретить можно вечерами по будням в pub #1 что на чкаловской :) либо в Дикенсе, либо в Дугласе, либо в Крике что на петроградке, но чаще в офисе на пуфиках — Большой 58 же! 
+
+* [http://www.linux.org.ru/people/cvs-255/profile cvs-255] В меру. 
+
+* [http://www.linux.org.ru/people/manntes-live/profile manntes-live] Чай, кофе, Убунту. Основным контактом служит почта (в профиле).
+
+* [http://www.linux.org.ru/people/veneperkele/profile veneperkele] OpenBSD, Ubuntu. На попойки не иду.
+
+* [http://www.linux.org.ru/people/vspider/profile vspider] Чай, кофе, Linux Mint. Контакты в профиле.
+
+* [http://www.linux.org.ru/people/Stage1/profile Stage1] Чай, мята, жаровый самовар, Gentoo. Контакт в профиле.
+
+* [http://www.linux.org.ru/people/ollowtf/profile ollowtf] По настроению.
+
+* [http://www.linux.org.ru/people/kdask/profile kdask] Да!
+
+* [http://www.linux.org.ru/people/x4DA/profile x4DA] Сижу дома, никуда не выхожу. Можно не звать. // Но попробовать можно.
+
+* [https://www.linux.org.ru/people/torvn77/profile torvn77] Люблю ликёры,грязный и не мытый.Дом для встреч не пригоден,если нет работы или какого ни будь дела то разговор замирает не начавщесь.
+
+* [https://www.linux.org.ru/people/BlackHawk/profile BlackHawk] Употребляю. Контакт в профиле.
+
+* [https://www.linux.org.ru/people/Ford_Focus/profile Ford_Focus] всеядный, мыло/жаба в профиле
+
+* [https://www.linux.org.ru/people/jcd/profile jcd] слабоконтактен, генту, алкоголь
+
+* [https://www.linux.org.ru/people/HerrWeigel/profile HerrWeigel ] употребляю почти все (из алкоголя), посиделки с чаем и кофе тоже люблю, могу иногда выйти на коньках покататься; джаббер в профиле, захожу каждый день, когда дома.
+
+* [https://www.linux.org.ru/people/yacuken/profile yacuken] алкоголь одобряю, мыло в профиле. Arch.
+
+* [https://www.linux.org.ru/people/v9lij/profile v9lij] Употребить всегда рад. Контакты в профиле.
+
+* [https://www.linux.org.ru/people/vostrik/profile vostrik], употребляю. 
+
+* [http://www.linux.org.ru/people/quest/profile quest] По настроению.
+
+* [http://www.linux.org.ru/people/Towelie/profile Towelie] Бывает
+
+*[http://www.linux.org.ru/people/Valkeru/profile Valkeru] По настроению в умеренных количествах. Контактная инфа в профиле
+== Симферополь ==
+
+* [http://www.linux.org.ru/people/Cypher/profile Cypher]
+== Смоленск ==
+
+* [http://www.linux.org.ru/people/DoctorSinus/profile DoctorSinus] не пью, но к пьянкам отношусь либерально. О встречах договариваться заранее, примерный ориентир — музыкальное училище или энергоинститут.
+
+* [http://www.linux.org.ru/people/sehellion/profile SeHELLioN] Употребляю. Бывает, холиварю. Дебианщик.
+== Сочи ==
+
+* [http://www.linux.org.ru/people/Ximen/profile Ximen]. JID в профиле.
+
+== Сургут ==
+
+* [http://www.linux.org.ru/people/spunky/profile spunky]. Буду крайне удивлён наличию социопатов-линуксоидов в этом городе, но не разочарован, надеюсь. Профиль наполнен незазря, там контакт.
+
+== Таганрог ==
+
+* [http://www.linux.org.ru/people/C1nde/profile C1nde]. Употребляю, социален. Холивары про ПО, железо и вебовое программирование инклюдед.
+
+== Тула ==
+
+* [http://www.linux.org.ru/people/ziemin/profile ziemin]. Злоупотребляю пивом. За кружечкой способен рассуждать на любые темы.
+
+== Тюмень ==
+
+* [http://www.linux.org.ru/people/Martin256/profile Martin256]. Контакты — в профиле. Вечерами играю в Dota 2, большую часть времени провожу на работе. Не против выпить по пиву вместо того чтобы играть в Dota 2.
+
+* [http://www.linux.org.ru/people/gr_buza/profile gr_buza]. Юниксоид-сетевик. Живу то в Сургуте, то в Тюмени. Можно писать в джаббер eill@j.r или в почту на тот-же-ник@яндекс :)
+
+* [http://www.linux.org.ru/people/Demacr/profile Demacr]. Полугентушник-полуцискошатальщик. Страйкбол и сноуборд основные хобби. Пиво в пятницу или в середине недели это святое. мой_ник@jabber.ru или 419777063
+
+== Уфа ==
+* [http://www.linux.org.ru/people/Ned/profile Ned]. Употребляю. Arch.
+* [http://www.linux.org.ru/people/DeadEye/profile DeadEye]. Сильно упорот.
+= США =
+
+== West Coast ==
+
+=== Las Vegas/Henderson ===
+
+* [http://www.linux.org.ru/people/LMW/profile LMW] Употребляю всё, но предпочитаю пиво. Админю циски, линухи всех сортов, редко венду.
+
+=== Seattle ===
+
+* [https://www.linux.org.ru/people/roy/profile roy] Хайки, вел, сноуборд, пиво и прочая развлекуха
+= Украина =
+
+== Днепропетровск ==
+
+* [http://www.linux.org.ru/people/dvrts/profile dvrts]. [http://about.me/igor.dvoretskyi я повсюду] - употребляю, употребл..
+* [http://www.linux.org.ru/people/sin-ok/profile sin-ok]
+* [http://www.linux.org.ru/people/Pyzia/profile Pyzia]
+
+== [http://www.linux.org.ru/tag/киев Киев] ==
+
+* [http://www.linux.org.ru/people/amazpyel/profile amazpyel]
+* [http://www.linux.org.ru/people/post-factum/profile post-factum] — употребляю, но встречу очень желательно планировать заранее.
+* [http://www.linux.org.ru/people/tyakos/profile tyakos] В Киеве нахожусь далеко не всегда, на меня особо не рассчитывайте.
+* [http://www.linux.org.ru/people/jtootf/profile jtootf]
+* [http://www.linux.org.ru/people/Komintern/profile Komintern] - всегда рад приятной компании, употребляю все что найду, джабер в профиле.
+* [http://www.linux.org.ru/people/Spirit_of_Stallman/profile Spirit_of_Stallman] - трудно найти, легко потерять и невозможно забыть :D
+* [http://www.linux.org.ru/people/ananas/profile ananas]
+* [http://www.linux.org.ru/people/Skolotovich/profile Skolotovich]
+* [http://www.linux.org.ru/people/long_live_php/profile long_live_php] - всегда рад употребить в хорошей компании
+* [http://www.linux.org.ru/people/grouzen/profile grouzen] - пью напитки <= 42 градусов
+* [http://www.linux.org.ru/people/Pavval/profile Pavval]
+* [http://www.linux.org.ru/people/cdshines/profile cdshines]
+* [http://www.linux.org.ru/people/drull/profile drull] - пью все что горит и все что не горит.
+* [http://www.linux.org.ru/people/toney/profile toney] - В основном не пью, но от этого не страдаю, а если и пью, то редко, но метко.
+* [https://www.linux.org.ru/people/Copycat/profile Copycat]
+* [https://www.linux.org.ru/people/Stahl/profile Stahl]
+* [https://www.linux.org.ru/people/Sectoid/profile Sectoid]
+* [https://www.linux.org.ru/people/observer/profile observer]
+* [https://www.linux.org.ru/people/slavun/profile slavun]
+* [https://www.linux.org.ru/people/never286/profile never286]
+* [https://www.linux.org.ru/people/cvv/profile cvv]
+* [https://www.linux.org.ru/people/elfy/profile elfy]
+* [https://www.linux.org.ru/people/kukara4/profile kukara4]
+* [https://www.linux.org.ru/people/cdshines/profile cdshines]
+* [https://www.linux.org.ru/people/dtm/profile dtm]
+* [https://www.linux.org.ru/people/Nicholass/profile Nicholass]
+* [https://www.linux.org.ru/people/Boui/profile Boui]
+* [https://www.linux.org.ru/people/long_live_php/profile long_live_php]
+* [https://www.linux.org.ru/people/ufw/profile ufw]
+* [https://www.linux.org.ru/people/Moonshine/profile Moonshine]
+* [https://www.linux.org.ru/people/r/profile r]
+* [https://www.linux.org.ru/people/webmak/profile webmak]
+== Кировоград ==
+
+* [http://www.linux.org.ru/people/NeverLoved/profile NeverLoved] - Гентушник. Употребляю. Много. В разнообразных компаниях. Контакты в профиле.
+
+* [http://www.linux.org.ru/people/moon/profile moon] сферический убунтист, питонист и бассист в вакууме.
+== [http://www.linux.org.ru/tag/львов Львов] ==
+
+* [http://www.linux.org.ru/people/PaulCarroty/profile PaulCarroty]
+* [http://www.linux.org.ru/people/shimon/profile shimon]
+* [http://www.linux.org.ru/people/val-amart/profile val-amart]
+
+== Одесса ==
+
+* [http://www.linux.org.ru/people/shatsky/profile shatsky]
+
+
+
+== [http://www.linux.org.ru/tag/харьков Харьков] ==
+
+* [http://www.linux.org.ru/people/vurdalak/profile vurdalak]. Употреляю под настроение, джаббер в профиле.
+
+* [http://www.linux.org.ru/people/vinnni/profile vinnni]. Употребляю. Пишите в skype vinni_ua
+
+* [http://www.linux.org.ru/people/joy4eg/profile joy4eg]. Skype: joy4egg
+
+* [https://www.linux.org.ru/people/MaGIc2laNTern/profile MaGIc2laNTern]. Email/Jabber: aruseni.magiku@gmail.com
+
+* [https://www.linux.org.ru/people/leg0las/profile leg0las]. Jabber: leg0las@jabber.com.ua, leg0las88@jabber.ru
+
+== Черновцы ==
+
+* [https://www.linux.org.ru/people/kiotoze/profile kiotoze]
+= Финляндия =
+
+== Uusimaa/Kanta-Häme/Päijät-Häme ==
+
+* [http://www.linux.org.ru/people/JackYF/profile JackYF] Чай/кофе/сок; Debian/C++/менеджеры пакетов; 42/42/42. Контакты в профиле.
+* [http://www.linux.org.ru/people/CYB3R/profile CYB3R] Linux, MIPS, Alcohol. Город Лахти. Контакты в профиле.
+== Helsinki ==
+
+* [http://www.linux.org.ru/people/unt1tled/profile unt1tled] Пью; Линуксоид, программист. nekiti@gmail.com
+= Эстония =
+
+== Tallinn ==
+
+* [http://www.linux.org.ru/people/Mr_Alone/profile Mr_Alone] Употребляю. В профиле мэйл для связи.
+* [http://www.linux.org.ru/people/const86/profile const86] Пью чай в любой точке Шенгена, а то и дальше.

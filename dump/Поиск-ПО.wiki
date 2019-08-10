@@ -1,0 +1,961 @@
+==Где искать и откуда брать==
+
+Если возникает необходимость в какой-либо программе, то первое место, где следует искать - это пакетный менеджер своего дистрибутива. Например, в случае с debian, или дистрибутиве произошедшем от него как, например, ubuntu, это apt. 
+
+Пример поиска программы:
+<pre>
+$ apt-cache search video editor
+bombono-dvd - DVD authoring program with nice and clean GUI
+kdenlive-debuginfo - KDE Non Linear Video Editor (debug files)
+kino - Non-linear DV editor
+openshot - Non Linear Video Editor using Python and MLT
+ffmpeg2dirac-kino - Dirac video encoder using ffmpeg
+xorg - Part of the X.Org implementation of the X Window System
+</pre>
+
+Для установки найденной программы также не надо искать где её можно скачать, а сделать это из того же пакетного менеджера: 
+
+<pre>
+$ sudo apt-get install kino
+</pre>
+
+В дистрибутиве основанном на red hat в качестве пакетного менеджера используется yum. Его испльзование немного отличается, но не принципиально.
+
+==А есть ли аналог...==
+
+[[Программы_для_дома_и_работы|Очень может быть]].
+
+Изначально была (и есть) хорошая таблица - [http://www.freesource.info/wiki/Win_Lin_Table]. Сейчас ее дорабатывает один человек [http://syncro.fatal.ru здесь] и еще группа людей вот [http://www.linuxrsp.ru/win-lin-soft/table-rus.html тут]
+
+Поищите в этих таблицах - большая часть вопросов, которая возникала на LOR, покрываются ею или этим разделом.
+
+Также можно воспользоваться довольно интересным порталом [http://www.osalt.com], это крупнейший портал со списком свободных альтернатив коммерческому ПО под различные ОС.
+
+==Какие есть словари/переводчики? Какие словари можно использовать в консоли?==
+
+Словари есть. Можно и Lingvo запустить под Wine - см. соотв. вопрос в этом FAQ. Некоторые небезосновательно полагают, что это лучший вариант, правда платный. В остальном же, следует различать сами словари и интерфейсы к ним. Словарь - это файл с собственно данными, а интерфейс (front-end)- это программа (текстовая или графическая), которая понимает формат словаря и используется для работы с ним.
+
+Самый популярный, но не самый сильный, это англо-русский словарь Мюллера (который был создан достаточно давно, чтобы стать Public Domain) плюс еще несколько словарей, которые можно найти в виде текстовых файлов на [http://selnix.narod.ru/dics.html]. В качестве простейшего интерфейса можно использовать [http://mueller-dic.chat.ru MOVA]
+
+Очень популярен [http://code.google.com/p/stardict-3/ StarDict] - он умеет переводить выделенные слова, понимает нечеткий запрос, понимает словари других форматов, т.к. имеет в своем составе конвертеры для них, имеет множество больших и малых словарей, причем не только для английского и русского языков, имеет звуковой словарь, имеет сборку под MS Windows. Словари для него можно найти на сайте [http://xdxf.sourceforge.net] (выбирайте формат stardict при скачивании). Консольную версию stardict можно взять [http://sdcv.sf.net здесь], а порт на Qt4 лежит [http://qstardict.ylsoftware.com тут]
+
+В последнее время набирает популярность [http://goldendict.berlios.de/ GoldenDict] и это не просто так. Он поддерживает форматы StarDict, Babylon, Lingvo .dsl, dictd, поиск в Википедии и других MediaWiki-сайтах, имеет систему морфологии, режим всплывающего окна и еще много чего прочего. Внешне выглядит как Lingvo, что тоже можно считать плюсом.
+
+Кроме всего вышеперечисленного есть сервер словарей [http://www.dict.org/ dictd] и клиенты к нему - Gnome dictionary и Kdict. 
+
+Также есть демонстрационная версия неплохого словаря [http://multitran.sourceforge.net/ Multitran]
+==Какие есть аналоги Punto Switcher?==
+
+[http://xneur.ru/ X Neural Switcher]
+==Скачивание файлов==
+===Какие есть менеджеры закачек? Например, как FlashGet или TeleportPro под MS Windows?===
+
+Самая популярная качалка - это, конечно же, wget, но он не всегда удобен, так как является программой текстового режима. Все остальное - это, часто, фронтенды к нему:
+*[http://projects.gnome.org/gwget/ Gwget]
+*[http://www.pavuk.org/ Павук] (судя по всему RIP)
+
+Для многопоточной закачки можно использовать консольную [http://aria2.sourceforge.net Aria2], также поддерживает базовую работу с BitTorrent.
+
+Тем, кто использует KDE, стоит установить [http://docs.kde.org/stable/en/kdenetwork/kget/index.html Kget] из пакета kdenetwork
+
+Очень неплох [http://lftp.yar.ru/ lftp]. Поддерживает параллельные закачки в бэкграунде, имеет возможность оставаться в фоне до завершения закачек при выходе, поддерживает FXP, FTP, FISH, HTTP/SOCKS-прокси, зеркалирование, и еще много чего.
+
+Программы для скачивания можно интегрировать в контекстное меню Mozilla или Firefox, установив расширение [http://flashgot.net/ FlashGot].
+
+Это, IMHO, самые интересные. А вообще посредством нехитрой формулы "toolkit name"+"get" можно по поиску найти массу более-менее аналогичных продуктов, хотя некоторые, например netfleet или Fatrat не содержат "get" в своем имени. 
+
+Для закачки сайтов целиком можно использовать wget:
+<pre>
+#!/bin/bash
+
+URL=$1
+DIR="~/dload/docs"
+
+cd "$DIR"
+wget -np -m -k -R *.rar,*.zip,*.gz*,*tar,*.rpm,*.bz2 $URL
+</pre>
+
+Еще есть [http://www.httrack.com/ HTTrack Website Copier] и несколько фронтендов к нему.
+===Какие есть p2p-клиенты? (Torrent, DC++, Edonkey)===
+
+Перечислим наиболее популярные:
+
+BitTorrent:
+
+* [http://www.bittorrent.com BitTorrent] - С октября 2007 года линуксовая версия больше не развивается
+* [http://deluge-torrent.org/ Deluge] - По своим характеристикам сходен с официальным клиентом BitTorrent, внешне напоминает популярный uTorrent
+* [http://ktorrent.org/ KTorrent] - Очень функциональный клиент для KDE4
+* [http://azureus.sourceforge.net/ Vuze] - Ранее известен как Azureus, написан на Java
+* [http://www.transmissionbt.com/ Transmission] - Простой и не требовательный к ресурсам клиент, имеются варианты Qt (qtr) , Gtk+, CLI, а также демон с управлением через Web-интерфейс
+* [http://qbittorrent.sourceforge.net/ qBittorrent] - Простой нетребовательный к ресурсам клиент на Qt4, встраивается в любое рабочее окружение, активно развивается, поддерживает новомодные фичи типа magnet URI, с версии 2 интерфейс стал напоминать  uTorrent, имеет собственный поисковый  движок, в том числе по категориям (музыка, видео), поддерживает удалённое управление через WEB-интерфейс, может "маскироваться" (выдавать себя) за uTorrent
+
+Direct Connect (DC):
+
+* [https://launchpad.net/linuxdcpp LinuxDC++] - Достаточно стабильный клиент, внешне копирует популярные Windows клиенты. В последней версии научился многопоточной закачке.
+* [http://wxdcgui.sourceforge.net/ Valknut] - Клиент основан на протоколе Neo-Modus Direct Connect (NMDC), который не совместим с последним протоколом Advanced Direct Connect (ADC).
+* [http://code.google.com/p/eiskaltdc/ EiskaltDC++] -  Мульти-бэкенд клиент на основе ядра DC++ для протоколов Advanced Direct Connect (ADC) и Neo-Modus Direct Connect (NMDC).
+Edonkey (он же "Осёл"):
+
+* [http://sourceforge.net/projects/xmule xmule] - Порт emule, сильно уступает оригиналу по функциональности, почти не развивается.
+* [http://www.amule.org/ amule] - Более живой форк xmule, ближе к emule по функциональности.
+* [http://mldonkey.org/ mldonkey] - Поддерживает также BitTorent, Gnutella, FastTrack,  Soulseek, Opennap, Direct-Connect и ряд других протоколов.
+* [http://hydranode.com/ Hydranode] - Проект, поддерживающий edonkey, bittorent и закачку через web. В планах поддержка DC++, Ares, FTP, IRC, NNTP.
+
+Gnutella:
+
+* [http://www.limewire.com Limewire]
+
+===Подскажите простой консольный клиент для BitTorrent===
+
+* [http://www.bittorent.com btdownloadcurses.py]
+* [http://libtorrent.rakshasa.no/ rtorrent] (веб интерфейсы [http://www.wtorrent-project.org/trac/ wtorrent], [http://code.google.com/p/rutorrent/ rutorrent])
+* [http://ctorrent.sourceforge.net/ ctorrent]
+* [http://www.transmissionbt.com/ transmission] - доступны консольный вариант (transmissioncli) и демон с веб интерфейсом
+
+==IM и чат==
+===Какие есть клиенты для ICQ/AIM/MSN?===
+
+В последнее время набирает обороты [http://qutim.org qutim], внешне несколько напоминающий популярный в среде Windows мессенджер QIP, хотя разработчики говорят что не ставили перед собой такой цели, просто так вышло. Написан на Qt4, поддерживает различные темы, смайлики, звуки и прочее. Наверное сейчас это самый функциональный ICQ клиент под *nix. Поддержка протоколов может быть расширена плагинами, в частности для XMPP (Jabber) и MRIM (mail.ru).
+
+Так же в свое время популярностью пользовались [http://sim-im.org sim] и [http://www.licq.org/ licq]. Интерфейс sim написан на Qt4, помимо ICQ поддерживаются AIM, Yahoo, MSN, Jabber и худо-бедно можно писать в livejournal. Licq так же использует Qt4 и в последней версии обзавелся поддержкой плагинов для других протоколов - MSN, XMPP/Jabber. Так же имеется возможность собрать [http://icqnd.sourceforge.net/ GTK2 интерфейс].
+
+Для текстового режима отлично подходит [http://www.centerim.org/ centerim], поддерживает также протоколы Yahoo, AIM, MSN, IRC и Jabber. Из текстовых есть еще неплохой клиент [http://www.climm.org/ climm], ранее назывался micq.
+
+Также существуют многофункциональные "комбайны", поддерживающие несколько протоколов, например [http://pidgin.im/ Pidgin] (на GTK) и Kopete (под KDE)
+
+Для MSN существует [http://www.amsn-project.net/ AMSN], [http://kmess.org/ KMess] и [http://blog.emesene.org/ emesene]. Для AIM в свою очередь можно воспользоваться вышеупомянутым Pidgin'ом.
+
+Еще два слова по поводу именно "комбайнов". Зачем нужна поддержка протокола Zephyr или Gadu-Gadu? Zephyr использовался как внутренний протокол для IM в университетских сетях, Gadu-Gadu же практически единственный IM, используемый в Польше, например. К слову сказать, адрес IM для Gadu-Gadu - [http://kadu.net]
+
+Если доступ в Интернет производится через SOCKS-сервер, проблем также возникнуть не должно - все клиенты могут работать через SOCKS4, SOCKS5 и HTTPS. Кроме того, в принципе, можно любой IM-клиент заставить работать как обычную программу через socks-cap. По крайней мере с licq это получалось.
+
+===А какие есть клиенты для Jabber?===
+
+Самые популярные это [http://gajim.org Gajim] и [http://psi-im.org Psi]. Выбор между ними это скорее выбор между тулкитами -  GTK или Qt, так как функционал у них по большей части одинаковый, разве что Gajim умеет PEP (Personal Events Protocol, аналог икс-статусов в аське), а в Psi есть начальная поддержка Jingle.
+
+Самый навороченный и наверное самый страшный это [http://tkabber.jabber.ru/ Tkabber]. Написан на Tk, умеет все и даже больше.
+
+Фанатам консоли подойдет [http://mcabber.com/ mcabber], альтернатива [http://poezio.eu/en/ poezio]
+
+В крайнем случае можно воспользоваться выше упомянутыми комбайнами - Pidgin и Kopete.
+
+Еще есть [http://live.gnome.org/Empathy Empathy], который теперь стал частью GNOME. Основан на фреймфорке [http://telepathy.freedesktop.org/wiki/ telepathy], умеет много разных протоколов и несколько клевых фич, вроде расшаривания рабочего стола для любого контакта из контакт-листа.
+
+Молодой клиент [http://code.google.com/p/vacuum-im/ Vacuum-IM].
+===А чем заменить Mail.ru Агент?===
+
+* Клиент Qutim
+
+* Траспорт mrim через Jabber
+
+* Клиент [http://code.google.com/p/frol9999/ Myagent-IM]
+
+* [http://github.com/dreadatour/pidgin-mra/downloads Модуль к Pidgin]
+
+* [http://mrim-prpl.googlecode.com/ Ещё один модуль к Pidgin]
+
+* Клиент [http://mdc.ru/ MDC (Multiple Direct Communicator)]
+===Какие есть IRC клиенты?===
+
+Их очень много. Прежде всего, абсолютное большинство IM-комбайнов, таких, как Pidgin и Kopete прекрасно работают с IRC-сетями. Также в браузерах Opera и Mozilla Seamonkey имеется встроенный IRC-клиент (в Firefox потребуется установка дополнительного расширения Chatzilla). Для тех, кому требуется только работа с IRC, существует несколько прекрасных клиентов с широчайшими возможностями:
+
+* [http://www.xchat.org/ XChat] - кроссплатформенный IRC-клиент, имеет большую базу скриптов - [http://xchat.org/cgi-bin/script_list.pl/]
+* [http://www.kvirc.net/ Kvirc] - очень навороченный IRC-клиент для KDE (поддержка KDE4 есть начиная с KVirc 4.0.0). Поддерживает скины, плагины, аватары, свой собственный скриптовый язык, легко расширяется.
+* [http://www.quassel-irc.org/ Quassel] - новый клиент на Qt4 с клиент-серверной архитектурой.
+* [http://konversation.kde.org/ Konversation] - еще один хороший IRC-клиент для KDE. Стабильная версия уже использует KDE4.
+* [http://irssi.org/ irssi] - популярный консольный клиент.
+* [http://www.bitchx.org/ BitchX] - один из старейших консольных IRC-клиентов, разрабатывается с 1994 года, не поддерживает UTF-8.
+* [http://www.ohloh.net/projects/smuxi Smuxi] - небольшой IRC-клиент для GNOME.
+
+Существует список [http://www.ircreviews.org/clients/platforms-unix-x.html графических] и [http://www.ircreviews.org/clients/platforms-unix.html консольных] клиентов для Unix-like ОС.
+
+==Какие есть почтовые программы? Например, как MS Outlook или The Bat под MS Windows? С помощью чего работать с MS Exchange?==
+
+На MS Outlook очень похожа почтовая программа Evolution. Она же умеет работать с MS Exchange.
+
+На The Bat! - Sylpheed (или Claws Mail, которая более функциональна) и KMail. Последняя входит в состав KDE и отлично понимает html, к тому же умеет импортировать письма из The Bat!
+
+Большой популярностью пользуется Mozilla Thunderbird, благодаря большой базе плагинов и расширений, увеличивающих функционал. 
+
+Также существует почтовые клиенты в составе браузеров Mozilla Seamonkey и Opera.
+
+Для консольного режима лучше всего подходят mutt и pine, они есть в любом дистрибутиве.
+
+==Какие существуют аналоги MS Exchange для групповой работы?==
+
+* [http://www.open-xchange.com/ Open-Xchange]
+* [http://www.scalix.com/ Scalix]
+* [http://www.kolab.org/ Kolab]
+* [http://www.bynari.net/ Bynari]
+* [http://www.zarafa.com/ Zarafa] - поддерживает календари, задания, список контактов, умеет интегрироваться с AD и с любым LDAP (FDS/389, OpenLDAP), синхронизацию с PDA и доступ через Web, поддерживается доступ из MS Outlook через MAPI
+==Какие есть браузеры? Какой браузер самый быстрый?==
+
+Много есть браузеров (думаю, при желании можно найти любой, кроме MS IE :), самые популярные (заслужено) - Mozilla Firefox и Chromium (Google Chrome). Понятие же "быстроты" - весьма субъективно. Во-первых, под ним можно понимать скорость отображения страниц, или работу самого интерфейса. И во-вторых, и то и другое - вещи весьма зависимые и спорные.
+
+Думаю правильным решением будет попробовать несколько и самому решить, что здесь и сейчас удобнее. Самые популярные:
+
+* [http://www.mozilla-russia.org/products/seamonkey/ Seamonkey] - ранее назывался Mozilla Suite, имеет встроенные email/news-клиенты, IRC-чат, адресную книгу и простенький редактор html-страниц.
+
+* [http://mozilla.com Mozilla Firefox] - популярный браузер, отпочковавшийся в свое время от Mozilla Suite. Имеет огромную [http://addons.mozilla.org/ базу] плагинов и расширений которые, при желании, весьма расширяют функциональность браузера вплоть до переводчика и игры "Пасьянс Косынка". Побочный эффект от установки всего этого - излишняя (сравнительно) тормознутость.
+
+* [http://opera.com Opera] - второй по популярности среди линуксоидов браузер. Изначально коммерческий, но сейчас - бесплатен. Есть встроенный e-mail/news/bittorrent-клиенты, поддержка сжатия траффика (на прокси серверах компании Opera Software ASA), сервисы Opera Unite позволяют предоставлять доступ к локальным файлам (например музыке) в том числе и если ваш компьютер находится за NAT 
+
+* [http://www.konqueror.org/ Konqueror] - стандартный браузер (и диспетчер файлов) KDE. Начиная с KDE4 позволяет выбирать между двумя движками для рендеринга страниц - KHTML и более современным WebKit.
+
+* [http://rekonq.sourceforge.net/ Rekonq] - более легкая (без файлового менеджера) альтернатива для Konqueror, использует WebKit.
+
+* [http://www.gnome.org/projects/epiphany/ Epiphany] - браузер по умолчанию в Gnome, использует движок WebKit.
+
+* [http://www.arora-browser.org/ Arora] - быстро развивающийся браузер на Qt4 использующий в качестве движка WebKit. При наличии Qt 4.5 (или выше) может использовать различные плагины, в том числе flash.
+
+* [http://www.twotoasts.de/index.php?/pages/midori_summary.html Midori] - легкий браузер на GTK2, не имеет зависимостей от Gnome. В качестве движка все тот же WebKit.
+
+* [http://www.google.com/chrome?platform=linux&hl=ru Google Chrome] Браузер от поискового гиганта Google. Поддерживает современные стандарты и технологии. Создан на основе браузера [http://www.chromium.org/Home Chromium], который доступен в большинстве дистрибутивов.
+
+Из совсем легких есть [http://www.dillo.org/ Dillo], но он умеет показывать разве что чистый html.
+
+Также хочется отметить и консольные браузеры - lynx и links. Первый, правда, пригодится наверное только если совсем уж ничего нет, а вот второй - очень даже неплохо справляется с функцией штатного браузера. Если его запустить с опцией -g (если он собран с ее поддержкой) получится очень даже приятный простенький графический браузер, хоть и не без недостатков. А вот у его разновидности - eLinks - их гораздо меньше и даже более того. Кроме того, есть Hacked Links - табы + GUI (из Links2) + куча опций из eLinks. 
+
+==Какие есть просмотрщики картинок? Например, как ACDSee под MS Windows?==
+
+* [http://gqview.sourceforge.net/ GQView] - есть почти в любом дистрибутиве. Не развивается где то с 2007 года.
+* [http://geeqie.sourceforge.net/ Geeqie] - форк GQView, пока жив.
+* [http://projects.gnome.org/eog/ Eye of Gnome] - стандартный просмотрщик Gnome.
+* [http://www.xnview.com/en/downloadunix.html XnView] - говорят, самый функциональный, но старая версия на LessTif страшная и уже не поддерживается, а новая на Qt пока глючная... :)
+* [http://gthumb.sourceforge.net/ gThumb] - просмотрщик под Gnome с возможностью создания веб-альбомов.
+* [http://gwenview.sourceforge.net/ Gwenview] - начиная с последних версий портирован под KDE4.
+* [http://www.imagemagick.org ImageMagic] - набор утилит для обработки графических файлов в скриптах - очень удобно. Утилиту display можно использовать как просмотрщик.
+* [http://www.graphicsmagick.org/ GraphicsMagick] - форк ImageMagic.
+* [http://www.klografx.net/qiv/index2.html qiv] - быстрый просмотрщик для любителей клавиатуры.
+* [http://linuxbrit.co.uk/feh/ feh] - легковесный просмотрщик картинок.
+* [http://lxde.sourceforge.net/gpicview/ GPicView] - еще один легковесный просмотрщик, теперь входит в состав LXDE
+* [http://gtksee.berlios.de GTKSee] - написан на GTK1, подойдет для слабых систем.
+* [http://mirageiv.berlios.de/ Mirage] - легковесный просмотрщик, быстро работает с большим количеством файлов.
+* [http://bytesex.org/fbi.html fbi] - framebuffer image viewer. Консольный просмотрщик, как видно из названия использует фреймбуфер.
+* [http://www.svgalib.org/rus/zgv zgv] - тоже консольный, но уже для svgalib.
+
+==Есть ли консольный редактор, поддерживающий unicode (utf-8)?==
+
+Да и вы все его знаете. Это vim. Он входит в состав любого дистрибутива. Дабы сделать переключатели кодировки, нужно добавить в файл ~/.vimrc следующие строки:
+<pre>
+map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
+set autoindent
+set wildmenu
+set wcm=<Tab>
+menu Encoding.koi8-r :e ++enc=koi8-r<CR>
+menu Encoding.windows-1251 :e ++enc=cp1251<CR>
+menu Encoding.cp866 :e ++enc=cp866<CR>
+menu Encoding.utf-8 :e ++enc=utf8 <CR>
+map <F8> :emenu Encoding.<TAB>
+</pre>
+Меню будет вызываться по клавише F8, переключить кодировки можно будет клавишей TAB.
+
+Есть другой вариант: автоопределение кодировки (KOI8-R или UTF-8) и запись результирующего файла в UTF-8:
+<pre>
+set encoding=utf-8
+set fenc=utf-8
+set fencs=utf-8,koi8-r
+</pre>
+
+Не хуже уникод поддерживают nano и emacs. Проблем с nano быть не должно, а настройка emacs'а заслуживает отдельной статьи.
+
+==Какие есть «звонилки»? (Чем звонить по модему?)==
+
+* [http://devel-home.kde.org/~kppp KPPP] - входит в состав KDE.
+* [http://alumnit.ca/wiki/index.php?page=WvDial WvDial] - популярная консольная звонилка. Имеет различные графические фронтенды - [http://www.gnomefiles.org/app.php?soft_id=41 GnomePPP] и [http://www.mtoussaint.de/qtwvdialer.html QtVwDialer]
+* [http://xisp.hellug.gr X-ISP] - страшная, но довольно функциональная.
+* [http://chestnut-dialer.sourceforge.net/ Chestnut Dialer] - симпатичная звонилка, имеет интерфейсы на GTK2 и Qt
+* [http://alioth.debian.org/projects/minicom/ minicom]
+
+Так же звонить можно с помощью pppd. Кстати, в отличие от Windows остальные операционные системы, включая GNU/Linux, не рвут логическое соединение при физическом разрыве, если у вас статический адрес. Например, соединение точно не разорвется, если pppd имеет следующие опции в /etc/ppp/options:
+
+<pre>
+demand
+persist
+maxfail 0
+holdoff 1
+ipcp-accept-local
+ipcp-accept-remote
+</pre>
+
+Еще есть pppconfig, соединения настраиваются через окошки ncurses, управление через pon/poff
+== Чем смотреть видео? ==
+
+Традиционно есть два плеера, которые перекрывают потребности любого человека - [http://mplayerhq.hu MPlayer] и [http://xinehq.de/ xine]. Последний обычно используется в качестве бекенда для кучи разных плееров - Kaffeine и так далее. Стандартный интерфейс у него мягко говоря ужасен. Впрочем, стандартный GUI mplayer'а (который в последних на данный момент версиях, конец 2011 года, был убран) тоже не красавец, сами разработчики рекомендуют использовать [http://smplayer.sourceforge.net/ SMPlayer].
+
+Многие годы ведутся священные войны о том, какой плеер лучше. Разницу постараемся выразить кратко:
+
+* xine умеет работать с dvd-меню. MPlayer в общем-то тоже, но мышкой кликать не получится.
+* mplayer может использоваться как программа для просмотра видео с любого v4l устройства (TV-тюнер, веб-камера).
+* mplayer можно использовать как плеер для браузера Mozilla с помощью специального плагина - [http://mplayerplug-in.sourceforge.net/].
+* mplayer поддерживает большое количество кодеков и имеет в своем составе одну из лучших программ кодирования видео - mencoder.
+* оба поддерживают аппаратную обработку видео на видеокартах nVidia через VDPAU, что позволяет просматривать HD-рипы в разрешении 1080p не имея топовый многоядерный процессор.
+* оба не поддерживают VAAPI, интерфейс для аппаратного декодирования видео на видеокартах MAD/ATi и Intel, но для обоих есть непритяный патч, добавляющий его поддержку<ref name="mplayer-vaapi">[http://gitorious.org/vaapi/mplayer/ mplayer-vaapi]</ref><ref name="xine-lib-vaapi">[https://github.com/huceke/xine-lib-vaapi xine-lib-vaapi]</ref>.
+* оба работают с пультами.
+* оба могут улучшать изображение на лету.
+* оба используются в различных графических редакторах видео.
+
+Есть ещё один плеер, изначально заточенный под проигрывание потокового видео из сети, но умеющий почти всё остальное - [http://www.videolan.org/vlc/ VLC]. Имеет приятный интерфейс на Qt4 и поддерживает практически все необходимые кодеки.
+
+В перспективе хорош GStreamer. Этот проект поддерживается и в KDE, и в Gnome. Список приложений использующих GStreamer можно посмотреть [http://gstreamer.freedesktop.org/apps/ тут].
+==Чем смотреть видеофайлы формата bik? (bink, radtools)==
+
+Есть консольная утилита - [http://www.radgametools.com/bnkdown.htm]
+
+==Какие есть бухгалтерские программы, как 1С под Linux, на русском?==
+
+Кое-что есть. Причем местами бесплатно и под GPL.
+
+* [http://www.lks-org.ru/production/hansa/ Hansa Financials] - в России поддерживается компанией "Лаборатория корпоративных систем". Приведена в соответствии с русским законодательством и требованиями по бухучету и налогообложению. Ссылка мертвая, но если поискать в гугле наверняка можно найти что нибудь.
+* [http://www.bestnet.ru/programs/best-4plus/ БЭСТ 4+]
+* [http://hdru.com/russian Финансы Без проблем]
+* [http://ananas.su/ Ананас]
+* [http://www.iceb.vc.ukrtel.net/ Открытая бухгалтерия iceB]
+* [http://linuxcanada.com/quasar.shtml#inter Quasar]
+* [http://eas.lrn.ru/index.php?id=about E/AS]
+* [http://1l.w4b.ru 1L:Project]
+
+Серверная часть 1С:Предприятия портирована на Linux, клиентская запускается в коммерческом клоне Wine под названием Wine@Etersoft.
+
+==Какие есть антивирусы?==
+
+Пока что эта проблема не столь актуальна, как у пользователей Windows. В основном проверяют транзитный трафик (почта, samba-трафик), иногда и файлы на диске. И несмотря на это:
+
+* [http://www.drweb.ru DrWeb], платный
+* [http://www.kaspersky.ru/ Kaspersky Anti Virus], платный
+* [http://www.clamav.net Clam Antivirus], открытый
+* [http://free.avg.com/download?prd=afl AVG], бесплатный для персонального использования
+* Avast!, Есть варианты как [http://www.avast.com/linux-unix-edition для сервера] (платный), так и [http://www.avast.com/linux-home-edition для рабочих станций] (для некоммерческого использования бесплатен).
+* [http://www.f-prot.com/products/corporate_users/unix/ F-Prot], платный
+* [http://www.pandasoftware.com Panda Software Antivirus], платный
+* [http://www.trendmicro.com/download/product.asp?productid=20 Trend's InterScan VirusWall Virus scanner]
+* [http://www.sophos.com/products/enterprise/endpoint/security-and-control/8.0/linux/ Sophos's "sweep" virus scanner]
+* [http://www.avira.com/en/pages/index.php Avira]
+* [http://www.mcafee.com/us/enterprise/products/system_security/servers/linuxshield.html McAfee], платный
+
+Если что-то упустили, вы уж простите нашу невнимательность :)
+
+==Есть ли программы для организации библиотек?==
+
+Вот тут их куча перечислена - [http://www.oss4lib.org]
+
+==Есть под Linux какой-нибудь аналог RAdmin?==
+
+Называется эта вещь x11vnc. Там, куда хотите подключиться, запускаете '''x11vnc -display :0''', а у себя запускаете '''vncviewer адрес_удаленного_компьютера:0'''
+
+В Gnome есть свой собственный VNC сервер, называется vino. Включить его можно через Система -> Параметры -> Удаленный рабочий стол. Там же можно задать пароль для подключения, сменить порт и включить шифрование. Клиент называется vinagre.
+
+В KDE аналогично имеется свой VNC сервер (krfb) и клиент (krdc)
+
+==Есть ли RAdmin под Linux (не аналог)?==
+
+RAdmin может работать под wine. Как решить проблемы с клавиатурой можно почитать [http://www.radmin.com/support/forum/read.php?FID=11&TID=2006&MID=13980&phrase_id=652584#message13980 в этом] обсуждении.
+
+==Запись оптических дисков==
+===Какие есть программы для записи CD-R/CD-RW/DVD?===
+
+Для записи CD-R/CD-RW в Linux используются консольные утилиты cdrkit (wodim) или cdrtools (cdrecord), обычно для совместимости wodim можно вызвать как cdrecord.
+
+Для записи DVD можно использовать growisofs или cdrecord из комплекта cdrtools.  Большая часть графических писалок дисков является просто фронтендами к соответствующим консольным программам.
+
+Графические утилиты для записи:
+
+* [http://projects.gnome.org/brasero/ Brasero] - простой и удобный инструмент записи дисков на тулките Gtk+
+* [http://sourceforge.net/projects/gnomebaker GnomeBaker] - предшественник Brasero.
+* [http://graveman.tuxfamily.org/index.php Graveman] - легковесная писалка на GTK2.
+* [http://k3b.plainblack.com/ K3B] - рассчитан на применение в среде KDE, умеет писать DVD и много чего еще. Поддерживает KDE 4 начиная с версий 1.9x (рекомендуется 2.0 или старше)
+* [http://developer.berlios.de/projects/serpentine/ Serpentine] - программа для записи Audio-CD под Gnome.
+* [http://www.xfce.org/projects/xfburn/ Xfburn] - стандартная писалка дисков в XFCE.
+* [http://cdw.sourceforge.net/ cdw] - консольная писалка, внешне похожа на midnight commander.
+
+Особняком стоит [http://www.nero.com/eng/linux3.html линуксовая] версия Nero. Во-первых она платная, а во-вторых использует свой собственный движок для записи дисков.
+
+Так же есть возможность организовать запись для пользователей по сети через web-интерфейс - [http://joerghaeger.de/webCDwriter]
+
+Как записывать диски читайте в вопросе [http://www.linux.org.ru/wiki/en/Диски%2C_приводы_CD/DVD-RW_и_файловые_системы#Как_записать_компакт-диск_(CD-R/CD-RW/DVD-RW)%3F Как записать компакт-диск (CD-R/CD-RW/DVD-RW)]
+
+===Чем можно протестировать качество записи CD/DVD (аналог nero dvd speed)?===
+
+[http://www.dvdisaster.com] - тестирует диск на ошибки чтения и выводит графики в gnuplot. Также dvdisaster умеет создавать страховочные файлы (используя Рид-Соломон (Reed-Solomon) кодировку исправления ошибок) для восстановления данных в случае возможных проблем от старения/порчи болванок. Сайт представляет исчерпывающую информацию об этой технологии.
+
+Еще есть метод [http://www.linux.org.ru/wiki/en/Диски%2C_приводы_CD/DVD-RW_и_файловые_системы#Как_проверить_читаемость_записанного_компакт-диска%3F попроще].
+
+Для [http://qpxtool.sourceforge.net/supported.html небольшого числа приводов] можно провести очень детальные тесты с помощью [http://qpxtool.sourceforge.net/ qpxtool] , поддерживаются анализ C1/C2, PIF/PIE
+===Чем в линуксе записывать BluRay диски?===
+
+Записывать BD диски умеет cdrecord из пакета [http://cdrecord.berlios.de/private/cdrecord.html cdrtools]
+
+в выводе версии должно присутствовать "ProBD"
+
+<pre>
+user@linux$ $ cdrecord -version
+Cdrecord-ProDVD-ProBD-Clone 2.01.01a57 (i686-pc-linux-gnu) Copyright (C) 1995-2009 Joerg Schilling
+</pre>
+
+Ну, и Nero Linux, конечно
+
+==Какие есть программы для черчения/рисования схем?==
+
+Несвободные CAD/CAM пакеты:
+
+* [http://www.varicad.com VariCAD] - пакет механического инженеринга (черчение в 2D, моделирование в 3D).
+* [http://www.cycas.de Cycas] - архитектурное моделирование в 2D/3D.
+* [http://www.octree.de Octree] - система автоматического архитектурного проектирования (комплексные сетевые проекты).
+* [http://www.linuxcad.com LinuxCAD] - нечто вроде AutoCAD.
+* [http://www.3ds.com/products/draftsight/free-cad-software/ DraftSight] - клон автокада без 3D возможностей. Использует тот же формат файлов.
+* [http://www.yworks.com/en/products_yed_about.html yED] - бесплатный редактор схем и диаграмм, написанный на Java, можно запустить прямо с сайта через Java WebStart.
+
+Открытое ПО:
+
+* [http://varkon.berlios.de/index.html Varkon] - черчение, моделирование, визуализация.
+* [http://www.qcad.org QCAD] - 2D CAD.
+* [http://www.opendx.org/index2.php OpenDX]
+* [http://www.calligra.org/flow/ Calligra Flow] - аналог Visio, входящий в состав Calligra Suite.
+* [http://www.cadsoftusa.com Eagle] - рисование принципиальных схем и разводка печатных плат.
+* [http://ktechlab.sourceforge.net KTechlab] - рисование принципиальных схем и разводка печатных плат.
+* [http://www.geda.seul.org gEDA] - аналогично, но свободная.
+* [http://projects.gnome.org/dia/ Dia] - рисование всевозможных схем и диаграмм.
+
+Если не хватает их функциональности, то попробуйте другие перечисленные вот на этой [http://www.tech-edv.co.at/05_LUnIx/80_CAD~2f3d/10_CAD~20Links/index.php странице]. Или зайдите на [http://freecode.com/ freecode.com] и в строке запроса наберите CAD или GIS.
+
+==Какие есть программы для работы с дисками. Например, как PartitionMagic?==
+
+Parted и фронтэнды к нему [http://qtparted.sourceforge.net/ QtParted] (позиционируется создателями как клон Partition Magic, проект заглох, но пользоваться можно, написан на Qt3) и [http://gparted.sourceforge.net/ Gparted] (gtk, развивается, хороший мощный инструмент).
+
+==Какие есть программы для разработки flash (swf)?==
+
+* [http://spalah.sourceforge.net/?p=25 Spalah]
+* [http://drawswf.sourceforge.net/ drawSWF] (примитивная рисовалка мультиков, подходит для детей)
+* [http://www.libming.org/ ming]
+* [http://f4l.sourceforge.net/ F4L]
+* [http://www.swftools.org/ SWFtools]
+
+==Чем посмотреть flash-ролики, кроме как плагином от Adobe? Чем посмотреть flash-ролики в exe или сконвертировать их в swf?==
+
+Существует три открытых flash-плеера:
+
+* [http://www.gnu.org/software/gnash/ gnash]
+* [http://gplflash.sourceforge.net/ gplflash]
+* [http://swfdec.freedesktop.org/wiki/ swfdec]
+* [http://sourceforge.net/apps/trac/lightspark Lightspark]
+
+Все они могут работать плагинами для браузеров.
+
+Чтобы посмотреть flash-ролик в exe-файле, переконвертируйте их с помощью [http://www.linux.org.ru/view-message.jsp?msgid=438939 exe2swf].
+
+==Какие есть программы для просмотра *.chm (компилированные файлы справки)?==
+
+* [http://code.google.com/p/chmsee/ ChmSee] - В качестве рендера использует движок Gecko, поддерживает такие фичи как CSS и JavaScript
+* [http://xchm.sourceforge.net xchm] - неплохой просмотрщик
+* [http://gnochm.sourceforge.net CHM for Gnome]
+* [http://developer.imendio.com/wiki/Devhelp DevHelp]
+* [http://kchmviewer.sourceforge.net/ kchmviewer] - хорошо работает с русскими файлами.
+* [http://okular.kde.org/ okular] зависит от KDE, (в Gentoo linux необходимо собрать с USE-флагом "chm", для Debian/Ubuntu установить okular-extra-backends)
+Консольный конвертер chm в группу HTML-файлов - [http://archmage.sourceforge.net archmage]. Требует chmlib и Python.
+
+==Где взять архиваторы? ==
+
+[http://www.gnu.org/software/tar/ tar] : стандартная в UNIX (и GNU/Linux) утилита архивирования. Расширение архива tar. Обычно используется совместно с другими утилитами сжатия - компрессорами (gzip,bzip2,lzma,xz). Есть в любом дистрибутиве.
+
+'''Компрессоры:'''
+
+[http://www.gzip.org/ gzip]: ранее самый популярный формат для сжатия, на современных процессорах обеспечивает очень быстрое сжатие и распаковку с приемлимым качеством (расширение - .gz , совместно с tar tar.gz). Есть в любом дистрибутиве.
+Существует многопоточный аналог для использования на многоядерных процессорах - [http://www.zlib.net/pigz/ pigz]
+
+[http://www.bzip.org/ bzip2]: также один из популярнейших вариантов сжатия, обеспечивает большую по сравнению с gzip степень сжатия, за счет длительности процедуры как упаковки, так и распаковки.
+Расширение скомпрессированного файла bz2. Есть в любом дистрибутиве. Как правило используется совместно с tar (расширение tar.bz2).
+Многопоточный аналог для SMP - [http://compression.ca/pbzip2/ pbzip2] 
+
+[http://tukaani.org/lzma/ LZMA] и его наследник [http://tukaani.org/xz/ XZ] : очень перспективный формат сжатия, обеспечивают очень высокую степень компрессии и быструю распаковку. lzma-utils или xz-utils (обратно совместимы с lzma-utils) присутствуют во многих современных дистрибутивах, архивы также могут быть распакованы p7zip (есть в большинстве не старых дистрибутивов). Расширения файлов .lzma , .xz , при совместном использовании с tar - tar.lzma , tar.xz.
+Поддержка многопоточного сжатия для xz-utils находится в разработке.  
+
+
+RAR, имеется несколько вариантов:
+* [http://unarchiver.c3.cx/ unar], полностью свободный распаковщик, имеющий поддержку формата rar3.
+* использовать [http://p7zip.sourceforge.net/ p7zip] с кодеком Rar29. Поддерживает только распаковку. Не имеет проблем с кириллицей и форматом архива rar3. Ограниченно свободен.
+* свободный unrar (unrar-gpl), который не поддерживает формат архива rar3.
+* проприетарный unrar-nonfree, исходники которого можно скачать [http://www.rarsoft.com/download.htm с сайта RarLab].
+* проприетарный (условно-бесплатный) rar , в том случае если вам требуется сжатие в этот формат, брать там же где и unrar-nonfree.
+
+[http://www.info-zip.org/ ZIP]: стандартно в дистрибутивах идёт unzip/infozip. Для поддержки русского в кривых кодировках можно использовать [http://unarchiver.c3.cx/ unar], а можно [http://www.sisyphus.ru/srpm/Sisyphus/unzip/patches патчи] (для работы нужна библиотека [http://natspec.sourceforge.net/ libnatspec]). 
+
+[http://p7zip.sourceforge.net/ 7ZIP]: точнее его порт p7zip , открывает zip, rar, cab, bz2, gz, lzma, xz и tar архивы.
+
+ARJ: Существует порт arj - [http://arj.sourceforge.net/]
+
+SIT: Утилита называется unstuffit - [http://linuxmafia.com/faq/Apps/stuffit-archives.html]
+
+HA: Достаточно часто используется для сжатия текстов , исходные коды (или пакет) [http://packages.debian.org/sid/ha можно взять]  из Debian.
+
+'''Графические оболочки для архиваторов''' (есть в большинстве дистрибутивов) 
+
+* file-roller (Gtk+)
+* Ark (KDE)
+* Xarchiver (Gtk+)
+==Эмуляция==
+===Какие есть эмуляторы cdrom?===
+
+Вы не поверите - никаких. Обычно они не нужны - возможность монтировать образы iso9660 была изначально благодаря дизайну ОС, если образ не в формате iso9660, его можно сконвертировать. Но если всё-таки требуется имитировать физический привод (например, для запуска игры с защитой), то есть [http://cdemu.sourceforge.net CDEmu]. Также эта программа позволяет использовать не-iso9660 образы (mdf и проч.)
+
+Для преобразования mdf в iso также есть mdf2iso
+===Какие существуют «эмуляторы» для запуска программ MS Windows?===
+
+Это не эмуляторы, но в сознании многих они являются эмуляторами.
+
+* [http://www.winehq.com Wine] - Wine Is Not Emulator.
+* [http://www.transgaming.com Cedega] - коммерческий вариант wine, заточенный под запуск игр.
+* [http://www.codeweavers.com CodeWeavers CrossOver] - еще один коммерческий вариант wine
+
+Вопросы об отличиях читайте [[Wine/Cedega|здесь]].
+
+===Какие существуют «эмуляторы» для запуска программ MS-DOS, MS Windows 1-3.11?===
+
+[http://dosemu.sourceforge.net DosEmu] - проверенный временем эмулятор MS-DOS, даже включает в себя клон MS-DOS под названием FreeDOS. Работает гораздо быстрее, чем DOSBox (поэтому даже на древнем Pentium 3 вы сможете легко запустить Warcraft II или Quake 1 под DOS и попутно делать что-нибудь еще - под DOSBox на таком же компьютере максимум, что вы сможете себе позволить, это игры для i286 на манер Dizzy и то они будут тормозить). Умеет работать с русским языком, умеет работать на полном экране, умеет включать и выключать некоторые особенности процессоров (i386-pentium), поддерживает приоритетность задач. С помощью него можно установить и запустить MS Windows версий с 1.0 по 3.11 включительно и пользоваться программами, написанными под эти системы.
+
+[http://dosbox.sourceforge.net DOSBox] - DOS эмулятор, эмулирующий также и 286/386-процессоры, умеет XMS/EMS, Tandy/Hercules/CGA/EGA/VGA/VESA-графику, SoundBlaster/Gravis Ultra Sound звук. При этом поддерживает OpenGL-вывод. Разрабатывался именно для эмуляции старых игрушек. Может работать на архитектуре, отличной от x86.
+
+===Какие существуют виртуальные машины и среды для запуска других операционных систем (в том числе MS Windows?)===
+
+[http://www.vmware.com VMware] - коммерческая виртуальная машина. Это значит, что данный продукт эмулирует все устройства. Позволяет установить любую систему для x86 и x86_64. Работает не слишком быстро по сравнению с вышеприведенными программами, так как эмуляция полная. По сути дорогая система для разработчиков, т.е. можно эмулировать не одну машину, а несколько и составлять из них сети и т.п. Поддерживает аппаратную виртуализацию на процессорах Intel (VT-d) и AMD (SVM), что заметно ускоряет работу. Существует и бесплатный, облегченный вариант - VMWare Player
+
+[http://bochs.sourceforge.net Bochs] - эмулятор IA32, свободный аналог VMware с несколько ограниченными возможностями,  менее стабильной работой и более низкой скоростью. Имеет в своем составе дочерний проект по созданию BIOS, причем довольно успешный. Или оно у вас будет работать (и работать хорошо) или нет. Создан для того, чтобы работать не только на платформе x86.
+
+[http://bellard.org/qemu QEMU] - свободный транслятор запросов процессора, построенный по принципу "Fast!". Позволяет эмулировать: x86, ARM, SPARC, PowerPC, MIPS, m68k, а с некоторыми оговорками или частично  также x86_64, SPARC64, PowerPC64, SH-4, Alpha, CRIS. Нормально работает на процессорах x86, x86_64 и PowerPC, в разработке порты на Alpha, Sparc32, ARM, S390, MIPS, Sparc64, IA64, m68k. Есть сообщения об успешном запуске на нем Darwin OS, Windows 2000, Windows XP. При использовании открытого модуля ядра QEMU Accelerator Module (kqemu) позволяет достичь на x86 скоростей сопоставимых с VMware.
+
+[http://www.linux-kvm.org KVM] - виртуализация для Линукс с открытым исходным кодом исключительно на архитектуре x86 (расширения x86, x86_64), поддерживающее полную виртуализацию расширений Intel VT и AMD-V. Требует поддержки со стороны ядра (начиная с версии 2.6.20 необходимые модули включены в ядро Линукс). Требует модифицированный QEMU, как компоненту пользовательского режима. По скорости работы сопоставим с VirtualBox, но работает стабильнее последнего, хотя есть проблемы в поддержке аппаратной виртуализации некоторых процессоров.
+
+[http://virtualbox.org/ VirtualBox] - виртуальная машина, эмулирующая x86 и x86_84 на платформах x86 и x86_64. Частично использует код QEMU, но имеются и закрытые компоненты. Отличается удобным пользовательским интерфейсом и хорошей эмуляцией графических ускорителей, поэтому популярен для игр. Список эмулируемого оборудования уже, чем у VMware, например пока нет параллельного порта. Поддерживает аппаратную виртуализацию как и VMware. Научился запускать MacOS
+
+[http://pearpc.sourceforge.net/ Pear PC], [http://www.pearpc.net неофициальный сайт] - эмулятор архитектуры PowerPC. Успешно, но медленно, на нем работает Mac OS X. Доступен на разных платформах. Для ускорения работы рекомендуется собирать с поддержкой sdl и jitc_x86. С учетом того, что Mac OS X начиная с версии 10.4 перенесена на процессоры Intel, в PearPC отпала необходимость.
+
+Это самые популярные проекты, с некоторыми другими можно ознакомится в каталоге Google, например [http://directory.google.com/Top/Computers/Emulators] или на соответствующих страницах Википедии - [http://ru.wikipedia.org/wiki/Сравнение_виртуальных_машин] и [http://en.wikipedia.org/wiki/Comparison_of_virtual_machines]
+
+/* FIXME: Написать про KVM и XEN */ 
+
+===Какие виртуальные машины могут работать в консоли?===
+
+Bochs, QEMU.
+
+===Какие есть эмуляторы ZX-Spectrum? Где взять игры для ZX-Spectrum?===
+
+* [http://fuse-emulator.sourceforge.net/ FUSE] - один из лучших эмуляторов ZX-Spectrum. Запускается на нем практически все. Работает не только с Linux, но и с *BSD, Mac OS X. 
+* [http://glukalka.sourceforge.net/ glukalka] - что не заработает во FUSE вполне может заработать на glukalka. Очень быстрый эмулятор, написанный lenin'ым, небезызвестным на LOR.
+* [http://www.erik-kunze.de/xzx/ XZX] - третья звезда эмуляции ZX и популярный обитатель пиринговых сетей. XZX - shareware, XZX-pro - коммерческий. Мультиплатформенный. Можно собрать из исходников версию, в которой нет некоторых функций и не поддерживаются некоторые форматы.
+* [http://users.comlab.ox.ac.uk/ian.collier/Spectrum/ xz80] - имеет общие корни с xzx. Ничего особенного. Но сама страничка полезная.
+
+Поиграть прямо в онлайне (если стоит Java-машина) можно здесь - http://www.ciunga.it/jxspeccy/arc.html
+
+Игры можно взять по следующим адресам:
+
+* [http://spectrummagic.emuunlim.com/Spectrum Magic Games.htm] - здесь есть даже 256-цветные игры (однако эмулятор под них для Linux я не видел - только под WIndows)
+* [ftp://ftp.nvg.unit.no/pub/spectrum/snaps/games/]
+* [http://www.zx-spectrum.narod.ru/game0.htm] - русские коллекции обычно более полные. :)   
+
+Еще архивы с играми можно поискать на торрентах
+
+===Какие есть эмуляторы ATARI ST?===
+
+* [http://stonx.sourceforge.net/ Stonx] - старейший эмулятор. Его разработка то останавливается, то снова идет. 
+* [http://hatari.berlios.de/ Hatari] - весьма живой проект. Рекомендации собаководов.
+* [http://aranym.org/ ARANYM] - виртуальная машина Atari ST/TT/Falcon для запуска операционных систем TOS, FreeMiNT, MagiC и приложений в них.
+
+Вам понадобится TOS. Лучше нативный. Если лень искать, можно взять его свободный аналог - emuTOS.
+
+Есть версия на Java - [http://www.atari-st.lovely.net/]
+
+===Какие есть эмуляторы игровых консолей? (Game Boy/PSX/NES/MasterGear/SNES/Nintendo/Sega/PlayStation)===
+
+[http://fms.komkon.org/] и [http://www.emulinks.de/emus/] - эмуляторы россыпью, причем не только для Linux, но и для Windows, многие многоплатформенные.
+
+Эмуляторы консолей от Sony:
+
+* [http://www.pcsx.net/ PCSX] - Sony Playstation. Игры работают. Есть списки точно рабочих игр.
+* [http://www.epsxe.com/ ePSX] - Sony Playstation. Что-то  даже работало аж на версии 1.52. Но пока все сыро-сыро и не стоит расчитывать, что все будет работать как на bleem! Биосы можно найти в google или пиринговых сетях.
+* [http://www.pcsx2.net/ PCSX2] - Sony Playstation 2. Вполне играбельно, хиты вроде Metal Gear и Final Fantasy идут без особых проблем.
+* [http://nsx2.emulation64.com/index2.html nSX2] - Sony Playstation2. Не развивается с 2003 года.
+
+Консоли Sega:
+
+* [http://sourceforge.net/projects/gens/ Gens] - Sega Genesis / Sega CD / Sega 32X.
+* [http://www.squish.net/generator/ Generator] - Sega Genesis / Mega Drive.
+* [http://www.zophar.net/sms-gg/meka.html Meka] - Sega Game 1000 (SG-1000) / Sega Computer 3000 (SC-3000) / Sega Super Control Station (SF-7000) / Sega Mark III (+ FM Unit) / Sega Master System (SMS) / Sega Game Gear (GG) / ColecoVision (COLECO) / Othello Multivision (OMV). Довольно популярный эмулятор.
+* [http://yabause.org Yabause] - кроссплатформенный (GNU/Linux, FreeBSD, Mac OS X, Windows, Dreamcast, PSP and Wii) эмулятор Sega Saturn.
+* [http://caesar.logiqx.com/html/emus/linux.shtml] - эмуляторы для Sega россыпью.
+
+Различные консоли Nintendo:
+
+* [http://fceux.com/ FCEUX]
+* [http://www.snes9x.com/ Snes9x] - Super Nintendo Entertainment System (SNES) - старейший многоплатформенный эмулятор. Постоянно в разработке.
+* [http://www.zsnes.com/ ZSNES] - популярный эмулятор SNES. Можно играть друг с другом по сети.
+* [http://mupen64.emulation64.com/ mupen64] - Nintendo 64. Оригинально разработан под Linux. Многоплатформенный. Самое забавное, что на само Nintendo был порт Linux'а.
+* [http://www.dolphin-emulator.com/ Dolphin Emulator] - эмулятор консолей GameCube и Wii, быстрый, имеет большое количество настроек, поддерживает вывод картинки в HD.
+
+Отдельно стоит упомянуть эмулятор MultiArcade Machine Emulator под названием [http://mamedev.org/ MAME]. Поддерживается более тысячи игр.
+
+Игры для консолей можно взять здесь:
+
+* [http://www.angelroms.com/emulators/genesis.html] - любые консоли
+* [http://www.pdroms.de/] - ROM'ы в Public Domain.
+* [http://s-k.al.ru/winceemu.html] - ссылки на хранилища ROM'ов под разные консоли.
+* [http://emu-russia.net/ru/] - наверное самое популярный сайт с ROM'ами.
+* [http://www.cherryroms.com/] - требуется регистрация, но она бесплатная.
+* [http://emuplanet.ru/] - русскоязычный сайт с играми для консолей, старых компьютеров и т.д.
+
+Русский сайт об играх в Linux, в том числе в консоли - [http://www.tuxgames.ru/]
+
+==Звук и видео==
+
+===Какие есть программы для прослушивания радио или просмотра телевидения при наличии тв-тюнера?===
+
+Часто просят порекомендовать какие-то определенные программы.
+
+ТВ:
+
+* [http://tvtime.sourceforge.net/ tvtime] - пожалуй самый популярный софт. Для получения очень качественного изображения с твтюнера, несомненно, стоит использовать именно его.
+* [http://zapping.sourceforge.net/Zapping/index.html Zapping] - умеет делать скриншоты, записывать звук и видео. Поддерживает LIRC. На GTK2.
+* [http://linux.bytesex.org/xawtv/ xawtv]
+* [http://www.mplayertv.tk/ MplayerTV] - фронтенд к mplayer'у с удобным интерфейсом.
+* [http://xawdecode.sourceforge.net/ xdtv] - подойдет для одновременного просмотра телевизора и записи просматриваемой программы. Работает на любом тюнере.
+* [http://kde-apps.org/content/show.php?content=11602 KDETv] достаточно неплохая, к сожалению более не развиваемая программа, предназначена для KDE 3. ( [https://launchpad.net/ubuntu/intrepid/+source/kdetv/0.8.9-1 пакеты исходного кода] )  
+
+Радио:
+
+* [http://projects.gnome.org/gnomeradio/ gnomeradio] - для пользователей Gnome.
+* [http://gqmpeg.sourceforge.net gqradio] - уже устаревшая (использует GTK+ версии 1), но удобная программа
+* Также в пакет xawtv входит консольная утилита radio.
+* [http://www.stanford.edu/~blp/fmtools fmtools] - для консоли
+
+===С помощью каких программ в Linux можно обрабатывать звук/писать музыку?===
+
+Рекомендуем прочитать статью [http://offline.computerra.ru/2004/539/33275/]. [http://qwazarih.promodj.ru/blog/40313.html Тут] тоже неплохая статья про создание музыки в Linux.
+
+* [http://bristol.klik.atekon.de/ Bristol] - Программный эмулятор легендарных синтезаторов. Копирует не только звучание но и внешний вид синтезаторов (за исключением логотипов и названий).
+* [http://lmms.sourceforge.net/ LMMS] - Лучшая программа для создания музыки под Linux, ныне стала стандартным Linux-инструментом созидания для техно, электро, транс- DJ и музыкантов.
+* [http://wired.sourceforge.net/ Wired] - Профессиональная музыкальная студия.
+
+Большая коллекция программ лежит здесь - [http://linux-sound.org/]
+
+===Какие есть программы организации в сети потоковое вещание видео и аудио?===
+
+* [http://ffmpeg.sourceforge.net ffmpeg]
+
+* [http://developer.apple.com/darwin/projects/streaming darwin streaming server]
+
+* [http://www.realnetworks.com/products/server Helix Universal Server]
+
+Неплохим вариантом будет [http://www.videolan.org VLC]
+
+Для звука подойдет icecast - [http://www.icecast.org/]
+
+===Как организовать вещание в сеть звука не только файлов, но и звука с line-in?===
+
+Использовать связку icecast + darkice.
+
+===С помощью чего организовать вещание звука в сеть?===
+
+Вам понадобится один из серверов потокового аудиовещания:
+
+* [http://www.icecast.org Icecast]
+
+* [http://www.geekbrain.com/sphinxter Sphinxter]
+
+* [http://www.gnu.org/software/gnump3d/ GNUMP3d]
+
+* [http://ample.sourceforge.net Apmle]
+
+* [http://www.shoutcast.com SHOUTcast Linux server]
+
+И программа для создания аудиопотока:
+
+* [http://www.icecast.org/ices.php Ices]
+
+* [http://darkice.sourceforge.net DarkIce]
+
+* [http://www.shoutcast.com SHOUTcast DSP Plug-In]
+
+О настройке SHOUTcast читайте тут - [http://www.nixp.ru/cgi-bin/go.pl?q=articles;a=shoutcast_linux]
+
+==Какие есть программы для разговора голосом по сети друг с другом? Есть ли подобные консольные программы?==
+
+* [http://www.teamspeak.org Teamspeak]
+
+* [http://mumble.sourceforge.net/ Mumble]
+
+* [http://www.mangler.org/ Mangler], Ventrilo-совместимый клиент для GNU/Linux и Android.
+
+* [http://www.skype.com/products/skype/linux/ Skype], вся ценность в том, что есть клиенты и под Windows и под Linux и под разные мобильные устройства.
+
+* [http://ekiga.org/ Ekiga], использует протокол SIP.
+
+* [http://www.linphone.org/index.php/eng linphone], программа для Gnome. При желании можно собрать без гномовских библиотек, чтобы программа работала в консоли. Хорошо понимает протокол SIP.
+
+* [http://sourceforge.net/projects/kphone KPhone], поддерживает SIP.
+
+==Какие есть программы, для конвертации содержимого текстового файла из одной кодировки в другую? Как выяснить, в какой кодировке записан файл?==
+
+Выяснить, в какой кодировке файл можно с помощью программы [http://dl.cihar.com/MIRROR/enca/ enca] или perl-модуля [http://search.cpan.org/author/FARBER/Lingua-RU-Charset-0.02/Charset.pm] (как им пользоваться - хз).
+
+Преобразовать можно с помощью стандартного iconv (входит в состав пакета glibc). Пользоваться очень просто, например, команда
+<pre>
+user@linux# iconv -f WINDOWS-1251 -t KOI8-R win.txt > koi.txt
+</pre>
+сделает из файла win.txt в кодировке cp1251 файл koi.txt в кодировке koi8-r.
+
+Еще одна популярная программа, в которой отсутствуют огрехи iconv и которая входит в состав любого приличного дистрибутива - recode.
+<pre>
+recode KOI8-RU..windows-1251 <fn.koi >fn.win;
+recode windows-1251..KOI8-RU <fn.win >fn.koi;
+</pre>
+
+Еще есть [http://uucode.com/rusconv rusconv]. Перекодирует win <> koi <> alt при этом довольно корректно, также встроена функция удаления в конце строк cp1251-файлов, так что про '''col -b''' можно забыть. Отлично документирован.
+
+Совсем неподготовленным пользователям можно глянуть на [http://girchenko.narod.ru QTexTransformer]   
+
+Кроме всего прочего - enca/enconv - автоматически детектирует кодировку, даже если подряд было сделано несколько неправильных конвертаций. для большинства случаев подходит. однако лучше знать, что делаешь и выбирать кодировки, из которой в которую следует кодировать. Для конвертации имен файлов можно использовать convmv.
+
+==Чем перекодировать ID3v1 тэги?==
+
+Программой [http://easytag.sourceforge.net/ EasyTag]. Для использования в скриптах лучше всего подойдут [http://code.google.com/p/id3conv/ id3conv] или [http://sourceforge.net/projects/tag2utf tag2utf]
+
+==Какие есть программы для конвертирования WMA в MP3?==
+
+Подойдет ffmpeg:
+<pre>
+user@linux$ ffmpeg -i 05Track.wma -ab 192 05Track.mp3
+</pre>
+
+==Какие есть программы для конвертации Audio-CD и wav-файлов в MP3, OGG Vorbis и т.п.?==
+
+Можно это сделать из консоли или же воспользоваться утилитами с графическим интерфейсом:
+
+* [http://nostatic.org/grip/grip]
+* [http://burtonini.com/blog/computers/sound-juicer Sound Juicer]
+
+В KDE это умеет делать Konqueror, просто наберите в строке адреса audiocd:/
+
+==Чем сделать преобразование mid в wav?==
+
+Воспользоваться программой timidity - [http://timidity.sourceforge.net/]
+
+==Есть ли графические инструменты для перекодирования DVD в avi?==
+
+Есть.
+
+* [http://www.exit1.org/dvdrip/ dvd::rip]
+* [http://untrepid.com/acidrip/ acid:rip]
+* [http://sourceforge.net/projects/kmencoder/ kmencoder]
+* [http://k3b.plainblack.com/ K3B] - как ни странно, DVD в avi
+
+За более подробной информацией сюда: [http://www.linux.org.ru/wiki/en/Multimedia#Как_перекодировать_DVD_в_mpeg4_(dvd2mpeg)%3F Как перекодировать DVD в mpeg4 (dvd2mpeg)?]  
+
+==Есть ли графические инструменты для перекодирования видеофайлов в VCD, SVCD, DVD, Half-DVD и VCD-on-DVD?==
+
+Не совсем. Есть инструменты, которые имеют графический интерфейс и позволяют создавать tilte'ы и субтитры для DVD.
+
+* [http://qdvdauthor.sourceforge.net/ QDVDAuthor]
+* [http://lvempeg.sourceforge.net/klvemkdvd.html kLVEmkDVD]
+
+Есть коллекция скриптов, которая делает все вышеперечисленное, и да же больше, называемая [http://tovid.wikia.com/ tovid]
+
+И, наконец, если вас так интересует этот вопрос, вы можете прочитать об этом [http://www.linux.org.ru/wiki/en/Multimedia#Чем_под_Linux_сделать_DVD-диск_из_avi-файла%3F_Как_сделать_DVD_с_помощью_mencoder%2C_или_transcode%3F здесь]
+
+==Какие есть видеоредакторы?==
+
+[http://www.linux.org.ru/wiki/en/Редактирование_и_преобразование_аудио_и_видео_файлов#Как_в_Linux_работать_с_видео%3F_Какие_есть_программы_для_работы_с_видео%3F Всякие разные]
+==Какие есть программы для просмотра man-страниц в виде гипер-текста?==
+
+man не просматривает ман-страницы. Об этом написано в man man.
+
+Для просмотра используется внешняя программа (pager), а уж пейджером может быть всё что угодно (хоть сам пиши). Для конвертации man в html воспользуйтесь [http://www.nongnu.org/man2html/ man2html]
+
+==Чем просматривать ресурсы Windows-сети (сетевое окружение)?==
+
+Ресурсы сетевого окружения можно просматривать и монтировать из консоли или с помощью следующих утилит:
+
+* [http://smbc.airm.net/en/ Smbc] - консольная утилита
+* [http://smb4k.berlios.de/ Smb4K] - для KDE4
+* В Konqueror и Nautilus можно просто набрать в строке адреса '''smb://computer/share'''
+
+== А что это за программа такая висит на скриншотах в левом/правом нижнем/верхнем углу с индикаторами и статистику по системе показывает? Какие существуют системные мониторы? ==
+
+Это [http://members.dslextreme.com/users/billw/gkrellm/gkrellm.html GKrellM]. Имеет довольно много встроенных функций мониторинга, в том числе и мониторинга удаленных систем (hdd, сеть, память, процессор, время, почта) и еще больше плагинов на самые разнообразные темы. Поддерживает темы оформления. Несмотря на свой преклонный возраст все еще пользуется популярностью среди ЛОР-овцев :)
+
+Для KDE3 существует набор виджетов [http://netdragon.sourceforge.net/ssuperkaramba.html SuperKaramba]. В KDE4 им на смену пришли плазмоиды, одна из killer-feature новой версии этого DE. Пользователи Gnome обычно используют [http://www.screenlets.org/index.php/Home Screenlets]. Еще можно упомянуть [http://www.gdesklets.de/ gDesklets] и [http://adesklets.sourceforge.net/ aDesklets], но как мне кажется это такая же некрофилия как и SuperKaramba.
+
+Отдельно стоит упомянуть [http://code.google.com/p/google-gadgets-for-linux/ Google Gadgets]. Версия под линукс может похвастаться открытым кодом, а так же поддержкой виджетов от Windows версии. Доступны как GTK2, так Qt4 версии. Версия GTK2 также предлагает боковую панель, аналогичную панели в Google Desktop Windows.
+
+Для оконных менеджеров, которые поддерживают dock-apps - AfterStep, WindowMaker, FVWM, BlackBox (и его клонов) и проч., для тех же целей можно использовать их (док-апы) - [http://dockapps.org]
+
+Из аскетичного и простого, но не менее функционального, существует [http://conky.sourceforge.net Conky]
+
+Чтобы все эти программы могли выводить статистику с температурных датчиков и показывать скорость вращения кулеров, поставьте пакет lmsensors.
+
+==Чем сделать презентацию?==
+
+OpenOffice Impress
+
+Если вы опытный пользователь, то вам подойдет [http://pauillac.inria.fr/advi/ Active-DVI] или latex с классом [http://latex-beamer.sourceforge.net/ beamer].
+
+==Чем мне прочитать .doc по-быстрому? Без AbiWord/KWord/OpenOffice?==
+
+Можно попробовать конвертеры, однако они практически игнорируют форматирование.
+
+Есть AntiWord (консольный, конвертирует в текст, знает много кодировок, в т.ч. ISO-8859-5, CP1251, KOI8, UTF8, портирован на NetWare и (!) Amiga), брать [http://antiword.cjb.net тут]
+
+Еще есть [http://freshmeat.net/projects/catdoc catdoc], понимает кодировки utf8, koi8r, cp866 и 1251, также работает с .xls
+
+==Чем рисовать? Нужны бесплатные редакторы для растровой и векторной графики==
+
+Ответ рассчитан на людей, которым все нужно было еще вчера.
+
+Редактор растровой графики [http://www.gimp.org Gimp], векторной - [http://www.inkscape.org/ Inkscape]. Входят почти в любой дистрибутив. 
+Сайт, посвященный графике в линуксе - [http://linuxgraphics.ru]
+
+Ещё для создания рисунков - [http://mypaint.intilinux.com/ MyPaint].
+
+==Какой программой можно раскодировать вложение в письме?==
+
+Программы кодировки и раскодировки называются uuencode и uudecode
+
+==Есть ли аналог Norton Ghost?==
+
+Прямой аналог Norton Ghost для ext2/3 - это утилиты dump и restore, входящие в любой дистрибутив, но работающие на ограниченном числе файловых систем.
+
+Есть утилита [http://www.partimage.org/ Partimage], которая помимо ext2/3 имеет стабильную поддержку ReiserFS, Fat16/32, HPFS, JFS, XFS. Несомненный ее плюс в том, что в ней как бы все включено, а минус (и он же плюс) заключается в том, что образ копируется не один в один, а только блоки данных, посему восстановленная копия будет содержать всю информацию, но будет физически отличатся от оригинала. Зато образ займет меньше места.
+
+Так же следует упомянуть [http://www.fsarchiver.org/ fsarchiver] - утилиту, работающую не на блочном, а на файловом уровне ФС. Она позволяет проводить архивацию в более гибкой форме, сильно (но не полностью) абстрагируюясь от уровня файловых систем, и воссоздавая их при restore. Возможна конверсия файловых систем, селективная архивация файлов и директорий, восстановление ФС на устройство с отличающимся от исходного размером, многопоточное сжатие (gzip, bzip2, lzma, lzo), шифрование по паролю и [http://www.fsarchiver.org/Cloning-ntfs поддержка ntfs]. fsarchiver использует свой формат контейнера (файл.fsa), который может включать дампы файловых систем с разных устройств.
+
+[http://www.fsarchiver.org/Fsarchiver_vs_partimage Сравнение FSArchiver и Partimage].
+
+PartImage и FSArchiver входят в дистрибутив [http://www.sysresccd.org/ SystemRescueCD].
+==Есть ли аналог макинтошевской программы Drop Drawers?==
+
+[http://basket.kde.org/ BasKet], написана под KDE.
+
+==Сеть==
+
+===Какие есть программы для учета входящего/исходящего трафика? Какие есть билинговые системы? Какие есть шейперы?===
+
+Тут небольшой список счетчиков трафика - [http://opennet.ru/prog/sml/47.shtml]. Многое из списка устарело и не актуально, но для общего развития сойдет
+
+Анализаторы логов squid - [http://opennet.ru/prog/sml/100.shtml]. Самые популярные это [http://lightsquid.sourceforge.net/ lightsquid] и [http://sarg.sourceforge.net/ SARG]
+
+Неплохой обзор популярных биллингов есть тут - [http://linuxbill.blogspot.com/2007/12/linux.html] и небольшой список [http://opennet.ru/prog/sml/46.shtml здесь]
+
+Шейперы:
+
+[http://monkey.org/~marius/pages/?page=trickle Trickle]
+
+[http://sourceforge.net/projects/htbinit/ HTB.init], а [http://blog.kovyrin.net/2006/04/06/5min-guide-to-linux-shaping-htb/lang/ru/ тут] и [http://sudouser.com/nastrojka-ogranicheniya-i-raspredeleniya-kanala-htb-shaper.html тут] небольшие хауту по его настройке.
+
+[http://www.gridmpi.org/pspacer-2.1/index.en.jsp PSparser], утверждается, что он не потеряет ни одного пакета под любой нагрузкой, правильно зашейпит и подсчитает трафик.
+
+Еще можно воспользоваться средствами iproute2 - [http://omever.ya.ru/replies.xml?item_no=386&ncrnd=2561]
+
+/* FIXME: Я не особо разбираюсь в шейперах и трафикосчиталках, нужно чтобы кто нибудь дополнил раздел */ 
+
+===Какие есть маленькие web-сервера?===
+
+* [http://cryp.to/mini-httpd/ Mini-httpd] 
+* [http://www.redhat.com/docs/manuals/tux/TUX-2.2-Manual/ TUX], встраиваемый в ядро высокопроизводительный вебсервер. Ныне не поддерживается, скачать патчи для ядер <nowiki><</nowiki> 2.6.18 можно [http://people.redhat.com/~mingo/TUX-patches/ тут ]
+* [http://nginx.net/ nginx ], разрабатывается нашим соотечественником
+* [http://www.lighttpd.net/ lighttpd]
+* [http://www.acme.com/software/thttpd/ Thttpd]
+* [http://monkeyd.sourceforge.net/blog/ Monkey HTTP Daemon]
+
+===Какие есть системы управления контентом (CMS) сайта?===
+
+Отличный сайт по теме - [http://www.opensourcecms.com/], там есть все :)
+
+/* FIXME: написать подробнее */ 
+
+===Какие есть движки форумов?===
+
+См. первую ссылку в предыдущем вопросе о CMS.
+
+Написанные на PHP:
+
+[http://fluxbb.org/ FluxBB]
+
+[http://www.mybb.com/ MyBB]
+
+[http://www.phpbb.com/ phpBB] 
+
+[http://punbb.informer.com/ PunBB]
+
+[http://www.simplemachines.org/ Simple Machines Forum]
+
+Написанные на Perl:
+
+[http://www.yabbforum.com/ YaBB]
+
+[http://sourceforge.net/projects/ikonforums/ IkonForums]
+
+/* FIXME: написать подробнее */ 
+
+===Какие есть графические файрволлы? Где взять графический фронтенд под iptables?===
+
+Отвечаем на первый вопрос. Графических файрволлов нет и не будет, потому как графика ничем не помогает в работе файрволла. Подумайте сами - если графики не будет, значит такой гипотетический файрволл не запустится.
+
+Интерактивный FireWall (реагирующий на новые соединения и спрашивающий, разрешить или запретить) — [http://www.douaneapp.com/ Douane]
+
+Программы, позволяющие настраивать правила iptables с помощью GUI:
+
+* [http://www.fwbuilder.org/ Firewall Builder]. Кроме iptables поддерживает так же ipfilter, pf, ipfw и cisco pix.
+* [http://www.fs-security.com/ Firestarter]
+* [http://www.simonzone.com/software/guarddog/ Guarddog]
+* [http://gtk-iptables.sourceforge.net/ gtk-iptables]. Простенькая оболочка для создания правил.
+
+В Ubuntu помимо перечисленного есть графический фронтенд [http://gufw.tuxfamily.org/index.html gufw] для ufw, который в свою очередь тоже является надстройкой над iptables.
+
+==Чем читать книжки? Есть ли специальные программы для чтения книг?==
+
+* [http://www.fbreader.org/ FBReader] -пожалуй самая лучшая программа. Поддерживает несколько форматов книг и множество разных платформ, включая Windows и различные КПК.
+* [http://www.khaalireader.narod.ru/ KHaaliReader] - открывает только fb2   
+* [http://pybookreader.narod.ru/ PyBookReader] - написана на PyGTK
+* [http://sourceforge.net/projects/odin/ Odin] - форк PyBookReader, с небольшими улучшениями.
+==Есть ли программы, работающие с картой метро?==
+
+[http://metromap.antex.ru/ Вот] программа. Она активно развивается. 
+
+==Драйверы==
+===Где взять драйверы для моего сканера?===
+
+Скачать со страницы проекта [http://www.sane-project.org/ sane], который занимается поддержкой сканеров под Linux. Также есть коммерческие условно-бесплатные драйверы vuescan - [http://www.hamrick.com/vsm.html]. Если xsane не подхватывает сканер сразу, попробуйте выключить и включить его снова. 
+
+/* FIXME запилить отдельную статью про сканеры */
+
+===Где взять драйверы для видеокарты Nvidia?===
+
+Обычно почти в любом дистрибутиве есть уже готовые пакеты с драйверами, не поленитесь их поискать, прежде чем ставить их вручную, если все же решились ставить версию с официального сайта [http://www.linux.org.ru/wiki/en/X-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80#%D0%9A%D0%B0%D0%BA_%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C_%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80_Nvidia%3F_%D0%93%D0%B4%D0%B5_%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C_%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%3F зайдите сюда].
+
+===Где взять драйверы для видеокарт AMD/ATI?===
+
+[http://www.linux.org.ru/wiki/en/X-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80#%D0%9A%D0%B0%D0%BA_%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C_%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D0%B0_ATI%3F об этом написано тут]
+==Чем установить иконки на рабочем столе, если у меня не Gnome/KDE/Xfce?==
+
+* [http://idesk.sourceforge.net idesk]
+* [http://garuda.newmail.ru/xtdesk_e.dhtml xdesk]
+
+А вообще, обычно оконные менеджеры без концепции рабочего стола имеют просто другой механизм работы и иконки там попросту не нужны. 
+
+==Чем под Linux обрабатывать raw-файлы?==
+
+Есть [http://kobyakov-serg.livejournal.com/868.html хорошая статья] на эту тему. Возможно,  полученные изображения будут отличатся от созданных официальными утилитами производителя вашей цифровой фотокамеры (такими, как Nikon Capture NX или Canon RAW Image Converter).
+==Чем под Linux нарисовать план интерьера?==
+
+[http://www.sweethome3d.eu/ru/ Sweet Home 3D]
+
+==Чем можно собрать набор сканов в djvu/pdf?==
+
+* [http://scantailor.sourceforge.net/?q=ru/about scantailor]
+* [http://unpaper.berlios.de/unpaper.html unpaper]
+
+==Какие есть игры?==
+Ответ [[Games#Во_что_можно_поиграть?|тут]].
+
+== Дополнительные материалы ==
+
+<references />
+
+[[Category:Коллекция ПО]]

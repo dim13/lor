@@ -1,0 +1,463 @@
+В этой статье мы рассмотрим способы общения с системным демоном HAL.
+
+== Введение ==
+
+'''HAL''' (''Hardware Abstraction Layer'') - это демон, хранящий информацию о системных устройствах, их типах, возможностях и другую информацию, которую
+он в состоянии получить через интерфейсы ядра. Демон предоставляет более высокоуровневый доступ к информации об устройствах, нежели прямое общение с sysfs и др.
+Используя HAL API мы может просканировать список системных устройств, найти в нём дисковые накопители, Audio CD, USB флеш карты, WiFi карты, клавиатуры,
+мыши и т.д. HAL также содержит несколько полезных сигналов, основываясь на которых мы можем отследить момент появления новых устройств в системе (например, когда
+был вставлен новый USB флеш накопитель, DVD диск, поднят WiFi интерфейс и т.д.). HAL предоставляет также и некоторые полезные методы,
+которые можно вызывать удалённо через интерфейс [[D-Bus]].
+
+Структура данных, в которой HAL хранит всю информацию, можно представить как ассоциативный массив. Ключом в этом массиве будет являться т.н. уникальный идентификатор
+устройства, или '''UDI'''. Значением этого ключа будет ещё один ассоциативный массив, в котором в свою очередь ключом будет имя свойства данного устройства,
+а значением - значение этого свойства для данного устройства. Имена UDI зависят от системы, не стоит полагаться на них постоянство.
+Чтобы было понятней, представим такую упрощённую структуру для некоего устройства:
+
+<pre>
+<nowiki>
+UDI1
+    |---block.device      /dev/sda1
+    |---block.is_volume   1
+    |---info.capabilities volume,block
+    |---volume.label      WORK
+    `---volume.uuid       0717-AD77
+UDI2
+    ...
+UDI3
+    ...
+</nowiki>
+</pre>
+
+Здесь у некоего устройства с UDI, равным абстрактному UDI1, имеется 5 свойств. Имя каждого свойства строго определено.
+Значение свойства зависит от имени. Для устройства UDI1 мы может сказать следущее:
+
+<ul>
+<li>на основании block.device - что этому устройству сопоставлен файл ''/dev/sda1'' в файловой системе /dev;
+<li>на основании block.is_volume - что это некий раздел;
+<li>на основании info.capabilities - что это раздел на блочном устройстве хранения данных;
+<li>на основании volume.label - что этот раздел имеет метку ''WORK'';
+<li>на основании volume.uuid - что этот раздел имеет UUID ''0717-AD77''.
+</ul>
+
+Мы можем проверить эту информацию с помощью системной утилиты ''blkid'' (запускается от пользователя ''root''):
+
+<pre>
+<nowiki>
+# blkid | grep WORK
+/dev/sda1: LABEL="WORK" UUID="0717-AD77" TYPE="vfat"
+</nowiki>
+</pre>
+
+Общение с HAL демоном происходит через [[D-Bus]]. Для D-Bus имеется множество биндингов для различных языков. Это значит, что
+для общения с HAL у нас не должно возникнуть трудностей. В этой статье мы постараемся рассказать о нескольких способах взаимодействия с HAL.
+
+<p>Также отметим, что на шине D-Bus демон предоставляет интерфейсы и методы для прямого вызова любым D-Bus клиентом. Например, с помощью ''qdbusviewer'' или любым консольным клиентом (''qdbus'', ''dbus-send'').
+
+<p>Каждое устройство в иерархии может иметь дочерние устройства (например, как шина USB и подключённые к ней устройства).
+
+<p>Схематически архитектура HAL выглядит так:
+[[Image:hal-arch.png]]
+== Подготовка ==
+
+Во всех современных дистрибутивах демон HAL уже должен быть установлен, настроен и запущен. Для программирования нам
+понадобятся только заголовки HAL и D-Bus. Для справки по HAL понадобится пакет ''hal-doc''. В Debian-подобных системах их можно установить так:
+
+<pre>
+<nowiki>
+# aptitude install libhal-dev libhal-storage-dev hal-doc
+</nowiki>
+</pre>
+
+Теперь мы готовы для общения с HAL.
+
+Для просмотра всех устройств и их свойств в графическом виде можно использовать утилиту ''hal-device-manager''. Она присутствует в Debian Etch, но в более поздних дистрибутивах (в т.ч. и последних Ubuntu) следует использовать ''gnome-device-manager''.
+== Свойства ==
+
+В качестве примера рассмотрим некоторые имена свойств.
+ 
+<ul>
+<li>'''info.capabilities''' - список строк, описание того, что из себя представляет это устройство. Это важное свойство для отделения устройств друг от друга по типу; 
+<li>'''info.parent''' - содержит UDI родительского элемента в иерархии HAL;
+<li>'''block.device''' - содержит файл устройства в системной иерархии (например, /dev/sda1);
+<li>'''block.is_volume''' - содержит значение ''true'', если данное устройство - раздел и может быть смонтировано;
+<li>'''volume.fstype''' - тип файловой системы раздела (если это раздел);
+<li>'''volume.label''' - метка тома;
+<li>'''volume.fsusage''' - как используется файловая система (обычная файловая система, RAID, неформатированная область и т.д.);
+<li>'''linux.sysfs_path''' - путь к файлу устройства в иерархии sysfs.
+</ul>
+
+За полным списком возможных имён свойств обратитесь к документации HAL.
+
+== Консоль ==
+
+Мы можем общаться с HAL с помощью любого D-Bus клиента. Например, с помощью консольного ''dbus-send''. Для каждого устройства на шине D-Bus предусмотрен
+интерфейс ''org.freedesktop.Hal.Device'', который предоставляет методы для получения и установки свойств данного конкретного устройства.
+
+Например, получим список облуживаемых устройств (похожий результат даст команда ''lshal''):
+
+<pre>
+<nowiki>
+$ dbus-send --system --print-reply --dest=org.freedesktop.Hal \
+            /org/freedesktop/Hal/Manager                      \
+            org.freedesktop.Hal.Manager.GetAllDevices
+method return sender=:1.1 -> dest=:1.28 reply_serial=2
+   array [
+      string "/org/freedesktop/Hal/devices/acpi_P001"
+      string "/org/freedesktop/Hal/devices/acpi_P002"
+      ...
+      string "/org/freedesktop/Hal/devices/pci_10de_368"
+      string "/org/freedesktop/Hal/devices/pci_10de_362"
+      string "/org/freedesktop/Hal/devices/pci_10de_369"
+   ]
+</nowiki>
+</pre>
+
+Каждая строка в ответе - это UDI обслуживаемого устройства.
+
+Теперь получим свойство ''info.capabilities'' для одного из дисковых разделов, основываясь на его UDI:
+
+<pre>
+<nowiki>
+$ dbus-send --system --print-reply --dest=org.freedesktop.Hal  \
+            /org/freedesktop/Hal/devices/volume_uuid_0717_AD77 \
+            org.freedesktop.Hal.Device.GetProperty             \
+            string:info.capabilities
+method return sender=:1.1 -> dest=:1.31 reply_serial=2
+   array [
+      string "volume"
+      string "block"
+   ]
+</nowiki>
+</pre>
+
+Теперь получим свойство ''volume.label'' (DOS метка) для этого же раздела:
+
+<pre>
+<nowiki>
+$ dbus-send --system --print-reply --dest=org.freedesktop.Hal  \
+            /org/freedesktop/Hal/devices/volume_uuid_0717_AD77 \
+            org.freedesktop.Hal.Device.GetProperty             \
+            string:volume.label
+method return sender=:1.1 -> dest=:1.33 reply_serial=2
+   string "WORK"
+</nowiki>
+</pre>
+
+Получим свойство ''volume.size'' (размер раздела в байтах) для этого же раздела:
+
+<pre>
+<nowiki>
+$ dbus-send --system --print-reply --dest=org.freedesktop.Hal  \
+            /org/freedesktop/Hal/devices/volume_uuid_0717_AD77 \
+            org.freedesktop.Hal.Device.GetProperty             \
+            string:volume.size
+method return sender=:1.1 -> dest=:1.36 reply_serial=2
+   uint64 15002878464
+</nowiki>
+</pre>
+
+== C/C++ ==
+
+В этом разделе мы напишем HAL клиента на оригинальной библиотеке libhal (на языке C, стандарта C99). Это необходимо прежде всего для
+тулкитов, где нет высокоуровнего D-Bus клиента, либо для чисто консольной программы, которая не использует тулкиты вообще.
+
+Итак, всё что нам понадобится - это один исходный файл и элементарный скрипт компиляции. Makefile можете написать по своему усмотрению.
+
+Скрипт компиляции (назовём его ''mk''):
+
+<pre>
+<nowiki>
+#!/bin/sh
+
+# компилируем исходник main.c. Не забываем о флагах и библиотеках HAL и D-Bus
+gcc -o hal -O2 -std=c99                                        \
+        `pkg-config --cflags hal` `pkg-config --cflags dbus-1` \
+        main.c                                                 \
+        `pkg-config --libs hal` `pkg-config --libs dbus-1`
+</nowiki>
+</pre>
+
+Стратегия написания простейшего HAL клиента сводится к следующему:
+
+<ul>
+<li>создать новый HAL контекст, используемый в HAL API;
+<li>создать соединение с D-Bus сессией;
+<li>ассоциировать HAL контекст с D-Bus соединением;
+<li>инициализировать HAL;
+<li>использовать функции из HAL API для общения с демоном (например, получим список всех устройств);
+<li>деинициализировать HAL клиента;
+</ul>
+
+<pre>
+<nowiki>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <libhal.h>
+
+#include <dbus/dbus.h>
+
+// функция обработки UDI
+static void handleDevice(LibHalContext *ctx, const char *udi, DBusError *error)
+{
+    if(!udi)
+        return;
+
+    printf("%s\n", udi);
+
+    // нас интересуют только устройства, имеющие свойство info.capabilities
+    if(!libhal_device_property_exists(ctx, udi, "info.capabilities", NULL))
+        return;
+
+    // получим значение свойства (массив строк)
+    int i = 0;
+    char **capabilities = libhal_device_get_property_strlist(ctx, udi, "info.capabilities", NULL);
+
+    if(!capabilities)
+        return;
+
+    // сейчас 'capabilities' представляет собой массив строк
+
+    // пройдёмся по всем строкам, выведем на экран значения
+    while(*(capabilities+i))
+    {
+        printf("\t%s\n", *(capabilities+i));
+        ++i;
+    }
+
+    printf("\n");
+
+    // освободим память!
+    libhal_free_string_array(capabilities);
+}
+
+static void die(const char *s)
+{
+    if(s)
+        fprintf(stderr, "%s\n", s);
+
+    exit(1);
+}
+
+int main(int argc, char **argv)
+{
+    DBusConnection *dbus;
+    LibHalContext *ctx;
+    DBusError error;
+
+    // создаём новый контекст
+    ctx = libhal_ctx_new();
+
+    if(!ctx)
+        die("Cannot initialize HAL context");
+
+    // инициализируем объект error, он нам понадобится в функциях HAL API
+    dbus_error_init(&error);
+
+    // создаём соединение с D-Bus
+    dbus = dbus_bus_get_private(DBUS_BUS_SYSTEM, &error);
+
+    // ассоциируем D-Bus соединение с HAL контекстом
+    libhal_ctx_set_dbus_connection(ctx, dbus);
+
+    // инициализируем HAL клиента с нашей стороны
+    if(!libhal_ctx_init(ctx, &error))
+        die("Cannot initialize HAL");
+
+    // с помошью HAL API получаем список устройств, обслуживаемых демоном,
+    // каждое устройство представляет собой строку с UDI
+    int numDevices;
+    char **halDevices = libhal_get_all_devices(ctx, &numDevices, NULL);
+
+    // нет устройств??
+    if(!halDevices)
+        die("Cannot get device list");
+
+    printf("Number of devices: %d\n", numDevices);
+
+    // для каждого UDI вызываем функцию обработки
+    for(int i = 0;i < numDevices;i++)
+        handleDevice(ctx, halDevices[i], &error);
+
+    // освобождаем память!
+    libhal_free_string_array(halDevices);
+
+    if(dbus_error_is_set(&error))
+        dbus_error_free(&error);
+
+    // завершаем D-Bus соединение
+    dbus_connection_close(dbus);
+    dbus_connection_unref(dbus);
+
+    // завершаем клиента
+    libhal_ctx_free(ctx);
+
+    return 0;
+}
+</nowiki>
+</pre>
+
+Эта программа выдаст на консоль список всех обслуживаемых устройств, и свойство ''info.capabilities'' каждого устройства.
+
+== Qt ==
+
+С помощью Qt общаться с HAL можно без особых трудностей, т.к. в 4-ю версию этого тулкита уже встроен D-Bus клиент (необходимы установленные пакеты ''libqt4-dbus'' и ''libqt4-dev'').
+
+Стратегия написания простейшего HAL клиента на Qt очень проста: с помощью D-Bus клиента Qt поключиться к системной шине
+(именно там запущен демон HAL), и вызывать необходимые D-Bus методы. В Qt примере используются два полезных сигнала, предоставляемых HAL -
+''DeviceAdded'' и ''DeviceRemoved''. Первый срабатывает когда добавляется какое-либо устройство, второй - когда удаляется. Наглядными примерами
+могут послужить USB флеш накопители или DVD диски. Когда такой сигнал возникает, вызываются все подписанные на него удалённые методы. Подписаться на эти сигналы можно средствами того же Qt.
+
+<pre>
+<nowiki>
+#include <QDBusConnection>
+#include <QDBusInterface>
+#include <QDBusReply>
+
+#include <QStringList>
+#include <QDebug>
+
+#include "hal.h"
+
+namespace
+{
+
+// функция вызова D-Bus методов, которые принимают один параметр и возвращают значение
+template<typename T>
+T dbusRequest(QDBusInterface &i, const QString &method, const QString &param)
+{
+    QDBusReply<T> reply = i.call(method, param);
+    
+    return reply.value();
+}
+
+}
+
+HAL::HAL() : QTextEdit()
+{
+    resize(640, 480);
+
+    /*
+     *  Используем сигналы DeviceAdded и DeviceRemoved за слежением
+     *  за добавлением/удалением устройств. Следует помнить, что при добавлении,
+     *  скажем, USB флешки, в системе возникает несколько устройств.
+     *  Отделить нужные устройства от вспомогательных можно с помощью анализа
+     *  их свойств.
+     */
+    QDBusConnection sys = QDBusConnection::systemBus();
+
+    sys.connect("org.freedesktop.Hal",
+                "/org/freedesktop/Hal/Manager",
+                "org.freedesktop.Hal.Manager",
+                "DeviceAdded",
+                this,
+                SLOT(slotAdded(const QString &)));
+
+    sys.connect("org.freedesktop.Hal",
+                "/org/freedesktop/Hal/Manager",
+                "org.freedesktop.Hal.Manager",
+                "DeviceRemoved",
+                this,
+                SLOT(slotRemoved(const QString &)));
+
+    // прочитаем список всех UDI устройств, и занесём этот список
+    // в текстовое поле
+    readDevices();
+}
+
+void HAL::readDevices()
+{
+    // с помощью QDBusInterface устанавливаем соединение с D-Bus шиной
+    QDBusInterface i("org.freedesktop.Hal",
+                     "/org/freedesktop/Hal/Manager",
+                     "org.freedesktop.Hal.Manager",
+                     QDBusConnection::systemBus());
+
+    // вызываем стандартный HAL метод - GetAllDevices. Этот
+    // метод возвращает список всех обслуживаемых UDI в виде массива строк
+    QDBusReply<QStringList> reply = i.call("GetAllDevices");
+
+    // ответ битый?
+    if(reply.isValid())
+    {
+        // получаем список строк из ответа
+        QStringList l = reply.value();
+        QStringList::iterator itEnd = l.end();
+
+        // проходим по списку строк (UDI) и заносим каждую строку
+        // в текстовое поле
+        for(QStringList::iterator it = l.begin();it != itEnd;++it)
+            append(*it);
+    }
+    else
+        append("Failed to get device list");
+}
+
+void HAL::slotAdded(const QString &udi)
+{
+    /* 
+     *  при добавлении устройства попробуем определить, что оно из себя
+     *  представляет (попробуем определить устройства с разделами, например USB
+     *  флеш накопители или DVD диски)
+     */
+    QDBusInterface i("org.freedesktop.Hal",
+                     udi,
+                     "org.freedesktop.Hal.Device",
+                     QDBusConnection::systemBus());
+
+    QStringList caps = dbusRequest<QStringList>(i, "GetProperty", "info.capabilities");
+
+    qDebug() << "Added device with UDI" << udi << caps;
+
+    // устройство не имеет файловой системы, оно нас не интересует
+    if(dbusRequest<QString>(i, "GetProperty", "volume.fsusage") != "filesystem" &&
+            !dbusRequest<bool>(i, "GetProperty", "volume.disc.has_audio"))
+        return;
+
+    QDBusMessage reply = i.call("GetProperty", "volume.size");
+
+    // получаем другие данные по устройству
+    QString product = dbusRequest<QString>(i, "GetProperty", "info.product");
+    QString size = reply.arguments().first().toString();
+    QString parent = dbusRequest<QString>(i, "GetProperty", "block.storage_device");
+
+    // родитель содержит параметры устройства, как модель и шину,
+    // к которой оно подключено
+    QDBusInterface iParent("org.freedesktop.Hal",
+                parent,
+                "org.freedesktop.Hal.Device",
+                QDBusConnection::systemBus());
+
+    QString model = dbusRequest<QString>(iParent, "GetProperty", "storage.model");
+    QString vendor = dbusRequest<QString>(iParent, "GetProperty", "storage.vendor");
+    QString bus = dbusRequest<QString>(iParent, "GetProperty", "storage.bus");
+
+    append(QString("Added device, model (%1), vendor (%2), bus (%3), product (%4), size (%5)")
+            .arg(model).arg(vendor).arg(bus).arg(product).arg(size));
+}
+
+void HAL::slotRemoved(const QString &udi)
+{
+    append(QString("Removed device with UDI %1").arg(udi));
+}
+</nowiki>
+</pre>
+
+При вставке DVD диска, в текстовом поле должно появится сообщение типа
+''"Added device, model (_NEC DVD_RW ND-3540A), vendor (), bus (ide), product (Мой диск), size (4644896768)"'':
+
+[[Image:hal-qt.png]]
+
+== Tcl ==
+
+Не менее просто чем из Qt, с HAL можно работать и из Tcl. Пример можно посмотреть в разделе [http://www.linux.org.ru/wiki/en/D-Bus#%D0%A0%D0%B0%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0_%D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D0%BB%D0%BE%D0%B2 D-Bus]
+
+== Ссылки ==
+* [http://people.freedesktop.org/~david/hal-spec/hal-spec.html Документация HAL]
+* [http://rusfolder.com/34174696 Примеры Qt, C, Python]
+* [http://ru.wikipedia.org/wiki/HAL_(freedesktop.org) Статья на Wikipedia]
+
+
+[[Category:Системное ПО]]
+[[Category:Программирование]]

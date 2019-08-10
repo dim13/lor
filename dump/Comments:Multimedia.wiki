@@ -1,0 +1,6 @@
+Добавить [http://www.linux.org.ru/news/multimedia/6394143 GNU Solfege] Оказывается не все о ней знают --[[User:adriano32|Андрей]] 17-Jun-2011 14:40 MSD
+
+Добавить [http://www.rastersoft.com/programas/devede.html DeVeDe] сюда неплохо бы. --[[User:adriano32|Андрей]] 17-Jun-2011 02:14 MSD
+
+
+sudo aptitude install, конечно, будет работать во всех дистрибутивах

@@ -1,0 +1,6 @@
+'''All contents copyright of the author. ©2007-2011.'''
+
+Не знаю как сделал [[User:JB|JB]], но туда вместо 2011, если оно текстом, следует вписать встроенную переменную <nowiki>{{CURRENTYEAR}}</nowiki>
+-- [[User:adriano32|adriano32]] 04.06.2011 21:49
+
+* fixed --[[User:JB|Тёма]] 04-Jun-2011 21:57 MSD

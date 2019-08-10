@@ -1,0 +1,138 @@
+= Собираем Worker =
+
+== Шрифты ==
+Если в Вашем дистрибутиве Worker вдруг собрали без поддержки XFT, пните мейнтейнера или соберите его сами с --enable-xft (Вам понадобится libxft-dev). Больше никаких кракозябриков и странных шрифтов!
+
+== Архивы ==
+При помощи AVFS (которая, в свою очередь, умеет работать с extfs от Midnight Commander) Worker поддерживает много типов архивов (хотя и не идеально). Если её нет в Вашем дистрибутиве, это повод пнуть мейнтейнера.
+
+== HAL и UDisks ==
+Worker достаточно современен, чтобы их поддерживать! Пните мейнтейнера или пересоберите его с --with-dbus (Вам понадобится libdbus-glib-1-dev).
+
+= Настраиваем Worker =
+
+== sshfs и другие интересные FUSE ==
+AVFS умеет много всего, но функционал Worker можно расширить ещё, если научить его монтировать разные FUSE во временные директории.
+
+Пример: монтирование (и размонтирование) sshfs
+<pre>	button {
+		position = 42;
+		title = "sshfs";
+		color = 1,0;
+		shortkeys {
+			normal {
+				key = "s";
+				mod = mod1;
+			}
+		}
+		commands {
+			ScriptOp {
+				type = if;
+				pushuseoutput = false;
+				dodebug = false;
+				wpurecursive = false;
+				wputakedirs = false;
+				stacknr = 0;
+				iftest = "${awk -v D={p} '($2==D&&$3==\"fuse.sshfs\")' /proc/mounts | wc -l} > 0";
+				iflabel = "unmount";
+				wintype = leave;
+				changeprogress = false;
+				changetext = false;
+				progressuseoutput = false;
+				wintextuseoutput = false;
+			}
+			ScriptOp {
+				type = push;
+				pushuseoutput = true;
+				dodebug = false;
+				wpurecursive = false;
+				wputakedirs = false;
+				stacknr = 0;
+				pushstring = "mktemp -d";
+				wintype = leave;
+				changeprogress = false;
+				changetext = false;
+				progressuseoutput = false;
+				wintextuseoutput = false;
+			}
+			OwnOp {
+				separateeachentry = false;
+				recursive = false;
+				start = terminal;
+				com = "nohup sshfs {Rs{[user@]host:[dir]}{}} {top 0} -p {Rs{Port}{22}} > /dev/null";
+				viewstr = "";
+				inbackground = false;
+				takedirs = false;
+				dontcd = false;
+				usevirtualtempcopies = false;
+			}
+			EnterDirOp {
+				dir = "{pop 0}";
+				mode = special;
+			}
+			ReloadOp {
+				mode = current;
+				resetdirsizes = false;
+				keepfiletypes = false;
+			}
+			ScriptOp {
+				type = end;
+				pushuseoutput = false;
+				dodebug = false;
+				wpurecursive = false;
+				wputakedirs = false;
+				stacknr = 0;
+				wintype = leave;
+				changeprogress = false;
+				changetext = false;
+				progressuseoutput = false;
+				wintextuseoutput = false;
+			}
+			ScriptOp {
+				type = label;
+				pushuseoutput = false;
+				dodebug = false;
+				wpurecursive = false;
+				wputakedirs = false;
+				stacknr = 0;
+				label = "unmount";
+				wintype = leave;
+				changeprogress = false;
+				changetext = false;
+				progressuseoutput = false;
+				wintextuseoutput = false;
+			}
+			ScriptOp {
+				type = push;
+				pushuseoutput = false;
+				dodebug = false;
+				wpurecursive = false;
+				wputakedirs = false;
+				stacknr = 0;
+				pushstring = "{p}";
+				wintype = leave;
+				changeprogress = false;
+				changetext = false;
+				progressuseoutput = false;
+				wintextuseoutput = false;
+			}
+			ParentDirOp {
+			}
+			OwnOp {
+				separateeachentry = false;
+				recursive = false;
+				start = normal;
+				com = "fusermount -u {top 0} && rmdir {pop 0}";
+				viewstr = "";
+				inbackground = false;
+				takedirs = false;
+				dontcd = false;
+			}
+			ReloadOp {
+				mode = current;
+				resetdirsizes = false;
+				keepfiletypes = false;
+			}
+		}
+	}
+</pre>

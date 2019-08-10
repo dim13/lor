@@ -1,0 +1,149 @@
+== Программирование на XUL ==
+
+* [[XUL]]
+
+==Использование NETWM==
+
+* [[NETWM]]
+
+==Использование HAL==
+
+* [[HAL]]
+
+==Введение в D-Bus==
+
+* [[D-Bus]]
+
+==Ресурсы по Qt==
+
+* [http://doc.trolltech.com/ Официальная документация]
+* [http://www.prog.org.ru Русскоязычный форум]
+* [http://www.forum.crossplatform.ru/ Еще один русскоязычный форум]
+* [http://www.doc.crossplatform.ru/qt/4.3.2/index.html Перевод официальной документации на русский язык]
+* [http://www.qtforum.org Англоязычный форум]
+* [http://lists.trolltech.com/ Списки рассылки]
+* [http://thepiratebay.org/torrent/4132097/C___GUI_Programming_with_Qt_4_Second_Edition_(_2nd_edition_) C++ GUI Programming with Qt 4]
+* [http://cartan.cas.suffolk.edu/oopdocbook/html/ Introduction to Design Patterns in C++ with Qt4]
+==Ресурсы по GTK и GNOME==
+====Привязки различных языков к GTK:====
+*[http://www.pygtk.org/ python]
+*[http://gtk.php.net/ gtk-php]
+*[http://ruby-gnome2.sourceforge.jp/ Ruby-GNOME]
+*[http://www.gnocl.org/ GTK-TCL]
+*[http://www.cliki.net/GTK%20binding CommonLisp-gtk]
+====Документация====
+Главным документом служит руководство по GTK для С программиста:
+*Ветка GTK+ 2: [http://developer.gnome.org/gtk/2.24/ GTK+ 2 Reference Manual] 
+*Ветка GTK+ 3: [http://developer.gnome.org/gtk3/3.0/ GTK+ 3 Reference Manual]
+======Документация по отдельным компонентам GNOME======
+'''GLib''' - это библиотека,предоставляющая базовые возможности для программиста такие как: 
+*Управление памятью; 
+*Работа со строками; 
+*Некоторые структуры данных (например. связные списки);
+*Операции ввода/вывода; 
+*Работа с файлами;
+*Интернационализация приложений; 
+Документация по Glib: [http://developer.gnome.org/glib/stable/ GLib Reference Manual (Stable)]
+
+'''Gobject''' - это реализация ООП для С: реализованы собственные типы данных, через сигналы реализуется наследование и некоторые др. возможности ООП. Обработка свойств объекта и параметризованные типы реализуются через собственную систему параметр/значение. Эта библиотека является фундаментом многих других компонентов GNOME 
+
+Документация по GObject: [http://developer.gnome.org/gobject/stable/ GObject Reference Manual] 
+
+'''GIO''' - набор библиотек для реализации простого API к VFS (виртуальная файловая система).Это инструмент, который должен предоставить более легкий и удобный набор функций по работе с вводом/выводом, чем аналогичные функции POSIX. 
+
+Документация по GIO: [http://developer.gnome.org/gio/stable/ GIO Reference Manual]
+
+'''Pango''' - набор библиотек для отображения текстовой информации с использованием различных шрифтов, устройств вывода и т.д. 
+
+Документация по Pango: [http://developer.gnome.org/pango/stable/ Pango Reference Manual] 
+
+'''ATK''' - набор инструментов для программиста по адаптации интерфейса приложения для людей с ограниченными физическими возможностями(например настройка контрастности экрана,"липкие" клавиши).
+
+Документация по ATK: [http://developer.gnome.org/atk/stable ATK Reference Manual] 
+
+'''GDK-PixBuf''' - библиотека для работы с изображениями
+
+Документация по GDK-PixBuf: [http://developer.gnome.org/gdk-pixbuf/stable/  GDK-PixBuf Reference Manual]
+
+'''GDK 2''' - вспомогательная библиотека для инициализации GNOME и его настройки(?)
+
+Документация по GDK 2: [http://developer.gnome.org/gdk/stable/gdk-General.html GDK 2 Reference Manual]
+== F.A.Q. по языку Lisp ==
+
+* [[lisp-lor-faq]]
+
+* [https://ru.wikibooks.org/wiki/%D0%9B%D0%B8%D1%81%D0%BF Викиучебник]
+== Как научиться программировать под Linux, с чего начать? ==
+Выбор первого языка — это стандартная тема для холиваров в Development. Как и в случае с дистрибутивом, нужно полагаться на другие факторы (наличие в пределах досягаемости знающего человека, востребованность на локальном рынке труда, бросок монетки)
+
+== С чего начать изучение C/C++? ==
+* [http://www.lib.ru/CTOTOR/kernigan.txt Б. Керниган, Д. Ритчи. Язык программирования Си. Издание 3-е, исправленное]
+* [ftp://ftp.rug.nl/contrib/frank/documents/annotations/ C++ Annotations ; F.B. Brokken]
+* [http://www.advancedlinuxprogramming.com/alp-folder M.Mitchell, J.Oldham, A.Samuel; Advanced Linux Programming]
+* [http://mindview.net/Books/DownloadSites/ Bruce Eckel, Thinking in C++] (есть перевод - Брюс Эккель, Философия С++)
+* Бьерн Страуструп. Язык программирования С++.
+== С чего начать изучение Python? ==
+К дистрибутиву прилагается полная документация (на английском языке) с отличным туториалом. Для тех, кто не силен в англ, есть книга (фактически просто перевод документации на русский) Г. Россум, Ф.Л.Дж. Дрейк, Д.С. Откидач «Язык программирования Python».
+*[https://ru.wikibooks.org/wiki/Python/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_Python_3.1 Викиучебник]. Очень ясно изложены основы и некоторые хитрости программирования Python.
+*Хорошим и живым введением в Python также является свободно доступная книга «[http://diveintopython.net/ Dive Into Python]».
+Python многоплановый язык и потому важно выбрать то направление, где Вы собираетесь применить навыки программирования  
+== С чего начать изучение Ruby? ==
+ 
+* [http://ru.wikibooks.org/wiki/Ruby Викиучебник]. Очень ясно изложены основы и некоторые хитрости программирования Ruby.
+* [http://www.pragprog.com/titles/ruby/programming-ruby «Programming Ruby: The Pragmatic Programmers' Guide»]. Авторы: Dave Thomas, Chad Fowler и Andy Hunt. В книге затрагиваются практически все тонкости языка Ruby. Книга написана простым и понятным языком и содержит множество иллюстрирующих примеров.
+* [http://mislav.uniqpath.com/poignant-guide/book/ Why’s (Poignant) Guide to Ruby].
+* [http://www.manning.com/black3/ The Well-Grounded Rubyist].
+== С чего начинать изучение OCaml? ==
+
+Можно начать с "Développement d'applications avec Objective Caml" by Emmanuel Chailloux, Pascal Manoury and Bruno Pagano, которая имеется в  [http://caml.inria.fr/pub/docs/oreilly-book/ en] и [http://shamil.free.fr/comp/ocaml/ ru] вариантах, пытливые умы также найдут и оригинальную версию на французском языке. Просто и понятно, на примерах, излагаются идиомы как Ocaml'а, так и некоторые понятия функционального программирования.
+
+В качестве редактора отлично подойдет [http://www.gnu.org/software/emacs Emacs] + [http://www.emacswiki.org/cgi-bin/wiki/TuaregMode tuareg-mode], которые обеспечат удобное перемещение по коду, подсветку синтаксиса, автоформатирование, интеграцию с интерпретатором.
+
+В качестве IDE можно попробовать [http://www.algo-prog.info/ocaide/ OcaIDE], представляющий собой плагин для Eclipse, который помимо вышеперечисленного, умеет автодополнение, подсказки, проекты, code browser и многое другое. 
+
+== С чего начать изучение Tcl? ==
+Рекомендую [http://www.amazon.com/exec/obidos/tg/detail/-/0130385603/qid=1046168352/sr=8-1/ref=sr_8_1/104-7014893-7300739?v=glance Practical Programming in Tcl and Tk, Fourth Edition].
+
+На русском можно почитать [http://www.opennet.ru/docs/RUS/tcltk/], но там мало и для слегка устаревшей версии.
+
+Много полезной информации можно найти на [http://wiki.tcl.tk].
+
+== Книги ==
+
+* [http://lib.ru/CTOTOR/FUNCPROG/ А.Филд, П.Харрисон, Функциональное программирование, Мир, 1993.]
+* [http://newstar.rinet.ru/~goga/sicp/sicp.ps.gz Структура и интерпретация компьютерных программ (Scheme)]
+* [http://fenster.forestnet.org/docs/clisp/ Э.Хювенен, Й.Сеппянен. Мир Лиспа]
+* [http://www.gigamonkeys.com/book/ Peter Seibel, Practical Common Lisp]
+* [http://www.ocaml-tutorial.org/ Richard W.M. Jones. Developers/OCaml Tutorial]
+* [http://catb.org/~esr/writings/taoup/ The Art of Unix Programming]
+* [http://www.htdp.org/ How to Design Programs]
+* Никлаус Вирт. Алгоритмы + структуры данных = программы. (И вообще любые книги Вирта)
+
+== Сайты с книгами и документацией ==
+
+* [http://linfoline.homedns.org Подборка статей по системе GNU, лицензиям и библиотекам]
+* [http://www.lib.ru/CTOTOR/ Поборка книг, в т.ч. по С, С++ и asm]
+* [http://tronche.com/gui/x/ Программирование в X Window]
+* [http://motif.opennet.ru/ Программирование в X Window и OSF/Motif]
+* [http://developer.mozilla.org/ Документация по технологиям, используемым в Mozilla ]
+* [http://www.prog.org.ru Русскоязычный форум для Qt программистов]
+
+== Технологические площадки для разработки свободного/открытого программного обеспечения ==
+
+* [http://fireforge.net/ FireForge.net] - русскоязычный сервер поддержки разработчиков свободного ПО (создан в 2008 году)
+* [http://fireforge.net/account/register.php FireForge.net: Register New Account]
+* [http://sourceforge.net/ SourceForge] - наиболее известный сервер-хранилище открытых проектов (существует с 1999 года)
+* [https://sourceforge.net/account/registration/ SourceForge: Account Registration]
+* [http://freshmeat.net/ freshmeat.net] - менее известный ресурс, где также находятся свободные (и просто открытые) проекты
+* [http://freshmeat.net/users/new freshmeat.net: Submit new Project]
+* [http://savannah.gnu.org] - Savannah, площадка от FSF, для проектов из GNU
+* [http://savannah.nongnu.org] - Savannah, площадка от FSF, для остальных проектов
+* [http://launchpad.net/] - Launchpad, площадка от Canonical. Система контроля версий - Bazaar. 
+* [http://code.google.com/] - Google Code, площадка от Google. SVN, git, Mercurial.
+* [http://github.com] - GitHub, площадка с git-репозиториями, wiki, багтрекерами и прочими вещами
+* [http://gitorious.org] - Похоже на GitHub, только на открытом движке
+
+'''Требуется доброволец для наполнения раздела!'''
+
+
+[[Category:Программирование]]

@@ -1,0 +1,15 @@
+'''Всякие полезные ссылки'''
+
+Дистрибутивы: [http://archlinuxarm.org/ Archlinux для ARM]
+
+Поисковики:
+[http://duckduckgo.com/ DuckDuckGo]
+
+Новостные ресурсы: [http://www.opennet.ru/ OpenNet], [http://piratemedia.ru/ Pirate MEDIA]
+
+Социальные сети: [http://www.linux.org.ru/ Linux.Org.Ru]
+
+
+'''По интересам:''' 
+
+Выразительный и компактный искусственный язык [http://ithkuil.net/ Ыфкуил]

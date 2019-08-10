@@ -1,0 +1,7 @@
+'''boombick aka Андрей Синицын'''
+* Debian testing
+* fluxbox
+* WebDev  все с ним связанное
+* Администрирование *NIX
+
+Остальное на [http://www.boombick.org www.boombick.org]

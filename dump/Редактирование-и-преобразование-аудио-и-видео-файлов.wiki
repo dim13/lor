@@ -1,0 +1,226 @@
+==Как в Linux работать с видео? Какие есть программы для работы с видео?==
+
+Обычно для работы нужны:
+
+* [http://www.transcoding.org/cgi-bin/transcode transcode]
+* [http://www.mplayerhq.hu/ mencoder], входит в состав MPlayer
+* и иногда [http://mjpeg.sourceforge.net/ mjpegtools] вместе с [http://tovid.wikia.com/wiki/Tovid_Wiki tovid].
+
+Программа для примитивного монтирования - [http://fixounet.free.fr/avidemux/ avidemux]. Программы посложнее - [http://www.pitivi.org/wiki/Main_Page PiTiVi], [http://www.kinodv.org/ Kino], [http://kdenlive.org/ Kdenlive], [http://jahshaka.org/ Jahshaka] и [http://lives.sourceforge.net/ LiVES]. Для профессиональной обработки видео или для выполнения задач аниматоров и дизайнеров подойдет [http://www.heroinewarrior.com/cinelerra.php Cinelerra].
+
+А [http://www.cyberciti.biz/faq/top5-linux-video-editing-system-software/ тут] есть неплохой обзор со скриншотами и сводной таблицы возможностей некоторых вышеперечисленных.
+
+Если очень нравится mencoder, но хочется получить графический интерфейс - вам поможет [http://www.mplayerhq.hu/design7/projects.html эта] страница, на ней перечислены все возможные фронтенды как к MPlayer, так и к Mencoder.
+
+==Какой есть софт для работы со звуком? Для создания музыки?==
+
+/* FIXME: Написать подробно что и как */ 
+
+Проще всего использовать [http://ccrma.stanford.edu/planetccrma/software/planetccrma.html Planetccrma], это репозиторий для Fedora, позволяющий превратить дистрибутив в рабочую станцию с low-latency ядром и множеством для работы со звуком. На сайте есть [http://ccrma.stanford.edu/planetccrma/software/soundapps.html описание] программ.
+
+/* FIXME: Не забыть и про UbuntuStudio и 64 Studio */ 
+
+/* FIXME: Audacity; LMMS */
+==Чем разрезать avi-файл?==
+
+Проще и лучше всего программой avisplit из комплекта [http://www.transcoding.org/cgi-bin/transcode transcode]. Еще можно колдовать, используя mencoder с ключами -ss (-sb) и -frames, но это сложновато.
+
+==Чем склеить avi-файл?==
+
+Проще всего с помощью программы avimerge из того же комплекта [http://www.transcoding.org/cgi-bin/transcode transcode]. Например:
+<pre>
+avimerge -i input1.avi input2.avi -o new_input12.avi
+</pre>
+Можно с помощью mencoder. Например:
+<pre>
+cat input1.avi input2.avi | mencoder - -forceidx -oac copy -ovc copy -o new_input12.avi
+</pre>
+Минус в строчке не лишний - он означает, что видео берется из потока. Файлы должны иметь одинаковые параметры - т.е. видео должно быть зажато одним и тем же кодеком, аудио - то же самое, плюс параметры сжатия должны быть одинаковы (т.е. разрешение видео, битрейт). Опция -forceidx нужна, чтобы после склейки не "съехали" индексы и фильм можно было нормально перематывать.
+
+==Как сделать видеоролик из набора фотографий?==
+
+Для объединения нескольких изображений в видеоролик с наложением звуковой дорожки можно использовать ffmpeg:
+<pre>
+ffmpeg -i sound.mp3 -f image2 -i img/image%d.jpg video.avi
+</pre>
+
+Тоже самое средствами mencoder:
+<pre>
+mencoder mf://*jpg -mf w=640:h=480:fps=10:type=jpg -ovc lavc -lavcopts \
+      vcodec=mpeg4:mbd=2:trell -oac copy -o output.avi
+</pre>
+
+Плюс добавляем звуковую дорожку:
+<pre>
+mencoder -oac copy -ovc copy -audiofile sound.mp3 output.avi -o video.avi
+</pre>
+
+Преобразуем в mpeg4:
+<pre>
+mencoder Alex.avi -oac mp3lame -lameopts abr:br=32 -ovc lavc \
+      -lavcopts vcodec=mpeg4:mbd=2:trell:vbitrate=160  -vf scale=320:240  -o films.avi
+</pre>
+
+==Как исправить индексы в видеофайле? Почему у меня перемотка в некоторых видеофайлах не работает?==
+
+Довольно просто - индексы нужно перестроить. Воспользуемся mencoder. Например:
+<pre>
+mencoder input.avi -forceidx -oac copy -ovc copy -o output.avi
+</pre>
+Также можно использовать утилиту avifix из из комплекта [http://www.transcoding.org/cgi-bin/transcode transcode]. Например:
+<pre>
+avifix -i input.avi
+</pre>
+
+==Как приклеить звук к avi-файлу? Как приклеить вторую звуковую дорожку?==
+
+Проще всего с помощью программы avimerge из комплекта [http://www.transcoding.org/cgi-bin/transcode transcode]. Например:
+<pre>
+avimerge -i input.avi -p input.wav -o output.avi
+</pre>
+
+Соответственно, клеится звук на первую свободную дорожку. Для avi-файлов, это дорожки с номерами от 0 до 31. Если дорожка 0 уже занята, то звук приклеится к дорожке 1 и получится avi с несколькими дорожками.
+
+==Как убрать нулевую звуковую дорожку из avi-файла?==
+
+На самом деле как убрать определенную дорожку я не знаю. Но если в файле одна дорожка или несколько, их все можно убрать с помощью mencoder так:
+<pre>
+mencoder input.avi -ovc copy -nosound -o output.avi
+</pre>
+
+Помните, что любая операция, произведенная с помощью mencoder, убьет дополнительные звуковые дорожки из видеофайла.
+
+==Как выделить звуковую дорожку из avi-файла?==
+
+Тут есть два варианта:
+
+1. В помощью MPlayer. Так мы сможем получить чистый звуковой файл так, как он закодирован. Например:
+<pre>
+mplayer input.avi -vo null -dumpaudio -dumpfile mysound.mp3
+</pre>
+
+Соответственно, запишется файл mysound.mp3. Правда звук запишется в том формате, в котором был - т.е. если PCM, то в PCM, если в AC3, то в AC3 и т.п.
+
+2. С помощью mencoder:
+<pre>
+mencoder input.avi -of rawaudio -oac mp3lame -ovc lavc -o output.mp3
+</pre>
+
+Звук получается действительно в mp3, его даже играет мой (очень привиредливый) плеер, правда, длину трека показывать отказывается.
+
+3. Тоже при помощи mencoder. Этим способом мы получим звук в контейнере avi (просто не будет видео):
+<pre>
+mencoder input.avi -ovc null -oac copy -o sound.avi
+</pre>
+
+Такой звук отлично подходит для работы с видеофайлами (типа подклейки и т.п.). К тому же часто звук ac3 играется без проблем именно из avi-контейнера.
+
+==Пережал звук из wav в mp3 и подклеил к avi-файлу, теперь видео не синхронизировано с аудио. Что делать?==
+
+Вообще это нехорошая практика жать звук отдельно. Тем не менее, если жмешь звук с помощью lame, нужно воспользоваться ключиком --cbr (т.е. никакого переменного битрейта). Должно помочь .
+
+Либо можно приклеить к avi этот wav-файл, после чего жать его средствами mencoder. Например:
+<pre>
+avimerge -i input.avi -p input.wav -o input-wav.avi
+mencoder input-wav.avi -ovc copy -oac mp3lame -lameopts vbr=3:br=192:q=0:aq=0 -o output-mp3.avi
+</pre>
+
+==Avimerge не подклеивает wav и/или mp3 к avi==
+
+В некоторых дистрибутивах avimerge так собран. Его придется пересобрать (например, в случае с дистрибутивом Fedora avimerge из репозитория livna.org не воспринимает mp3).
+
+А можно пойти другим путем, используя mencoder:
+<pre>
+mencoder input.avi -audiofile audio.avi -oac copy -ovc copy -o output.avi
+</pre>
+
+==Как перегнать mp3 в ogg (в том числе из консоли)?==
+
+Вы можете воспользоваться программой [http://ecasound.seul.org/ecasound/ ecasound].
+
+Для преобразования из консоли воспользуйтесь скриптом [http://dev.gentoo.org/~sergey/mp32ogg mp32ogg]. Это не домашняя страница проекта, а сам скрипт, исправленный [http://linux.org.ru/whois.jsp?nick=svyatogor svyatorog] для перекодировки тэгов сразу в unicode. Домашняя страница проекта - [http://faceprint.com/code/].
+
+Есть второй вариант - поместить mp3 в контейнер ogg, единственное, что не все плееры понимают такой ogg. Утилита для такой операции называется ogmmerge, входит в состав [http://www.bunkus.org/videotools/ogmtools/ OGMtools].
+
+На самом деле перекодирование из одного lossy-формата в другой проводить не стоит.
+==Как создать тег mp3-файла в кодировке UTF-8 (например, для MPD)?==
+
+Кодировка UTF-8 поддерживается только id3 тэгами версии 2.4 (id3v2.4). Есть CLI утилита [http://eyed3.nicfit.net/ eyeD3], написанная на python, которая умеет создавать/редактировать id3 теги версии 2.4.
+
+==Как массово преобразовать все теги моей коллекции в UTF-8?==
+
+Для массовой перекодировки можно воспользоваться утилитой mid3iconv из пакета [http://code.google.com/p/quodlibet/wiki/Mutagen mutagen]. В Debian соответствующий пакет называется python-mutagen. Предполагается, что первоначально теги были в кодировке CP1251
+
+<pre>
+find -iname '*.mp3' -print0 | xargs -0 mid3iconv -eCP1251 --remove-v1
+</pre>
+
+Замечание: если тэги уже в ID3v2.4 и UTF-8, ничего страшного не произойдет, так что эту команду можно использовать на смешанной коллекции.
+
+Если нужен GUI, используйте ExFalso или QuodLibet.
+
+==Чем изменить частоту в wav-файле (и не только)?==
+
+С помощью утилиты [http://sox.sourceforge.net/ sox]. Достаточно добавить нужную частоту в список параметров выходного файла. Например:
+<pre>
+sox input.wav -r 44100 output.wav
+</pre>
+
+При конвертации в ogg утилитой oggenc можно использовать ключ --resample. 
+
+==Чем объединить несколько mp3 или ogg в один?==
+
+* [http://mp3splt.sourceforge.net/ mp3split] 
+* [http://mp3wrap.sourceforge.net/ mp3wrap]
+
+==Как преобразовать .ape + .cue во .flac с потрековым разбиением?==
+
+По причине отсутствия поддержки .ape + .cue во многих плейерах для Linux, иногда возникает необходимость перекодирования .ape в хорошо поддерживаемый .flac с потрековым разбиением. Для достижения цели нам понадобятся следующие инструменты: [http://etree.org/shnutils/shntool/ shntool], [http://supermmx.org/linux/mac/ mac] и [http://flac.sourceforge.net/ flac]. Прежде чем качать исходники и собирать поищите их в репозитории своего дистрибутива.
+
+Сама по себе команда перекодирования умещается в одну строчку:
+<pre>
+$ shntool split your_ape_file.ape -f cue_list_for_your_ape_file.cue -o flac -t "%n - %t"
+</pre>
+
+Приведённая выше команда означает следующее: разрезать your_ape_file.ape, извлекая данные о длительности треков и их названиях из файла cue_list_for_your_ape_file.cue, закодировав выходные данные в формате flac. Полученные файлы именовать по маске "Номер дорожки - Название дорожки".
+
+Данной командой можно резать как ape + cue, так и flac + cue-файлы.
+
+Кроме ключей названия %n и %t так же можно использовать ключ %p, который задает исполнителя (от англ. performer).
+
+==Как создать gif-анимацию?==
+
+Получить gif-анимацию из видеоролика в Linux очень легко, для этого вам потребуется MPlayer и всего лишь одна команда в консоли:
+<pre>
+$ mplayer myvideo -ao null -ss 0:00:00 -endpos 00 -nosub -vf scale=320:240 -vo gif89a:fps=24:output=mygif.gif
+</pre>
+Здесь:
+* myvideo - видео из которого вы хотите создать анимацию
+* -ao null - не выводить звук
+* -ss 0:00:00 - стартовая позиция видеофрагмента в видеоролике, из которого будет получена анимация (формат - часы:минуты:секунды)
+* -endpos 00 - длина видеофрагмента в секундах
+* -nosub - без субтитров
+* -vf scale=320:240 - разрешение получаемой анимации в пикселях (формат ширина:высота)
+* -vo gif89a:fps=24:output=mygif.gif - количество кадров в секунду (fps=24) и название итоговой анимации (mygif.gif)
+
+Если по каким-либо причинам вам не понравилось качество или размер анимации, существует иной, более сложный способ ее изготовления при помощи редактора GIMP:
+
+Первым шагом экспортируем необходимый фрагмент видео в набор jpg картинок:
+<pre>
+$ mplayer myvideo -ao null -ss 0:00:00 -endpos 00 -nosub -vf scale=320:240 -vo jpeg:outdir=picturesdirectory
+</pre>
+Здесь:
+* -vo jpeg:outdir=picturesdirectory - картинки сохраняются в директорию picturesdirectory
+Следующим шагом обрабатываем в GIMP полученные картинки:
+* "File / Open As Layers", "Файл / Открыть как слои" - открываем картинки как слои
+* "File / Export As", "Файл / Экспортировать как" - экспортируем и сохраняем картинки как анимированный gif
+Необходимо заметить, что GIMP позволяет творчески обрабатывать получаемую анимацию, что является несомненным плюсом его использования, также при помощи GIMP можно оптимизировать полученную анимацию, сократив ее размер:
+* "Filters / Animation / Optimization", "Фильтры / Анимация / Оптимизация"
+Как для первого, так и для второго способа получения gif-анимации удобным способом оптимизации полученных гифок будет использование программы gifsicle:
+<pre>
+$ gifsicle --optimize -O3 --colors 128 mygif.gif > mygifoptimized.gif
+</pre>
+Здесь:
+* --optimize -O3 - уровень оптимизации
+* --colors 128 - количество цветов (от 2 до 256)
+[[Category:Мультимедиа]]

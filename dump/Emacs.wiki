@@ -1,0 +1,3 @@
+* [https://www.linux.org.ru/wiki/en/Emacs/Intro Введение]
+* [https://www.linux.org.ru/wiki/en/Emacs_Lisp Elisp]
+* [https://www.linux.org.ru/wiki/en/Emacs/Packages Полезные elisp модули(пакеты)]

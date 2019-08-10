@@ -1,0 +1,178 @@
+Несколько вопросов, которые могут возникнут у новичка, обратившего внимание на Lisp
+
+==Зачем нужен Lisp?==
+
+В самом деле зачем? Это же "архаичный, академический язык", на нём "никто не программирует", "он не востребован среди работодателей." Эти и подобные им высказывания, нередко можно услышать от людей вовсе незнакомых с lisp или в лучшем случае, когда-то немного слышавшими о нём в институте, от чего у них осталось лишь впечатление языка с огромным количеством скобок.
+
+На самом деле всё не так. Lisp - современный высокоуровневый язык, на нём писались и пишутся и разные достаточно серьёзные системы и вещи попроще, навроде скриптов в разных средах, хотя есть конечно области, где Lisp применять было бы неразумно, например, для реализации вычислительных методов.  Отчасти верны лишь слова про работодателей. Действительно, Lisp сейчас применяется не так широко. Попытки ответить на вопрос "почему" выходят далеко за рамки F.A.Q., но на взгляд составителя огромную роль играет просто банальное незнание его возможностей и имеющихся инструментов. Тем не менее, есть и серьёзные работодатели у которых знание Lisp прямо указано в требованиях к вакансиям.
+
+Кроме того, многие, изучившие Lisp, отмечают, что полученное знание помогает им лучше писать программы даже на других языках, в том числе на C++. 
+
+Многих к изучению и использованию лиспа вдохновила статья Пола Грэма "Побеждая посредственность" http://www.paulgraham.com/avg.html с русским переводом которой можно ознакомится на http://www.nestor.minsk.by/sr/2003/07/30710.html в которой описывается, как фактически именно лисп стал "секретным оружием" успешного стартапа Viaweb, позднее приобретённого Yahoo.
+
+==Какие существуют разновидности Lisp?==
+
+Со времени первоначального Lisp, созданного в 1958 году Джоном Маккарти (John McCarthy), прошло уже много лет и сейчас имеется несколько диалектов и родственных языков. Среди наиболее важных диалектов можно назвать Common Lisp и Scheme, первый является ANSI стандартом языка Lisp номер X3.226-1994, постепенно развившимся из первоначального варианта языка, а Scheme - диалект лиспа, созданный Гаем Стилом и Джеральдом Дж. Сассманом (Guy L. Steele и Gerald Jay Sussman), на который тоже существует стандарт [http://www.r6rs.org R6RS], хотя наиболее распространённые реализации используют до сих пор его предыдущую версию [http://www.r5rs.org R5RS]
+
+Также распространены диалекты elisp - Emacs Lisp, используемый в редакторах GNU Emacs и XEmacs и AutoLisp, используемый в CAD-программе AutoCAD, выпускаемой Autodesk. По сравнению со стандартами, elisp и AutoLisp имеют серьёзные ограничения. В последнее время получил распространение диалект Clojure, позволяющий создавать приложения для платформы Java. Имеется и немало других диалектов и разновидностей языка, в том числе и по той причине, что даже разные трансляторы Common Lisp различаются в некоторых деталях реализации.
+
+==Какие имеются компиляторы/интерпретаторы Lisp?==
+
+===Реализующие Common Lisp===
+
+[http://common-lisp.net/~dlw/LispSurvey.html Подробное сравнение нескольких реализаций Common Lisp.] (англ.)
+
+Интерпретаторов и компиляторов Lisp и Scheme очень много [http://www.paulgraham.com/lisps.html большой список приведён на сайте Пола Грэма], здесь же приведён список, по мнению составителей F.A.Q., наиболее универсальных, популярных и доступных.
+
+<b>Свободные:</b>
+* [http://clisp.cons.org/ CLISP],
+* [http://trac.clozure.com/openmcl Clozure CL]
+* [http://www.cons.org/cmucl/ CMUCL],
+* [http://ecls.sourceforge.net/ ECL]
+* [http://www.gnu.org/software/gcl/ GCL],
+* [http://www.sbcl.org/ SBCL]
+* [http://common-lisp.net/project/mkcl/ MKCL]
+* [http://common-lisp.net/project/armedbear/ ABCL] - реализация Common Lisp для JVM
+
+<b>Проприетарные:</b>
+* [http://www.franz.com/ Allegro CL],
+* [http://www.lispworks.com/ LispWorks]
+* [http://www.scieneer.com/scl/ Scieener CL]
+
+Однозначно рекомендовать тот или иной компилятор/интерпретатор сложно, многое зависит от конкретных задач, но всё-таки, среди свободных реализаций стоит отметить CLISP и SBCL, CLISP более широко распространен и немного удобнее в работе, особенно в ходе обучения, SBCL часто быстрее CLISP и реализует ряд функциональных парадигм, не вошедших в стандарт Common Lisp, но чрезвычайно полезных, например, хвостовую (концевую) рекурсию. CMUCL более медленно развивается, но существует ряд полезных библиотек, ориентированных на него. GCL применяется, в частности, в системе компьютерной алгебры Axiom
+=== Реализующие Scheme ===
+
+<b>Свободные:</b>
+
+<i>Поддерживающие R7RS:</i>
+* [http://racket-lang.org Racket] - помимо поддержки R5RS и R6RS реализует собственный диалект Lisp'а,
+* [https://code.google.com/p/sagittarius-scheme/ sagittarius],
+* [https://code.google.com/p/chibi-scheme/ chibi-scheme] - небольшая встраиваемая реализация,
+* [http://practical-scheme.net/ Gauche] - есть начальная поддержка R7RS
+
+
+<i>Поддерживающие R6RS:</i>
+* [http://code.google.com/p/ypsilon/ Ypsilon],
+* [https://launchpad.net/ikarus Ikarus] - разработка заброшена.
+* [http://www.larcenists.org/ Larceny],
+* [http://marcomaggi.github.com/vicare.html Vicare] - форк Ikarus, активно развивается
+* [http://code.google.com/p/mosh-scheme/ Mosh],
+* [http://www.gnu.org/software/guile/guile.html Guile]
+<i>Поддерживающие R5RS:</i>
+
+<i>Примечание: большая часть этих реализаций не собирается поддерживать R6RS никогда. Подробности можно узнать [http://scheme-punks.org/wiki/index.php?title=Main_Page здесь]</i>
+* [http://www.gnu.org/software/mit-scheme MIT/GNU Scheme],
+* [http://swiss.csail.mit.edu/~jaffer/SCM SCM],
+* [http://www.stklos.net/ STklos],
+* [http://www-sop.inria.fr/mimosa/fp/Bigloo Bigloo],
+* [http://www.call-with-current-continuation.org Chicken] - Scheme->C компилятор с удобным FFI для С. Есть некое подобие CPAN. Авторы не поддерживают R6RS.
+* [http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page Gambit],
+* [http://s48.org/ Scheme48]
+
+В известный графический редактор [http://www.gimp.org GIMP] встроен скриптовый язык Script-Fu, являющийся  усечённым вариантом Scheme, базирующемся на интерпретаторе [http://tinyscheme.sourceforge.net/ TinyScheme]. Еще одной интересной встраиваемой реализацией Scheme является [https://ccrma.stanford.edu/software/snd/snd/s7.html s7].
+
+<b>Проприетарные:</b>
+* [http://www.scheme.com Chez Scheme]
+==Нужна документация по Lisp==
+
+====На русском языке====
+
+К сожалению, книг по Lisp на русском языке очень мало. В основном они выпущены более 17 лет назад.
+
+----
+
+1.Хювёнен Э., Сеппянен Й. Мир Лиспа. В 2-х томах — М.: Мир, 1990 г.
+
+Более-менее известная книга финских авторов, существует в электронном виде в электронных библиотеках.
+
+----
+
+2. Абельсон Харольд, Сассман Джеральд при участии Джули Сассман, Структура и интерпретация компьютерных программ — М.: Добросвет, "КДУ", 2006 г.  Эта, де-факто культовая книга, собственно говоря, не о языке Scheme, а учебник по программированию, является переводом вводного курса по компьютерным наукам (Computer Science). Язык Scheme в ней служит языком на примере которого происходит обучение парадигмам и методам программирования.
+
+Книга свободно доступна на английском языке: [http://mitpress.mit.edu/sicp/full-text/book/book.html sicp] также по ключевому слову sicp можно найти в интернете её перевод на русский язык.
+
+Имеется блог, посвящённый изучению этой книги и решению задач из неё: [http://sicp.sergeykhenkin.com/ sicp.sergeykhenkin.com]
+
+----
+
+3.[http://www.cardarmy.ru/proekt/lisp/art1.htm В.Водолазкий, Первые шаги в GNU Common Lisp] — цикл статей о Lisp, опубликованный на сайте В.Водолазкого. Для примеров используется [http://www.gnu.org/software/gcl/ GCL].
+
+----
+4. [http://lisper.ru/pcl/ Перевод на русский Practical Common Lisp] -- [https://github.com/pcl-ru/pcl-ru работа] еще в процессе, можно регистрироваться и переводить/вычитывать
+
+----
+5. [http://www.marstu.mari.ru:8101/mmlab/home/lisp/title.htm Курс лекций функционального программирования. Морозов М.Н.] 
+
+----
+6. [https://bitbucket.org/muspellsson/scheme-books-ru Выучите Scheme за считанные дни] -- работа в процессе по переводу книги [http://www.ccs.neu.edu/home/dorai/t-y-scheme/t-y-scheme.html Teach Yourself Scheme in Fixnum Days]
+
+----
+
+В поисках книг и статей по Lisp на русском языке можно обнаружить заметное количество документов по AutoLisp'у - диалекту языка Lisp, применяемом для пользовательского программирования конструкторских задач в AutoCAD. Их сложно рекомендовать для полноценного обучения Lisp'у по причине ограниченности самого AutoLisp'а, его заточенности под AutoCAD, следствием чего является ограниченность в использовании возможностей языка у авторов этих книг. В частности, такая фундаментальная возможность Lisp, как метапрограммирование практически выпадает в AutoLisp'е.
+
+
+
+====На английском языке====
+
+Основная документация, необходимая для серьёзного изучения Lisp'а имеется только на английском языке.
+
+----
+
+# [http://www.lispworks.com/documentation/HyperSpec/Front/index.htm Common Lisp HyperSpec] (CLHS) - Свободно доступный электронный справочник по Common Lisp. Входит в состав некоторых дистрибутивов Linux.
+# [http://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html Guy L. Steele, Common Lisp the Language, 2nd Edition] ---  книга, описывающая Common Lisp во время процесса стандартизации, была выпущена до ратификации окончательного варианта ANSI-стандарта и между ними имеются [http://bc.tech.coop/cltl2-ansi.htm некоторые отличия]. Как и HyperSpec входит в состав некоторых дистрибутивов Linux. Продаётся бумажный вариант книги.
+# [http://www.flownet.com/gat/papers/ публикации Erann Gat], в частности стоит обратить внимание на [http://www.flownet.com/gat/packages.pdf Erann Gat, The Complete Idiot’s Guide to Common Lisp Packages] - статья учит как использовать пакеты (модули) в Lisp'е.
+# Paul Graham, On Lisp — Prentice Hall, 1993. Можно свободно скачать электронный вариант с сайта автора [http://www.paulgraham.com/onlisp.html On Lisp]
+# Paul Graham, ANSI Common Lisp — Prentice Hall, 1995. В отличие от книги [http://www.paulgraham.com/onlisp.html On Lisp] того же автора, свободно распространяемой версии не существует.
+# [http://www.paulgraham.com/rootsoflisp.html Paul Graham, The Roots of Lisp, 2002.] - в этой статье рассматривается минимальный базис из операторов на которых можно построить Lisp. Даётся рекурсивное определение функции eval, фактически определяя этим интерпретатор Lisp.
+# Peter Seibel, Practical Common Lisp — APRESS, 2005. Можно свободно скачать электронный вариант [http://www.gigamonkeys.com/book/ Practical Common Lisp]. Имеется [http://pcl.catap.ru/doku.php сайт для работы над переводом этой книги]
+# [http://clqr.boundp.org/ Common Lisp Quick Reference] — короткая справка (шпаргалка) по Common Lisp.
+
+Начать изучение можно рекомендовать с книги [http://www.gigamonkeys.com/book/ Practical Common Lisp]. В состав тарбола от [http://clisp.cons.org/ CLISP] в подкаталоге doc лежат два файла: Lisp-tutorial.txt и CLOS-guide.txt являющиеся соответственно введением в Lisp и в его ООП-расширение CLOS. Их вполне можно использовать для начального знакомства с языком и в качестве справки, но не стоит по ним систематически учиться.
+
+Для более глубокого понимания математических основ Lisp следует обратить внимание на [http://en.wikipedia.org/wiki/Lambda-calculus лямбда исчисление Чёрча]. 
+
+Головешкин В.А., Ульянов М.В. Теория рекурсии для программистов. - М.ФИЗМАТЛИТ, 2006 г.  В значительной мере эта книга основана как раз на лямбда исчислении Чёрча.
+
+==Какие существуют среды разработки для Lisp?==
+Проприетарные AllegroLisp и LispWorks поставляются со своими средами разработки.
+
+Свободные среды:
+
+# Emacs + дополнение paredit-el. Поддерживает баланс скобок, ряд высокоуровневых действий над S-выражениями.
+
+<nowiki>   Ориентированные на Common Lisp</nowiki>
+
+# Emacs + расширение [http://common-lisp.net/project/slime/ Slime].
+# Emacs + пакет ilisp (устаревшее, но рабочее)
+# Eclipse + плагин [http://sourceforge.net/projects/dandelion-ecl Dandelion-ecl] (Dandelion)
+# Eclipse + плагин [http://bitfauna.com/projects/cusp/index.html CUSP]
+
+<nowiki>   Ориентированные на Scheme</nowiki>
+
+# Emacs -- [http://xtalk.msk.su/%7Eott/ru/writings/emacs-devenv/EmacsScheme.html Статья про использование Emacs для программирования на Scheme]
+## Emacs + cmuscheme
+## Emacs + расширение [http://www.neilvandyke.org/quack Quack]
+## Emacs + расширение [http://mumble.net/%7Ecampbell/slime48.html Slime48] в качестве бэкенда к Slime. Работает только с [http://s48.org/ Scheme48] v.1.3
+# [http://www.drscheme.org/ DrScheme]
+# Vim + плагин [http://www.vim.org/scripts/script.php?script_id=2219 limp]
+
+
+==Установил Emacs и Slime, почему не работает?==
+
+Slime телепатией не обладает и ему надо как-то указать используемый компилятор Lisp, например, записав в файле настроек ~/.emacs следующее
+<pre style="" name="code" class="lisp">   
+(setq inferior-lisp-program "/usr/bin/sbcl")
+</pre>
+
+После вызова Emacs, по команде M-x slime произойдёт запуск сервера cl-swank, использующего в данном случае SBCL
+
+Для более тонкой настройки надо прочитать документацию по slime, идущую с ним в комплекте. Скорее всего она находится в /usr/share/doc/slime
+
+==Где мне найти библиотеки и программы для Lisp?==
+
+* [http://www.cliki.net/index cliki]
+* [http://www.cl-user.net/ cl-user.net]
+* [http://www.quicklisp.org/ quicklisp] - Пакет для установки модулей вместе с зависимостями.
+* [http://lisper.ru/wiki/lisp-source-code]
+
+[[Category:Lisp]]

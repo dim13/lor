@@ -1,0 +1,21 @@
+Рецепт для '''Chromium''':
+
+1) Качаешь pepperflash-plugin:
+
+Если у тебя система x32 - [http://www.slackware.com/~alien/slackbuilds/chromium-pepperflash-plugin/pkg/current/ тут]
+
+Если у тебя система x64 - [http://www.slackware.com/~alien/slackbuilds/chromium-pepperflash-plugin/pkg64/current/ тут]
+
+Качать нужно файл который больше всего весит (с расширением .txz).
+
+2) Распаковываешь скачанный архив.
+
+3) В консоли 
+
+<pre>sudo mkdir /usr/lib/pepperflashplugin-nonfree </pre>
+
+4)<pre>sudo cp /адрескаталогасархивом/libpepflashplayer.so /usr/lib/pepperflashplugin-nonfree/ </pre>
+
+5) Перезапускаешь Chromium
+
+6) PROFIT!!!

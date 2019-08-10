@@ -1,0 +1,5 @@
+Основные области интересов - Emacs, функциональное (Lisp, Scheme, OCaml, Erlang и др.) и другое (C, C++) программирование, а также всякие Юниксы (Linux, *BSD, HP-UX, Solaris)
+
+[http://xtalk.msk.su/~ott/ru/ Домашнаяя страница] - много статей и т.п.
+
+Блоги - [http://alexott-ru.blogspot.com ИТ-шный] и [http://alexott.livejournal.com Персональный]

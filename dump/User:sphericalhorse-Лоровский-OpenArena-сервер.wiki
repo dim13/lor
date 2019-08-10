@@ -1,0 +1,15 @@
+Пользователь [http://www.linux.org.ru/people/KivApple/profile KivApple] [http://www.linux.org.ru/forum/talks/7445150 сделал] для нас сервер игры [http://www.linux.org.ru/wiki/en/Games#openarena OpenArena]. Присоединиться к игре может каждый желающий.
+
+Сервер находится по адресу <u>distruktiver.no-ip.org</u>.
+
+Новости, касающиеся сервера и предстоящих игр, доступны на [http://juick.com/ Жуйке] по тегу [http://juick.com/?tag=lorarena lorarena].
+
+= Мультикаст любителей поиграть =
+[user]a931bw[/user], [user]Bad_ptr[/user], [user]billic[/user], [user]Copycat[/user], [user]curufinwe[/user], [user]darkshvein[/user], [user]dimss[/user], [user]disee[/user], [user]Dragon59[/user], [user]DrF[/user], [user]f1xmAn[/user], [user]iMp[/user], [user]insfel[/user], [user]mopsen[/user], [user]netcat[/user], [user]sphericalhorse[/user], [user]unC0Rr[/user], [user]XoFfiCEr[/user], [user]xwicked[/user], [user]Zhbert[/user].
+
+
+<!--
+
+Если статью все таки перенесут из песочницы, не забыть поставить редирект из-за ссылки из Жуйка.
+
+-->

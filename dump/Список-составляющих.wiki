@@ -1,0 +1,393 @@
+[ToDo]:
+
+1. Запилить статью-дерево со всеми WM/менеджерами сессий/файловыми менеджерами/etc.  Для того, чтобы можно было легко сконструировать систему по вкусу.
+
+'''Тем, кто читает:''' поправьте меня, где я не прав.
+Размеры смотрю через synaptic, без зависимостей.
+
+= Менеджер входа =
+
+Менеджер входа позволяет войти в систему, запустив x-сессию с настройками требуемого пользователя.
+
+== <none> ==
+
+Можно обходиться и без менеджера входа, совершив следующие действия:
+
+# Залогиниться необходимым пользователем.
+# Запустить X-сервер командой startx.
+
+== Qingy ==
+Размер: ~300KB<br />
+Пакет: qingy<br />
+Скриншот: http://qingy.sourceforge.net/images/start.jpg<br />
+Описание: Заменяет стандартный менеждер входа getty. Может показывать красивую картинку через DirectFB, может не показывать. Есть автологин и выбор сессий. Прекрасный выбор для действительно легковесного окружения.
+
+== X Window Display Manager ==
+
+Размер: ~200 кб.<br />
+Пакет: xdm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/e/ec/Xdm_Screenshot.png<br />
+Описание: Входит в состав x window system.
+
+== GNOME Display Manager ==
+
+
+Размер: ~7 мб.<br />
+Пакет: gdm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/2/27/Ubuntu_8.04_login_screen.png<br />
+Описание: Используется в GNOME-based дистрибутивах, может устанавливаться отдельно.
+
+== KDE Display Manager ==
+
+Размер: ~2 мб.<br />
+Пакет: kdm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/1/10/Kubuntu_8.04_login_screen.png<br />
+Описание: Используется в KDE-based дистрибутивах, может устанавливаться отдельно.
+
+== Light Display Manager ==
+
+Размер: ~100 кб.<br />
+Пакет: lightdm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lightdm-screenshot.jpg/800px-Lightdm-screenshot.jpg<br />
+Описание: Обладает всеми возможностями gdm, имеет меньший размер. Сегодня используется в ubuntu/xubuntu.
+
+== SLiM — Simple Login Manager == 
+
+Размер: ~350 кб.<br />
+Пакет: slim<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Slim01.jpg/750px-Slim01.jpg<br />
+Описание: SLIM является простым, легко настраиваемым и может использоваться на системах с высокой и низкой производительностью. SLIM также очень удобен для тех, кто хочет менеджер входа без зависимостей от графического окружения Gnome или KDE, что делает его идеальным для пользователей, работающих с Xfce, Openbox, Fluxbox и т.д. По сути является не десктопным менеджером, как GDM и KDM, а именно утилитой для логина, так как работает не с сессиям десктопных оболочек (например gnome-session), а с файлом '''~/.xinitrc'''.
+= Менеджеры сессий =
+
+Менеджер окон X Window System — приложение, работающее «поверх» X Window System и определяющее интерфейс и взаимодействие с пользователем. В Unix-подобных операционных системах пользователь может выбрать любой оконный менеджер по своему усмотрению.
+
+Менеджеры окон могут отличаться по таким показателям, как:
+  
+* Возможности настройки внешнего вида и функциональности.
+* Способы запуска различных приложений;
+* Средства настройки и управления окружением;
+* Наличие и взаимодействие с несколькими рабочими или виртуальными столами.
+* Потребление оперативной памяти и прочих ресурсов компьютера.
+* Степень интеграции со средой рабочего стола, предоставляющим более полный набор средств для взаимодействия с операционной средой и различными пользовательскими приложениями.
+
+== GNOME 3 Session manager ==
+
+Размер: ~100 кб.<br />
+Пакет: gnome-session<br />
+Примечание: Требует 3D-ускорение для корректной работы.
+
+== Xfce4 Session Manager ==
+
+Размер: ~1.5 мб.<br />
+Пакет: xfce4-session
+
+== LXDE Session Manager ==
+
+Размер: ~50 кб.<br />
+Пакет: lxsession
+
+== Razor Session Manager ==
+
+Описание: менеджер сессий для оболочки [http://razor-qt.org/ Razor-Qt], которая в свою очередь является форком заброшенной оболочки Antico. Также стоит заметить, что оболочка Razor-Qt ещё не стабильна. Написано это всё, как видно из названия — на Qt.
+
+'''[TODO: Про кеды]'''
+
+= Менеджеры окон =
+
+Менеджеры окон делятся на стековые (например, Openbox), композитные (Compiz, KWin, Metacity) и тайловые, они же фреймовые (awesome, wmii). Некоторые тайловые могут работать в режиме стековых (awesome). Стековые управляют окнами в привычном нам режиме, композитные ещё и придают им разных эффектов и декораций (например прозрачность и куб рабочего стола), тайловые же разбивают рабочее пространство экрана на взаимно не пересекающиеся прямоугольные области — фреймы. Есть ещё динамические оконные менеджеры — они работают как тайловые, только там размещение фреймов предварительно настраивается (пример — Awesome). Также есть приложения, позволяющие добавить стековым менеджерам некоторый функции характерные для композитных (Xcompmgr).
+
+'''Наглядно разницу можно увидеть на скриншотах:'''
+
+'''Стековые'''
+*[http://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/2010-04-24-133031_1280x800_scrot.png/800px-2010-04-24-133031_1280x800_scrot.png Openbox]
+'''Композитные'''
+*[http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Fedora-Core-6-AIGLX.png/800px-Fedora-Core-6-AIGLX.png Compiz]
+*[http://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Kwin-cube.jpg/800px-Kwin-cube.jpg KWin]
+'''Тайловые'''
+*[http://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Awesome_screenshot.png/750px-Awesome_screenshot.png awesome]
+*[http://upload.wikimedia.org/wikipedia/commons/c/cb/Wmii-3.6_screenshot.png wmii]
+
+== AfterStep ==
+
+Размер: ~400 кб.<br />
+Пакет: afterstep<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/AfterStep.png/750px-AfterStep.png<br />
+Настройка: редактирования текстовых файлов конфигурации.<br />
+Тайловый: нет.<br />
+Статус: в разработке, но очень медленной. [fixme]
+
+== Awesome ==
+
+Размер: ~850 кб.<br />
+Пакет: awesome<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Awesome_screenshot.png/750px-Awesome_screenshot.png<br />
+Настройка: один конфигурационный файл (на Lua).<br />
+Тайловый: возможность переключения.<br />
+Статус: актуальный.
+
+== Blackbox ==
+
+Размер: ~250 кб.<br />
+Пакет: blackbox<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Blackbox_on_Debian.png/750px-Blackbox_on_Debian.png<br />
+Настройка: редактирования текстовых файлов конфигурации.<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== Claude`s tab Window Manager (CTWM) ==
+
+Размер: ~500 кб.<br />
+Пакет: ctwm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/ru/thumb/6/60/Ctwm-clearblue.jpg/800px-Ctwm-clearblue.jpg<br />
+Настройка: с помощью тем (набор скриптов и изображений xpm)<br />
+Тайловый: нет.<br />
+Статус: устарел.
+
+== Compiz ==
+
+Размер: ~25 кб. (много зависимостей)<br />
+Пакет: compiz<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Fedora-Core-6-AIGLX.png/800px-Fedora-Core-6-AIGLX.png<br />
+Настройка: графический конфигуратор.<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== Dynamical Window Manager ==
+
+Размер: ~40 кб<br />
+Пакет: dwm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dwm-shot.png/800px-Dwm-shot.png<br />
+Настройка: правка исходных кодов и перекомпиляция.<br />
+Тайловый: да.<br />
+Статус: актуальный.
+
+== Enlightenment ==
+
+Размер: ~3 мб.<br />
+Пакет: e17<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/ru/thumb/b/ba/Eshot-1680x1050.png/800px-Eshot-1680x1050.png<br />
+Настройка: GUI<br />
+Тайловый: неполная (плагином).<br />
+Статус: в разработке (нестабильный). [fixme: или уже стабильный?]
+
+== Fluxbox ==
+
+Размер: ~1.5 мб.<br />
+Пакет: fluxbox<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flux.jpg/800px-Flux.jpg<br />
+Настройка: редактирования текстовых файлов конфигурации, или [http://devaux.fabien.free.fr/flux/ fluxconf].<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== F Virtual Window Manager ==
+
+Размер: ~4 мб.<br />
+Пакет: fvwm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Fvwm1-wikipedia-20050312.png/800px-Fvwm1-wikipedia-20050312.png<br />
+Настройка: редактирования текстовых файлов конфигурации.<br />
+Тайловый: нет.<br />
+Статус: актуальный.<br />
+Примечание: прабатюшка большинства современных wm.
+
+Почти полный ман: http://www.linux.org.ru/wiki/en/FVWM
+
+== IceWM ==
+
+Размер: ~750 кб.<br />
+Пакет: icewm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/IceWM.png/750px-IceWM.png<br />
+Настройка: как прямое редактирование текстовых файлов так и графические средства.<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== Ion ==
+
+Размер: ???<br />
+Пакет: ???<br />
+Скриншот: http://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Screenshot-1.png<br />
+Настройка: ???<br />
+Тайловый: да.<br />
+Статус: актуальный.
+
+== Joe’s Window Manager ==
+
+Размер: ~100 кб.<br />
+Пакет: jwm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Openbsd37withjwm.png/800px-Openbsd37withjwm.png<br />
+Настройка: ???<br />
+Тайловый: Нет.<br />
+Статус: актуальный.<br />
+Примечание: Используется на очень слабых системах и "легких" дистрибутивах.
+
+== K Window manager ==
+
+Размер: ~3 мб.<br />
+Пакет: kde-window-manager<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Kwin-coverswitch4.1_beta_1.png/800px-Kwin-coverswitch4.1_beta_1.png<br />
+Настройка: графические средства.<br />
+Тайловый: нет.<br />
+Статус: актуальный.<br />
+Примечание: прибит гвоздями к KDE.
+
+== Metacity ==
+
+Размер: ~500 кб.<br />
+Пакет: metacity<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/e/ec/Metacity-screenshot.png<br />
+Настройка: графические средства (ограниченная настройка), gconf (там настроек побольше).<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== Mutter ==
+
+Размер: ~6.5 мб.<br />
+Пакет: mutter<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/GNOME_Shell.png/800px-GNOME_Shell.png<br />
+Настройка: графические средства (очень ограниченная настройка).<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+Является форком Metacity. Название — это сокращение от „Metacity Clutter“ (Clutter - это новая библиотека-тулкит для отрисовки интерфейса приложений средствами OpenGL). Служит основой для GNOME Shell (по сути GNOME Shell это плагин для Mutter). [http://en.wikipedia.org/wiki/Mutter_(window_manager) Может] функционировать, как отдельный оконный менеджер отдельно без GNOME Shell. Наличие GPU не обязательно.
+== Openbox ==
+
+Размер: ~300 кб.<br />
+Пакет: openbox<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Openbox-elementary3.png/800px-Openbox-elementary3.png<br />
+Настройка: правка текстовых конфигурационных файлов, возможно использование графического средства настройки.<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== Sawfish ==
+
+Размер: ???<br />
+Пакет: ???<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Sawfish.png/750px-Sawfish.png<br />
+Настройка: ???<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== Stumpwm ==
+
+Размер: ~300 кб.<br />
+Пакет: stumpwm<br />
+Скриншот:  http://upload.wikimedia.org/wikipedia/commons/e/eb/Stumpwm_12-2-2006.png <br />
+Настройка: ???<br />
+Тайловый: да.<br />
+Статус: актуальный.
+
+== Tom's Window Manager ==
+
+Размер: ~100 кб.<br />
+Пакет: twm<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Twm.png/800px-Twm.png<br />
+Настройка: ???<br />
+Тайловый: нет.<br />
+Статус: устарел.
+
+== Window maker ==
+
+Размер: ~2.5 мб.<br />
+Пакет: wmaker<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/f/fa/Wmaker-0.80.2.png<br />
+Настройка: графическая утилита.<br />
+Тайловый: нет.<br />
+Статус: уатарел.
+
+== Window Manager Improved 2 ==
+
+Размер: ~400 кб.<br />
+Пакет: wmii<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Wmii-20070228.png/750px-Wmii-20070228.png<br />
+Настройка: консольная утилита<br />
+Тайловый: да.<br />
+Статус: актуальный.
+
+== Xfwm ==
+
+Размер: ~9347 кб.<br />
+Пакет: xfwm4<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/7/71/Xfce-4.4.png<br />
+Настройка: графическая утилита.<br />
+Тайловый: нет.<br />
+Статус: актуальный.
+
+== Xmonad ==
+
+Размер: ~600 кб.<br />
+Пакет: xmonad<br />
+Скриншот: http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Xmonad-tall-status-dons.png/800px-Xmonad-tall-status-dons.png<br />
+Настройка: путем написания исходного кода на Haskell.<br />
+Тайловый: да.<br />
+Статус: актуальный.
+
+= Файловые менеджеры =
+
+Файловый менеджер — программа, предоставляющая интерфейс пользователя для работы с файловой системой и файлами. Файловый менеджер позволяет выполнять наиболее частые операции над файлами — создание, открытие/проигрывание/просмотр, редактирование, перемещение, переименование, копирование, удаление, изменение атрибутов и свойств, поиск файлов и назначение прав.
+
+Отдельной категорией файловых менеджеров выступают двухпанельные файловые менеджеры. «Двухпанельные» или «ортодоксальные» файловые менеджеры в общем случае используют две равноценные панели, но многие из них поддерживают и большее количество панелей, и другие режимы. Самыми известным программами данной категории есть Norton Commander для ОС&nbsp;ДОС ([http://upload.wikimedia.org/wikipedia/ru/2/2b/Norton_Commander_v5.51.png скриншот]) и Total Commander для ОС&nbsp;Виндоус ([http://upload.wikimedia.org/wikipedia/en/4/41/Total_Commander.gif скриншот]).
+
+ 
+== Andromeda ==
+Работает на: Qt 4<br />
+Двухпанельный: нет<br />
+'''Описание'''<br />
+Не требователен к ресурсам. Сочетает в себе функционал файлового менеджера и браузера на движке WebKit. Один из рекомендованных приложений для использования со средой Razor&#8209;Qt. <!-- &#8209; — это неразрывный дефис --> <br />
+
+== DoubleCommander ==
+Работает на: Free Pascal / Lazarus<br />
+Двухпанельный: да<br />
+'''Описание'''<br />
+Открытый и кроссплатформенный аналог известного Total Commander с реализованной поддержкой его же плагинов. Имеет широкий функционал.<br />
+
+== GNOME Commander ==
+Работает на: GTK+ 2 [fixme]<br />
+Двухпанельный: да<br />
+'''Описание'''<br />
+Аналог Total Commander для Linux.<br />
+
+== Konqueror ==
+Работает на: Qt 4, KDELibs<br />
+Двухпанельный: возможны разные режимы работы<br />
+'''Описание'''<br />
+Файловый менеджер по умолчанию для среды KDE. Сочетает в себе функционал файлового менеджера, просмотрщика файлов и браузера (на движке KHTML, который, в свою очередь, послужил основой для движка WebKit).<br />
+
+== Krusader ==
+Работает на: Qt 4, KDELibs<br />
+Двухпанельный: да<br />
+
+== Marlin ==
+Работает на: GTK+ 3<br />
+Двухпанельный: нет<br />
+'''Описание'''<br />
+Основан на Thunar. Разрабатывается командой Elementary project. Не смотря на то, что он уже работает — всё ещё является нестабильным.<br />
+
+== Midnight Commander ==
+Работает на: C<br />
+Двухпанельный: да<br />
+'''Описание'''<br />
+Самый распространенный консольный файловый менеджер. Открытый кроссплатформенный аналог таких известных файловых менеджеров, как Norton Commander и FAR. На базе сайта Linux.org.ru [http://www.linux.org.ru/news/linux-org-ru/6918997 создан] русскоязычный [https://www.linux.org.ru/forum/midnight/ форум поддержки] данного файлового менеджера.<br />
+
+== muCommander ==
+Работает на: Java<br />
+Двухпанельный: да<br />
+'''Описание'''<br />
+Открытый и кроссплатформенный аналог Total Commander.<br />
+
+== Nautilus ==
+Работает на: GTK+ 3<br />
+Двухпанельный: да<br />
+'''Описание'''<br />
+Файловый менеджер по умолчанию для среды GNOME.<br />
+
+== PCManFM ==
+Работает на: GTK+ 2<br />
+Двухпанельный: нет<br />
+'''Описание'''<br />
+Файловый менеджер по умолчанию для среды LXDE.<br />
+
+== Thunar == 
+Работает на: GTK+ 2<br />
+Двухпанельный: нет<br />
+'''Описание'''<br />
+Файловый менеджер по умолчанию для среды Xfce.<br />
+= Панели (доки) =

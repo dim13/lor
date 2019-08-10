@@ -1,0 +1,11 @@
+''После соединения с шиной приложение, которое создаёт на шине новый сервис, получает уникальный идентификатор для соединения в рамках шины (в виде :22.33
+
+ref: Это не вид, вид - это X.Y. Что такое 22.33? :) Расписать как состявляется каждое новое имя.
+
+ref: Уникально? [http://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names-bus Главное - начинаться с двоеточия и содержать не менее двух алфавитноцифровых элемента, разделенных точками])''
+
+Что-то я не понял, как ты ссылку читал? Там как раз написано "A connection has exactly one bus name that is a unique connection name." и "Bus names that start with a colon (':') character are unique connection names. " --[[User:gaa|Alexander Galanin]] 10-Feb-2009 15:16 MSK
+
+: вторая дописка - это мой комент на комент alex_custov'а на твое предложение. расписывать особо нечего, дефолтный сервер использует :<номер шины>.<номер проги>, но ведь на том же qt можно нарисовать свой сервер. --[[User:generatorglukoff|generatorglukoff]] 10-Feb-2009 16:06 MSK
+
+:: Что-то я запутался... Перепишите кто-нибудь по-нормальному.--[[User:gaa|Alexander Galanin]] 10-Feb-2009 16:14 MSK

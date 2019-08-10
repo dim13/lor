@@ -1,0 +1,54 @@
+'''Arch Linux''' — простой, легкий, оптимизированный под i686 и x86_64 дистрибутив операционной системы [[Linux]], основанный на идеях дистрибутива CRUX. Рассчитан на опытных пользователей. Использует собственный менеджер пакетов pacman и похожую на порты систему сборки пакетов ABS (Arch Build System). Arch является постоянно обновляемым дистрибутивом (rolling release), новые пакеты появляются ежедневно. Имеет простое и обширное руководство построенное на вики-движке, в котором можно найти ответ на любой вопрос касательно дистрибутива. Большая часть руководства переведена на многие языки отличные от английского, однако содержащаяся там информация не всегда актуальная. Простой в настройке и использовании, так как устроен по принципу KISS ('''K'''eep '''i'''t '''s'''imple, '''S'''tupid!). Одним из преимуществ является пользовательский репозиторий — [http://aur.archlinux.org/ AUR] (Arch User Repository), содержащий очень большое количество пакетов.  
+
+== История ==
+=== Список версий ===
+{| class="wikitable"
+! Версия !! Кодовое имя !! Дата !! Примечание
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.1 ||  Homer ||align="right"| март&nbsp;2002 || Первый выпуск.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.2 || Vega ||align="right"| апрель&nbsp;2002 ||
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.3 || Firefly ||align="right"| август&nbsp;2002 ||
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.4 || Dragon ||align="right"| декабрь&nbsp;2002 ||
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.5<ref name="Nova">Judd Vinet (2003-07-21) [http://www.archlinux.org/news/25/ Arch Linux 0.5 Released].</ref> || Nova ||align="right"| июль&nbsp;2003 || Поддержка PAM, LVM и GRUB.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.6<ref name="Widget">Judd Vinet (2004-03-01) [http://www.archlinux.org/news/50/ Arch Linux 0.6 Released].</ref> || Widget ||align="right"| март&nbsp;2004 || Добавлена поддержка файловых систем JFS и XFS.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.7<ref name="Wombat">Judd Vinet (2005-01-24) [http://www.archlinux.org/news/133/ Arch Linux 0.7 (Wombat) Released!]</ref> || Wombat ||align="right"| январь&nbsp;2005 ||
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 0.8<ref name="Voodoo">Tobias Powalowski (2007-03-31) [http://www.archlinux.org/news/305/ 0.8 Voodoo ISOs finally released!]</ref> || Voodoo ||align="right"| март&nbsp;2007 || Расширены возможности программы установки.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 2007.05<ref name="Duke">Tobias Powalowski (2007-05-17) [http://www.archlinux.org/news/325/ 2007.05 Duke ISOs released].</ref> || Duke ||align="right"| май&nbsp;2007 || pacman 3.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 2007.08<ref name="Panic">Tobias Powalowski (2007-08-05) [http://www.archlinux.org/news/337/ 2007.08 Don’t Panic ISOs released].</ref> || Don’t&nbsp;Panic ||align="right"| август&nbsp;2007 || Исправлены ошибки в программе установки.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 2008.06<ref name="Overlord">Simo Leone (2008-06-24) [http://www.archlinux.org/news/398/ 2008.06 Overlord ISOs released].</ref> || Overlord ||align="right"| июнь&nbsp;2008 || Использование .img образов для записи на USB-устройства.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 2009.02<ref name="2009.02">Aaron Griffin (2009-02-16) [http://www.archlinux.org/news/434/ 2009.02 ISO Release].</ref> ||  ||align="right"| февраль&nbsp;2009 || Использование AIF (Фреймворк установки Arch).
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 2009.08<ref name="2009.08">Dieter Plaetinck (2009-08-10) [http://www.archlinux.org/news/459/ 2009.08 images].</ref> ||  ||align="right"| август&nbsp;2009 || pacman 3.3, использование переработаного AIF (возможность использования LVM и другие изменения), различные улучшения.
+|-
+|bgcolor="111111" align="right" style="color: #C8C8C8;"| 2010.05<ref name="2010.05">Dieter Plaetinck (2010-05-17) [http://www.archlinux.org/news/500/ 2010.05 images].</ref> ||  ||align="right"| май&nbsp;2010 || Использование единого образа для записи на CD и USB устройства. Появление ''dual''-образа, помимо отдельных образов для архитектур x86 и x86-64.
+|-
+|bgcolor="282828" align="right" style="color: #C8C8C8;"| 2011.08<ref name="2011.08.19">Dieter Plaetinck (2011-08-20) [http://www.archlinux.org/news/20110819-installation-media/ 2011.08.19 images].</ref> || ||align="right"| август&nbsp;2011 || Расширены возможности программы установки, переход на ядро 3.x.
+|}
+
+== Примечания ==
+<references />
+
+== Ссылки ==
+* [http://www.archlinux.org/ Официальный сайт]
+* [http://www.archlinux.org.ru/ Сайт русского сообщества]
+* [http://www.archlinuxppc.org/ Неофициальный порт Arch для PowerPC]
+* [http://www.archmobile.org/ Порт Arch Linux для мобильных устройств на основе ARM]
+* [http://wiki.archlinux.org/index.php/Main_Page Официальная Вики] <small>(англ.)</small>
+* [http://wiki.archlinux.org/index.php/Main_Page_(Русский) Официальная русскоязычная Вики]
+''' Видеоинструкция по установке дистрибутива для чайников (на английском) '''
+* [http://www.thisweekinlinux.com/2010/09/archinstall1/ Arch Linux Installation Tutorial Part 1: Initial Installation  | This Week In Linux]
+* [http://www.thisweekinlinux.com/2010/10/archinstall2/ Arch Linux Installation Tutorial Part 2: Setting up Xorg, Gnome and Pulseaudio | This Week In Linux]
+* [http://www.thisweekinlinux.com/2010/12/aur/ Arch Linux Installation Tutorial Part 3: The Arch User Repository | This Week In Linux]
+
+[[Category:Дистрибутивы]]

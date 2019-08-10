@@ -1,0 +1,236 @@
+==Дистрибутивы==
+
+* [http://www.spohelp.ru/ СПО в российских школах]
+При наличии желания можно настроить любой. Если в дистрибутиве есть постоянно или раз в полгода обновляемая версия и версия с длительным сроком поддержки (LTS, Long Term Support, Stable и так далее), то обычно лучше ставить второй вариант.
+==Программы==
+===Операционная система===
+* [[Linux]]
+* [[Дистрибутивы]]
+===Файловый менеджер (в составе операционной системы или др.)===
+* [http://live.gnome.org/Nautilus Nautilus] в GNOME
+* [http://dolphin.kde.org/ Dolphin] в KDE4
+* [http://www.konqueror.org/ Konqueror] в KDE
+* [http://thunar.xfce.org/ Thunar] в Xfce
+* [http://wiki.lxde.org/en/PCManFM PCManFM] легкий файловый менеджер с поддержкой вкладок, на GTK
+* [http://igurublog.wordpress.com/downloads/mod-pcmanfm/ PCManFM-Mod] форк PCManFM 0.5.2 
+* [http://roscidus.com/desktop/ROX-Filer ROX-Filer]
+* [http://doublecmd.sourceforge.net/ Double Commander] для тех, кто привык к Total Commander
+* [http://www.midnight-commander.org/wiki/ru/WikiStart mc] Midnight Commander, для консоли
+* [http://www.krusader.org/ Krusader] двухпанельный файловый менеджер, KDE
+* [http://roland65.free.fr/xfe/ X File Explorer] файловый менеджер на тулките FOX. Легко переключается из однопанельного представления в двухпанельник.
+===Антивирусная программа===
+Для Linux пока этот вопрос не слишком актуален в силу малой распространённости вирусов в том виде, в каком они описываются в школьном учебнике информатики. Тем не менее, для проверки проходящей почты и сетевых файловых хранилищ имеются антивирусы практически от всех известных производителей подобных программ. Из открытого ПО есть:
+* [http://www.clamav.net/ ClamAV]
+===Программа-архиватор=== 
+
+Тут следует отметить, что в Linux есть программы, которые сжимают поток данных (компрессоры): 
+* gzip
+* bzip2
+* lzma 
+* xz
+которые собирают множество файлов в один перед сжатием (архиваторы):
+* tar
+программы для работы с rar, zip, lha, stuffit и другими неродными для unix/linux форматами (обычно делают и то, и другое)
+
+и есть графические оболочки к ним:
+* [http://fileroller.sourceforge.net/ File Roller] - входит в состав GNOME
+* [http://www.kde.org/applications/utilities/ark/ Ark] - часть KDE
+* [http://squeeze.xfce.org/ Squeeze] - Xfce
+* [http://xarchiver.sourceforge.net/ Xarchiver], GTK
+* [http://www.peazip.org/ PeaZIP]
+===Клавиатурный тренажер===
+* [http://www.gnu.org/software/gtypist/ GNU Typist]
+* [http://edu.kde.org/applications/all/ktouch/ KTouch]
+* [http://klavaro.sourceforge.net/en/ Klavaro]
+* [http://pypi.python.org/pypi/typetrainer typetrainer] - beta, аналог VerseQ
+* [http://ergosolo.ru/products/linux/ Соло на клавиатуре] - beta-версия, несвободный, разрушает мозг
+===Интегрированное офисное приложение, включающее текстовый редактор, растровый и векторный графические редакторы, программу разработки презентаций и электронные таблицы.===
+
+* [http://www.documentfoundation.org/ LibreOffice] или [http://ru.openoffice.org/ OpenOffice.org]
+* [http://symphony.lotus.com/ IBM Lotus Symphony], на основе OpenOffice.org, несвободный
+
+Растровые графические редакторы:
+
+* [http://www.gimp.org/ GIMP] 
+* [http://www.koffice.org/krita/ Krita] - входит в состав KOffice для KDE
+
+Векторные графические редакторы:
+
+* [http://inkscape.org/ Inkscape]
+* Draw из состава OpenOffice или LibreOffice
+
+Редактор диаграмм (что-то на замену Visio):
+
+* [http://live.gnome.org/Dia Dia], GNOME
+* [http://www.xfig.org/ Xfig], сильно устарел
+
+Примеры работы с GIMP и Inkscape можно посмотреть на [http://linuxgraphics.ru/ этом сайте].
+===Звуковой редактор===
+* [http://audacity.sourceforge.net/ Audacity]
+
+Подробнее о работе со звуком в Linux можно почитать [http://linuxsound.ru/ здесь].
+===Простая система управления базами данных===
+* Base из состава OpenOffice.org или LibreOffice
+===Простая геоинформационная система===
+* [http://merkaartor.be/wiki/merkaartor/RuWiki Merkaartor] - редактор для OpenStreetMap
+* [http://www.qgis.org/ Quantum GIS]
+
+карты:
+* [http://www.foxtrotgps.org/ FoxtrotGPS], GTK
+* [http://edu.kde.org/marble/ Marble], KDE
+* [http://earth.google.com/intl/ru/ Google Earth] - несвободная, скачивает карты из сети. Иногда бывают проблемы с запуском на 64битных дистрибутивах
+* [http://www.openstreetmap.org/ OpenStreetMap] - online-сервис, карты сделаны пользователями и распространяются под свободной лицензией.
+
+[http://gis-lab.info/ сайт по теме GIS].
+===Система автоматизированного проектирования===
+* [http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=Main_Page FreeCAD]
+* [http://www.qcad.org/qcad.html QCAD] - как QCAD Community Edition, так и QCAD Professional Demo / Free Trial
+* [http://www.librecad.org/ LibreCAD]
+* [http://www.brics-cad.ru/ Bricscad] - коммерческий CAD, совместимый с AutoCAD
+* [http://www.cad-schroer.com/Software/MEDUSA4/CADFreeware/ MEDUSA4] - несвободный, но бесплатный для некоммерческого использования
+* [http://konstruktor.influx.kr/ Konstructor] - CAD для конструкторов Lego
+===Виртуальные компьютерные лаборатории===
+физика:
+* [http://phet.colorado.edu/ PhET] — симуляции различных процессов, наглядные интерактивные модели. Java, flash, возможность запускать прямо из браузера.
+* [http://edu.kde.org/step/ Step] — из набора KDE, в основном механика
+* [http://www.phunland.com/wiki/Home Phun]
+планетарии:
+* [http://www.shatters.net/celestia/ Celestia] имитирует полёт в космосе и космические явления (такие как затмения и покрытия).
+* [http://www.stellarium.org/ Stellarium] имитирует вид звёздного неба с Земли.
+* [http://edu.kde.org/kstars/ KStars], интерактивная звёздная карта KDE
+химия:
+* [http://edu.kde.org/kalzium/ Kalzium], интерактивная таблица химических элементов им. Д.И. Менделеева из состава KDE. Включает калькулятор реакций.
+* [http://www.nongnu.org/gchemutils/ Gnome Chemistry Utils], GNOME
+математика:
+* [http://edu.kde.org/kalgebra/ KAlgebra], интерактивный калькулятор KDE
+* [http://edu.kde.org/kig/ Kig], интерактивные геометрические построения KDE
+* [http://db-maths.nuxit.net/CaRMetal/index_en.html CaRMetal], универсальный графопостроитель. Java, есть возможность запуска прямо из браузера
+* [http://geogebra.org GeoGebra], динамическая геометрическая среда, недавно появилась работа с табличными данными, планируется интеграция системы компьютерной алгебры. Позволяет создавать апплеты. Java.
+===Программа-переводчик===
+
+* [http://translate.google.ru/?hl=ru&tab=wT Платформонезависимый онлайн-переводчик от Google]
+* интерфейс к [http://translate.google.ru/ google translate] [https://github.com/flareguner/litetran LiteTran]
+* практически нерабочая [http://www.prawda.newmail.ru/ Правда].
+Программы-переводчики пока не слишком хорошо понимают смысл написанного, и, следовательно, результат их работы обычно расстраивает тех людей, кто знает оба языка. Поэтому гораздо более актуальной проблемой является хороший словарь. Из работающих под Linux можно назвать:
+* [http://goldendict.org/ GoldenDict]
+* [http://code.google.com/p/stardict-3/ StarDict] и словари с [http://xdxf.sourceforge.net/ XDXF]
+* [http://multitran.sourceforge.net/ multitran] - очень хороший словарь, но оболочка давно не переписывалась и почти везде уже не работает. Доступен  [http://www.multitran.ru/ online]. 
+===Система оптического распознавания текста===
+системы распознавания:
+* [http://www.cuneiform.ru/ CuneiForm], есть [https://launchpad.net/cuneiform-linux порт на Linux]
+* [http://symmetrica.net/cuneiform-linux/ CuneiForm c поддержкой смешанных языков], например, ru-en
+* [http://code.google.com/p/tesseract-ocr/ Tesseract]
+графические оболочки:
+* [http://symmetrica.net/cuneiform-linux/yagf-ru.html YAGF] - на Qt
+* [http://live.gnome.org/OCRFeeder OCRFeeder], GNOME
+===Мультимедиа проигрыватель (входит в состав операционных систем или др.)===
+видеопроигрыватели:
+* [http://www.mplayerhq.hu/ MPlayer] с оболочкой [http://smplayer.sourceforge.net/ SMPlayer]
+* [http://www.xine-project.org/ xine] - устарел
+* [http://www.videolan.org/vlc/ VLC]
+* [http://projects.gnome.org/totem/ Totem], GNOME
+* [http://kaffeine.kde.org/ Kaffeine], KDE
+проигрыватели на основе библиотеки файлов (по типу iTunes):
+* [http://amarok.kde.org/ Amarok], KDE
+* [http://projects.gnome.org/rhythmbox/ Rhythmbox], GNOME
+* [http://banshee.fm/ Banshee], GNOME+Mono
+простые аудиопроигрыватели (по типу Winamp):
+* [http://www.xmms.org/ XMMS] - стар почти как протокол X11, 1:1 внешне как старый WinAmp
+* [http://audacious-media-player.org/ Audacious] - написан на GTK2. Создан на замену XMMS(внешне также похож на винамп)
+* [http://qmmp.ylsoftware.com/index_ru.php Qmmp] - написан на Qt. Изначально похож на винамп, есть альтернативные интерфейсы
+* [http://www.xmms2.org/ XMMS2] - ремейк XMMS. Клиент-серверный с кучей плюшек. Любителям минимализма может не понравиться :)
+* [http://moc.daper.net/ MOC] - удобный консольный
+* [http://deadbeef.sourceforge.net/ Deadbeef]  - лёгкий, но очень функциональный плеер. Напоминает foobar2000.
+выше перечислены только наиболее популярные варианты
+===Система программирования===
+Традиционные для Linux языки разработки:
+
+для разработки минимально нужны IDE (можно использовать текстовый редактор с подсветкой синтаксиса) и компилятор/интерпретатор выбранного языка
+
+IDE:
+* [http://www.geany.org/ Geany], GTK
+* [http://www.eclipse.org/ Eclipse] - несколько монструозен, есть множество плагинов и расширений
+* [http://www.codeblocks.org/ Code::Blocks] - IDE для C, C++ и Fortran 
+* [http://www.anjuta.org/ Anjuta], GNOME
+кроме того, в качестве IDE можно использовать текстовые редакторы с поддержкой расширений:
+* [http://www.vim.org/ Vim]
+* [http://www.gnu.org/software/emacs/ Emacs],
+
+RAD-IDE:
+* [http://www.kdevelop.org/ KDevelop], KDE
+* [http://glade.gnome.org/ Glade], GTK/GNOME
+
+компиляторы/интерпретаторы:
+* [http://gcc.gnu.org/ GCC] C, C++, Objective-C, Fortran, Java, Ada
+* [http://clang.llvm.org/ clang] С и C++-компилятор, красиво подсвечивает ошибки с точностью до символа
+* [http://www.python.org/ Python]
+
+Традиционно используемые в школах языки программирования:
+
+Pascal, Delphi, КуМир и им подобные:
+* [http://www.freepascal.org/ Free Pascal Compiler] - совместимость с борландовскими компиляторами нужно включать в настройках среды
+* [http://www.lazarus.freepascal.org/ Lazarus] - аналог Delphi
+* [http://www.niisi.ru/kumir/ КуМир]
+Старые досовские системы, такие, как Turbo Pascal и Turbo C можно запустить в эмуляторе [http://www.dosbox.com/ DOSBox].
+
+BASIC:
+* [http://www.basic256.org/index_ru basic256] и [http://sisyphus.ru/ru/srpm/Sisyphus/basic256/patches русификация] - аналог Basic'а старых до-intel-овских машин)
+* [http://gambas.sourceforge.net/ Gambas] - а этот более современный
+
+[http://blog.nntc.nnov.ru/?p=1268 Редактор блок-схем c возможностью генерировать код на языках программирования]
+===Почтовый клиент (входит в состав операционных систем или др.)===
+* [http://projects.gnome.org/evolution/ Evolution] - входит в состав GNOME, аналог Outlook
+* [http://people.gnome.org/~michael/blog/evolution-express-for-meego.html Evolution Express] - GNOME, аналог Outlook Express
+* [http://www.mozilla-russia.org/products/thunderbird/ Thunderbird] - почтовый клиент проекта Mozilla, в некоторых дистрибутивах Icedove
+* [http://userbase.kde.org/Kmail KMail], KDE
+* [http://www.claws-mail.org/ Claws Mail], GTK
+* [http://www.mutt.org/ Mutt], консольный
+* [http://www.washington.edu/alpine/ Alpine], консольный
+и другие
+===Браузер (входит в состав операционных систем или др.)===
+* [http://www.mozilla-europe.org/ru/firefox/ Firefox] - в некоторых дистрибутивах называется Iceweasel
+* [http://ru.opera.com/ Opera], несвободный
+* [http://www.google.com/chrome?hl=ru Google Chrome] (несвободный) и [http://www.chromium.org/Home Chromium]
+* [http://www.mozilla-russia.org/products/seamonkey/ SeaMonkey] - в некоторых дистрибутивах называется Iceape
+* [http://www.konqueror.org/ Konqueror] и [http://rekonq.sourceforge.net/ Rekonq], KDE
+* [http://projects.gnome.org/epiphany/ Epiphany], GNOME
+* [http://ru.wikipedia.org/wiki/Links Links], консольный
+и многие другие
+===Программа интерактивного общения===
+* [http://psi-im.org/ Psi] - написан на Qt, из протоколов поддерживает только Jabber/XMPP
+* [http://www.gajim.org/ Gajim] - Python+GTK, только Jabber/XMPP
+* [http://www.pidgin.im/ Pidgin] - поддерживает почти все протоколы, GTK
+* [http://live.gnome.org/Empathy Empathy] - входит в состав GNOME, умеет много разных протоколов
+* [http://kopete.kde.org/ Kopete], KDE
+* [http://mcabber.com/ MCabber] - консольный jabber клиент
+* [http://online.yandex.ru/mac-linux/ Я.Онлайн] - Qt, сделано Яндексом на основе Psi
+видео/аудио общение:
+* [http://ekiga.org/ Ekiga], Gnome
+* [http://www.skype.com/intl/ru/home Skype] - несвободный, может потреблять неоправданно большое количество сетевого трафика в случае неправильной конфигурации и тем самым создавать проблемы в работе сети или в оплате за пользование сетью в конце месяца
+* [http://www.teamspeak.com/ TeamSpeak] - несвободный
+* [http://mumble.sourceforge.net/ Mumble] - аналог TeamSpeak
+специальные школьные варианты:
+* [http://italc.sourceforge.net/ iTalk]
+серверы видеоконференций:
+* [http://openmcu.ru/ openmcu][http://www.voxgratia.org/ (en)]
+===Простой редактор Web-страниц===
+* [http://bluefish.openoffice.nl/ Bluefish]
+* [http://quanta.kdewebdev.org/ Quanta]
+* [http://www.nvu.com/ NVU] (устарел)
+* [http://www.kompozer.net/ Kompozer] последователь NVU
+* [https://www.google.com/webdesigner/ Google Web Desigher] для HTML5, beta
+Можно использовать любой текстовой редактор, поддерживающий подсветку синтаксиса.
+==Учебники==
+* [http://www.altlinux.org/Books:Altlibrary Серия «Библиотека ALT Linux»]
+==Документы==
+
+* [http://www.mon.gov.ru/work/obr/dok/obs/prog/09-o.doc Примерная программа по информатике] в конце приведен список необходимых для обучения программ.
+* [http://минобрнауки.рф/документы/2873 Списки учебников]
+
+==Полезные ссылки==
+
+* [http://younglinux.info/ Лаборатория юного линуксоида]
+* [[Программы для дома и работы]]
+
+[[Category:Администрирование]]
+[[Category:Полезные советы]]

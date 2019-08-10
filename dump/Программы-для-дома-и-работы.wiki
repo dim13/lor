@@ -1,0 +1,241 @@
+==Офисный пакет==
+
+Наиболее функциональными на настоящий момент являются два клона OpenOffice.org:
+
+* [http://www.libreoffice.org/ LibreOffice]
+* [http://ru.openoffice.org/ Apache OpenOffice]
+
+Оба построены по сути на одном движке, LibreOffice в настоящий момент разрабатывается более активно. Совместимость с форматами MS достаточно хорошая, примерно 99% текстовых документов и порядка 95% таблиц и презентаций последние версии должны открывать без проблем, многие проблемы с неправильным отображением решает установка в систему [http://avi.alkalay.net/linux/docs/font-howto/Font.html#msfonts шрифтов] от основного конкурента (msttfonts, webcore fonts или webfonts в разных дистрибутивах). 
+
+Остальные офисные пакеты в целом неплохо справляются с созданием и редактированием простых документов, но с совместимостью и открытием принесённых и присланных документов могут возникать различные проблемы. Эти пакеты нередко входят в состав предустановленных систем на недостаточно мощных машинах (например, на смартбуках и планшетках с Linux внутри) и в специальные легковесные дистрибутивы для устаревшей техники.
+
+* [http://www.calligra-suite.org/ Calligra Suite] и [http://www.koffice.org/ KOffice] - офисный пакет для [http://www.kde.org/ KDE].
+* [http://live.gnome.org/GnomeOffice Gnome Office] - офисный пакет для [http://www.gnome.org/ GNOME]
+
+==Верстка текста==
+
+В жизни практически каждого, кто занимается в университете делом, возникает момент, когда перед ним ставится боевая задача сделать нечто большое и светлое: курсовую, диплом, презентацию на конференцию, статью, методичку или книгу. Подобные задачи решаются обычно с использованием того,что человек уже знает и чем умеет пользоваться, т.е. сегодня это практически всегда средствами того или иного офисного пакета. Однако, как справедливо подметил Дональд Кнут в 1977 году, когда любимого всеми офиса ещё и в проекте не было, нередко результат получается не слишком соответствующий ожиданиям. Поскольку Кнут принадлежал к той небольшой группе людей, которые столкнувшись с трудностями и лишениями их преодолевают не героическим упорным поеданием кактуса, а использованием более подходящих к случаю функций человеческой головы, в 1979 году появился первый вариант типографской системы TeX, которая позволяла получить на выходе красивую статью или книгу. В 1984 году Лесли Лампорт написал LaTeX, набор макросов для TeX, позволявших получить эту же красоту не будучи программистом. С тех пор у научного сообщества появилась легендарная типографская система, в которой и сегодня верстается большинство серьёзных научных журналов. 
+
+На настоящий момент наиболее популярной реализацией этой системы является [http://www.tug.org/texlive/ TeX Live]. Теоретически он работает в любой операционной системе и в трех самых популярных работает точно. Т.к. исходные коды документов TeX/LaTeX представляют собой особым образом размеченные текстовые файлы, их можно править в любом текстовом редакторе. Существуют также специализированные редакторы для создания документов LaTeX, такие как [http://kile.sourceforge.net/ Kile] или [http://texstudio.sourceforge.net/ TeXstudio]. Кроме того, есть WYSIWYM-редакторы --- [http://www.lyx.org/ LyX] и [http://www.texmacs.org/ TeXmacs], однако, для набора больших и сложных текстов они могут оказаться не самым лучшим выбором в силу своей ограниченности.
+
+==Графические приложения==
+===Графические редакторы===
+
+Наиболее функциональными и доработанными на сегодняшний день являются:
+
+* [http://www.gimp.org/ GIMP] растровый
+* [http://inkscape.org/ Inkscape] векторный
+
+В состав KDE (точнее, KOffice или Calligra Suite) входят:
+
+* [http://www.koffice.org/krita/ Krita] растровый
+* [http://www.koffice.org/karbon/ Karbon] векторный
+
+Кроме них также можно назвать:
+
+* [http://mypaint.intilinux.com/ MyPaint] - растровый редактор для художников, рисующих на планшете
+* Draw из [http://www.libreoffice.org/features/draw/ LibreOffice] или [http://www.openoffice.org/product/draw.html OpenOffice] - векторный.
+* [http://sk1project.org/ sK1] - векторный, нацелен на допечатную подготовку, в состоянии вечной разработки
+* [http://pinta-project.com/ Pinta] - растровый, простой редактор для рисования, аналог Paint.NET
+* [http://www.xfig.org/ Xfig] - векторный, очень удобный редактор для простой технической графики, к сожалению, сильно устарел.
+* [http://synfig.org/ Synfig Studio] - платформа для создания двухмерной векторной/растровой анимации
+===Работа с фотографиями===
+* [http://darktable.sourceforge.net/ Darktable] - "проявка" Raw-файлов, аналог Photoshop Lightroom
+* [http://rawstudio.org/ Rawstudio] - примерно то же самое, но в другом исполнении
+* [http://rawtherapee.com/ RawTherapee] - ещё один вариант
+* [http://www.yorba.org/shotwell/ Shotwell] - каталогизатор фотографий 
+* [http://piwigo.org/ Piwigo] — ещё один каталогизатор фотографий
+* [http://f-spot.org/ F-Spot] - устаревший каталогизатор фотографий, написан на Mono
+* [http://www.digikam.org/ digiKam] - каталогизатор фотографий для KDE
+* [http://kornelix.squarespace.com/fotoxx/ fotoxx] - каталогизатор фотографий с функциями редактирования
+* [http://hugin.sourceforge.net/ Hugin] - склейка панорам
+* [http://enblend.sourceforge.net/ Enblend] - склейка панорам
+* [http://www.kolor.com/ Kolor] предлагает ряд платных проприетарных программ (с пробными версиями) для сборки и редактирования панорам, в том числе и под Linux:
+** [http://www.kolor.com/panorama-software-autopano-pro.html Autopano Pro]
+** [http://www.kolor.com/image-stitching-software-autopano-giga.html Autopano Giga]
+** [http://www.kolor.com/panotour-software-virtual-tours-360-home.html Panotour]
+** [http://www.kolor.com/panotour-pro-profesionnal-360-virtual-tour-software-home.html Panotour Pro]
+* [http://gardengnomesoftware.com/pano2vr.php Pano2VR] - платная проприетарная программа (с пробными версиями) для создания так называемых [http://en.wikipedia.org/wiki/VR_Photography VR photography (virtual reality photography)] - интерактивных широкоугольных панорам, в том числе под Linux с записью в Adobe Flash, HTML5 (iPhone/iPad) или QuickTime VR (QTVR)
+* [http://webuser.fh-furtwangen.de/~dersch/ Panorama Tools] - свободные открытые программы на Java для работы с VR Photography, написанные с использованием SIMD-Math Хельмутом Дершем (Helmut Dersch), автором CAS Jasymca
+* [http://photobatch.stani.be/ Phatch] - кроссплатформенный пакетный обработчик фотографий с графическим интерфейсом, использующий [http://www.pythonware.com/products/pil/ PIL (Python Imaging Library)] и [http://www.wxpython.org/ wxPython]
+===3D-моделирование===
+* [http://www.blender.org/ Blender] - пакет создания трёхмерной графики
+Трассировщики лучей:
+* [http://www.yafaray.org/ YafaRay]
+* [http://www.luxrender.net/ LuxRender]
+* [http://www.povray.org/ POV-Ray]
+===Просмотр изображений===
+Этих программ слишком много, чтобы перечислять все. Вот лишь некоторые:
+
+* в GNOME основной программой просмотра является [http://projects.gnome.org/eog/ Eye of GNOME], в KDE - [http://kde.org/applications/graphics/gwenview/ GwenView]
+* Если нужен более функциональный вариант под GTK, то стоит смотреть в сторону [http://live.gnome.org/gthumb gThumb] (зависит от GNOME) или [http://geeqie.sourceforge.net/ Geeqie]
+* [http://goodies.xfce.org/projects/applications/ristretto Ristretto] - лёгкий просмотрщик на GTK из проекта Xfce.
+* [http://lxde.sourceforge.net/gpicview/ GPicView] - ещё один простой просмотрщик на GTK из проекта LXDE.
+* [http://mirageiv.berlios.de/ Mirage Image Viewer] - тоже лёгкий просмотрщик на GTK.
+* Куча легковесных просмотрщиков было упомянуто в этой [http://www.linux.org.ru/forum/desktop/6433110 теме], а именно [http://www.imagemagick.org/script/display.php display], [http://feh.finalrewind.org/ feh], [http://cade.datamax.bg/qvv/ QVV], [http://spiegl.de/qiv/ QIV], [http://www.kraxel.org/blog/linux/fbida/ fbi], [http://xsisqox.github.com/Viewnior/ Viewnior], [http://sourceforge.net/projects/xzgv/ xzgv], [http://gqview.sourceforge.net/ GQview], [http://www.xnview.com/ XnView] и отдельно должен быть упомянут [http://tim.scandiaca.com/post/japw.aspx japw], автором которого является [http://www.linux.org.ru/people/hibou/profile/ hibou].
+
+Подробнее о работе с графикой в открытых системах можно узнать на сайте [http://digilinux.ru/ http://digilinux.ru/]
+==Браузеры==
+
+Есть практически любые, кроме Internet Explorer (он же "синенький интернет") и Safari:
+
+* [http://www.mozilla-europe.org/ru/ Firefox], в некоторых дистрибутивах Iceweasel.
+* [http://ru.opera.com Opera], несвободный, версия на движке Blink доступна начиная с версии 24.
+* [http://www.google.com/chrome/?hl=ru Google Chrome] и свободный [http://www.chromium.org/Home Chromium]
+* [http://mozilla-russia.org/products/seamonkey/ Mozilla Seamonkey], ранее был известен как Mozilla Suite, а до этого просто Mozilla, а ещё раньше он назывался Netscape Navigator. В некоторых дистрибутивах называется Iceape.
+* [http://conkeror.org/ Conkeror] - лёгкий браузер, основанный на Gecko и XULrunner. Поддерживает почти все дополнения от Firefox, заточен под клавиатурное управление в стиле Emacs.
+* куча браузеров на движке [http://webkit.org/ WebKit] (Chrome и Chromium используют его форк - blink):
+** [http://projects.gnome.org/epiphany/ Epiphany] - стандартный браузер GNOME
+** [http://www.konqueror.org/ Konqueror] - плод противоестественной связи между браузером и файловым менеджером из KDE. Может использовать как собственный движок KHTML, так и более современный его вариант - WebKit
+** [http://rekonq.kde.org/ Rekonq] - что-то вроде облегченного Konqueror из KDE4
+** [http://code.google.com/p/arora/ Arora] - легкий браузер на Qt4
+** [http://www.twotoasts.de/index.php?/pages/midori_summary.html Midori] - лёгкий браузер на GTK
+** [http://www.qupzilla.com/ QupZilla] - кроссплатформенный браузер, использущий WebKit и Qt Framework
+** [http://luakit.org/ Luakit] - легковесный браузер, рассчитанный на использование клавиатуры (значительно быстрее плагинов для браузера), использует Lua для конфигурации и расширения.
+* ну и совсем лёгкие, устаревшие и консольные:
+** [http://www.dillo.org/ dillo] - сверхлёгкий браузер на FLTK
+** [http://lynx.isc.org/current/index.html lynx] - консольный браузер
+** [http://www.jikos.cz/~mikulas/links/ links] - консольный браузер, более функциональный вариант
+** [http://seanm.ca/mosaic/ NCSA Mosaic] - один из первых графических браузеров
+** [http://www.w3.org/Amaya/ w3c/Amaya] - редактор и браузер от создателей всемирной паутины
+и другие
+==Почтовые клиенты==
+
+* [http://mozilla-russia.org/products/thunderbird/ Thunderbird] - функциональный почтовый клиент от Mozilla, основанный на технологиях XUL. Есть поддержка чтения RSS-лент. Расширяется с помощью дополнений.
+* [http://userbase.kde.org/KMail KMail] - почтовый клиент проекта KDE
+* [http://projects.gnome.org/evolution/ Evolution] - почтовый клиент проекта GNOME
+* [http://www.claws-mail.org/ Claws Mail] - лёгкий и функциональный почтовый клиент на GTK
+* [http://sylpheed.sraoss.jp/en/ Sylpheed] - прародитель предыдущего
+* [https://launchpad.net/postler Postler] - сверхлёгкий почтовый клиент на GTK и Vala
+* [http://redmine.yorba.org/projects/geary/wiki Geary] - сверхлёгкий почтовый клиент на GTK3
+* [http://www.mutt.org/ Mutt] - консольный
+* [http://www.washington.edu/alpine/ Alpine] - консольный
+в состав браузеров Mozilla Seamonkey и Opera (до версии 12 включительно) также входят почтовые клиенты
+==Программы для общения в сети (IM, голос, видео)==
+
+Тут следует отметить, что многие программы текстового общения начали обзаводиться поддержкой голоса и видео, и наоборот, многие программы видеообщения включают поддержку текстового чата.
+
+===Передача текстовых сообщений===
+* [http://psi-im.org/ Psi] - написан на Qt, из протоколов поддерживает только Jabber/XMPP
+* [http://psi-plus.com/ Psi+] - модифицированная версия Psi, с поддержкой плагинов и более богатыми возможностями
+* [http://www.gajim.org/ Gajim] - Python+GTK, только Jabber/XMPP
+* [http://www.pidgin.im/ Pidgin] - поддерживает почти все протоколы, GTK
+* [http://tkabber.jabber.ru/ Tkabber] - Tcl/Tk, Jabber/XMPP
+* [http://www.instantbird.com/ Instantbird] - Mozilla + libpurple
+* [http://live.gnome.org/Empathy Empathy] - входит в состав GNOME, умеет много разных протоколов
+* [http://kopete.kde.org/ Kopete], KDE
+* [http://swift.im/ Swift], Qt
+* [http://mcabber.com/ MCabber] - консольный jabber клиент
+* [http://developer.pidgin.im/wiki/Using%20Finch Finch] - консольный на движке libpurple
+* [http://online.yandex.ru/mac-linux/ Я.Онлайн] - Qt, сделано Яндексом на основе Psi
+* [http://qutim.org/ qutIM] - аналог QIP
+* [http://www.icq.com/download/linux/ru ICQ] - несвободный официальный ICQ-клиент, требует Flash и Adobe Air
+* [http://userbase.kde.org/Telepathy KDE Telepathy] - IM/VOIP клиент, поддерживает передачу текста/файлов/аудио/видео, межпрограммную коммуникацию и много IM протоколов (за исключением IRQ). Позиционируется как замена Kopete
+===Голосовое и видеообщение===
+* [https://jitsi.org/ Jitsi] - написан на Java. Поддерживает Jabber/XMPP,SIP,AIM/ICQ. Умеет VOIP (текст, звонки, видео, файлы). Также есть клиент под Android.
+* [http://ekiga.org/ Ekiga], Gnome
+* [http://www.skype.com/ru/ Skype] - несвободный, раньше был P2P, сейчас вроде перешел на клиент-серверную архитектуру
+* [http://tox.im/ Tox] - свободный P2P, beta
+* [http://www.teamspeak.com/ TeamSpeak] - несвободный
+* [http://www.linphone.org/ Linphone], GTK
+* [http://thecoccinella.org/ Coccinella], Tcl/Tk
+* [http://mumble.sourceforge.net/ Mumble], Qt
+
+
+===Cерверы видеоконференций===
+* [http://openmcu.ru/ openmcu] [http://www.voxgratia.org/ (en)]
+==Видео и аудиоплееры==
+===Видеопроигрыватели===
+* [http://www.mplayerhq.hu/ MPlayer] с оболочкой [http://smplayer.sourceforge.net/ SMPlayer] или [http://www.mplayerhq.hu/design7/projects.html другой]
+* [http://www.mplayer2.org/ MPlayer2], форк предыдущего
+* [http://www.videolan.org/vlc/ VLC]
+* [http://projects.gnome.org/totem/ Totem], GNOME
+* [http://kaffeine.kde.org/ Kaffeine], KDE
+* [https://www.kde.org/applications/multimedia/dragonplayer/ Dragon Player], KDE, легковесный с простым интерфейсом
+* [http://www.xine-project.org/ xine] - устарел
+===проигрыватели на основе библиотеки файлов (по типу iTunes)===
+* [http://amarok.kde.org/ Amarok], KDE
+* [http://projects.gnome.org/rhythmbox/ Rhythmbox], GNOME
+* [http://banshee.fm/ Banshee], GNOME+Mono
+* [http://flavio.tordini.org/minitunes Minitunes], минималистичный плеер на Qt4
+* [https://launchpad.net/beat-box Beatbox], лёгкий плеер на GTK, пока в активной разработке
+* [http://www.clementine-player.org/ Clementine], Qt
+* [http://www.musicpd.org/ MPD], Music Player Daemon — бекенд, существует фронтенд (морда) на Qt — [https://code.google.com/p/cantata/ Cantata]
+===Простые аудиопроигрыватели (по типу Winamp)===
+* [http://audacious-media-player.org/ Audacious] — плеер, использующий GTK, один из форков XMMS
+* [http://deadbeef.sf.net/ DeadBeef] — легковесный плеер в стиле foobar2000 работающий на GTK, открывающий множество форматов (многоканальных в. т. ч.) и корректно работающий с испорченными кодировками в тегах 
+* [http://qmmp.ylsoftware.com/ Qmmp] - Интерфейс в стиле WinAmp (хотя есть возможность использовать альтернативный GUI), написан на Qt.
+* [http://moc.daper.net/ MOC] — удобный консольный
+* [http://www.xmms.org/ XMMS] — стар почти как протокол X11, 1:1 внешне как старый WinAmp
+выше перечислены только наиболее популярные варианты
+==Словари и переводчики==
+
+* [http://goldendict.org/ GoldenDict], Qt, наиболее функционален
+* [http://code.google.com/p/stardict-3/ StarDict] и словари с [http://xdxf.sourceforge.net/ XDXF], GTK. Консольную версию stardict можно взять [http://sdcv.sf.net здесь], а порт на Qt4 лежит [http://qstardict.ylsoftware.com тут]
+* [http://multitran.sourceforge.net/ multitran] - очень хороший словарь, но оболочка на Qt3, давно не переписывалась и почти везде уже не работает. Доступен online, [http://www.multitran.ru/ http://www.multitran.ru/]
+* [https://launchpad.net/purple Purple], лёгкий словарь на GTK
+* Кроме всего вышеперечисленного есть сервер словарей [http://www.dict.org/ dictd] и клиенты к нему - Gnome dictionary и Kdict. 
+
+Из переводчиков есть интерфейс к [http://translate.google.ru/ google translate] [https://github.com/flareguner/litetran LiteTran] и практически нерабочая [http://www.prawda.newmail.ru/ Правда].
+==Файловые менеджеры==
+
+* [http://live.gnome.org/Nautilus Nautilus] в GNOME и его ремейки nautilus-elementary и Nemo
+* [http://dolphin.kde.org/ Dolphin] в KDE4
+* [http://www.konqueror.org/ Konqueror] в KDE
+* [http://thunar.xfce.org/ Thunar] в Xfce
+* [http://wiki.lxde.org/en/PCManFM PCManFM] легкий файловый менеджер с поддержкой табов, на GTK
+* [http://rox.sourceforge.net/desktop/ROX-Filer.html ROX-Filer]
+* [http://doublecmd.sourceforge.net/ Double Commander] для тех, кто привык к Total Commander
+* [http://www.midnight-commander.org/wiki/ru/WikiStart mc] Midnight Commander, для консоли
+* [http://www.krusader.org/ Krusader] двухпанельный файловый менеджер, KDE
+==Архиваторы==
+
+Тут следует отметить, что в Linux есть программы-компрессоры, которые сжимают (консольные): 
+* gzip
+* bzip2
+* lzma 
+* xz
+* программы для работы с rar, zip, lha, stuffit и другими неродными для unix/linux форматами;
+собственно архиваторы, которые собирают множество файлов в один перед сжатием:
+* tar
+* cpio
+и есть графические оболочки к ним:
+* [http://fileroller.sourceforge.net/ File Roller] - входит в состав GNOME
+* [http://www.kde.org/applications/utilities/ark/ Ark] - часть KDE
+* [http://xarchiver.sourceforge.net/ Xarchiver], GTK
+* [http://www.peazip.org/ PeaZIP]
+
+Многие файловые менеджеры умеют работать в качестве оболочки к консольным архиваторам
+==Работа с электронными книгами==
+===Просмотр PDF/DjVu/FB2===
+* [http://live.gnome.org/Evince Evince] - простая и удобная программа GNOME для чтения электронных книг и документов. Поддерживает форматы PDF, DjVu и DVI. Также есть опциональная поддержка презентаций в формате OpenOffice Impress и комиксов в формате CBR.
+* [http://okular.kde.org/ Okular] - программа просмотра документов проекта KDE.
+* [http://www.fbreader.ru/ FBReader] - кроссплатформенна программа для чтения электронных книг. Поддерживает форматы ePub, fb2, chm, rtf, plucker, и т. д. Файлы можно читать напрямую из архивов zip, tar, gzip и bzip2.
+* [http://pwmt.org/projects/zathura/ Zathura] - легковесный инструмент для просмотра документов, поддерживающий pdf, djvu и postscript.
+* [http://get.adobe.com/reader/ Adobe Reader] - несвободный официальный просмотрщик PDF, поддерживает практически все возможности формата, заметно быстрее открывает большие pdf-файлы, по сравнению с другими имеет большое количество проблем в безопасности, которые исправляются не слишком оперативно. Крайне не рекомендуется использовать его plugin в браузере.
+* [http://djvu.sourceforge.net/djview4.html DjView4] - программа для просмотра DjVu, написанная на Qt4 с использованием библиотеки [http://djvu.sourceforge.net/index.html DjVuLibre], как и многие другие свободные просмотрщики DjVu. Версия DjView3 разрабатывалась совместно с DjVuLibre, однако DjView4 поставляется отдельно, формально оставаясь частью того же проекта.
+* [http://foolabs.com/xpdf/home.html Xpdf] - простой просмотрщик PDF, прародитель библиотеки [http://poppler.freedesktop.org/ poppler], которая используется практически во всех остальных свободных программах просмотра.
+* [http://trac.emma-soft.com/epdfview/ ePDFView] - легковесная программа просмотра PDF на GTK
+* [http://pybookreader.narod.ru/misc.html fbless] - для чтения FB2 книг в консоли
+* другие программы просмотра PDF можно найти на [http://pdfreaders.org/].
+===Организация библиотеки===
+* [http://calibre-ebook.com/ Calibre]
+* [http://www.lintest.ru/wiki/MyRuLib MyRuLib] — для организации библиотеки электронных книг формата fb2. Можно использовать для работы с библиотеками lib.rus.ec и flibusta.net
+
+Более сложные системы ведения библиографии описаны в [[LOR-FAQ-Scientific]]
+===Обработка сканов===
+* [http://scantailor.sourceforge.net/?q=ru/about Scan Tailor]
+* [http://unpaper.berlios.de/unpaper.html unpaper]
+* [http://gscan2pdf.sourceforge.net/ gscan2pdf]
+===Системы оптического распознавания текста (OCR)===
+системы распознавания:
+* [http://www.cuneiform.ru/ CuneiForm], есть [https://launchpad.net/cuneiform-linux порт на Linux]
+* [http://symmetrica.net/cuneiform-linux/ CuneiForm c поддержкой смешанных языков], например, ru-en
+* [http://code.google.com/p/tesseract-ocr/ Tesseract]
+* [http://www.abbyy.ru/finereader-engine/linux/ FineReader Engine] несвободный и не предназначен по цене для персонального использования
+графические оболочки:
+* [http://symmetrica.net/cuneiform-linux/yagf-ru.html YAGF] - на Qt
+* [http://live.gnome.org/OCRFeeder OCRFeeder], GNOME
+
+[[Category:Коллекция ПО]]
+[[Category:Полезные советы]]

@@ -1,0 +1,44 @@
+[http://www.linux.org.ru/forum/talks/6937079 Кунсткамера эпических тредов]
+
+* [http://linuxhacker.ru/~shaman/rfvs.html РФВС]
+
+* [http://linuxhacker.ru/~shaman/perl-one.html Однострочник на Perl]
+
+* [http://linuxhacker.ru/~shaman/linux-registry.html Реестр в Линуксе]
+
+* [http://linuxhacker.ru/~shaman/extra-sence.html Экстрасенсы]
+
+* [http://linuxhacker.ru/~shaman/poland-god.html Польский священник и Господь Бог]
+
+* [http://linuxhacker.ru/~shaman/gentoo4girls.html Gentoo для девочек]
+
+* [http://linuxhacker.ru/~shaman/lisp1.html Одна фраза о Lisp'е]
+
+* [http://linuxhacker.ru/~shaman/MSLinux.html Microsoft ищет линуксоида]
+
+* [http://linuxhacker.ru/~shaman/Material-LOR.html Материалистам LOR]
+
+* [http://linuxhacker.ru/~shaman/GTK3.html GTK3]
+
+* [http://linuxhacker.ru/~shaman/Torvalds-Gnome.html Линус начал использовать Gnome]
+
+* [http://linuxhacker.ru/~shaman/Talks-Talks.html Правила Talks]
+
+* [http://linuxhacker.ru/~shaman/Bolgenos.html Явление Болгенос]
+
+* [http://linuxhacker.ru/~shaman/arch-2005.html Arch Linux 2010.05]
+
+* [http://linuxhacker.ru/~shaman/wayland.html Wayland готов для десктопа]
+
+* [http://linuxhacker.ru/~shaman/ayat.html Аят, собственно, аля]
+
+* [http://linuxhacker.ru/~shaman/gentoo-bra.html Лифчик с Убунтой]
+
+
+«Сюда я буду добавлять треды без купюр и IP (UA оставим).
+
+Важное замечание: "страницы" внизу фиктивные, ведут вникуда. Все, что происходило в треде видно в указанных выше файлах.
+
+Если вы считаете, что список нужно пополнить чем-то интересным или смешным, напишите мне на abondarenko@gmail.com. Однако, я не буду заносить сюда топики-травли или то, что сочту унылым.
+
+Shaman007 ***** (29.10.2011 22:55:30)»

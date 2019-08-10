@@ -1,0 +1,8 @@
+<center>
+<table border="0" style="border:solid 1px lightblue;">
+<tr><td>
+<div><b>Подробнее обо мне</b></div>
+<div>на [http://ru.wikipedia.org/wiki/User:DarkSTALKER Википедии]</div>
+</td></tr>
+</table>
+</center>

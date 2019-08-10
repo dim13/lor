@@ -1,0 +1,119 @@
+<!--Верхний основной блок с приветствием и ссылками на главные категории-->
+<div class="topbanner" style="margin: 10px 0; border: 3px #ddd solid;">
+
+<!--Левая часть верхнего блока : приветствие-->
+<div style="width:53%; float:left;border: 0px #0dd solid; ">
+
+<!--Добро пожаловать-->
+<div style="text-align:center;font-size:175%;border: 0px #d00 solid; ">Добро пожаловать на LOR&nbsp;Wiki
+</div>
+
+<!--Количество статей-->
+<div style="text-align:center;font-size:110%;border: 0px #880 solid; ">На данный момент в LOR&nbsp;Wiki содержится [[Special:Allpages|{{NUMBER_OF_PAGES}} статей]]
+</div>
+
+<!--Дата-->
+<div style="text-align:center;font-size:90%;border: 0px #808 solid; ">Сегодня {{CURRENTDAY}} {{CURRENTMONTHNAME}} {{CURRENTYEAR}} года
+</div>
+
+</div>
+
+<!--Правая часть верхнего блока : ссылки на категории-->
+<div style="width:47%; float:right; text-align:left;border: 0px #faa solid; ">
+
+<!--Левый блок ссылок-->
+<div style="float: left;border: 0px #808 solid; ">
+* [[:Category:Linux.org.ru|Linux.org.ru]]
+* [[:Category:Дистрибутивы|Дистрибутивы]]
+* [[:Category:Коллекция_ПО|Коллекция&nbsp;ПО]]
+</div>
+
+<!--Центральный блок ссылок-->
+<div style="float: left;border: 0px #880 solid;">
+* [[:Category:Программирование|Программирование]]
+* [[:Category:Администрирование|Администрирование]]
+* [[:Category:Полезные_советы|Полезные&nbsp;советы]]
+</div>
+
+<!--Правый блок ссылок-->
+<div style="float: left;border: 0px #088 solid;">
+* [[:Category:Hardware|Hardware]]
+* [[:Category:Лицензии|Лицензии]]
+* '''[[Special:Categories|Все&nbsp;разделы]]&nbsp;&nbsp;'''
+</div>
+
+<div class="clear">
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+
+</div>
+
+<!--Средний основной блок с содержимым-->
+<div class="midbanner" style="margin: 10px 0; border: 0px #f0a solid;">
+
+<!--Левая половина блока с содержимым-->
+<div style="width:50%;  float:left;border: 0px #FaF solid; ">
+
+<!--Левый #1-->
+<div style="margin: 1.0em 0.5em 1.0em 0;padding: 0 5px; border: 3px #ddd solid; ">
+'''Новичкам :: в первую очередь'''<br>
+* [[Lor-faq|LOR FAQ - Часто задаваемые вопросы об ОС GNU/Linux]]
+* [[Выбор дистрибутива]]
+* [[Что такое командная строка и как в ней работать]]
+* [[Основные команды]]
+</div>
+
+<!--Левый #2-->
+<div style="margin: 1.0em 0.5em 1.0em 0;padding: 0 5px; border: 3px #ddd solid; ">
+'''Сюда перенёс правила'''
+* [http://www.linux.org.ru/rules.jsp Официальные правила ЛОРа]
+* [[Linux.org.ru|Как вести себя на ЛОРе]]
+* [http://segfault.kiev.ua/smart-questions-ru.html Как правильно задавать вопросы]
+* [[Lorcode|Как правильно оформлять сообщения на ЛОРе]]
+</div>
+
+</div>
+
+<!--Правая половина блока с содержимым-->
+<div style="width:50%; float:left;border: 0px #0ff solid; ">
+
+<!--Правый #1-->
+<div style="margin: 1.0em 0 1.0em 0.5em;padding: 0 5px; border: 3px #ddd solid; ">
+'''Лучшие статьи'''
+* [[Linux в школе]] - в статье перечислены свободные альтернативы проприетарному ПО для организации учебного процесса с ОС GNU/Linux на персональных компьютерах
+* [[Admin|Настройка системы]] - в статье собраны факты, которые могут пригодится как администратору малой ЛВС, так и домашнего компьютера
+</div>
+
+<!--Правый #2-->
+<div style="margin: 1.0em 0 1.0em 0.5em; padding: 0 5px; border: 3px #ddd solid; ">
+'''Последние релизы'''<br>
+* [http://www.linux.org.ru/news/openoffice/6342762 LibreOffice 3.4] - [[LibreOffice]] версии 3.4 (03 июня 2011)
+* [http://www.linux.org.ru/news/opensource/6338235 qBittorrent 2.8.0] - [[qBittorrent]] версии 2.8.0 (02 июня 2011)
+* [http://www.linux.org.ru/news/gnu/6336177 GNU Parted 3.0] - [[Parted| GNU Parted]] версии 3.0 (30 мая 2011)<br>
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+
+</div>
+
+<!--Нижний основной блок с содержимым-->
+<div class="bottombanner" style="margin: 10px 0;border: 0px #00f solid;">
+
+<!--Нижний #1-->
+<div style="margin: 0 0 1.0em 0; padding: 0 5px; border: 3px #ddd solid;">
+Придумайте что сюда поместить
+</div>
+
+<!--Нижний #2-->
+<div style="margin: 1.0em 0 1.0em 0;padding: 0 5px; border: 3px #ddd solid;">
+Если вы хотите написать статью, но не знаете о чём, можете выбрать один из свободных открытых проектов [[User:adriano32/Нужные_статьи|в инкубаторе]], в [http://www.linux.org.ru/news/ новостях] [http://www.linux.org.ru/ ЛОРа] или [http://www.opennet.ru/ другого] сайта или просто вспомнив, чем вы пользуетесь в [[Linux]]. Но прежде ознакомьтесь с [[как_правильно_оформлять|рекомендациями по оформлению]]
+</div>
+
+</div>

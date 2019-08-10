@@ -1,0 +1,394 @@
+<!--<div class="top" style="margin: 10px 0; border: 0px #ddd solid;">
+<div style="font-size:120%;color:#FF4040;">Статья находится в процессе написания (буду наполнять по мере появления свободного времени).</div>
+</div>-->
+
+== Введение ==
+<p>Небольшая инструкция, раскрывающая некоторые особенности по установке и настройке <code>Debian6 (squeeze)</code> на ноутбук <code>Lenovo ThinkPad X220</code>.<br>Будет кратко описан процесс установки (только моменты отличающиеся от штатных), установки необходимых обновлений до версий <code>backports/testing</code> (исключительно из-за неработоспособности некоторых узлов ноутбука на стабильной ветке). Более подробно будет освещена доработка функционирования горячих клавиш и сканера отпечатков пальцев. Вариант изначальной установки <code>testing/sid</code> не рассматривался в принципе из-за отсутствия Gnome2 (дискуссии на тему альтернатив не уместны).</p>
+<p>Немного о модели ноутбука (429058G, она же NYF58RT): 12.5" (1366x768) IPS, Intel Core i7-2640M(2.8GHz), 4GB, 80GB SSD, 500GB (5400rpm), Intel HD3000, WiFi, BT, TPM, FPR, WebCam, 6cell, Win 7 Pro 64</p>
+<p>Хочу сразу акцент сделать на одном моменте: знаю, что это не "true *nix way", но работаю при установке/настройке преимущественно от root - разумеется <code>sudo</code> также использую, но только на этапе эксплуатации. Поэтому команды привожу без префикса <code>sudo</code>, т.к. выполняются от root.</p>
+== Установка Debian ==
+=== Установка ===
+Для установки был взят образ с официального сайта, актуальный на момент установки [http://cdimage.debian.org/debian-cd/6.0.6/amd64/iso-dvd/debian-6.0.6-amd64-DVD-1.iso debian-6.0.6-amd64-DVD-1.iso], залит с помощью dd на USB-flash носитель и запущен с него процесс установки дистрибутива.
+Т.к. в данной модели ноутбука имеется и SSD и SATA диск, то систему решил ставить на SSD, а рабочие разделы разместить на жестком диске. Исходя из этого при установке вручную разметил разделы:
+* <b>SSD:</b>
+** /boot (300Mb, ext4, noatime)
+** / (40Gb, ext4, noatime)
+** /home (~40Gb, ext4, noatime)
+* <b>SATA:</b>
+** /var (20Gb, ext4, relatime) 
+** Все рабочие и файловые разделы (ext4, relatime)
+Swap раздел не создавал за ненадобностью (в ноут доустановил еще 4Gb оперативной памяти - для работы вполне хватает).
+
+Из предложенного списка метапакетов отметил: desktop, laptop, utils.
+
+После установки Gnome запустился нормально, но иксы не "увидели" разрешение экрана, также не определилась wifi карта, не работали некоторые функциональные клавиши.
+
+=== Первичная настройка ===
+Перво-наперво необходимо "починить" управление сетевыми интерфейсами, если при установке сетевой интерфейс был сконфигурирован статически. Если необходимо конфигурирование сети через network-manager, то необходимо поправить конфигурацию интерфейсов в <code>/etc/network/interfaces</code> - перевести сетевой интерфейс в режим авто:
+<pre># This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+</pre>
+
+Сразу же обратил внимание на наличие характерных периодических "кликов" парковок головок жесткого диска. Проблема известная (извечная? на предыдущем Lenovo была аналогичная ситуация), но решаемая просто. Диагностируется также путём установки пакета <code>smartmontools</code> и просмотром информации S.M.A.R.T по команде <code>smartctl -A /dev/sd*</code> - а именно интересует параметр: <code>Load_Cycle_Count</code>, если его значение от замера к замеру растёт (после "кликов" парковки), значит оно и есть. Добавляем в файл <code>/etc/rc.local</code>, перед командой <code>exit 0</code>, строку вида: <code>hdparm -S 244 -B 255 /dev/sda</code>. Также создаём скрипт для обновления перезаписи параметров смарт при пробуждении ноутбука: файл <code>/etc/pm/sleep.d/fix_sda_apm_param</code> <pre>
+#!/bin/sh
+
+case "${1}" in
+    resume|thaw)
+        hdparm -S 244 -B 255 /dev/sda
+    ;;
+esac
+</pre>
+
+Для оптимизации использования SSD (и продления его ресурса):
+# Скорректировать fstab для задания оптимальных параметров монтирования разделов:
+#* для /boot, / - discard,noatime,commit=60
+#* для остальных - relatime,commit=60
+#* временный раздел помещаем в память, изменяем на: tmpfs /tmp tmpfs defaults 0 0
+# <div>Выставить в опциях загрузки ядра <code>elevator=noop</code>:
+* Первый вариант - в конфигурационном файле <code>/boot/grub/grub.cfg</code> добавить к опциям загрузки ядра.
+* Второй вариант - в дефолтных настройках <code>/etc/default/grub</code> изменить параметр <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet elevator=noop"</code> и после выполнить <code>update-grub</code>.
+Так же можно и уменьшить время ожидания выбора ядра при старте (в секундах): <code>GRUB_TIMEOUT=3</code>. Некоторые рекомендуют для ещё большего уменьшения ожидания добавлять: <pre>GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true</pre> Но это может быть чревато, т.к. при таймауте равном единице и двух этих опциях у меня "проскакивало" без выбора даже с зажатым shift - в результате пришлось править, загрузившись с LiveCD.</div>
+
+# Добавить в конец <code>/etc/sysctl.conf</code> опции:<pre>
+vm.laptop_mode=5
+vm.dirty_writeback_centisecs=6000
+</pre>
+
+Далее целесообразно перезагрузить ноутбук для применения всех внесённых настроек.
+
+=== Обновление ===
+# Включить <code>contrib</code> и <code>non-free</code> репозитории squeeze. Для этого добавить в файл <code>/etc/apt/sources.list</code> строку:<pre>
+deb http://ftp.ru.debian.org/debian/ squeeze main contrib non-free
+</pre>
+# Обновить базу пакетов: <pre># aptitude update</pre>
+# Обновить систему - просто запустить графический менеджер обновлений.
+# Подключить <code>squeeze-backports</code>. Для этого добавить в файл <code>/etc/apt/sources.list</code> строку:<pre>
+deb http://backports.debian.org/debian-backports squeeze-backports main contrib non-free
+</pre>
+# Обновить базу пакетов: <pre># aptitude update</pre>
+# <div>Установить из backports:
+* <div>Свежее ядро (3.2.*): <pre># aptitude install -t squeeze-backports linux-image-3.2.0(посвежее).amd64
+</pre>
+Если <code>aptitude</code> спросит "оставлять со старыми зависимостями"? Не соглашаться, после чего спросит "обновить зависимости"? Соглашатья - подтянет обновления для зависимых пакетов из <code>backports</code>.
+</div>
+* Пакеты для Wifi:<pre>
+# aptitude install -t squeeze-backports firmware-iwlwifi wireless-tools
+</pre>
+* Иксы: <pre>
+# aptitude install -t squeeze-backports xorg xserver-xorg xserver-xorg-core xserver-xorg-input-all xserver-xorg-video-all
+</pre>Может что-то с собой подтянуть, что-то обновится, что-то установится - соглашаться.
+* Поддержка opengl (2D/3D): <pre>
+# aptitude install -t squeeze-backports libgl1-mesa-dri libgl1-mesa-glx
+</pre>
+</div>
+# Загрузить ноутбук на новом ядре. Что по факту имеем в плюсе - разрешение экрана адекватное и wifi работает. В минусе - по прежнему не работают некоторые функциональные клавиши: <b>Fn+F6</b>, <b>Fn+F8</b>, <b>MicMute</b> (а также <b>VolumeUp</b>, <b>VolumeDown</b> - не включают звук при включённом Mute, хотя светодиод на кнопке Mute и гаснет).<br><br>Позже я обновил ядро, иксы, драйвера и некоторые утилиты до версий из репозиториев <code>wheezy</code> (<code>testing</code>). Не скажу, что было просто, т.к. часто пакеты тянут за собой очень много зависимостей и зачастую предлагается удалить Gnome2 и установить Gnome3, приходилось обновлять с помощью <code>apt-get</code> и подтягивая вручную нужные версии пакетов.
+== Функциональные клавиши ==
+Из-за особенностей конфигурации ядра Debian (конфигурационных опций - в ядре не включена поддержка <code>CONFIG_ACPI_PROCFS</code> и <code>CONFIG_ACPI_PROC_EVENT</code>, соответственно события <code>ibm/hotkey</code> посылаемые на <code>/proc/acpi/event</code> начисто фильтруются). Таким образом, при отсутствии реализации обработки клавиши в системе - свои обработчики уже не навесить. В это упиралось большинство вопросов в интернет на тему "как заставить работать функциональные клавиши". В Ubuntu 12*, Mint 13, Fedora 17 - эти клавиши работают. Различий в исходниках модуля <code>thinkpad_acpi</code> почти нет (не принципиальные). В исходниках acpi также никаких критических изменений на глаза не попалось, так что причина может быть только в конфигурации ядра. Пересобирать ядро для проверки я не стал, но работу <code>thinkpad_acpi</code> проверил - исправно вызывает функцию генерации событий <code>acpi_bus_generate_proc_event</code>, но та работает вхолостую, т.к. <code>/proc/acpi/event</code> в системе отсутствует. Возможно решение двумя путями - пересобрать ядро с нужными опциями и пропатчить <code>thinkpad_acpi</code> (я выбрал второе - для включения светодиода его всёравно придётся патчить, да и проще, чем пересобирать ядро).
+В принципе, стояла задача заставить генерировать ACPI события нажатий клавиш <b>Fn+F6</b>, <b>Fn+F8</b>, <b>MicMute</b>, и обрабатывать их в юзерспейс, а также дополнительно обрабатывать нажатия <b>VolumeUp</b>, <b>VolumeDown</b> (благо ACPI события на них генерируются) - выключать <b>Mute</b>. Ну и заставить работать светодиод на кнопке <b>MicMute</b>...
+
+Уточню, что при наблюдении за событиями <code>ThinkPad Extra Buttons</code> с помощью <code>evtest</code> выводились корректные события нажатий на все (!) функциональные клавиши даже на те, на которые <code>acpi_listen</code> молчал.
+
+=== Патч ===
+# Скачать исходники ядра (находятся в <code>/usr/src/linux-source*.tar.bz2</code>).
+# Скопировать из архива исходник <code>thinkpad_acpi.c</code> (в архиве <code>/linux-source-*/drivers/platform/x86/thinkpad_acpi.c</code>) в рабочий каталог где будем собирать.
+# В этом каталоге создать файл <code>Makefile</code> (регистр!) следующего содержания:
+<pre>
+obj-m += thinkpad_acpi.o
+
+all:
+        make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+
+clean:
+        make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+
+</pre>Те, кого напрягает отладочная информация, пристёгнутая к модулю - могут добавить <code>stripe</code> для её удаления.
+# Пропатчить <code>thinkpad_acpi.c</code> для корректной работы уведомлений о событиях:
+<pre>
+static void hotkey_notify(struct ibm_struct *ibm, u32 event)
+{
+...
+		/* Legacy events */
+		if (!ignore_acpi_ev &&
+		    (send_acpi_ev || hotkey_report_mode < 2)) {
+
+			// sptim: Do nothing in Debian6 (without /proc/acpi/event)
+			//acpi_bus_generate_proc_event(ibm->acpi->device, 
+			//			     event, hkey);
+
+			// sptim: True generation (with bus id).
+			acpi_bus_generate_netlink_event(
+					ibm->acpi->device->pnp.device_class,
+					ibm->acpi->device->pnp.bus_id,
+					event, hkey);
+		}
+...
+}
+</pre>
+
+# Пропатчить <code>thinkpad_acpi.c</code> для работы индикатора на клавише <b>MicMute</b>. Этот патч и инструкцию нашёл [http://askubuntu.com/questions/125367/enabling-mic-mute-button-and-light-on-lenovo-thinkpads здесь].
+<pre>
+static const char * const tpacpi_led_names[TPACPI_LED_NUMLEDS] = {
+	/* there's a limit of 19 chars + NULL before 2.6.26 */
+	"tpacpi::power",
+	"tpacpi:orange:batt",
+	"tpacpi:green:batt",
+	"tpacpi::dock_active",
+	"tpacpi::bay_active",
+	"tpacpi::dock_batt",
+	"tpacpi::unknown_led",
+	"tpacpi::standby",
+	"tpacpi::dock_status1",
+	"tpacpi::dock_status2",
+	"tpacpi::unknown_led2",
+	"tpacpi::unknown_led3",
+	"tpacpi::thinkvantage",
+	"tpacpi::unknown_led4", // sptim: add micmute led 
+	"tpacpi::micmute",      // sptim: add micmute led  
+};
+#define TPACPI_SAFE_LEDS	0x5081U  // sptim: safe leds update
+
+...
+
+static const struct tpacpi_quirk led_useful_qtable[] __initconst = {
+
+	...
+
+	/* (1) - may have excess leds enabled on MSB */
+
+	/* Defaults (order matters, keep last, don't reorder!) */
+	{ /* Lenovo */
+	  .vendor = PCI_VENDOR_ID_LENOVO,
+	  .bios = TPACPI_MATCH_ANY, .ec = TPACPI_MATCH_ANY,
+	  .quirks = 0x5fffU, // sptim: quirks update 
+	},
+
+	...
+};
+</pre>
+# Собрать модуль командой <code>make</code> (при этом возможно необходимо будет доустановить пакеты необходимых библиотек, не забываем, что должны быть установлены и части библиотек предназначенные для разработки - *-dev пакеты!).
+# На выходе получится файл <code>thinkpad_acpi.ko</code>, который необходимо инсталлировать (в принципе, ничего такого смертельного не случится, если инсталлировать сразу без предварительной апробации):
+## Отключить модуль: <pre># modprobe -r thinkpad_acpi</pre>
+## Сохранить оригинальный модуль (или переименовать <code>/lib/modules/<ядро>/kernel/drivers/platform/x86/thinkpad_acpi.ko</code> в <code>thinkpad_acpi.ko.orig</code>): <pre>
+# mv /lib/modules/<ядро>/kernel/drivers/platform/x86/thinkpad_acpi.ko \
+     /lib/modules/<ядро>/kernel/drivers/platform/x86/thinkpad_acpi.ko.orig
+</pre>
+## Скопировать собранный модуль в <code>/lib/modules/<ядро>/kernel/drivers/platform/x86</code>: <pre>
+# cp -f thinkpad_acpi.ko /lib/modules/<ядро>/kernel/drivers/platform/x86
+</pre>
+## Запустить модуль: <pre># modprobe thinkpad_acpi</pre>
+# Я для этих целей, когда экспериментировал, набросал шелл-скрипт запускаемый в рабочем каталоге (под root разумеется):
+<pre>
+#!/bin/sh
+
+make clean
+make
+modprobe -r thinkpad_acpi
+cp -f thinkpad_acpi.ko /lib/modules/3.2.0-3-amd64/kernel/drivers/platform/x86
+modprobe thinkpad_acpi
+</pre>
+# Запустить <code>acpi_listen</code> (демон <code>acpid</code> должен быть установлен и запущен) и понажимать функциональные клавиши. Вывод должен быть такого вида: <pre>
+ibm/hotkey HKEY 00000080 00001006
+ibm/hotkey HKEY 00000080 00001008
+ibm/hotkey HKEY 00000080 0000101b
+</pre>
+# Проверить работу светодиода <b>MicMute</b> (должен появиться каталог <code>/sys/devices/platform/thinkpad_acpi/leds/tpacpi::micmute</code>).<br>Включение светодиода<pre>
+# echo 1 > /sys/devices/platform/thinkpad_acpi/leds/tpacpi::micmute/brightness
+</pre>Выключение светодиода<pre>
+# echo 0 > /sys/devices/platform/thinkpad_acpi/leds/tpacpi::micmute/brightness
+</pre>
+
+=== Настройка ===
+После успешного патча необходимо настроить скрипты для обработки событий. <b>Fn+F8</b> (<b>Fn+F6</b> мне не нужен), <b>MicMute</b>, <b>VolumeUp</b>, <b>VolumeDown</b>. Далее подразумевается, что пакеты <code>acpi-support</code> и <code>xinput</code> установлены (будут активно использоваться), а также пакет <code>libnotify-bin</code> - для вывода уведомлений.
+<div>
+* <div><code><b>Fn+F8</b></code> - Включение/отключение тачпада.
+За основу был взят скрипт <code>asus-touchpad.sh</code> из пакета <code>acpi-support</code>.<br>Файл <code>/etc/acpi/events/thinkpad-touchpad</code>:
+<pre>
+# This is called when the user presses Fn-F8.
+# This toggles the touchpad on and off.
+
+event=ibm/hotkey HKEY 00000080 00001008
+action=/etc/acpi/thinkpad-touchpad.sh
+</pre>
+Файл <code>/etc/acpi/thinkpad-touchpad.sh</code>:
+<pre>
+#!/bin/sh
+
+set -e
+
+pff=/usr/share/acpi-support/power-funcs
+[ -f $pff ] || exit 0
+
+atp_error() {
+        logger -t${0##*/} -perr -- $*
+        exit 1
+}
+
+. $pff || atp_error "Sourcing $pff failed"
+
+[ -x /usr/bin/xinput ] || atp_error "Please install package xinput to enable toggling of touchpad devices."
+
+getXconsole
+
+ENABLEPROP="Synaptics Off"
+# Get the xinput device number and enabling property for the touchpad
+XINPUTNUM=$(xinput --list | sed -nr "s|.*[Tt]ouch[pP]ad.*id=([0-9]+).*|\1|p")
+[ "$XINPUTNUM" ] || atp_error "Invalid TouchPad id '$XINPUTNUM'"
+
+# Get the current state of the touchpad
+TPSTATUS=$(xinput --list-props $XINPUTNUM | awk "/$ENABLEPROP/ { print \$NF }")
+
+# Switch state
+case $TPSTATUS in
+        0)
+                xinput --set-int-prop $XINPUTNUM "$ENABLEPROP" 8 1
+                ;;
+        1)
+                xinput --set-int-prop $XINPUTNUM "$ENABLEPROP" 8 0
+                ;;
+        *)
+                atp_error "Invalid TouchPad status '$TPSTATUS'"
+                ;;
+esac
+</pre>upd: '''ВАЖНО!''' Для тех, у кого скрипт не отрабатывает корректно, его нужно немного изменить. Вместо вызова getXconsole - жёстко прописываем дисплей и файл авторизации.
+<pre>...
+#getXconsole
+export DISPLAY=:0
+export XAUTHORITY=/home/имя пользователя/.Xauthority
+...</pre>Лично у меня никогда не создавалось файла ~/.Xauthority (вместо этого файл генерируется в /var/run/gdm3/... с рандомной частью в названии каталога, так что необходимо создать следующий файл для создания символьной ссылки при начале сессии (в случае использования среды gnome2) или добавить в уже существующий строку с созданием ссылки перед командой запуска среды.
+Файл: <code>~/.xsession</code>
+<pre>#!/usr/bin/env bash
+ln -f -s "$XAUTHORITY" ~/.Xauthority
+exec gnome-session</pre>
+</div>
+* <div><code><b>MicMute</b></code> - Включение/отключение микрофона.
+Файл <code>/etc/acpi/events/thinkpad-mutemic</code>:<pre>
+# This is called when the user presses MicMute.
+# This toggles the microphone mute on and off.
+
+event=ibm/hotkey HKEY 00000080 0000101b
+action=/etc/acpi/thinkpad-mutemic.sh
+</pre>Файл <code>/etc/acpi/thinkpad-mutemic.sh</code>:<pre>
+#!/bin/sh
+
+set -e
+
+pff=/usr/share/acpi-support/power-funcs
+[ -f $pff ] || exit 0
+
+atp_error() {
+        logger -t${0##*/} -perr -- $*
+        exit 1
+}
+. $pff || atp_error "Sourcing $pff failed"
+getXconsole
+
+MICMUTE=/sys/devices/platform/thinkpad_acpi/leds/tpacpi::micmute/brightness
+CHANNEL="Capture"
+
+notify() {
+        notify-send -t 1000 -i microphone-sensitivity-muted-symbolic "$1"
+}
+
+if amixer sget "$CHANNEL",0 | grep '\[on\]' ; then
+    amixer sset "$CHANNEL",0 toggle
+    echo 1 > $MICMUTE
+    notify "Mic MUTE"
+else
+    amixer sset "$CHANNEL",0 toggle
+    echo 0 > $MICMUTE
+    notify "Mic ON"
+fi
+</pre></div>
+* <div><code><b>VolumeUp</b></code> - Увеличение громкости звука.
+Файл <code>/etc/acpi/events/thinkpad-volumeup</code>:<pre>
+# This is called when the user presses VolumeUp.
+# This toggles the mute off.
+
+event=button/volumeup VOLUP 00000080
+action=/etc/acpi/thinkpad-unmute.sh
+</pre>Файл <code>/etc/acpi/thinkpad-unmute.sh</code>:<pre>
+#!/bin/sh
+
+[ -f /usr/share/acpi-support/key-constants ] || exit 0
+. /usr/share/acpi-support/key-constants
+
+if amixer sget Master,0 | grep '\[off\]' ; then
+    acpi_fakekey $KEY_MUTE
+fi
+</pre></div>
+* <div><code><b>VolumeDown</b></code> - Уменьшение громкости звука.
+Файл <code>/etc/acpi/events/thinkpad-volumedown</code>:<pre>
+# This is called when the user presses VolumeDown.
+# This toggles the mute off.
+
+event=button/volumedown VOLDN 00000080
+action=/etc/acpi/thinkpad-unmute.sh
+</pre>
+</div></div>
+== Сканер отпечатков пальцев ==
+<p>В ThinkPad X61s у меня стоял дистрибутив <code>Fedora 14.1 (RFRemix)</code>, там всё работало из коробки в том числе и авторизация в <code>gdm</code> с помощью встроенного сканера отпечатков пальцев. Т.е. в <code>Gnome</code> уже была реализована GUI часть для работы с <code>FingerPrint</code> через расширение темы gdm насколько я понял (или это есть в мейнстриме изначально?).</p>
+<p>В <code>squeeze</code> и его <code>backports</code> необходимых библиотек не обнаружил, а из <code>wheezy</code> многое (почти всё, что завязано на GUI) тянет за собой Gnome3. Пришлось брать исходники пакетов, доустанавливать необходимые dev-пакеты и средства разработки и собирать вручную.</p>
+
+=== Сборка ===
+<p>Понадобятся следующие пакеты исходников:</p>
+* [http://people.freedesktop.org/~hadess/libfprint-0.4.0.tar.bz2 libfprint-0.4.0] (freedesktop.org)
+* [http://people.freedesktop.org/~hadess/fprintd-0.2.0.tar.bz2 fprintd-0.2.0] (freedesktop.org)<br>Более свежие версии требуют более новых библиотек в том числе <code>GIO</code> которую мне не удалось подтянуть, последняя версия -  [http://people.freedesktop.org/~hadess/fprintd-0.4.1.tar.bz2 fprintd-0.4.1].
+* [http://people.freedesktop.org/~hadess/shared-mime-info-1.0.tar.xz shared-mime-info-1.0] (freedesktop.org)
+* [https://nodeload.github.com/dsd/fprint_demo/tarball/master fprint_demo] (тарбол с github.com/dsd/fprint_demo)
+
+Что необходимо установить со всеми подтягиваемыми зависимостями:<pre>
+# aptitude install gcc intltool make libxml2-dev libglib2.0-dev libusb-1.0-0-dev libnss3-dev libmagickcore-dev libdbus-1-dev libpolkit-gobject-1-dev libpam0g-dev libxv-dev
+</pre>
+
+Собрать shared-mime-info:<pre>
+./configure
+make
+make install
+</pre>
+
+Собрать libfprint:<pre>
+./configure --prefix=/usr --enable-exanples-build --enable-x11-examples-build 
+make
+make install
+</pre>
+
+Собрать fprintd:<pre>
+./configure —prefix=/usr --enable-pam
+make
+make install
+</pre>
+
+Собрать fprint_demo:<pre>
+./autogen.sh
+./configure —prefix=/usr
+make
+make install
+</pre>
+
+=== Настройка ===
+# Внести в группу <code>plugdev</code> (после чего необходимо перелогиниться).
+# Создать новое правило для <code>udev</code>, файл <code>/etc/udev/rules.d/91-upek_rule</code>:<pre>
+# Доступ к устройству для группы и создание для него симлинка.
+ATTRS{idVendor}=="147e", ATTRS{idProduct}=="2016", SYMLINK+="input/touchchip-%k", MODE="0664", GROUP="plugdev"
+# Включение энергосбережения.
+ATTRS{idVendor}=="147e", ATTRS{idProduct}=="2016", ATTR{power/control}=="*", ATTR{power/control}="auto"
+</pre>
+# Перезагрузить ноутбук или создать фейковое событие для <code>udev</code> чтобы правило сработало:<pre>
+# udevadm trigger --attr-match=idVendor="147e" --attr-match=idProduct="2016"
+</pre>
+=== Проверка ===
+<p>Запустить от юзера <code>fprint_demo</code> (можно из консоли, можно через меню гнома <i>Приложения->Стандартные->fprint project demo</i>).
+Должно запускаться, находить устройство <code>UPEK Eikon 2</code>. Для пробы зарегистрировать палец на первой вкладке и проверить на второй. Если всё сделано правильно - должно работать корректно. Да, устройство не поддерживает отдачу "снимков" (?) - поэтому "весёлых картинок" в программе не видно.</p>
+<p>Что не удалось достичь - чтобы при авторизации в gdm можно было зайти по отпечатку пальца.
+Т.е. добавление <code>pam_fprintd.so</code> в <code>/etc/pam.d/common-auth</code> никак не помогло. Также не помог <code>gdm_plugin_fingerprint</code> от Fedora14, установка gdm вместо gdm3 тоже, установка gdm от федоры вообще отказалась работать корректно (как подозреваю из-за наслоения конфигов). Хотя конечно интерес был скорее академический, т.к. авторизацию по отпечаткам не использую.</p>
+== Заключение ==
+<p>В принципе, результатом удовлетворён - всё, что необходимо - работает.</p>
+<p>Хотя с сожалением понимаю, что рано или поздно (скорее второе - со следующим апгрейдом ноутбука) придётся переходить на более свежий дистрибутив и там уж выбирать "меньшее зло". Имхо это будет Xfce.</p>

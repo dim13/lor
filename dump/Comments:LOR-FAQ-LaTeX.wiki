@@ -1,0 +1,11 @@
+'''Добавить что-нибудь [http://www.texample.net/tikz/resources/ отсюда] пока я не забыл.''' По мотивам треда http://www.linux.org.ru/forum/general/6234494
+
+Также ещё [http://tug.org/metapost.html это] с сайта [http://tug.org/ The TeX Users Group (TUG)].
+
+http://www.xm1math.net/texmaker/
+
+http://www.texmacs.org/
+
+--[[User:adriano32|Андрей]] 16-Jun-2011 00:25 MSD
+
+: в общем, частично перекопипащено в редакторы, а частично фиг знает куда это девать [[User:dn2010|dn2010]] 23-Jun-2011 16:49 MSD

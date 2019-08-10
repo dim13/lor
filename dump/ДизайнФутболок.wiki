@@ -1,0 +1,29 @@
+{{Tip|content=Пофиксите битые ссылки, внутревикивые ссылки почему-то перестали работать}}
+
+Картинки:
+
+# [[Image:ananymous-RIP-v1.jpg]][http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3583512] (dead)
+# [[Image:svu-lorquotes-v1.jpg]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3583520] (dead)
+# [http://img209.imageshack.us/img209/7871/70958970.png] [http://www.linux.org.ru/forum/linux-org-ru/3583232?cid=3584402]
+# [http://shesha.ru/stuff/design/lor-t-shirts/01a.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3586901]
+# [http://shesha.ru/stuff/design/lor-t-shirts/01c.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3586901]
+# [http://bayimg.com/image/kaocaaabj.jpg] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3588749] (dead)
+# [http://pmironov.ru/lor/futbolki/faq_jackill_finish.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591711] (dead)
+# [http://pmironov.ru/lor/futbolki/locale_finish.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591711] (dead)
+# [http://pmironov.ru/lor/futbolki/root_finish.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591711] (dead)
+# [http://pmironov.ru/lor/futbolki/shaman_1_finish.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591711] (dead)
+# [[Image:2009032823624_780.png]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591919] (dead)
+# [[Image:fejack T-shirt template.svg]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591930] (dead)
+# [[Image:since.png]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591938] (dead)
+# [http://shesha.ru/stuff/design/lor-t-shirts/01a-grey.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3591943]
+# [http://img16.imageshack.us/img16/5088/63965769.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3592054]
+# [http://xmages.net/out.php/i160870_2.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3592138]
+# [http://www.petaimg.com/u29/489frontend.png] [http://www.petaimg.com/u279/990back.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3592779] (dead)
+# [http://shesha.ru/stuff/design/lor-t-shirts/02.png] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3593981]
+# [[Image:lor t-sh 1.png]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3594626] (dead)
+# [[Image:lor t-sh 2.png]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3594626] (dead)
+# [[Image:lor t-sh 3.png]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3594626] (dead)
+# [[Image:love-lor.png]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3596382] (dead)
+# [[Image:lor4ts.png]] [http://www.linux.org.ru/jump-message.jsp?msgid=3583232&cid=3631825] (dead)
+
+[[Category:Linux.org.ru]]

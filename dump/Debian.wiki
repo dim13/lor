@@ -1,0 +1,222 @@
+Это один из первых дистрибутивов Linux. Прославился огромным количеством пакетов, наибольшим списком поддерживаемых архитектур, повышенными требованиями к лицензиям, качественным тестированием и фразой "Debian выпускается, когда приходит время", что означает, что релиз-цикл у Debian ОЧЕНЬ долгий.
+
+[http://debian.org Официальный сайт]
+
+==Что ставить - stable/testing/unstable?==
+
+Новичкам лучше начинать со stable, стабильный релиз имеет проверенный набор пакетов с небольшой вероятностью того, что придется встретиться с какими-либо ошибками, регулярно и в кратчайшие сроки получает обновления безопасности. С другой стороны в stable будет старая версия ядра, которая, возможно, не сможет работать с современным железом. Частично это решается использованием [http://www.linux.org.ru/wiki/en/Debian#Откуда_брать_пакеты%2C_отсутствующие_в_дистрибутиве%3F бекпортов].
+
+После детального понимания дистрибутива десктопы можно обновить до testing. Тестируемая ветка отличается более новыми версиями пакетов программ, а поэтому есть вероятность того, что иногда встречаются ошибки или что-то бывает сломано, также возможны конфликты при обновлении пакетов из за меняющихся зависимостей и изменения версий программ. В случае использования testing можно (на свой страх и риск) смешивать пакеты из репозиториев testing, unstable или experimental. Для ветки stable подобным заниматься не следует.
+
+А unstable - для экстремалов или тех, кто знает, что делает. 
+==Squeeze, Wheezy, Jessie, Sid - что это такое?==
+
+Это кодовые имена релизов Debian, названия берутся из мультфильма "Toy Story" компании Pixar. В каждый момент времени существует три официальные версии Debian:
+* Stable - стабильная версия, в которой версии ПО не обновляют, а только исправляют найденные ошибки.
+* Testing - версия, в которой пакеты переносятся из unstable, после предварительной заморозки и тестирования. 
+* Unstable - ветка, содержащая последние версии ПО и, соответственно, n-ое количество ошибок :). 
+Так же существует Oldstable (предыдущий Stable) и Experimental, который не является полноценной веткой - в нем находятся пакеты, требующие тщательного тестирования или которые повлекут серьезные изменения в дистрибутиве (например новая версия gcc или Xorg). Через определенные промежутки времени stable отправляется в утиль, а текущий testing становится новым stable.
+
+'''Sid''' - кодовое название unstable. Этот релиз никогда не будет выпущен. (В "Toy Story" Sid Phillips - хулиганистый мальчишка, ломающий игрушки. Достаточно символичное название для нестабильной ветки)
+
+'''Jessie''' - текущий testing. Спустя некоторое время станет новым stable, Debian 8.0
+
+'''Wheezy''' - Debian 7.0, текущий stable. вышел [https://www.linux.org.ru/news/debian/9129003 04.05.2013]
+
+'''Squeeze''' - Debian 6.0,  предыдущий stable (или как его еще обычно называют - oldstable)
+
+Кодовые названия старых релизов: buzz: 1.1, rex: 1.2, bo: 1.3.x, hamm: 2.0, slink: 2.1, potato: 2.2, woody: 3.0, sarge: 3.1, etch: 4.0, lenny: 5.0
+
+Само название '''Debian''' происходит от имени создателя Ian Murdock и его жены Debra.<ref>http://www.debian.org/doc/manuals/project-history/ch-intro.en.html#s1.2</ref>
+==Вопросы по установке Debian (свободное ядро и несвободные драйвера)==
+
+В связи с [http://www.debian.org/News/2010/20101215 переносом несвободных драйверов устройств из ядра] в пакет '''firmware-linux-nonfree''' в разделе '''non-free''' у некоторых пользователей могут возникнуть проблемы с оборудованием во время установки Debian, например, из-за нехватки драйвера сетевой карты (например от Broadcom) не будет связи с интернетом.
+
+Перед установкой Debian прочтите [http://wiki.debian.org/Firmware тут] и [http://www.debian.org/releases/stable/i386/ch06s04.html.en тут] для инструкций. 
+Кратко:
+* перед установкой проверьте ваше оборудование на наличие проблем с драйверами (по ссылке выше есть список устройств);
+* скопируйте на съёмный носитель, например на CD/DVD или USB, тарболл взятый [http://cdimage.debian.org/cdimage/unofficial/non-free/firmware/ отсюда] и подключите его перед установкой. Если во время установки интернет доступен, то будет предложено скачать недостающий firmware.
+
+Также доступны неофициальные netinst-iso-образы со всеми драйверами [http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/ по ссылке].
+
+Почему так было сделано? Мифы и факты об этом [http://blog.schmehl.info/Debian/myths-and-facts-about-firmware есть по ссылке].
+
+==Откуда брать пакеты, отсутствующие в дистрибутиве?==
+
+Всё зависит от того, что вы хотите поставить. Большая часть необходимых пакетов для стабильного релиза обнаруживается на [http://backports.debian.org/]. Как следует из названия, это проект, занимающийся пересборкой некоторых программ из testing для stable. Остальные пакеты, как правило, можно найти, воспользовавшись поисковиком [http://www.apt-get.org/].
+
+В частности, заслуживает внимания репозиторий для мультимедийных программ (skype, google earth, adobe reader, различные кодеки), которые из-за проблем с патентами не включены в основной репозиторий - [http://deb-multimedia.org/]
+
+А вот [http://linuxoid.in/Полезные_репозитории_для_Debian тут] собран список популярных репозиториев Debian.
+
+Все вышеупомянутые ресурсы, за исключением [http://backports.debian.org/], неофициальны, разработчики Debian не оказывают никакой поддержки этим пакетам.
+
+Если вам необходимо достать старый пакет, доступен архив по ссылке - [http://snapshot.debian.org/]
+==Пример оформления sources.list==
+
+Пример для Debian Squeeze. В случае с Sid (unstable) репозиторий security.debian.org нужно отключить, так как для unstable ветки не выпускаются исправления ошибок в безопасности.
+
+Пояснение:
+* '''deb''' - бинарные пакеты, '''deb-src''' - пакеты с исходниками (если нужно пересобрать пакет на свой вкус);
+* '''линк''' репозитория;
+* '''squeeze''' - релиз Дебиана, может быть как название релиза (squeeze, lenny, wheezy, sid, ...), или по-другому (oldstable, stable, testing, unstable, experimental). Текущий релиз - stable, в данный момент это Debian Squeeze;
+* '''main''' - основная секция репозитория; '''contrib''' - пакеты в этой части распространяются владельцем авторских прав на условиях свободной лицензии, но зависят от несвободного программного обеспечения; '''non-free''' - лицензии пакетов в этой части содержат условия, ограничивающие использование или распространение ПО.
+
+<pre>
+# Debian repository
+deb http://ftp.ru.debian.org/debian/ squeeze main non-free contrib
+deb-src http://ftp.ru.debian.org/debian/ squeeze main non-free contrib
+
+# Security fixes
+deb http://security.debian.org/ squeeze/updates main contrib non-free
+deb-src http://security.debian.org/ squeeze/updates main contrib non-free
+
+# Debian updates
+deb http://ftp.debian.org/debian squeeze-updates main contrib non-free
+deb-src http://ftp.debian.org/debian squeeze-updates main contrib non-free
+
+# Backports
+deb http://backports.debian.org/debian-backports squeeze-backports main non-free contrib
+deb-src http://backports.debian.org/debian-backports squeeze-backports main non-free contrib
+</pre>
+
+'''Примечание:''' строки с deb-src необязательны и могут быть закомментированы для экономии трафика.
+==Как редактировать список автозагрузки сервисов?==
+
+Для поклонников основанных на RedHat и Fedora дистрибутивов есть замечательная программа sysv-rc-conf. Установим ее:
+<pre>
+root@linux# aptitude install sysv-rc-conf
+</pre>
+Однако можно сделать тоже самое и вручную. Для этого достаточно сделать нужный файл исполняемым или наоборот, если нужно отключить автозагрузку сервиса, снять бит исполняемости:
+<pre>
+root@linux# chmod +x /etc/init.d/foo
+root@linux# chmod -x /etc/init.d/bar
+</pre>
+
+Остальные могут воспользоваться "изкоробочной" утилитой [http://manpages.ylsoftware.com/ru/update-rc.d.8.html update-rc.d]
+
+Не забывайте, что по умолчанию Debian использует второй уровень автозагрузки (man init, man inittab).
+==Как правильно установить проприетарные драйвера nVidia/ATI?==
+
+===Настройка драйвера nVidia===
+Установить драйвера nVidia можно одним из следующих способов. 
+
+В репозиториях Debian есть уже готовые скомпилированные бинарные модули для дистрибутивного ядра. Например, для версии x86_64 установка будет выглядеть как:
+<pre>
+root@linux# aptitude install nvidia-kernel-amd64 nvidia-glx nvidia-settings nvidia-vdpau-driver
+</pre>
+
+nvidia-xconfig не используем, ибо она пишет в конфиг много ненужного. Вместо этого пропишем в xorg.conf следующее:
+<pre>
+Section "Device"
+    Identifier "video"
+    Driver     "nvidia"
+EndSection
+</pre>
+В большинстве случаев, этого конфига хватает для нормальной работы иксов.
+
+Есть и альтернативный вариант: можно установить nvidia-glx и nvidia-kernel-dkms, в этом случае будут скачаны исходники и собран модуль для текущего ядра при помощи dkms. Так же этот способ подходит в том случае, если используется самосборное ядро или установлен testing или unstable дистрибутив
+
+Еще есть старый способ сборки модуля ядра с помощью module-assistant:
+<pre>
+root@linux# aptitude install module-assistant
+root@linux# module-assistant prepare
+root@linux# module-assistant update
+root@linux# module-assistant auto-install nvidia-kernel-source
+root@linux# nvidia-xconfig
+</pre>
+
+Для поддержки аппаратного ускорения в 32-битных программах нужно установить пакет nvidia-glx-ia32.
+
+Также в репозитории присутствуют исходники legacy драйверов для поддержки старых моделей видеокарт:
+* nvidia-kernel-legacy-71xx-source - для карт Vanta/TNT/GeForce256 и [http://www.nvidia.com/object/linux-display-ia32-71.86.14-driver.html подобного антиквариата] (не поддерживаются Xorg 1.9 и выше)
+* nvidia-kernel-legacy-96xx-source - для карт GeForce2/4 MX [http://www.nvidia.com/object/linux-display-ia32-96.43.19-driver.html и некоторых других]
+* nvidia-kernel-legacy-173xx-source - от Quadro, GeForce 5 FX [http://www.nvidia.com/object/linux-display-ia32-173.14.28-driver.html и старше]
+
+помимо исходников есть скомпилированные версии и модули [http://ru.wikipedia.org/wiki/Dynamic_Kernel_Module_Support DKMS].
+===Настройка драйвера ATI===
+
+[http://wiki.debian.org/ATIProprietary] - Установка драйвера из репозитория
+
+[http://my-note.ru/archives/136.html] - Установка более новой, чем в репозитории, версии
+
+[http://debian.oppserver.net/fglrxlegacy/] - Репозиторий с драйверами для RadeonHD 2000, 3000 и 4000 серий
+===Быстрый (хоть и идеологически неверный) вариант===
+
+Также для установки драйверов можно воспользоваться утилитой [http://code.google.com/p/sgfxi/ sgfxi].
+
+sgfxi это автоматический инсталлятор и конфигуратор видеодрайверов для nvidia, ati/amd, а также свободных драйверов из состава Xorg для Debian (с некоторых пор добавлена поддержка Ubuntu и Arch). При каждом запуске скрипт автоматически обновляется, что позволяет с большой долей вероятности получить работоспособные драйвера даже для самых свежих ядер. 
+
+Скачиваем:
+<pre>
+user@linux$ wget http://sgfxi.googlecode.com/svn/trunk/sgfxi
+</pre>
+Делаем исполняемым:
+<pre>
+user@linux$chmod +x sgfxi
+</pre>
+Выключаем иксы. Внимательно изучив справку можно обойтись и без этого, но в любом случае их придётся перезагружать:
+<pre>
+root@linux# init 3
+</pre>
+Запускаем:
+<pre>
+root@linux# ./sgfxi
+</pre>
+
+Скрипт проверит актуальность своей версии, обновится при необходимости, выяснит модель видеокарты, версию ядра, установит необходимые пакеты, применит патчи и соберет библиотеки и модули. Если все пройдет успешно - сам предложит запустить иксы.
+==Как добавить ключ, которым подписаны пакеты в репозитории?==
+
+Зачастую при попытке установить пакет из стороннего репозитория выводится выводится сообщение об ошибке, например такое:
+
+<blockquote>
+W: GPG error: http://download.virtualbox.org lenny Release: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY DCF9F87B6DFBCBAE
+</blockquote>
+
+Добавить недостающий ключ можно так:
+<pre>
+root@linux# gpg --keyserver wwwkeys.eu.pgp.net --recv-keys DCF9F87B6DFBCBAE
+root@linux# gpg --armor --export DCF9F87B6DFBCBAE | apt-key add -
+root@linux# apt-get update
+</pre>
+
+Для удобства вы можете сделать скрипт, который будет добавлять в кеш переданный ему ключ. Он поможет в будущем легко импортировать другие ключи.
+
+==Как быстро собрать deb пакет?==
+
+[http://barrel-of-herring.blogspot.com/2010/08/deb.html Вот так]
+
+==Как подкорректировать сглаживание шрифтов в системе?==
+
+[http://wiki.debian.org/ru/PatchCairo Настройка сглаживания шрифтов]
+==Где можно получить ответы на вопросы, которых здесь нет?==
+
+Ответы на остальные вопросы можно получить в [http://www.debian.org/doc/FAQ/ Debian FAQ], [http://forums.debian.net/ Debian Forums], [http://ask.debian.net/ Debian Q/A] или в соответствующих рассылках (см. [http://lists.debian.org/]).
+
+Существует так же Debian Wiki по адресу [http://wiki.debian.org/], русскоязычный раздел [http://wiki.debian.org/ru/DebianRussian находится здесь].
+
+==Статьи в этой wiki==
+
+*[[Установка Debian через другой GNU/Linux (debootstrap)]]
+
+==Ссылки==
+
+*[http://www.debian.org/doc/ Документация Debian]
+*[http://wiki.debian.org Debian Wiki]
+*[http://packages.debian.org/ Поиск пакетов по официальному репозиторию]
+*[http://linuxoid.in/Полезные_репозитории_для_Debian Полезные репозитории для Debian]
+*[http://www.debian.org/doc/manuals/debian-reference/ Debian Reference]
+*[http://www.debian.org/releases/stable/i386/index.html.ru Debian GNU/Linux Installation Guide]
+*[http://www.debian.org/releases/stable/i386/release-notes/index.ru.html Debian Stable Release Notes]
+*[http://www.debian.org/doc/manuals/debian-faq/ Debian FAQ]
+*[http://www.debian.org/doc/manuals/maint-guide/ Debian New Maintainers' Guide]
+*[http://www.debian.org/doc/manuals/developers-reference/ Debian Developer's Reference]
+*[http://tangosoft.com/refcard/ The 101 most important things when using Debian GNU/Linux]
+*[http://www.debian-administration.org/ Debian Administration]
+*[http://planet.debian.net/ Planet Debian]
+*[http://raphaelhertzog.com Apt-get install debian-wizard: blog about debian]
+
+==Сноски==
+<div class="references-small"> <references /> </div>
+
+[[Category:Дистрибутивы]]

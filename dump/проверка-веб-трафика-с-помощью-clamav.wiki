@@ -1,0 +1,53 @@
+== Общее ==
+
+Для онлайн проверки на вирусы веб трафика можно использовать [http://www.server-side.de HAVP] (HTTP AntiVirus proxy). Мы рассмотрим использование его в паре со Squid:
+
+<blockquote>Пользователь-&gt;Squid-&gt;Havp-&gt;WWW</blockquote>
+
+Здесь Squid является прозрачным кэширующим прокси с ведением статистики, поэтому havp установлен после него. [http://lissyara.su Lissyara] приводит и другие аргументы в пользу такой схемы.
+
+== Установка ==
+
+Предположим, что squid уже установлен и настроен. Устанавливаем havp и вносим изменения в конфиг havp (/etc/havp/havp.config). Закомментируем строку <i>REMOVETHISLINE deleteme</i> и раскомментируем следующее:
+<pre>
+USER havp 
+GROUP havp 
+DAEMON true 
+</pre>
+Меняем значение переменной (в зависимости от нагрузки):
+<pre>
+SERVERNUMBER 20 
+</pre>
+Раскомментируем:
+<pre>
+PORT 8080 
+BIND_ADDRESS 127.0.0.1 
+</pre>
+В ''/etc/havp/templates/en'' поле ''TEMPLATEPATH'' меняем ''en'' на ''ru'' и удостоверяемся, что незакомментирована строка ''ENABLECLAMLIB true'' 
+
+Стартуем havp - ''/etc/init.d/havp start'' 
+
+Вносим изменения в настройки squid:
+<pre>
+cache_peer 127.0.0.1 parent 8080 0 
+always_direct allow SSL_Ports 
+</pre>
+Рестартуем squid - ''/etc/init.d/squid restart''. (Если нет delay pools, то можно reload).
+
+== Проверка ==
+
+Проверить, что havp слушает, можно командой ''netstat -an |grep 8080''
+ 
+Проверить связку можно по адресу [http://www.eicar.org/anti_virus_test_file.htm ]
+
+== Источники ==
+
+* [http://ylsoftware.com/?action=news&amp;na=viewfull&amp;news=390]
+
+* [http://www.lissyara.su/?id=1662]
+
+* [http://www.linux16.net/node/390]
+
+[[Category:Администрирование]]
+[[Category:Сети и интернет]]
+[[Category:Безопасность]]

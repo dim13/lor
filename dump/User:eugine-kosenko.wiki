@@ -1,0 +1,5 @@
+[[LOR-contest]]
+
+[[Полезная документация]]
+
+[[User:eugine kosenko:VectorLength]]

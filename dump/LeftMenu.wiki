@@ -1,0 +1,11 @@
+* [http://www.linux.org.ru/ Главная]
+* [[СтартоваяСтраница|Стартовая Страница]]
+* [[lor-faq|L.O.R. FAQ]]
+* [[faq_howto|Другие FAQ и HOWTO]]
+----
+* [[Special:Allpages|Все страницы]]
+* [[Special:Specialpages|Специальные страницы]]
+* [[Special:Upload|Загрузить файл]]
+----
+* [[Special:RecentChanges|Последние правки]]
+* [http://www.linux.org.ru/search.jsp Поиск]

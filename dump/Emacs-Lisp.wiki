@@ -1,0 +1,15 @@
+Ссылки на документацию:
+*Learn X in Y minutes сначала where X = [http://learnxinyminutes.com/docs/common-lisp/ CL], потом where X = [http://learnxinyminutes.com/docs/elisp/ elisp]
+*[http://www.gnu.org/software/emacs/manual/html_node/elisp/index.html Emacs Lisp Reference Manual]
+*[http://www.gnu.org/software/emacs/emacs-lisp-intro/html_node/index.html An Introduction to Programming in Emacs Lisp]
+*[http://xahlee.org/emacs/elisp.html Xah Emacs Lisp Tutorial]
+*[http://steve-yegge.blogspot.com/2008_01_01_archive.html Emergency Lisp]
+*[http://stackoverflow.com/questions/41522/tips-for-learning-elisp Tips For Learning Elisp]
+
+
+Примеры кода:
+
+*[https://github.com/technomancy/emacs-starter-kit Emacs Starter Kit]
+
+
+[[Category:Lisp]]

@@ -1,0 +1,13 @@
+Добавить [http://www.rastersoft.com/programas/devede.html DeVeDe] сюда неплохо бы. --[[User:adriano32|Андрей]] 17-Jun-2011 02:14 MSD
+
+
+для создания музыки могу посоветовать Linux Multimedia Studio - [http://lmms.sf.net http://lmms.sf.net] - [[User:AITap|Иван Крылов]] 20-Mar-2009 14:36 MSK
+
+
+и ещё: для вырезания из видео звука отдельно можно использовать следующую команду:
+<pre>
+mencoder input.avi -of rawaudio -oac mp3lame -ovc lavc -o output.mp3
+</pre>
+Звук получается действительно в mp3, его даже играет мой (очень привиредливый) плеер, правда, длину трека показывать отказывается. - [[User:AITap|Иван Крылов]] 27-Apr-2009 19:43 MSD
+
+

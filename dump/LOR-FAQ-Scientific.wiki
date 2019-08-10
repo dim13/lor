@@ -1,0 +1,285 @@
+==Чем построить график?==
+
+* [http://www.gnuplot.info/ gnuplot], руководства, примеры, оболочки: 
+**[http://t16web.lanl.gov/Kawano/gnuplot/index-e.html gnuplot — not so Frequently Asked Questions], [http://www.ualberta.ca/~xz10/gnuplot/index-e.html зеркало] если основной сайт не работает.
+**[http://www.gnuplotting.org руководство по рисованию более современных графиков] 
+**[http://en.wikibooks.org/wiki/Gnuplot ещё одно краткое руководство]
+**[http://www.phyast.pitt.edu/~zov1/gnuplot/html/gallery.html примеры необычных графиков и поверхностей]
+**[http://plotdrop.sourceforge.net PlotDrop - простой GUI для визуализации серий данных из файлов]
+* [http://home.gna.org/veusz/ Veusz]
+* [http://www.gnu.org/software/gsegrafix/ GSEGrafix]
+* [http://labplot.sourceforge.net/ LabPlot]
+* [http://soft.proindependent.com/qtiplot.html QtiPlot]
+* [http://scidavis.sourceforge.net/ SciDAVis] - форк QtiPlot
+* [http://plasma-gate.weizmann.ac.il/Grace/ Grace] - с использованием библиотеки [http://www.openmotif.org/ Open Motif]
+* [http://gracegtk.sourceforge.net/ GraceGTK] - форк Grace на GTK
+* [http://qtgrace.sourceforge.net/ QtGrace] - форк Grace на Qt
+* [http://matplotlib.sourceforge.net/ matplotlib] - Python-библиотека, имеющая сходный с Matlab интерфейс
+* [http://plplot.sourceforge.net/ plplot] - библиотека с биндингами к многим языкам.
+* [http://rlplot.sourceforge.net/ RLPlot]
+* [http://sourceforge.net/projects/ngraph-gtk/ ngraph] - построение 2D графиков. Интерфейс английский, документация только на японском
+* [http://mathgl.sourceforge.net/ MathGL]
+* [http://jwork.org/scavis/ SCaVis]
+
+для трёхмерных данных помимо вышеперечисленного есть:
+
+* [http://www.opendx.org/ OpenDX]
+* [http://code.enthought.com/projects/mayavi/ MayaVi]
+* [https://wci.llnl.gov/codes/visit/ VisIt]
+* [http://www.paraview.org/ ParaView]
+==Как в gnuplot включить поддержку русского==
+
+выбрать кодировку символов можно с помощью команды:
+<pre>
+set encoding кодировка
+</pre>
+
+Про русские шрифты написано здесь: 
+http://mydebianblog.blogspot.com/2007/11/eps-gnuplot-latex.html
+
+Про utf8 тут:
+http://statist.wald.intevation.org/utf8.html
+
+utf8 - дополнение 
+
+http://surrender-zen-way.blogspot.com/2010/05/gnuplot-ubuntu-1004-utf8.html
+gnuplot в Ubuntu 10.04 теперь поддерживает UTF8!
+
+http://www.gnuplot.info/faq/faq.html
+Update: Version 4.4 contains contains more complete support for UTF-8, including PostScript. 
+
+Не забываем про пакет psfrag в LaTeX'е, который позволяет полностью подменять подписи.
+==Как из графика в виде картинки получить табличку с данными?==
+
+Вручную:
+
+* [http://star.physics.yale.edu/~ullrich/xyscanDistributionPage/ xyscan]
+* [http://digitizer.sourceforge.net/ Engauge Digitizer]
+* [http://sovety.blogspot.com/2010/11/unplotpy-from-plots-to-tabular-data.html unplot.py]
+* [http://sourceforge.net/projects/spectrascan/ SpectraScan]
+==А чем можно создать пояснительные рисунки?==
+
+* [http://www.clucalc.info/ CLUCalc] со скриптовым языком CLUScript (CLUViz, переработанный и улучшенный CLUCalc, не имеет версии под Linux)
+
+==Чем просмотреть и обработать данные с атомно-силового или сканирующего туннельного микроскопа?==
+
+* [http://gwyddion.net/ Gwyddion] поддерживает форматы NTMDT, AIST-NT, NanoScanTech, Femtoscan различных версий и многие другие (около 100 различных форматов). [http://gwyddion.net/documentation/user-guide-ru/ Русская документация] по работе с ним.
+
+==Какие есть программы для работы с данными оптической микроскопии?==
+* [http://www.bioimagexd.net/ BioImageXD]
+* [http://micro-manager.org/ Micro-Manager]
+* [http://jmicrovision.com/ JMicroVision] - проприетарная программа на Java для анализа изображений, заявлена поддержка работы с большими изображениями
+* [http://www.openmicroscopy.org/ OME (Open Microscopy Environment)] разрабатывает ряд открытых программных продуктов, в том числе [http://www.openmicroscopy.org/site/products/omero OMERO], [http://www.openmicroscopy.org/site/products/visbio VisBio] и другие
+* [http://bioimage.ucsb.edu/bisque BisQue]
+
+
+Для обработки изображений можно использовать [http://rsbweb.nih.gov/ij/ ImageJ] написанное на Java.
+
+Можно посмотреть дополнительные варианты [http://www.leica-microsystems.com/science-lab/integrative-open-source-software-for-image-analysis-in-biology/ в этом обзоре].
+==Чем быстро и удобно делать металлографию фотографий микроструктуры материалов с интерактивным исправлением измерений?==
+
+Металлография относится к оптической и электронной микроскопии, поэтому в большинстве случаев будет достаточно программы [http://rsbweb.nih.gov/ij/ ImageJ]. Так, для определения объемных долей фаз можно использовать плагин Grid или, в случае хорошей контрастности изображения, использовать анализ частиц.
+
+Однако, ImageJ на данный момент в поставке без плагинов не позволяет делать неразрушающие измерения изображения с сохранением маркеров. Эта возможность есть у таких программ как Gwyddion и проприетарная ImagePro.
+
+К счастью, есть расширение [http://simon.bio.uva.nl/objectj/index.html ObjectJ] для ImageJ. Данное расширение позволяет сразу сохранять измерения отдельных размеров в отдельных столбцах таблицы, что не позволяет делать ImagePro (согласно отзывам пользователей этой программы).
+
+Кроме этого поддержка неразрушающих маркеров есть в [http://jmicrovision.com JMicroVision], но разделения по типам измерений, в отличие от ObjectJ, нет.
+
+==Чем можно быстро открыть, исправить, обработать картинки гигантских разрешений?==
+
+* [http://www.vips.ecs.soton.ac.uk/index.php?title=VIPS VIPS]+[http://www.vips.ecs.soton.ac.uk/index.php?title=Nip2 Nip2] (первое - движок, второе - интерфейс)
+==Чем можно проанализировать данные с масс-спектрометра/хроматографа?==
+
+MS:
+* [http://massxpert.org/ massXpert]
+* [http://www.mmass.org/ mMass]
+
+MS+хроматография:
+* [http://www.openchrom.net/ OpenChrom]
+==Какие есть аналоги Mathcad, Matlab, Maple, Mathematica?==
+
+Кроме Mathcad, остальные есть под Linux, но, естественно, стоят денег.
+
+Matlab можно попробовать заменить на [http://www.scilab.org/ Scilab] или [http://www.gnu.org/software/octave/ Octave] вместе с [http://qtoctave.wordpress.com/ QtOctave] или [http://www.ics.es.yamanashi.ac.jp/mirror/octave-workshop/ Octave Workshop]. Недостающий функционал в Octave добавляется обычно модулями с [http://octave.sourceforge.net/ Octave-Forge].
+
+Scilab более функционален, чем Octave, но синтаксис Scilab'a в большей степени, чем синтаксис Octave, отличается от синтаксиса MatLab, однако имеется конвертор M2SCI (Matlab2cilab) текстовых скриптов Matlab.
+
+Возможности Scilab можно значительно расширить за счёт [http://atoms.scilab.org/ внешних модулей], разрабатываемых сообществом и энтузиастами. Среди них и нужно искать так нехватающие многим в основной поставке тулбоксы для Wavelet анализа, обработки изображений и пр.
+
+Об Octave можно подробнее почитать собственно в [http://www.gnu.org/software/octave/doc/interpreter/ документации], а также [http://xgu.ru/wiki/GNU_Octave на сайте проекта Xgu.ru].
+
+Еще есть [http://freemat.sourceforge.net/ FreeMat]. Синтаксис такой же как в Matlab, но реализован только базовый функционал, нет большого числа дополнительных модулей, как в Octave.
+
+Mathcad можно попробовать заменить на [http://smath.info SMath Studio].
+
+Для символьных вычислений есть [http://maxima.sourceforge.net/ Maxima] и графические интерфейсы Xmaxima и [http://wxmaxima.sourceforge.net/ wxMaxima]. Примеры работы можно посмотреть [http://www.csulb.edu/~woollett/ здесь]. 
+Также для символьных вычислений есть [http://axiom-developer.org/ Axiom] (и его форки [http://www.open-axiom.org/ OpenAxiom] и [http://fricas.sourceforge.net/ FriCAS]), [http://www.reduce-algebra.com/ REDUCE] и [http://www.mathomatic.org/ Mathomatic]
+Активно развивается CAS, написанная на Python:[http://sympy.org/en/index.html Sympy]. Ее можно встраивать в свои приложения.    
+
+Для статистического анализа данных есть [http://www.r-project.org/ R] с графическими интерфейсами [http://rkward.sourceforge.net/ RKWard] и [http://socserv.mcmaster.ca/jfox/Misc/Rcmdr/ R Commander]
+
+Кроме специализированных программ, достаточно популярны математические библиотеки для обычных языков программирования, например, [http://numpy.scipy.org/ NumPy] и [http://scipy.org/ SciPy] для Python, [http://www.gnu.org/software/gsl/ GSL] для C.
+
+Упомяну комбайн [http://www.sagemath.org/ Sage].
+
+[http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems]
+
+==А чем можно сразу построить математическую модель задачи и решить получившиеся уравнения?==
+
+* [http://ascend4.org/ ASCEND]
+
+==Какой есть аналог GPSS?==
+
+О GPSS все давно забыли. Для моделирования систем массового обслуживания есть, например, библиотека [http://simpy.sourceforge.net/ SimPy] для Python.
+
+==Чем можно нарисовать химическую формулу?==
+
+* [http://bkchem.zirael.org/ BKChem]
+* [http://xdrawchem.sourceforge.net/ XDrawChem]
+* [http://ruby.chemie.uni-freiburg.de/~martin/chemtool/ ChemTool]
+* [http://sourceforge.net/apps/mediawiki/cdk/index.php?title=JChemPaint JChemPaint] 
+* [http://www.chemdoodle.com/ ChemDoodle] (несвободный)
+* [http://www.chemaxon.com/marvin/sketch/index.php MarvinSketch] (несвободный)
+
+==Чем нарисовать молекулу для её дальнейшего расчёта?==
+
+* [http://www.uku.fi/~thassine/projects/ghemical/ Ghemical]
+* [http://avogadro.openmolecules.net/ Avogadro]
+* [http://www.pymol.org/ PyMOL]
+* [http://gabedit.sourceforge.net/ Gabedit]
+* [http://www.scl.ameslab.gov/~brett/MacMolPlt/ wxmacmolplt]
+* [http://www.cse.scitech.ac.uk/ccg/software/ccp1gui/ CCP1GUI]
+
+==Чем считать молекулярную динамику?==
+
+Молекулярная механика:
+* [http://www.gromacs.org/ Gromacs]
+* [http://ambermd.org/ Amber]
+* [http://www.ks.uiuc.edu/Research/namd/ NAMD]
+* [http://lammps.sandia.gov/ LAMMPS]
+* [http://dasher.wustl.edu/tinker/ TINKER]
+* [http://codeblue.umich.edu/hoomd-blue/ HOOMD-blue]
+
+[http://en.wikipedia.org/wiki/List_of_software_for_molecular_mechanics_modeling и многие другие]
+
+Полуэмпирические методы:
+* [http://openmopac.net/ MOPAC (Molecular Orbital PACkage)]
+* [http://www.uku.fi/~thassine/projects/download/current/ mopac7] (свободная версия mopac)
+* [http://www.semichem.com/ampac/ AMPAC]
+
+большая часть из нижеперечисленного тоже умеет полуэмпирические методы.
+
+''Ab initio'' методы (DFT, Хартри-Фок и т.д.):
+* [http://classic.chem.msu.su/gran/gamess/index.html Firefly (бывший PC GAMESS)]
+* [http://www.msg.ameslab.gov/GAMESS/ GAMESS]
+* [http://www.thch.uni-bonn.de/tc/orca/ ORCA]
+* [http://www.gaussian.com/ Gaussian] 
+* [http://www.nwchem-sw.org/ NWChem]
+* [http://www.mpqc.org/ MPQC (Massively Parallel Quantum Chemistry Program)]
+* [http://www.molpro.net/ Molpro]
+
+[http://en.wikipedia.org/wiki/Quantum_chemistry_computer_programs и многие другие]
+
+==А как её считать?==
+
+[http://kodomo.cmm.msu.ru/wiki/Main/Modelling Курс] молекулярного моделирования биополимеров Факультета Биоинженерии и Биоинформатики МГУ.
+
+Учебник по использованию PC GAMESS в связке с wxmacmolplt: http://classic.chem.msu.su/gran/gamess/marek/en/docs/PCG-Tutorial-Usage.pdf
+
+После переименования PC GAMESS в Firefly, на wxmacmolplt надо наложить патчи для нормальной совместной работы. Взять их можно здесь: http://slackbuilds.org/repository/14.0/academic/wxmacmolplt/ Либо можно использовать опцию -legacy в расчётах firefly, делающую выходные файлы firefly совместимыми с gamess-us.
+
+==Чем посмотреть результат расчётов молекулярной динамики?==
+
+Большая часть программ для рисования позволяет и посмотреть результат, но есть и специализированные пакеты, предназначенные в основном только для визуализации:
+* [http://www.pymol.org/ PyMOL]
+* [http://www.ks.uiuc.edu/Research/vmd/ VMD]
+* [http://gabedit.sourceforge.net/ Gabedit]
+* [http://www.cgl.ucsf.edu/chimera/ Chimera]
+* [http://www.cscs.ch/molekel/ Molekel]
+* [http://ovito.org/ OVITO] (поддерживает форматы файлов LAMMPS, XYZ и POSCAR)
+* [http://mt.seas.upenn.edu/Archive/Graphics/A/ AtomEye] (поддерживается LAMMPS (?))
+
+и многие другие
+
+Колебательные спектры красиво рисует [http://gausssum.sourceforge.net/ GaussSum]. 
+
+==Чем перевести из одного химического формата в другой?==
+
+* [http://openbabel.org/ Open Babel]
+
+==Какие есть программы для молекулярной биологии?==
+
+* [http://http://ugene.unipro.ru/ UGENE] — набор инструментов молекулярного биолога.
+
+==Какие программы-планетарии есть под linux?==
+
+* [http://www.stellarium.org/ Stellarium]
+* [http://www.shatters.net/celestia/ Celestia]
+* [http://edu.kde.org/kstars/ KStars] из состава проекта KDE Edu
+* [http://www.ap-i.net/skychart/index.php Sky Chart/Cates du Ciel]
+
+==Какие интерактивные программы демонстрации физических явлений существуют?==
+
+* [http://phet.colorado.edu/ PhET] — написано на Java, требуется перевод на русский
+* [http://edu.kde.org/step/ Step ] из состава KDE Edu, в основном механика и термодинамика
+
+==Какие есть свободные альтернативы пакетам ANSYS, COMSOL Multiphysics, CFD-ACE?==
+
+Все эти [http://ru.wikipedia.org/wiki/Computer-aided_engineering CAE] пакеты предназначены для серьезных инженерных расчетов и лицензии на их использование стоят немалых денег. Но и для них есть свободные альтернативы.
+
+[http://www.salome-platform.org/home/presentation/overview/ Salome] и набор решателей: OpenFOAM, Code-Aster, Code-Saturne.
+
+[http://www.csc.fi/english/pages/elmer Elmer], но в качестве генератора сеток и постпроцессора удобнее использовать сторонние утилиты, например, [http://geuz.org/gmsh/ Gmsh] и [http://www.paraview.org/ ParaView] соответственно. Хотя в последнее время разработчики активно допиливают графический интерфейс (ElmerGUI) и возможно в ближайшем будущем сторонние утилиты использовать больше не будет необходимости.
+
+Так же стоит упомянуть специализированный дистрибутив [http://caelinux.com/CMS/ CAELinux].
+
+==Как рассчитать полупроводниковый лазер с вертикальным резонатором?==
+
+* [http://camfr.sourceforge.net/ CAMFR (CAvity Modelling FRamework)] - быстрый, гибкий полностью векторный пакет для решения уравнений Масквелла (Maxwell) на C++ с биндингами на Python. Основное назначение - область нанофотоники.
+
+* [http://ab-initio.mit.edu/wiki/index.php/Meep Meep] Meep (or MEEP) is a free finite-difference time-domain (FDTD) simulation software package developed at MIT to model electromagnetic systems, along with our MPB eigenmode package.
+
+* [http://openems.de/start/index.php openEMS] -- пакет для решения уравнений Максвелла методом конечных разностей во временной области (FTDT). Поддерживает работу в прямоугольной и цилиндрической системе координат. Заявлена поддержка SSE и MPI (CUDA и OpenCL, к сожалению, не задействуются). Используется совместно с matlab или octave.
+
+
+==Как аппроксимировать экспериментальные пики Гауссом, Лоренцом и др. кривыми?==
+
+* [http://www.unipress.waw.pl/fityk/ Fityk] - приложение для нелинейной подгонки кривых методом наименьших квадратов.
+* Команда fit в gnuplot, только нужно сначала задать функцию которой аппроксимируется.
+
+==С помощью чего можно организовать или упорядочить коллекцию статей? Какие есть аналоги papers?==
+
+* [http://www.mendeley.com/ Mendeley] — freeware под все три основные платформы, распространяется без исходного кода. Данные для совместной работы (Shared Collection) хранятся в онлайне на серверах mendeley. Бесплатные учетные записи на сервисе mendeley предоставляют ограниченный функционал. В 2013 году Mendeley была куплена издательской компанией Elsevier.
+* [http://www.zotero.org/ Zotero] — инструмент для управления библиографическими данными. Существует в виде плагина для браузера, а также отдельного приложения. Интегрируется с LibreOffice, Apache OpenOffice и MS Office.
+* [http://icculus.org/referencer/ Referencer] — Удобный каталогизатор статей. Позволяет вводить и отслеживать библиографические данные, умеет импортировать/экспортировать подборки ссылок в BibTeX формат. "Вкусной" фишкой является сканирование текстов статей в pdf-формате и извлечение оттуда DOI, по которому онлайн можно определить библиографические данные (требуется бесплатная регистрация). Благодаря этому можно быстро каталогизировать большие объемы текстов статей, сохраненные локально.
+* [http://home.gna.org/kbibtex/ KBibTex] -- KDE-аналог referencer. Гораздо более настраиваемый и удобный. Работает напрямую с bib-файлом.
+* [http://sourceforge.net/projects/bibus-biblio/ Bibus] — библиографическая СУБД. Использует MySQL или SQLite в качестве хранилища, может вставлять ссылки в LibreOffice, OpenOffice.org и Microsoft Word, а также генерировать библиографический список.
+* [http://zettelkasten.danielluedecke.de/en/index.php Zettelkasten] — (с нем. "карточный каталог") кроссплатформенное свободное приложение-каталогизатор на Java.
+* [http://jabref.sourceforge.net/ JabRef] — хранитель ссылок по типу EndNote на основе BibTeX (Java).
+* [http://www.docear.org/ Docear] — ("Dog-ear") пакет программ для работы с научной литературой (работает на большинстве платформ, где доступна Java 6). В нем интегрированы функции поиска, организации и создания научных текстов. А именно: электронная библиотека с поддержкой PDF, менеджер ссылок, инструмент для заметок,  с mind maps в центральной роли. Более того, Docear работает с такими существующими инструментами, как Mendeley, Microsoft Word, Foxit Reader. Docear -- бесплатен, с открытым исходным кодом. Основан на Freeplane, а также JabRef и JPod. Финансируется Федеральным министерством технологии ФРГ.
+==Где можно поискать свободно доступную современную литературу?==
+
+* [http://www.intechopen.com/books/ intechopen] естественные и технические науки, впрочем, качество там довольно сомнительное.
+
+*[http://www.greenteapress.com/ Green Tea Press] издательство объединяет различные книги в сериях Think X, и How to Think Like a Computer Scientist,Little Book of Semaphores. Книги начального уровня, но написаны специалистами в своей области. Доступны их исходные тексты в TeX.
+
+*[http://www.mccme.ru/free-books/ МЦНМО]Часть книг в области математики распостраняется под свободными лицензиями    
+==Какой софт может предложить OpenSource психологу и нейрофизиологу?==
+* [http://www.psychopy.org/ PsychoPy] - программа для проведения экспериментов в области восприятия и дальнейшей обработки результатов, написанная, как это ни странно, на Python.
+* [http://neuro.debian.net/ NeuroDebian] Проект развивающий репозиторий нейрофизиологического и психологического свободного софта. Так же они делают сборки Debian с предустановленным софтом  
+* [http://openeeg.sourceforge.net/doc/ OpenEEG] Это проект по созданию дешевых приборов ЭЭГ диагностики и свободного софта для этой же цели
+* [http://sccn.ucsd.edu/eeglab/index.html/ EEGLAB] Инструмент для анализа ЭЭГ,являющийся расширением для Matlab
+* [http://od1n.sourceforge.net/ ODIN] объектно-ориентированная библиотека на С++ для анализа данных МРТ
+
+== Обработка сигналов ==
+*[http://www.scipy.org/ библиотека scipy] -- данная библиотека на языке Python имеет несколько модулей, представляющих различные алгоритмы обработки сигналов. 
+Например scipy.signals реализует  базовые операции над сигналом(нормирование,поиск пиков и т.д.). Так же данная библиотека поддерживает возможности по созданию цифровых фильтров, расчету и моделированию аналоговых, расчету спектра (на основе БПФ, метод Велча, модифицированный метод Велча,с применением оконных функций и др.),расчету адаптивных фильтров. Многие функции довольно близки по синтаксису к матлаб.    
+*[http://gnuradio.org/redmine/projects/gnuradio/wiki GNU Radio] Данный фреймворк предоставляет инструменты для анализа сигналов 
+==Что можно использовать для визуализации метаболических путей?==
+
+* [http://arcadiapathways.sourceforge.net/ Arcadia] — просмотрщик, средство визуализации метаболических путей с поддержкой стандартов [http://www.sbml.org SBML] и [http://www.sbgn.org SBGN] с интерфейсом на Qt.
+
+Прочее ПО для этой задачи можно найти на сайтах [http://www.sbml.org SBML] и [http://www.sbgn.org SBGN].
+
+[[Category:Полезные советы]]
