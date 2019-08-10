@@ -1,1 +1,0 @@
-[awesome](awesome "wikilink")

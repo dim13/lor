@@ -1,9 +1,0 @@
-<http://habrahabr.ru/post/138328/>
-
-<http://sysadmin-vit.blogspot.ru/2011/03/linux-squid3-squidguard.html>
-
-<http://www.linuxcenter.ru/lib/books/lkmpg.phtml>
-
-<http://yvoinov.blogspot.ru/2013/06/squid-transparent-proxy.html>
-
-<http://wiki.squid-cache.org/Features/SslBump>

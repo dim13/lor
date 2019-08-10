@@ -1,1 +1,0 @@
-xmpp: dmatveev@jabber.ru

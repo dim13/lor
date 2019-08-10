@@ -1,1 +1,0 @@
-Поправил ссылку на Dia <http://projects.gnome.org/dia/>

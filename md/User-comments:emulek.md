@@ -1,1 +1,0 @@
-add: emacs like info pages.

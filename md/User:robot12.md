@@ -1,3 +1,0 @@
-1\) <http://www.linux.org.ru/whois.jsp?nick=robot12>
-
-Женат. На этом пока и остановимся.

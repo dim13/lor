@@ -1,1 +1,0 @@
-xorg.conf и Xorg.0.log Проблема 60hz.
