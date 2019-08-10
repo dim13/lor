@@ -1,0 +1,127 @@
+by kir2yar <http://www.linux.org.ru/forum/general/8400952>
+
+### Запуск двух иксов и настройка KDM
+
+У меня две видеокарты NVIDIA, не знаю, прокатит такой способ с ATI.
+Сперва нам нужно найти адрес устройств, делается это так:
+
+    $ lspci | grep VGA
+    01:00.0 VGA compatible controller: NVIDIA Corporation GF100 [GeForce GTX 480] (rev a3)
+    04:00.0 VGA compatible controller: NVIDIA Corporation G73 [GeForce 7600 GT] (rev a1)
+
+Соответственно нас интересует первая колонка.
+
+Затем нам нужно запустить два экземпляра Xorg Делается это так:
+
+    Xorg -config /etc/X11 -br -nolisten tcp -isolateDevice PCI:1:0:0 vt6 #Первый
+    Xorg -config ~ -br -nolisten tcp -sharevts -novtswitch -isolateDevice PCI:4:0:0 vt5 #Второй
+
+в качестве пути к конфиге я намеренно указал неверный путь, для того,
+что бы конфига сгенерилась на лету.
+
+Соответственно пример конфиги KDM:
+
+    cat /etc/kde4/kdm/kdmrc
+    http://pastebin.com/2CHkVa7h
+
+### Назначение устройств ввода
+
+Был в сети пример через конфиги иксов, но мне не понравилось то, что в
+таком случае нужно эти конфиги таки писать. Потому я сделал через
+xinput
+
+Вывод списка устройств:
+
+    xinput list
+    ⎡ Virtual core pointer id=2 [master pointer (3)]
+    ⎜ ↳ Virtual core XTEST pointer id=4 [slave pointer (2)]
+    ⎜ ↳ Logitech USB Gaming Mouse id=9 [slave pointer (2)]
+    ⎣ Virtual core keyboard id=3 [master keyboard (2)]
+    ↳ Virtual core XTEST keyboard id=5 [slave keyboard (3)]
+    ↳ Power Button id=6 [slave keyboard (3)]
+    ↳ Power Button id=7 [slave keyboard (3)]
+    ↳ Dell Dell USB Keyboard id=8 [slave keyboard (3)]
+    ∼ Logitech USB Optical Mouse id=10 [floating slave]
+    ∼ AT Translated Set 2 keyboard id=11 [floating slave]
+
+По умолчанию - все устройства ввода подцеплены ко всем иксам, нам нужно
+это исправить. От каждого дисплея мы отключаем лишние устройства.
+
+    DISPLAY=:0 xinput --float 10
+    DISPLAY=:0 xinput --float 11
+    DISPLAY=:1 xinput --float 8
+    DISPLAY=:1 xinput --float 9
+
+Соответственно, добавляем эти строки в /etc/kde4/kdm/Xsetup, и в
+/etc/kde4/kdm/Xreset. (Я на всякий случай добавил и в
+/etc/kde4/kdm/Xsession)
+
+На этом этапе, у вас два икса, каждый со своим набором клава/мыш.
+
+### Разделение аудио
+
+Вариант для ленивых, с пульсаудио я не расматриваю, так как не пользуюсь
+им. Как это делается в ALSA. Двух звуковух у меня нет, поэтому я делю
+звук по каналам. Передний канал на первого пользователя, задний на
+второго. Основная идея в использовании ttable.
+
+    pcm.alc883 {
+      type dmix
+      ipc_key 2048 #Нужно для того, что бы все пользователи использовали общий dmix
+      ipc_perm 0777
+      slave {
+        pcm "hw:CARD=Intel,DEV=0" #Править под себя
+        rate 44100
+        period_time 0
+        period_size 1024
+        buffer_size 16384
+        channels 8
+      }
+      bindings { #Почему-то без этого у меня не заработало.
+        0 0
+        1 1
+        2 2
+        3 3
+        4 4
+        5 5
+        6 6
+        7 7
+      }
+    }
+    # green - "Front" in Alsa mixer
+    pcm.a {
+      type plug
+      slave {
+        pcm "alc883"
+        channels 8
+      }
+      ttable.0.0 1 #Тут рулим каналами
+      ttable.1.1 1
+    }
+    # gray - "Surround" in Alsa mixer
+    pcm.b {
+      type plug
+      slave {
+        pcm "alc883"
+        channels 8
+      }
+      ttable.0.2 1
+      ttable.1.3 1
+    }
+
+Пример моей рабочей конфиги: <http://pastebin.com/aZwNE4RS>
+
+Разумеется у пользователя в хомяке должен лежать файл \~/.asoundrc, с
+чем-то вроде этого:
+
+    pcm.!default {
+      type plug
+      slave {
+        pcm "d"
+        channels 8
+      }
+    }
+
+Собственно на этом все. У меня все работает. (Конфига называется
+asound.conf.old потому как я временно отключил разделение звука,
+разумеется реально она должна лежать в /etc/asound.conf)

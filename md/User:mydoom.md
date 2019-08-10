@@ -1,0 +1,1 @@
+<http://www.linux.org.ru/people/mydoom/profile>
